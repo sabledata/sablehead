@@ -1,0 +1,1407 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  15 JUL 2020 11:22
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**techreport.tex
+(./techreport.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-02-25> (c:/Users/lackol/AppData/Roaming/TinyTeX/texm
+f-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphicx
+.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.s
+ty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/graphics
+.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/grap
+hics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-def/pdft
+ex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/color.st
+y
+Package: color 2019/11/23 v1.2a Standard LaTeX Color (DPC)
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics-cfg/colo
+r.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip49
+\fb@frw=\dimen137
+\fb@frh=\dimen138
+\FrameRule=\dimen139
+\FrameSep=\dimen140
+) (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+) (./csas-style/tech-report.sty
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyhdr/fancyhdr
+.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip50
+\f@nch@O@elh=\skip51
+\f@nch@O@erh=\skip52
+\f@nch@O@olh=\skip53
+\f@nch@O@orh=\skip54
+\f@nch@O@elf=\skip55
+\f@nch@O@erf=\skip56
+\f@nch@O@olf=\skip57
+\f@nch@O@orf=\skip58
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/booktabs/booktabs
+.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen141
+\lightrulewidth=\dimen142
+\cmidrulewidth=\dimen143
+\belowrulesep=\dimen144
+\belowbottomsep=\dimen145
+\aboverulesep=\dimen146
+\abovetopsep=\dimen147
+\cmidrulesep=\dimen148
+\cmidrulekern=\dimen149
+\defaultaddspace=\dimen150
+\@cmidla=\count175
+\@cmidlb=\count176
+\@aboverulesep=\dimen151
+\@belowrulesep=\dimen152
+\@thisruleclass=\count177
+\@lastruleclass=\count178
+\@thisrulewidth=\dimen153
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lineno/lineno.sty
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count179
+\output=\toks16
+\linenoprevgraf=\count180
+\linenumbersep=\dimen154
+\linenumberwidth=\dimen155
+\c@linenumber=\count181
+\c@pagewiselinenumber=\count182
+\c@LN@truepage=\count183
+\c@internallinenumber=\count184
+\c@internallinenumbers=\count185
+\quotelinenumbersep=\dimen156
+\bframerule=\dimen157
+\bframesep=\dimen158
+\bframebox=\box45
+LaTeX Info: Redefining \\ on input line 3056.
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/longtable.s
+ty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip59
+\LTright=\skip60
+\LTpre=\skip61
+\LTpost=\skip62
+\LTchunksize=\count186
+\LTcapwidth=\dimen159
+\LT@head=\box46
+\LT@firsthead=\box47
+\LT@foot=\box48
+\LT@lastfoot=\box49
+\LT@cols=\count187
+\LT@rows=\count188
+\c@LT@tables=\count189
+\c@LT@chunks=\count190
+\LT@p@ftn=\toks17
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsmath.s
+ty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip63
+For additional information on amsmath, use the `?' option.
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amstext.s
+ty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsgen.st
+y
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks18
+\ex@=\dimen160
+))
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsbsy.st
+y
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen161
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/amsmath/amsopn.st
+y
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count191
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count192
+\leftroot@=\count193
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count194
+\DOTSCASE@=\count195
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box50
+\strutbox@=\box51
+\big@size=\dimen162
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count196
+\c@MaxMatrixCols=\count197
+\dotsspace@=\muskip16
+\c@parentequation=\count198
+\dspbrk@lvl=\count199
+\tag@help=\toks19
+\row@=\count266
+\column@=\count267
+\maxfields@=\count268
+\andhelp@=\toks20
+\eqnshift@=\dimen163
+\alignsep@=\dimen164
+\tagshift@=\dimen165
+\tagwidth@=\dimen166
+\totwidth@=\dimen167
+\lineht@=\dimen168
+\@envbody=\toks21
+\multlinegap=\skip64
+\multlinetaggap=\skip65
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microty
+pe.sty
+Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
+\MT@toks=\toks23
+\MT@count=\count269
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen169
+LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
+\MT@listname@count=\count270
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microty
+pe-pdftex.def
+File: microtype-pdftex.def 2019/11/18 v2.7d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 914.
+LaTeX Info: Redefining \lslig on input line 914.
+\MT@outer@space=\skip66
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/microty
+pe.cfg
+File: microtype.cfg 2019/11/18 v2.7d microtype main configuration file (RS)
+)) (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/setspace/setspace
+.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lastpage/lastpage
+.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tocbibind/tocbibi
+nd.sty
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has section divisions on input line 50.
+
+Package tocbibind Note: Using section or other style headings.
+
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hanging/hanging.s
+ty
+Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
+\h@ngcommawd=\skip67
+\h@ngfstopwd=\skip68
+\h@ngquotewd=\skip69
+\h@ngdquotewd=\skip70
+\h@ngquerywd=\skip71
+\h@ngexclwd=\skip72
+\h@ngcolonwd=\skip73
+\h@ngscolonwd=\skip74
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/placeins/placeins
+.sty
+Package: placeins 2005/04/18  v 2.2
+) (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/flafter.st
+y
+Package: flafter 2018/11/28 v1.4d Standard LaTeX floats after reference (FMi)
+Applying: [2015/01/01] float order in 2-column on input line 49.
+Already applied: [0000/00/00] float order in 2-column on input line 151.
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/sectsty/sectsty.s
+ty
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+
+LaTeX Warning: Command \underbar  has changed.
+               Check if current package is valid.
+
+
+LaTeX Warning: Command \underline  has changed.
+               Check if current package is valid.
+
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/02/28 3.41 The Babel package
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/switch.de
+f
+File: switch.def 2020/02/28 3.41 Babel switching mechanism
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel-english/e
+nglish.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/02/28 3.41 Babel common definitions
+\babel@savecnt=\count271
+\U@D=\dimen170
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.
+def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count272
+)
+Package babel Info: \l@british = using hyphenrules for english
+(babel)             (\language0) on input line 82.
+Package babel Info: \l@UKenglish = using hyphenrules for english
+(babel)             (\language0) on input line 83.
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for english
+(babel)             (\language0) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for english
+(babel)             (\language0) on input line 108.
+))
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/titlecaps/titleca
+ps.sty
+Package: titlecaps 2015/01/30 V1.2 Routines for setting rich-text input into Ti
+tling Caps
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/ifnextok/ifnextok
+.sty
+Package: ifnextok 2011/06/27 v0.3 test next token (UL)
+) (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@lcword@index=\count273
+\c@word@count=\count274
+\c@lc@words=\count275
+\c@dia@count=\count276
+\c@arg@@@index=\count277
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/textcase/textcase
+.sty
+Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption.s
+ty
+Package: caption 2020/01/03 v3.4h Customizing captions (AR)
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/caption3.
+sty
+Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 61.
+\captionmargin=\dimen171
+\captionmargin@=\dimen172
+\captionwidth=\dimen173
+\caption@tempdima=\dimen174
+\caption@indent=\dimen175
+\caption@parindent=\dimen176
+\caption@hangindent=\dimen177
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count278
+\c@continuedfloat=\count279
+Package caption Info: longtable package is loaded.
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/ltcaption
+.sty
+Package: ltcaption 2018/08/26 v1.4a longtable captions (AR)
+)) (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count280
+\calc@Bcount=\count281
+\calc@Adimen=\dimen178
+\calc@Bdimen=\dimen179
+\calc@Askip=\skip75
+\calc@Bskip=\skip76
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count282
+\calc@Cskip=\skip77
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip78
+\bibsep=\skip79
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count283
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hyperref
+.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/ltxcmds/ltxcmds
+.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2019/11/07 v1.0c TeX engine tests
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdftexcmds/pdftex
+cmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/infwarerr/infwa
+rerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvsetkeys/kvset
+keys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/kvdefinekeys/kv
+definekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/pdfescape/pdfes
+cape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hycolor/hycolor.s
+ty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/letltxmacro/letlt
+xmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/auxhook/auxhook.s
+ty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/kvoptions/kvoptio
+ns.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen180
+\Hy@linkcounter=\count284
+\Hy@pagecounter=\count285
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/pd1enc.d
+ef
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/intcalc/intcalc
+.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/etexcmds/etexcm
+ds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count286
+\pdfmajorversion=\count287
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count288
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen181
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bitset/bitset.s
+ty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/bigintcalc/bigi
+ntcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count289
+\Field@Width=\dimen182
+\Fld@charsize=\dimen183
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/atbegshi/atbegs
+hi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count290
+\c@Item=\count291
+\c@Hfootnote=\count292
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/hpdftex.
+def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/atveryend/atverye
+nd.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count293
+\c@bookmark@seq@number=\count294
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/rerunfilecheck/re
+runfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/uniquecounter/u
+niquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip80
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pdfpages
+.sty
+Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/eso-pic/eso-pic.s
+ty
+Package: eso-pic 2018/04/12 v2.0h eso-pic (RN)
+)
+\AM@pagewidth=\dimen184
+\AM@pageheight=\dimen185
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfpages/pppdftex
+.def
+File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box52
+\AM@global@opts=\toks24
+\AM@pagecnt=\count295
+\AM@toc@title=\toks25
+\c@AM@survey=\count296
+\AM@templatesizebox=\box53
+) (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.st
+y
+Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
+2.
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)) (c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/doi/doi.sty
+Package: doi 2018/09/09 handle doi numbers
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/appendix/appendix
+.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count297
+\c@@ppsavesec=\count298
+\c@@ppsaveapp=\count299
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/caption/subcaptio
+n.sty
+Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
+\c@subfigure=\count300
+\c@subtable=\count301
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdfcomment/pdfcom
+ment.sty
+Package: pdfcomment 2018/11/01 pdfcomment.sty v2.4a - Josef Kleber (C) 2008-201
+2, 2015-2016, 2018
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/xkeyval/xkeyval.s
+ty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkeyval
+.tex
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/xkeyval/xkvutil
+s.tex
+\XKV@toks=\toks26
+\XKV@tempa@toks=\toks27
+)
+\XKV@depth=\count302
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\c@pc@count@i=\count303
+\c@pc@count@ii=\count304
+\c@pc@count@iii=\count305
+\c@pc@count@iv=\count306
+\pc@mathannot@box=\box54
+\pc@nullbox=\box55
+\pc@dima=\skip81
+\pc@dimb=\skip82
+\pc@Sposx=\skip83
+\pc@Sposy=\skip84
+\pc@Eposx=\skip85
+\pc@Eposy=\skip86
+\pc@column=\skip87
+\pc@box@width=\skip88
+\pc@box@height=\skip89
+\pc@box@depth=\skip90
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/etoolbox/etoolbox
+.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count307
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/datetime2/datetim
+e2.sty
+Package: datetime2 2019/11/11 v1.5.5 (NLCT) date and time formats
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tracklang/trackla
+ng.sty
+Package: tracklang 2019/11/30 v1.4 (NLCT) Track Languages
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/tracklang/track
+lang.tex))
+
+Package datetime2 Warning: Date-Time Language Module `english' not installed on
+ input line 1913.
+
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/zref/zref-savepos
+.sty
+Package: zref-savepos 2019/11/29 v2.28 Module savepos for zref (HO)
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/zref/zref-base.st
+y
+Package: zref-base 2019/11/29 v2.28 Module base for zref (HO)
+Package zref Info: New property list: main on input line 763.
+Package zref Info: New property: default on input line 764.
+Package zref Info: New property: page on input line 765.
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+Package zref Info: New property list: savepos on input line 84.
+Package zref Info: New property: posx on input line 85.
+Package zref Info: New property: posy on input line 86.
+)
+\c@zref@unique=\count308
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/refcount/refcount
+.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/marginnote/margin
+note.sty
+Package: marginnote 2018/08/09 v1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count309
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifluatex.
+sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/soulpos/soulpos.s
+ty
+Package: soulpos 2012/02/25 v1.1 Fancy underlining
+\ulp@subcnt=\count310
+\ulp@cnt=\count311
+\ulp@out=\write3
+\ulp@in=\read3
+\ulwidth=\dimen186
+)
+
+Package hyperref Warning: Option `pdftex' has already been used,
+(hyperref)                setting the option has no effect on input line 1369.
+
+Package zref Info: New property list: pdfcomment on input line 2735.
+Package zref Info: New property: PCPDFOBJID on input line 2736.
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/chngcntr/chngcntr
+.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/makecell/makecell
+.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen187
+\ar@mcellbox=\box56
+\extrarowheight=\dimen188
+\NC@list=\toks28
+\extratabsurround=\skip91
+\backup@length=\skip92
+\ar@cellbox=\box57
+)
+\rotheadsize=\dimen189
+\c@nlinenum=\count312
+\TeXr@lab=\toks29
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/tools/tabularx.st
+y
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen190
+\TX@old@table=\dimen191
+\TX@old@col=\dimen192
+\TX@target=\dimen193
+\TX@delta=\dimen194
+\TX@cols=\count313
+\TX@ftn=\toks30
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/lscape.s
+ty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/textpos/textpos.s
+ty
+Package: textpos 2019/04/15 v1.9.1
+Package: textpos 2019/04/15 1.9.1, absolute positioning of text on the page
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/ms/everyshi.sty
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+)
+\TP@textbox=\box58
+\TP@holdbox=\box59
+\TPHorizModule=\dimen195
+\TPVertModule=\dimen196
+\TP@margin=\dimen197
+\TP@absmargin=\dimen198
+Grid set 16 x 16 = 38.39343pt x 49.68562pt
+\TPboxrulesize=\dimen199
+\TP@ox=\dimen256
+\TP@oy=\dimen257
+\TP@tbargs=\toks31
+\TP@prevdepth=\dimen258
+TextBlockOrigin set to 0pt x 0pt
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 101.
+Package hyperref Info: Option `plainpages' set `true' on input line 101.
+\c@savesection=\count314
+\c@apdxsection=\count315
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/ragged2e/ragged2e
+.sty
+Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/ms/everysel.sty
+Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
+)
+\CenteringLeftskip=\skip93
+\RaggedLeftLeftskip=\skip94
+\RaggedRightLeftskip=\skip95
+\CenteringRightskip=\skip96
+\RaggedLeftRightskip=\skip97
+\RaggedRightRightskip=\skip98
+\CenteringParfillskip=\skip99
+\RaggedLeftParfillskip=\skip100
+\RaggedRightParfillskip=\skip101
+\JustifyingParfillskip=\skip102
+\CenteringParindent=\skip103
+\RaggedLeftParindent=\skip104
+\RaggedRightParindent=\skip105
+\JustifyingParindent=\skip106
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry
+.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.st
+y
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count316
+\Gm@cntv=\count317
+\c@Gm@tempcnt=\count318
+\Gm@bindingoffset=\dimen259
+\Gm@wd@mp=\dimen260
+\Gm@odd@mp=\dimen261
+\Gm@even@mp=\dimen262
+\Gm@layoutwidth=\dimen263
+\Gm@layoutheight=\dimen264
+\Gm@layouthoffset=\dimen265
+\Gm@layoutvoffset=\dimen266
+\Gm@dimlist=\toks32
+))
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/upquote/upquote.s
+ty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backe
+nd-pdfmode.def
+File: l3backend-pdfmode.def 2020-02-23 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count319
+\l__pdf_internal_box=\box60
+) (./techreport.aux)
+\openout1 = `techreport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 96
+.
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 20.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 23.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 26.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 46.
+
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/epstopdf-pkg/epst
+opdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epsto
+pdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\symgns@font=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/phv/m/n --> TS1/phv/b/n on input line 96.
+Package gensymb Info: Math companion symbols declared on input line 96.
+LaTeX Info: Redefining \degree on input line 96.
+LaTeX Info: Redefining \celsius on input line 96.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
+erthousand on input line 96.
+LaTeX Info: Redefining \ohm on input line 96.
+Package gensymb Info: Using \textohm for \ohm on input line 96.
+Package gensymb Info: Using \textmu for \micro on input line 96.
+LaTeX Info: Redefining \microtypecontext on input line 96.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `basictext'.
+LaTeX Info: Redefining \showhyphens on input line 96.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `phv' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 96.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\AtBeginShipoutBox=\box61
+Package hyperref Info: Link coloring ON on input line 96.
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/hyperref/nameref.
+sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/gettitlestring/
+gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count320
+)
+LaTeX Info: Redefining \ref on input line 96.
+LaTeX Info: Redefining \pageref on input line 96.
+LaTeX Info: Redefining \nameref on input line 96.
+(./techreport.out) (./techreport.out)
+\@outlinefile=\write4
+\openout4 = `techreport.out'.
+
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/pdflscape/pdflsca
+pe.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+Package soulpos Info: Loading soulutf8 on input line 96.
+
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/soulutf8/soulut
+f8.sty
+Package: soulutf8 2019/12/15 v1.2 Permit use of UTF-8 characters in soul (HO)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks33
+\SOUL@lasttoken=\toks34
+\SOUL@cmds=\toks35
+\SOUL@buffer=\toks36
+\SOUL@token=\toks37
+\SOUL@spaceskip=\skip107
+\SOUL@ttwidth=\dimen267
+\SOUL@uldp=\dimen268
+\SOUL@ulht=\dimen269
+)) ABD: EveryShipout initializing macros ABD: EverySelectfont initializing macr
+os
+LaTeX Info: Redefining \selectfont on input line 96.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-39.5pt
+* \headheight=14.5pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Option `pageanchor' set `false' on input line 101.
+LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 101.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+01.
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.
+cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+01.
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+101.
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+101.
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 101.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 101.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 101.
+LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
+01.
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 17.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 20.
+
+
+LaTeX Warning: Font shape declaration has incorrect series value `mc'.
+               It should not contain an `m'! Please correct it.
+               Found on input line 34.
+
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `phv' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+<csas-style/images/e_dfo_c.png, id=32, 1215.54124pt x 88.33pt>
+File: csas-style/images/e_dfo_c.png Graphic file (type png)
+<use csas-style/images/e_dfo_c.png>
+Package pdftex.def Info: csas-style/images/e_dfo_c.png  used on input line 101.
+
+(pdftex.def)             Requested size: 274.0785pt x 19.91692pt.
+<csas-style/images/canada_c.png, id=33, 3014.26125pt x 719.68875pt>
+File: csas-style/images/canada_c.png Graphic file (type png)
+<use csas-style/images/canada_c.png>
+Package pdftex.def Info: csas-style/images/canada_c.png  used on input line 101
+.
+(pdftex.def)             Requested size: 83.38687pt x 19.91692pt.
+[1
+
+\openout3 = `techreport.upa'.
+
+{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdft
+ex.map} <./csas-style/images/e_dfo_c.png> <./csas-style/images/canada_c.png>]
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
+[2
+
+]
+Package hyperref Info: Option `pageanchor' set `true' on input line 101.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10.95> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 101.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 101.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 101.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 101.
+[1
+
+] [2
+
+] (./techreport.toc)
+\tf@toc=\write5
+\openout5 = `techreport.toc'.
+
+[3
+
+] [4
+
+] [5
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.139   H
+         old the calipers perpendicular to the plane of measurement and pres...
+[1
+
+]
+Package marginnote Info: Using workaround for absolute page number on input lin
+e 139.
+
+Underfull \hbox (badness 1178) in paragraph at lines 166--168
+\T1/phv/m/n/10.95 (+20) re-peata-bil-ity) but car-ried on mea-sur-ing this di-m
+en-sion on the re-main-ing fish for 
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.170   E
+         ach measurement was ranked in terms of `Ease of Use' and `Repeatabi...
+[2]pdfTeX warning (ext4): destination with the same identifier (name{page.3}) h
+as been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.172 \clearpage
+                 [3]
+Underfull \hbox (badness 10000) in paragraph at lines 184--184
+[]\T1/phv/m/n/12 (+20) Table 1. |[][]Def-i-ni-tion of head di-men-sions mea-sur
+ed and in-struc-tions for po-si-tion-ing the
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 186.
+
+Overfull \hbox (1239.45436pt too wide) in paragraph at lines 186--202
+[][] 
+ []
+
+
+Overfull \hbox (588.60933pt too wide) in paragraph at lines 208--229
+[][] 
+ []
+
+<C:/github/headresults/figures/Figure1.jpg, id=110, 770.88pt x 578.16pt>
+File: C:/github/headresults/figures/Figure1.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure1.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure1.jpg  used on inp
+ut line 236.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+File: C:/github/headresults/figures/Figure1.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure1.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure1.jpg  used on inp
+ut line 236.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+File: C:/github/headresults/figures/Figure1.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure1.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure1.jpg  used on inp
+ut line 236.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+File: C:/github/headresults/figures/Figure1.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure1.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure1.jpg  used on inp
+ut line 236.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+<C:/github/headresults/figures/Figure2.jpg, id=112, 172.4844pt x 129.6042pt>
+File: C:/github/headresults/figures/Figure2.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure2.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure2.jpg  used on inp
+ut line 245.
+(pdftex.def)             Requested size: 433.62pt x 325.84883pt.
+File: C:/github/headresults/figures/Figure2.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure2.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure2.jpg  used on inp
+ut line 245.
+(pdftex.def)             Requested size: 433.62pt x 325.84883pt.
+File: C:/github/headresults/figures/Figure2.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure2.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure2.jpg  used on inp
+ut line 245.
+(pdftex.def)             Requested size: 433.62pt x 325.84883pt.
+File: C:/github/headresults/figures/Figure2.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure2.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure2.jpg  used on inp
+ut line 245.
+(pdftex.def)             Requested size: 433.62pt x 325.84883pt.
+<C:/github/headresults/figures/Figure3.jpg, id=114, 770.88pt x 578.16pt>
+File: C:/github/headresults/figures/Figure3.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure3.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure3.jpg  used on inp
+ut line 254.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+File: C:/github/headresults/figures/Figure3.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure3.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure3.jpg  used on inp
+ut line 254.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+File: C:/github/headresults/figures/Figure3.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure3.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure3.jpg  used on inp
+ut line 254.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+File: C:/github/headresults/figures/Figure3.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure3.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure3.jpg  used on inp
+ut line 254.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+<C:/github/headresults/figures/Figure4.jpg, id=116, 770.88pt x 578.16pt>
+File: C:/github/headresults/figures/Figure4.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure4.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure4.jpg  used on inp
+ut line 263.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+File: C:/github/headresults/figures/Figure4.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure4.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure4.jpg  used on inp
+ut line 263.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+File: C:/github/headresults/figures/Figure4.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure4.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure4.jpg  used on inp
+ut line 263.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+File: C:/github/headresults/figures/Figure4.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure4.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure4.jpg  used on inp
+ut line 263.
+(pdftex.def)             Requested size: 433.62pt x 325.2142pt.
+<C:/github/headresults/figures/Figure5.jpg, id=118, 831.85782pt x 571.38469pt>
+File: C:/github/headresults/figures/Figure5.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure5.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure5.jpg  used on inp
+ut line 272.
+(pdftex.def)             Requested size: 433.62pt x 297.84538pt.
+File: C:/github/headresults/figures/Figure5.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure5.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure5.jpg  used on inp
+ut line 272.
+(pdftex.def)             Requested size: 433.62pt x 297.84538pt.
+File: C:/github/headresults/figures/Figure5.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure5.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure5.jpg  used on inp
+ut line 272.
+(pdftex.def)             Requested size: 433.62pt x 297.84538pt.
+File: C:/github/headresults/figures/Figure5.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure5.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure5.jpg  used on inp
+ut line 272.
+(pdftex.def)             Requested size: 433.62pt x 297.84538pt.
+<C:/github/headresults/figures/Figure1a.jpg, id=120, 469.755pt x 365.86688pt>
+File: C:/github/headresults/figures/Figure1a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure1a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure1a.jpg  used on in
+put line 281.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure1a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure1a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure1a.jpg  used on in
+put line 281.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure1a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure1a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure1a.jpg  used on in
+put line 281.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure1a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure1a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure1a.jpg  used on in
+put line 281.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+<C:/github/headresults/figures/Figure2a.jpg, id=122, 469.755pt x 365.86688pt>
+File: C:/github/headresults/figures/Figure2a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure2a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure2a.jpg  used on in
+put line 290.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure2a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure2a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure2a.jpg  used on in
+put line 290.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure2a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure2a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure2a.jpg  used on in
+put line 290.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure2a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure2a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure2a.jpg  used on in
+put line 290.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+<C:/github/headresults/figures/Figure3a.jpg, id=124, 469.755pt x 385.44pt>
+File: C:/github/headresults/figures/Figure3a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure3a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure3a.jpg  used on in
+put line 299.
+(pdftex.def)             Requested size: 433.62pt x 355.79124pt.
+File: C:/github/headresults/figures/Figure3a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure3a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure3a.jpg  used on in
+put line 299.
+(pdftex.def)             Requested size: 433.62pt x 355.79124pt.
+File: C:/github/headresults/figures/Figure3a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure3a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure3a.jpg  used on in
+put line 299.
+(pdftex.def)             Requested size: 433.62pt x 355.79124pt.
+File: C:/github/headresults/figures/Figure3a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure3a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure3a.jpg  used on in
+put line 299.
+(pdftex.def)             Requested size: 433.62pt x 355.79124pt.
+<C:/github/headresults/figures/Figure4a.jpg, id=126, 469.755pt x 365.86688pt>
+File: C:/github/headresults/figures/Figure4a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure4a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure4a.jpg  used on in
+put line 308.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure4a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure4a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure4a.jpg  used on in
+put line 308.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure4a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure4a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure4a.jpg  used on in
+put line 308.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure4a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure4a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure4a.jpg  used on in
+put line 308.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+<C:/github/headresults/figures/Figure5a.jpg, id=128, 469.755pt x 365.86688pt>
+File: C:/github/headresults/figures/Figure5a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure5a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure5a.jpg  used on in
+put line 317.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure5a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure5a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure5a.jpg  used on in
+put line 317.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure5a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure5a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure5a.jpg  used on in
+put line 317.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+File: C:/github/headresults/figures/Figure5a.jpg Graphic file (type jpg)
+<use C:/github/headresults/figures/Figure5a.jpg>
+Package pdftex.def Info: C:/github/headresults/figures/Figure5a.jpg  used on in
+put line 317.
+(pdftex.def)             Requested size: 433.62pt x 337.72372pt.
+
+AED: lastpage setting LastPage
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.323 \end{document}
+                     [4
+
+]pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.323 \end{document}
+                     [5 <c:/github/headresults/figures/Figure1.jpg>] [6 <c:/git
+hub/headresults/figures/Figure2.jpg>] [7 <c:/github/headresults/figures/Figure3
+.jpg>] [8 <c:/github/headresults/figures/Figure4.jpg>] [9 <c:/github/headresult
+s/figures/Figure5.jpg>] [10 <c:/github/headresults/figures/Figure1a.jpg>] [11 <
+c:/github/headresults/figures/Figure2a.jpg>] [12 <c:/github/headresults/figures
+/Figure3a.jpg>] [13 <c:/github/headresults/figures/Figure4a.jpg>] [14 <c:/githu
+b/headresults/figures/Figure5a.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 323.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 323.
+(./techreport.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 323.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 323.
+Package rerunfilecheck Info: File `techreport.out' has not changed.
+(rerunfilecheck)             Checksum: 92F569FB184C7BBD32DE92A713E96968;304.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 323.
+ ) 
+Here is how much of TeX's memory you used:
+ 17577 strings out of 482938
+ 312302 string characters out of 5958759
+ 627364 words of memory out of 5000000
+ 32246 multiletter control sequences out of 15000+600000
+ 601894 words of font info for 149 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 49i,14n,77p,1721b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.e
+nc}<c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic
+/uhvb8a.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw
+/helvetic/uhvbo8a.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts
+/type1/urw/helvetic/uhvr8a.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-d
+ist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on techreport.pdf (21 pages, 971444 bytes).
+PDF statistics:
+ 219 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 39541 words of extra memory for PDF output out of 42996 (max. 10000000)
+

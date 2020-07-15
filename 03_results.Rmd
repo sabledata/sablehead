@@ -1,0 +1,10 @@
+# Results
+
+A simple linear regression was calculated to predict sablefish fork length based on interorbital head length.
+
+
+
+
+
+
+

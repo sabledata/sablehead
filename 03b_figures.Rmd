@@ -1,0 +1,135 @@
+# Figures
+```{r code}
+    options("scipen"=100, "digits"=12)
+
+    # read data
+    head        <- paste("select SPECIMEN_ID, sex, FORKLENGTHcm, Round_Weightg, InterOrbital_Distance ", 
+                         "from Head_Measurements where InterOrbital_Distance is not null ", sep="")
+    #hd         <- GetSQLData(head,"Sablefish")      # read from sql server and store in csv
+    hd          <- read.csv("C:/DATA/ADMIN/StatsRefresher/Datasets/Reg/Mercury/hd.csv")
+    
+    # scatter plot the raw data  # par(mfrow=c(1,2))
+    prelimplothd <-ggplot(data=hd, aes(x=InterOrbital_Distance, y=FORKLENGTHcm), label=SPECIMEN_ID) +
+                   # ggtitle('Fork Length vs. Interorbital') +
+                   ylab(expression("Interorbital length"~"("*mu*"m)")) + 
+                   xlab('Fork length (cm)') +
+                  geom_point()           # +
+                 #geom_text(aes(label=SPECIMEN_ID),hjust=0, vjust=0)
+    # prelimplothd  
+    
+    #  fit the regression line and get the results on regular data including outliers(hd)
+    hd.fit.outliers        <-  lm(FORKLENGTHcm ~ InterOrbital_Distance, data=hd)
+    hd.fit.outliersummary  <-  summary(hd.fit.outliers)
+
+    diagplothd    <- autoplot(hd.fit.outliers)         # Regression diagnostic plots
+    # plot(residuals(hd.fit.outliers))                # plot the residuals
+    # abline(h=0)
+    
+    # Run regression and display residual-fitted plot
+    lm.good <-  lm(FORKLENGTHcm ~ InterOrbital_Distance, data=hd)
+    # plot(lm.good, which = 1) 
+    
+    keephd         <- abs(residuals(hd.fit.outliers))<100
+    hd2            <- hd[keephd,]
+    hd.fit         <- lm(FORKLENGTHcm ~ InterOrbital_Distance, data=hd2)
+    hd.fit.summary <- summary(hd.fit)
+    
+    hd2.len        <- length(hd2$sex)    # after 434  --> hd.fit
+    hd.len         <- length(hd$sex)    # before 437   --> hd.fit.outliers
+    
+    #layout(matrix(1:4,2,2))
+    #new.data    <- plot(hd.fit)                 # plot the new data
+    #raw.data    <- plot(hd.fit.outliers)       # plot the old data
+    
+    #identify     <- plot(hd$InterOrbital_Distance, hd$FORKLENGTHcm,
+     #               main=  'forklength vs.interorbital',
+     #               sub=   'Outliers denoted by filled circles',
+     #               ylab=  'fork length',
+     #               xlab=  'interorbital',
+     #               pch=   16+keephd)
+     # abline(hd.fit)
+     hddiagplot  <-  autoplot(hd.fit.outliers)
+
+```
+
+(ref:figure1) Upper jaw measurement.
+
+```{r figure1, fig.cap='(ref:figure1)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}
+
+    img <-  paste('C:/github/headresults/figures/Figure1.jpeg',sep="")   # -- retrieve png 
+             knitr::include_graphics(img)
+    
+```
+
+(ref:figure2) Eye diameter measurement.
+
+```{r figure2, fig.cap='(ref:figure2)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
+
+    img  <-  paste('C:/github/headresults/figures/Figure2.jpeg',sep="")   # -- retrieve png 
+                           knitr::include_graphics(img)
+```
+
+(ref:figure3) Interorbital measurement.
+
+```{r figure3, fig.cap='(ref:figure3)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
+
+    img  <-  paste('C:/github/headresults/figures/Figure3.jpeg',sep="")   # -- retrieve png 
+                           knitr::include_graphics(img)
+```
+
+(ref:figure4) Post orbital to preoperculum length measurement.
+
+```{r figure4, fig.cap='(ref:figure4)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
+
+    img  <-  paste('C:/github/headresults/figures/Figure4.jpeg',sep="")   # -- retrieve png 
+                           knitr::include_graphics(img)
+```
+
+(ref:figure5) Post orbital head length. 
+
+```{r figure5, fig.cap='(ref:figure5)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
+
+    img  <-  paste('C:/github/headresults/figures/Figure5.jpeg',sep="")   # -- retrieve png 
+                           knitr::include_graphics(img)
+```
+
+(ref:figure6) Scatterplot upper jaw vs fork length.
+
+```{r figure6, fig.cap='(ref:figure6)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
+
+    img  <-  paste('C:/github/headresults/figures/Figure1a.jpeg',sep="")   # -- retrieve png 
+                           knitr::include_graphics(img)
+```
+
+(ref:figure7) Scatterplot eye diameter vs fork length.
+
+```{r figure7, fig.cap='(ref:figure7)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
+
+    img  <-  paste('C:/github/headresults/figures/Figure2a.jpeg',sep="")   # -- retrieve png 
+                           knitr::include_graphics(img)
+```
+
+(ref:figure8) Scatterplot interorbital vs fork length.
+
+```{r figure8, fig.cap='(ref:figure8)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
+
+    img  <-  paste('C:/github/headresults/figures/Figure3a.jpeg',sep="")   # -- retrieve png 
+                           knitr::include_graphics(img)
+```
+
+(ref:figure9) Scatterplot post orbital to preoperculum  vs fork length.
+
+```{r figure9, fig.cap='(ref:figure9)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
+
+    img  <-  paste('C:/github/headresults/figures/Figure4a.jpeg',sep="")   # -- retrieve png 
+                           knitr::include_graphics(img)
+```
+
+(ref:figure10) Scatterplot post orbital vs fork length.
+
+```{r figure10, fig.cap='(ref:figure10)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
+
+    img  <-  paste('C:/github/headresults/figures/Figure5a.jpeg',sep="")   # -- retrieve png 
+                           knitr::include_graphics(img)
+```
+
