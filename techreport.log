@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  15 JUL 2020 11:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  15 JUL 2020 14:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1144,215 +1144,215 @@ Overfull \hbox (588.60933pt too wide) in paragraph at lines 208--229
 [][] 
  []
 
-<C:/github/headresults/figures/Figure1.jpg, id=110, 770.88pt x 578.16pt>
-File: C:/github/headresults/figures/Figure1.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure1.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure1.jpg  used on inp
-ut line 236.
+<C:/github/sablehead/figures/Figure1.jpg, id=110, 770.88pt x 578.16pt>
+File: C:/github/sablehead/figures/Figure1.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure1.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure1.jpg  used on input
+ line 236.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-File: C:/github/headresults/figures/Figure1.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure1.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure1.jpg  used on inp
-ut line 236.
+File: C:/github/sablehead/figures/Figure1.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure1.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure1.jpg  used on input
+ line 236.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-File: C:/github/headresults/figures/Figure1.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure1.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure1.jpg  used on inp
-ut line 236.
+File: C:/github/sablehead/figures/Figure1.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure1.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure1.jpg  used on input
+ line 236.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-File: C:/github/headresults/figures/Figure1.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure1.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure1.jpg  used on inp
-ut line 236.
+File: C:/github/sablehead/figures/Figure1.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure1.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure1.jpg  used on input
+ line 236.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-<C:/github/headresults/figures/Figure2.jpg, id=112, 172.4844pt x 129.6042pt>
-File: C:/github/headresults/figures/Figure2.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure2.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure2.jpg  used on inp
-ut line 245.
+<C:/github/sablehead/figures/Figure2.jpg, id=112, 172.4844pt x 129.6042pt>
+File: C:/github/sablehead/figures/Figure2.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure2.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure2.jpg  used on input
+ line 245.
 (pdftex.def)             Requested size: 433.62pt x 325.84883pt.
-File: C:/github/headresults/figures/Figure2.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure2.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure2.jpg  used on inp
-ut line 245.
+File: C:/github/sablehead/figures/Figure2.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure2.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure2.jpg  used on input
+ line 245.
 (pdftex.def)             Requested size: 433.62pt x 325.84883pt.
-File: C:/github/headresults/figures/Figure2.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure2.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure2.jpg  used on inp
-ut line 245.
+File: C:/github/sablehead/figures/Figure2.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure2.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure2.jpg  used on input
+ line 245.
 (pdftex.def)             Requested size: 433.62pt x 325.84883pt.
-File: C:/github/headresults/figures/Figure2.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure2.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure2.jpg  used on inp
-ut line 245.
+File: C:/github/sablehead/figures/Figure2.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure2.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure2.jpg  used on input
+ line 245.
 (pdftex.def)             Requested size: 433.62pt x 325.84883pt.
-<C:/github/headresults/figures/Figure3.jpg, id=114, 770.88pt x 578.16pt>
-File: C:/github/headresults/figures/Figure3.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure3.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure3.jpg  used on inp
-ut line 254.
+<C:/github/sablehead/figures/Figure3.jpg, id=114, 770.88pt x 578.16pt>
+File: C:/github/sablehead/figures/Figure3.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure3.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure3.jpg  used on input
+ line 254.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-File: C:/github/headresults/figures/Figure3.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure3.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure3.jpg  used on inp
-ut line 254.
+File: C:/github/sablehead/figures/Figure3.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure3.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure3.jpg  used on input
+ line 254.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-File: C:/github/headresults/figures/Figure3.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure3.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure3.jpg  used on inp
-ut line 254.
+File: C:/github/sablehead/figures/Figure3.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure3.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure3.jpg  used on input
+ line 254.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-File: C:/github/headresults/figures/Figure3.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure3.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure3.jpg  used on inp
-ut line 254.
+File: C:/github/sablehead/figures/Figure3.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure3.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure3.jpg  used on input
+ line 254.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-<C:/github/headresults/figures/Figure4.jpg, id=116, 770.88pt x 578.16pt>
-File: C:/github/headresults/figures/Figure4.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure4.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure4.jpg  used on inp
-ut line 263.
+<C:/github/sablehead/figures/Figure4.jpg, id=116, 770.88pt x 578.16pt>
+File: C:/github/sablehead/figures/Figure4.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure4.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure4.jpg  used on input
+ line 263.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-File: C:/github/headresults/figures/Figure4.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure4.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure4.jpg  used on inp
-ut line 263.
+File: C:/github/sablehead/figures/Figure4.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure4.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure4.jpg  used on input
+ line 263.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-File: C:/github/headresults/figures/Figure4.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure4.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure4.jpg  used on inp
-ut line 263.
+File: C:/github/sablehead/figures/Figure4.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure4.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure4.jpg  used on input
+ line 263.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-File: C:/github/headresults/figures/Figure4.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure4.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure4.jpg  used on inp
-ut line 263.
+File: C:/github/sablehead/figures/Figure4.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure4.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure4.jpg  used on input
+ line 263.
 (pdftex.def)             Requested size: 433.62pt x 325.2142pt.
-<C:/github/headresults/figures/Figure5.jpg, id=118, 831.85782pt x 571.38469pt>
-File: C:/github/headresults/figures/Figure5.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure5.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure5.jpg  used on inp
-ut line 272.
+<C:/github/sablehead/figures/Figure5.jpg, id=118, 831.85782pt x 571.38469pt>
+File: C:/github/sablehead/figures/Figure5.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure5.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure5.jpg  used on input
+ line 272.
 (pdftex.def)             Requested size: 433.62pt x 297.84538pt.
-File: C:/github/headresults/figures/Figure5.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure5.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure5.jpg  used on inp
-ut line 272.
+File: C:/github/sablehead/figures/Figure5.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure5.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure5.jpg  used on input
+ line 272.
 (pdftex.def)             Requested size: 433.62pt x 297.84538pt.
-File: C:/github/headresults/figures/Figure5.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure5.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure5.jpg  used on inp
-ut line 272.
+File: C:/github/sablehead/figures/Figure5.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure5.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure5.jpg  used on input
+ line 272.
 (pdftex.def)             Requested size: 433.62pt x 297.84538pt.
-File: C:/github/headresults/figures/Figure5.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure5.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure5.jpg  used on inp
-ut line 272.
+File: C:/github/sablehead/figures/Figure5.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure5.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure5.jpg  used on input
+ line 272.
 (pdftex.def)             Requested size: 433.62pt x 297.84538pt.
-<C:/github/headresults/figures/Figure1a.jpg, id=120, 469.755pt x 365.86688pt>
-File: C:/github/headresults/figures/Figure1a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure1a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure1a.jpg  used on in
-put line 281.
+<C:/github/sablehead/figures/Figure1a.jpg, id=120, 469.755pt x 365.86688pt>
+File: C:/github/sablehead/figures/Figure1a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure1a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure1a.jpg  used on inpu
+t line 281.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure1a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure1a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure1a.jpg  used on in
-put line 281.
+File: C:/github/sablehead/figures/Figure1a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure1a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure1a.jpg  used on inpu
+t line 281.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure1a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure1a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure1a.jpg  used on in
-put line 281.
+File: C:/github/sablehead/figures/Figure1a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure1a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure1a.jpg  used on inpu
+t line 281.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure1a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure1a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure1a.jpg  used on in
-put line 281.
+File: C:/github/sablehead/figures/Figure1a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure1a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure1a.jpg  used on inpu
+t line 281.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-<C:/github/headresults/figures/Figure2a.jpg, id=122, 469.755pt x 365.86688pt>
-File: C:/github/headresults/figures/Figure2a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure2a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure2a.jpg  used on in
-put line 290.
+<C:/github/sablehead/figures/Figure2a.jpg, id=122, 469.755pt x 365.86688pt>
+File: C:/github/sablehead/figures/Figure2a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure2a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure2a.jpg  used on inpu
+t line 290.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure2a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure2a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure2a.jpg  used on in
-put line 290.
+File: C:/github/sablehead/figures/Figure2a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure2a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure2a.jpg  used on inpu
+t line 290.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure2a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure2a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure2a.jpg  used on in
-put line 290.
+File: C:/github/sablehead/figures/Figure2a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure2a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure2a.jpg  used on inpu
+t line 290.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure2a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure2a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure2a.jpg  used on in
-put line 290.
+File: C:/github/sablehead/figures/Figure2a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure2a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure2a.jpg  used on inpu
+t line 290.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-<C:/github/headresults/figures/Figure3a.jpg, id=124, 469.755pt x 385.44pt>
-File: C:/github/headresults/figures/Figure3a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure3a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure3a.jpg  used on in
-put line 299.
+<C:/github/sablehead/figures/Figure3a.jpg, id=124, 469.755pt x 385.44pt>
+File: C:/github/sablehead/figures/Figure3a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure3a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure3a.jpg  used on inpu
+t line 299.
 (pdftex.def)             Requested size: 433.62pt x 355.79124pt.
-File: C:/github/headresults/figures/Figure3a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure3a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure3a.jpg  used on in
-put line 299.
+File: C:/github/sablehead/figures/Figure3a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure3a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure3a.jpg  used on inpu
+t line 299.
 (pdftex.def)             Requested size: 433.62pt x 355.79124pt.
-File: C:/github/headresults/figures/Figure3a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure3a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure3a.jpg  used on in
-put line 299.
+File: C:/github/sablehead/figures/Figure3a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure3a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure3a.jpg  used on inpu
+t line 299.
 (pdftex.def)             Requested size: 433.62pt x 355.79124pt.
-File: C:/github/headresults/figures/Figure3a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure3a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure3a.jpg  used on in
-put line 299.
+File: C:/github/sablehead/figures/Figure3a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure3a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure3a.jpg  used on inpu
+t line 299.
 (pdftex.def)             Requested size: 433.62pt x 355.79124pt.
-<C:/github/headresults/figures/Figure4a.jpg, id=126, 469.755pt x 365.86688pt>
-File: C:/github/headresults/figures/Figure4a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure4a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure4a.jpg  used on in
-put line 308.
+<C:/github/sablehead/figures/Figure4a.jpg, id=126, 469.755pt x 365.86688pt>
+File: C:/github/sablehead/figures/Figure4a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure4a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure4a.jpg  used on inpu
+t line 308.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure4a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure4a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure4a.jpg  used on in
-put line 308.
+File: C:/github/sablehead/figures/Figure4a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure4a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure4a.jpg  used on inpu
+t line 308.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure4a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure4a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure4a.jpg  used on in
-put line 308.
+File: C:/github/sablehead/figures/Figure4a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure4a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure4a.jpg  used on inpu
+t line 308.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure4a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure4a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure4a.jpg  used on in
-put line 308.
+File: C:/github/sablehead/figures/Figure4a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure4a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure4a.jpg  used on inpu
+t line 308.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-<C:/github/headresults/figures/Figure5a.jpg, id=128, 469.755pt x 365.86688pt>
-File: C:/github/headresults/figures/Figure5a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure5a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure5a.jpg  used on in
-put line 317.
+<C:/github/sablehead/figures/Figure5a.jpg, id=128, 469.755pt x 365.86688pt>
+File: C:/github/sablehead/figures/Figure5a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure5a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure5a.jpg  used on inpu
+t line 317.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure5a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure5a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure5a.jpg  used on in
-put line 317.
+File: C:/github/sablehead/figures/Figure5a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure5a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure5a.jpg  used on inpu
+t line 317.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure5a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure5a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure5a.jpg  used on in
-put line 317.
+File: C:/github/sablehead/figures/Figure5a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure5a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure5a.jpg  used on inpu
+t line 317.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
-File: C:/github/headresults/figures/Figure5a.jpg Graphic file (type jpg)
-<use C:/github/headresults/figures/Figure5a.jpg>
-Package pdftex.def Info: C:/github/headresults/figures/Figure5a.jpg  used on in
-put line 317.
+File: C:/github/sablehead/figures/Figure5a.jpg Graphic file (type jpg)
+<use C:/github/sablehead/figures/Figure5a.jpg>
+Package pdftex.def Info: C:/github/sablehead/figures/Figure5a.jpg  used on inpu
+t line 317.
 (pdftex.def)             Requested size: 433.62pt x 337.72372pt.
 
 AED: lastpage setting LastPage
@@ -1368,13 +1368,13 @@ l.323 \end{document}
 <to be read again> 
                    \relax 
 l.323 \end{document}
-                     [5 <c:/github/headresults/figures/Figure1.jpg>] [6 <c:/git
-hub/headresults/figures/Figure2.jpg>] [7 <c:/github/headresults/figures/Figure3
-.jpg>] [8 <c:/github/headresults/figures/Figure4.jpg>] [9 <c:/github/headresult
-s/figures/Figure5.jpg>] [10 <c:/github/headresults/figures/Figure1a.jpg>] [11 <
-c:/github/headresults/figures/Figure2a.jpg>] [12 <c:/github/headresults/figures
-/Figure3a.jpg>] [13 <c:/github/headresults/figures/Figure4a.jpg>] [14 <c:/githu
-b/headresults/figures/Figure5a.jpg>]
+                     [5 <c:/github/sablehead/figures/Figure1.jpg>] [6 <c:/githu
+b/sablehead/figures/Figure2.jpg>] [7 <c:/github/sablehead/figures/Figure3.jpg>]
+[8 <c:/github/sablehead/figures/Figure4.jpg>] [9 <c:/github/sablehead/figures/F
+igure5.jpg>] [10 <c:/github/sablehead/figures/Figure1a.jpg>] [11 <c:/github/sab
+lehead/figures/Figure2a.jpg>] [12 <c:/github/sablehead/figures/Figure3a.jpg>] [
+13 <c:/github/sablehead/figures/Figure4a.jpg>] [14 <c:/github/sablehead/figures
+/Figure5a.jpg>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 323.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 323.
 (./techreport.aux)
@@ -1386,7 +1386,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 323.
  ) 
 Here is how much of TeX's memory you used:
  17577 strings out of 482938
- 312302 string characters out of 5958759
+ 312140 string characters out of 5958759
  627364 words of memory out of 5000000
  32246 multiletter control sequences out of 15000+600000
  601894 words of font info for 149 fonts, out of 8000000 for 9000
@@ -1398,7 +1398,7 @@ nc}<c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic
 /helvetic/uhvbo8a.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts
 /type1/urw/helvetic/uhvr8a.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-d
 ist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on techreport.pdf (21 pages, 971444 bytes).
+Output written on techreport.pdf (21 pages, 971480 bytes).
 PDF statistics:
  219 PDF objects out of 1000 (max. 8388607)
  176 compressed objects within 2 object streams

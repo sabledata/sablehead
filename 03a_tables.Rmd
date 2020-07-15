@@ -7,7 +7,7 @@
   library(kableExtra)
 
   options(knitr.kable.NA = '')
-  table1   <-  read.csv("c:/github/headresults/storage/table1.csv",header=T)
+  table1   <-  read.csv("c:/github/sablehead/storage/table1.csv",header=T)
 
    kableExtra::kable(table1,
                     booktabs = TRUE,linesep = "",
@@ -24,7 +24,7 @@
   library(kableExtra)
 
   options(knitr.kable.NA = '')
-  table1   <-  read.csv("c:/github/headresults/storage/table2.csv",header=T)
+  table1   <-  read.csv("c:/github/sablehead/storage/table2.csv",header=T)
 
    kableExtra::kable(table1,
                     booktabs = TRUE,linesep = "",

@@ -56,7 +56,7 @@
 
 ```{r figure1, fig.cap='(ref:figure1)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}
 
-    img <-  paste('C:/github/headresults/figures/Figure1.jpeg',sep="")   # -- retrieve png 
+    img <-  paste('C:/github/sablehead/figures/Figure1.jpeg',sep="")   # -- retrieve png 
              knitr::include_graphics(img)
     
 ```
@@ -65,7 +65,7 @@
 
 ```{r figure2, fig.cap='(ref:figure2)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
 
-    img  <-  paste('C:/github/headresults/figures/Figure2.jpeg',sep="")   # -- retrieve png 
+    img  <-  paste('C:/github/sablehead/figures/Figure2.jpeg',sep="")   # -- retrieve png 
                            knitr::include_graphics(img)
 ```
 
@@ -73,7 +73,7 @@
 
 ```{r figure3, fig.cap='(ref:figure3)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
 
-    img  <-  paste('C:/github/headresults/figures/Figure3.jpeg',sep="")   # -- retrieve png 
+    img  <-  paste('C:/github/sablehead/figures/Figure3.jpeg',sep="")   # -- retrieve png 
                            knitr::include_graphics(img)
 ```
 
@@ -81,7 +81,7 @@
 
 ```{r figure4, fig.cap='(ref:figure4)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
 
-    img  <-  paste('C:/github/headresults/figures/Figure4.jpeg',sep="")   # -- retrieve png 
+    img  <-  paste('C:/github/sablehead/figures/Figure4.jpeg',sep="")   # -- retrieve png 
                            knitr::include_graphics(img)
 ```
 
@@ -89,7 +89,7 @@
 
 ```{r figure5, fig.cap='(ref:figure5)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
 
-    img  <-  paste('C:/github/headresults/figures/Figure5.jpeg',sep="")   # -- retrieve png 
+    img  <-  paste('C:/github/sablehead/figures/Figure5.jpeg',sep="")   # -- retrieve png 
                            knitr::include_graphics(img)
 ```
 
@@ -97,7 +97,7 @@
 
 ```{r figure6, fig.cap='(ref:figure6)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
 
-    img  <-  paste('C:/github/headresults/figures/Figure1a.jpeg',sep="")   # -- retrieve png 
+    img  <-  paste('C:/github/sablehead/figures/Figure1a.jpeg',sep="")   # -- retrieve png 
                            knitr::include_graphics(img)
 ```
 
@@ -105,7 +105,7 @@
 
 ```{r figure7, fig.cap='(ref:figure7)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
 
-    img  <-  paste('C:/github/headresults/figures/Figure2a.jpeg',sep="")   # -- retrieve png 
+    img  <-  paste('C:/github/sablehead/figures/Figure2a.jpeg',sep="")   # -- retrieve png 
                            knitr::include_graphics(img)
 ```
 
@@ -113,7 +113,7 @@
 
 ```{r figure8, fig.cap='(ref:figure8)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
 
-    img  <-  paste('C:/github/headresults/figures/Figure3a.jpeg',sep="")   # -- retrieve png 
+    img  <-  paste('C:/github/sablehead/figures/Figure3a.jpeg',sep="")   # -- retrieve png 
                            knitr::include_graphics(img)
 ```
 
@@ -121,7 +121,7 @@
 
 ```{r figure9, fig.cap='(ref:figure9)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
 
-    img  <-  paste('C:/github/headresults/figures/Figure4a.jpeg',sep="")   # -- retrieve png 
+    img  <-  paste('C:/github/sablehead/figures/Figure4a.jpeg',sep="")   # -- retrieve png 
                            knitr::include_graphics(img)
 ```
 
@@ -129,7 +129,7 @@
 
 ```{r figure10, fig.cap='(ref:figure10)', results='asis',echo=FALSE,fig.height = 4, fig.width = 4,  fig.align = "center"}  
 
-    img  <-  paste('C:/github/headresults/figures/Figure5a.jpeg',sep="")   # -- retrieve png 
+    img  <-  paste('C:/github/sablehead/figures/Figure5a.jpeg',sep="")   # -- retrieve png 
                            knitr::include_graphics(img)
 ```
 
