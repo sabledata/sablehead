@@ -1,25 +1,27 @@
 ---
-title: "Sablefish (*Anoplopoma fimbria*) fork length predictions based on interorbital head length measurements."
-year: 20XX
+title: "Results of sablefish (*Anoplopoma fimbria*) head measurement study, putting our noggins together."
+year: 2020
 report_number: nnn
 author: |
-  First. M. Last^1^ and
-  Alex B. Smith^2^
-author_list: "Last, F.M. and Smith, A.B."
+  Kathryn x. Temple, 
+  Lisa C. Lacko and
+  Brendan M. Connors
+author_list: "Kathryn x. Temple and Lacko, L.C. and Connors, B.M."
 region: Pacific Region
 isbn: ""
 address: |
-  ^1^Pacific Biological Station\
+     Pacific Biological Station\
      Fisheries and Oceans Canada, 3190 Hammond Bay Road\
      Nanaimo, British Columbia, V9T 6N7, Canada\
-  ^2^Far, far away\
-     Another Galaxy
 phone: "(555) 555-5555"
-author_footnote: "Email: First.Author@dfo-mpo.gc.ca | telephone: (250) 756-5555"
+author_footnote: "Email: Kathryn.Temple@dfo-mpo.gc.ca | telephone: (250) 756-xxxx"
 abstract: |
-  Here is the abstract text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  This document describes sampling activities and summarizes results 
+
+  
 abstract_other: |
-  Voici le résumé. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+ 
+
 output:
  csasdown::techreport_pdf:
    french: false
@@ -37,30 +39,27 @@ lof: true
 # Any extra LaTeX code for the header:
 # header-includes:
 # - \usepackage{tikz}
+header-includes: \usepackage{pdflscape}
+                 
 ---
 
 ```{r setup, echo=FALSE, cache=FALSE, message=FALSE, results='hide', warning=FALSE}
 library(knitr)
-library(ggplot2)
-library(kableExtra)
-
-yr  <- 2020    # set the report year 
-
 if (is_latex_output()) {
-  knitr_figs_dir <- "knitr-figs-pdf/"
+  knitr_figs_dir  <- "knitr-figs-pdf/"
   knitr_cache_dir <- "knitr-cache-pdf/"
-  fig_out_type <- "png"
+  fig_out_type    <- "png"
 } else {
-  knitr_figs_dir <- "knitr-figs-docx/"
+  knitr_figs_dir  <- "knitr-figs-docx/"
   knitr_cache_dir <- "knitr-cache-docx/"
-  fig_out_type <- "png"
+  fig_out_type    <- "png"
 }
-fig_asp <- 0.618
+fig_asp   <- 0.618
 fig_width <- 9
 fig_out_width <- "6in"
-fig_dpi <- 180
+fig_dpi   <- 180
 fig_align <- "center"
-fig_pos <- "htb"
+fig_pos   <- "htb"
 opts_chunk$set(
   collapse = TRUE,
   warning = FALSE,
@@ -87,15 +86,148 @@ options(kableExtra.latex.load_packages = FALSE)
 ```{r load-libraries, cache=FALSE}
 # add other packages here:
 library(csasdown)
-library("RODBC")
-options(useFancyQuotes=FALSE) # renders summary output corrects
-library(ggfortify)
+message("year = ", rmarkdown::metadata$year)
+#browser()
+yr  <-  2020
+library(RODBC)
+library(knitr)
+library(magick)
+library(excelR)
+library(gapminder)
 library(ggplot2)
+library(dplyr)        # transform and summarize tabular data
+library(xtable)       # produces tables
+library(kableExtra)   # produces html tables with scrollbars, etc
+library(pacman)       # produces numbered tables and figures in order to reference them
+ #  if (!require("pacman")) install.packages("pacman")
+ #  pacman::p_load(knitr, captioner, bundesligR, stringr)
+library(bookdown)
+library(tableHTML)
+library(Rmisc)
+library(cowplot)
+library(rgdal)
+library(maps)
+library(ggspatial)
+library(png)
+library(grid)
 
-   GetSQLData <- function(strSQL,strDbName) {    # connect to SQL Server
-     cnn <- odbcDriverConnect(paste("Driver={SQL Server};Server=DFBCV9TWVASP001;", 
-                                    "Database=",strDbName,";Trusted_Connection=Yes",sep=""))
-     dat <- sqlQuery(cnn, strSQL)
-     odbcClose(cnn)
-    return(dat)     }  
+#  ----   G L O B A L --- F U N C T I O N S ---------------------------------
+  GetSQLData <- function(strSQL,strDbName) {    # connect to SQL Server
+         cnn <- odbcDriverConnect(paste("Driver={SQL Server};Server=DFBCV9TWVASP001;", 
+                                         "Database=",
+                                          strDbName,";
+                                          Trusted_Connection=Yes",
+                                          sep=""))
+            dat <- sqlQuery(cnn, strSQL)
+            odbcClose(cnn)
+            return(dat) 
+                                            }
+  
+  panLab <- function( x, y, txt, ... ) { # Allows text to be placed at 0<x<1, 0<y<1)
+            usr <- par( "usr" )
+            par( usr=c(0,1,0,1) )
+            text( x, y, txt, ... )
+            par( usr=usr )
+            #return( NULL )
+            }
+  
+  cleanf <- function(x){                            # function to remove duplicates
+            oldx <- c(FALSE, x[-1]==x[-length(x)])  # is value equal to previous value
+            res <- x
+            res[oldx] <- NA
+            return(res)
+            } 
+  
+  simpleCap <- function(x) {  # add capital first letter to each word
+            s <- strsplit(x, " ")[[1]]
+            paste(toupper(substring(s, 1,1)), substring(s, 2),
+            sep="", 
+            collapse=" ")
+            }
+  
+  firstup <- function(x) {   # add capital first letter to first word
+            substr(x, 1, 1) <- toupper(substr(x, 1, 1))
+            x
+  }
+  
+  format_cells <- function(df, rows ,cols, value = c("italics", "bold", "strikethrough")){
+            # select the correct markup
+            map    <- setNames(c("*", "**", "~~"), c("italics", "bold", "strikethrough"))
+            markup <- map[value]  
+            
+            for (r in rows){
+                  for(c in cols){
+                      df[[c]] <- as.character( df[[c]])  # -- make sure values not factors
+                      df[r, c] <- paste0(markup, df[r, c], markup)  # -- Update formatting
+                                }
+                           }
+                     return(df)
+            }
+            
+  fig_label <- function(text, region="figure", pos="topleft", cex=NULL, ...) {
+           
+            region <- match.arg(region, c("figure", "plot", "device"))
+            pos    <- match.arg(pos,    c("topleft",    "top", "topright", 
+                                          "left",       "center", "right", 
+                                          "bottomleft", "bottom", "bottomright"))
+           
+            if(region %in% c("figure", "device")) {
+              ds <- dev.size("in")
+              # xy coordinates of device corners in user coordinates
+              x <- grconvertX(c(0, ds[1]), from="in", to="user")
+              y <- grconvertY(c(0, ds[2]), from="in", to="user")
+           
+              # fragment of the device we use to plot
+              if(region == "figure") {
+                # account for the fragment of the device that 
+                # the figure is using
+                fig <- par("fig")
+                dx <- (x[2] - x[1])
+                dy <- (y[2] - y[1])
+                x <- x[1] + dx * fig[1:2]
+                y <- y[1] + dy * fig[3:4]
+              } 
+            }
+           
+            # much simpler if in plotting region
+            if(region == "plot") {
+              u <- par("usr")
+              x <- u[1:2]
+              y <- u[3:4]
+            }
+           
+            sw <- strwidth(text, cex=cex) * 60/100
+            sh <- strheight(text, cex=cex) * 60/100
+           
+            x1 <- switch(pos,
+              topleft     =x[1] + sw, 
+              left        =x[1] + sw,
+              bottomleft  =x[1] + sw,
+              top         =(x[1] + x[2])/2,
+              center      =(x[1] + x[2])/2,
+              bottom      =(x[1] + x[2])/2,
+              topright    =x[2] - sw,
+              right       =x[2] - sw,
+              bottomright =x[2] - sw)
+           
+            y1 <- switch(pos,
+              topleft     =y[2] - sh,
+              top         =y[2] - sh,
+              topright    =y[2] - sh,
+              left        =(y[1] + y[2])/2,
+              center      =(y[1] + y[2])/2,
+              right       =(y[1] + y[2])/2,
+              bottomleft  =y[1] + sh,
+              bottom      =y[1] + sh,
+              bottomright =y[1] + sh)
+           
+            old.par <- par(xpd=NA)
+            on.exit(par(old.par))
+           
+            text(x1, y1, text, cex=cex, ...)
+            return(invisible(c(x,y)))
+}
+  
 ```
+
+

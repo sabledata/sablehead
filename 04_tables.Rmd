@@ -1,0 +1,50 @@
+# Tables
+(ref:Table1Caption) Definition of head dimensions measured and instructions for positioning the calipers.
+\ \
+\ \
+```{r table1, echo=FALSE}
+     options(knitr.kable.NA = '')
+
+     table1   <-  read.csv("c:/github/sablehead/standalone/table1.csv", header=T)
+     kableExtra::kable(table1,
+                     booktabs = TRUE,linesep = "",
+                     format = "latex",  caption = "(ref:Table1Caption)") %>%
+                     row_spec(1,  hline_after = T) %>%
+                     row_spec(2,  hline_after = T) %>%
+                     row_spec(3,  hline_after = T) %>%
+                     row_spec(4,  hline_after = T) %>%
+                     row_spec(5,  hline_after = T) %>%
+
+     
+     kableExtra::kable_styling(font_size = 8) %>%
+                      column_spec(1, width  = "2.2cm") %>%
+                      column_spec(2, width  = "2.7cm") %>%
+                      column_spec(3, width  = "4.7cm") 
+
+```
+
+(ref:Table2Caption) Ease of Use and Repeatability Considerations for each Measurement.
+
+```{r table2, echo=FALSE}
+     options(knitr.kable.NA = '')
+
+     table2  <-  read.csv("c:/github/sablehead/standalone/table2.csv", header=T)
+     kableExtra::kable(table2,
+                     booktabs = TRUE,linesep = "",
+                     format = "latex",  caption = "(ref:Table2Caption)") %>%
+                     row_spec(1,  hline_after = T) %>%
+                     row_spec(2,  hline_after = T) %>%
+                     row_spec(3,  hline_after = T) %>%
+                     row_spec(4,  hline_after = T) %>%
+                     row_spec(5,  hline_after = T) %>%
+     
+     kableExtra::kable_styling(font_size = 8, position = "center") %>%
+                      column_spec(1, width  = "1.6cm") %>%
+                      column_spec(2, width  = "0.6cm") %>%
+                      column_spec(3, width  = "0.6cm") %>%
+                      column_spec(4, width  = "1.7cm") %>%
+                      column_spec(5, width  = "1.2cm") %>%
+                      column_spec(6, width  = "3.7cm")
+
+```
+\clearpage

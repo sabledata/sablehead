@@ -1,0 +1,398 @@
+# Figures
+```{r functions}
+    options("scipen"=100, "digits"=12)
+    # options(scipen = 999)  # no exponential format
+
+    hd    <-    read.csv("C:/github/sablehead/standalone/head_measurements.csv")
+    hdUj  <-    hd[hd$Upper_jaw_length > 0,]         # upper jaw length
+    hdEd  <-    hd[hd$Eye_Diameter > 0,]             # eye diameter
+    hdId  <-    hd[hd$InterOrbital_Distance > 0,]    # interorbital distance
+    hdSl  <-    hd[hd$Snout_length > 0,]             # snout length
+    hdPop <-    hd[hd$Postorbital_Preoperculum > 0,] # postorbital to preoperculum
+    hdPo  <-    hd[hd$Post_orbital_Head_length > 0,] # postorbital head length
+    
+    ggplotRegression <- function (fit,labelname) {
+               ggplot(fit$model, aes_string(x = names(fit$model)[2], y = names(fit$model)[1])) + 
+                      ylab('Fork length (mm)') +
+                      xlab(labelname) + 
+                      geom_point(colour="#72AFD2", shape=19, size=1) +
+                      stat_smooth(method = "lm",colour="black") +
+                      theme_bw() #+
+                       #labs(title = paste( "AdjR2= ",signif(summary(fit)$adj.r.squared, 5),
+                       #                   "b = ",signif(fit$coef[[1]],5 ),
+                       #                    "m= ",signif(fit$coef[[2]], 5),
+                       #                   "P = ",signif(summary(fit)$coef[2,4], 5)),
+                       #                    cex.lab=0.4)
+                                          }
+    
+    lm_eqn <- function(df,y,x, N){   # y = mx + b function
+              m      <- lm(y ~ x, df);
+              eq     <- substitute(italic(y) == a + b %.% italic(x)*","~~italic(r)^2~"="~r2~", n ="~italic(n)~" ", 
+              list(a =  format(unname(coef(m)[1]),    digits = 2),
+                   b =  format(unname(coef(m)[2]),    digits = 3),
+                   r2 = format(summary(m)$r.squared,  digits = 3),
+                   n  = N))
+                   as.character(as.expression(eq));
+                                          }
+    
+```
+
+(ref:figure1) Sample locations.
+
+```{r figure1, fig.cap='(ref:figure1)',warning=FALSE, echo=FALSE, message=FALSE, error= FALSE, width=5.5, height=7.5,fig.align='center'}
+
+    png("C:/github/sablehead/figures/Figure1.png",  width = 480, height = 680, units = "mm", res = 500) # write png to file
+    sql             <-   "select * from Head_Measurements_Report where SLAT > 0"  # head measurement data
+    pointdata       <-   GetSQLData(sql,"Sablefish")   # retrieve from seamount database
+
+    lon       <- data.frame(pointdata$SLAT)
+    lat       <- data.frame(pointdata$SLON)
+    spid      <- data.frame(pointdata$SPECIMEN_ID)
+    trip      <- data.frame(pointdata$TRIP_ID)
+    df        <- as.data.frame(cbind(lon,lat,spid,trip))   # add year, lat, long, specimen_id to dataframe
+                     
+    canada                <-   readOGR(dsn = "C:/github/sablehead/storage",layer ="awscntry_geo", verbose = FALSE)  # open shapefile   
+    shapefile_can         <-   fortify(canada)    # fortify for ggplot require.
+    points_df             <-   fortify(df)
+    
+    map       <-  ggplot() +
+                  geom_polygon(data = shapefile_can,  aes(x = long, y = lat, group = group), fill="gray40",  size = .2) +
+                  geom_point(data =   points_df,   aes(pointdata.SLON, pointdata.SLAT,  fill=factor(pointdata.TRIP_ID),  size=0.7) , 
+                                      colour="gray50", shape=21, size=6) +            
+                  theme_minimal()    +
+                  guides(fill=FALSE) + 
+                  guides(size=FALSE) + 
+                  guides(fill=guide_legend(title="Trip id")) +
+                  xlab("Longitude") + ylab("Latitude") + 
+                  theme(  text = element_text(size=40),
+                          plot.title      = element_blank(),
+                          legend.position = c(.19, 0.35),
+                          legend.justification = c("right", "top"),
+                          legend.box.just = "right",
+                          legend.margin = margin(6, 6, 6, 6)
+                          #axis.title.x = element_blank(),   
+                          #axis.title.y = element_blank()
+                          )
+   
+    map_projected  <- map +   # reproject to make it look better
+    coord_map()  +
+    annotation_north_arrow(location = "bl", which_north = "true",  # north arrow
+                           pad_x  = unit(3.75, "cm"),  
+                           pad_y  = unit(4.5,  "cm"),
+                           height = unit(2.5,  "cm"),
+                           width  = unit(2.5,  "cm"),
+                           style  = north_arrow_fancy_orienteering)
+    
+    map_projected        +
+    annotation_scale(location = "bl",
+                     pad_x = unit(1.0, "in"),  
+                     pad_y = unit(1.0, "in"),
+                     height = unit(0.5, "cm"),
+                     width  = unit(5.95,"cm"),
+                     text_cex = 2.2)   +
+                     coord_sf(crs = 4326)
+
+    while (!is.null(dev.list()))  dev.off()
+    img <-   paste('C:/github/sablehead/figures/Figure1.png',sep="")   # -- retrieve png 
+            knitr::include_graphics(img)
+   
+ 
+```
+
+(ref:figure2) A. Upper jaw measurement;  B. Eye diameter measurement;  C. Interorbital distance;  D. Snout length;  E. Post orbital to preoperculum length measurement; F. Post orbital head length.
+
+```{r figure2, fig.cap='(ref:figure2)', results='asis',echo=FALSE,fig.height = 8, fig.width = 8,  fig.align = "center"} 
+
+   png("C:/github/sablehead/figures/Figure2.png", res = 600) # write png to file
+    
+   img         <- readPNG("C:/github/sablehead/figures/Figure2a.png")
+   g           <- rasterGrob(img, interpolate=TRUE)   # get image A. Upper jaw measurement
+   img2        <- readPNG("C:/github/sablehead/figures/Figure2b.png")
+   g2          <- rasterGrob(img2, interpolate=TRUE)  # get image B. Eye diameter measurement
+   img3        <- readPNG("C:/github/sablehead/figures/Figure2c.png")
+   g3          <- rasterGrob(img3, interpolate=TRUE)  # get image C. Interorbital measurement
+   img4        <- readPNG("C:/github/sablehead/figures/Figure2d.png")
+   g4          <- rasterGrob(img4, interpolate=TRUE)  # get image D. Snout length 
+   img5        <- readPNG("C:/github/sablehead/figures/Figure2e.png")
+   g5          <- rasterGrob(img5, interpolate=TRUE)  # get image E. Post orbital to preoperculum length measurement
+   img6        <- readPNG("C:/github/sablehead/figures/Figure2f.png")
+   g6          <- rasterGrob(img6, interpolate=TRUE)  # get image F. Post orbital head length.   
+   
+   ggplot(data.frame(x = 1:3, y = 1:3), aes(x, y)) +
+          geom_point(size = 0.00001, color="white") +
+          annotation_custom(g,   xmin = 0.7,    xmax = 2.1,   ymin = 2.45,  ymax = 3.2)   +   
+          geom_text(x=0.99,  y=2.6, label="A.", size=0.6) +  # place fish image
+          annotation_custom(g2,  xmin = 1.87,   xmax = 3.2,   ymin = 2.45,  ymax = 3.2)   +   
+          geom_text(x=2.1,   y=2.6, label="B.", size=0.6) +  
+          annotation_custom(g3,  xmin = 0.7,    xmax = 2.1,   ymin = 1.65,  ymax = 2.4)   +    
+          geom_text(x=0.99,  y=2.0, label="C.", size=0.6) + 
+          annotation_custom(g4,  xmin = 1.87,   xmax = 3.2,   ymin = 1.65,  ymax = 2.4)   +   
+          geom_text(x=2.1,   y=2.0, label="D.", size=0.6) +  
+          annotation_custom(g5,  xmin = 0.7,    xmax = 2.1,   ymin = 0.85,  ymax = 1.6)   +   
+          geom_text(x=0.99,  y=1.22,label="E.", size=0.6) +  
+          annotation_custom(g6,  xmin = 1.87,   xmax = 3.35,  ymin = 0.85,  ymax = 1.6)   +   
+          geom_text(x=2.1,   y=1.22,label="F.", size=0.6) +
+          theme_void()
+   
+   
+     while (!is.null(dev.list()))  dev.off()
+     img <-   paste('C:/github/sablehead/figures/Figure2.png',sep="")   # -- retrieve png 
+              knitr::include_graphics(img)
+
+```
+
+(ref:figure3) Scatterplot upper jaw vs fork length, measurements in millimeters.
+
+```{r figure3, fig.cap='(ref:figure3)', results='asis',echo=FALSE, fig.align = "center"} 
+
+     png("C:/github/sablehead/figures/Figure3.png",  width=450, height=350) # write png to file
+
+     new_theme <- theme_bw() %+replace% 
+                  theme(legend.position = c(0.8, 0.2))
+     theme_set(new_theme)   # alter the bw theme so that legend has a position
+
+     #  fit the regression line and get the results
+     hd                     <-  hdUj                                        # original data
+     n                      <-  length(hd$SPECIMEN_ID)                      # number of specimens 
+     
+     hd.fit.outliers        <-  lm(Fork_Length ~ Upper_jaw_length, data=hd) # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     hd.fit.outliersummary  <-  summary(hd.fit.outliers)                    # summary
+     keephd                 <- abs(residuals(hd.fit.outliers)) < 100            
+     hdnew                  <- hd[keephd,]                                   
+     hd.fit.new             <- lm(Fork_Length ~ Upper_jaw_length, data=hdnew)
+     hd.fit.new.summary     <- summary(hd.fit.new)
+    
+     hd$predicted       <- predict(hd.fit.outliers)   # save the predicted values
+     hd$residuals       <- residuals(hd.fit.outliers) # save the residual values
+     o                  <- abs(residuals(hd.fit.outliers)) > 100
+     h                  <- hd[o,]
+     h$indx             <- as.integer(rownames(h))    # label values considered outliers
+
+     
+     ggplot(hd, aes(x = Upper_jaw_length, y = Fork_Length)) +
+            ylab('Fork length (mm)') +
+            xlab("Upper jaw length (mm)") + 
+            geom_smooth(method = "lm", se = FALSE, color = "grey") +                # plot regression slope
+            geom_segment(aes(xend = Upper_jaw_length, yend = predicted), alpha = .5) +   # alpha to fade lines
+            geom_point(aes(color = residuals), size=1.5) +  
+            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +     # blue to white to red
+            geom_point(aes(y = predicted), shape = 21, size=1) +  
+            #scale_shape(solid = FALSE) +
+            geom_text(data=h,x = h$Upper_jaw_length, y = h$Fork_Length+18, label = h$indx, size=3.0) +   #label outliers
+            geom_text(x = 50, y = 1000, 
+                      label = lm_eqn(hd, hd$Fork_Length, hd$Upper_jaw_length, n), parse = TRUE, size=4.2)
+
+     while (!is.null(dev.list()))  dev.off()
+     img <-   paste('C:/github/sablehead/figures/Figure3.png',sep="")   # -- retrieve png 
+              knitr::include_graphics(img)
+
+```
+
+(ref:figure4) Scatterplot eye diameter vs fork length, measurements in millimeters.
+
+```{r figure4, fig.cap='(ref:figure4)', results='asis',echo=FALSE, fig.align = "center"}  
+
+     png("C:/github/sablehead/figures/Figure4.png", width=450, height=350) # write png to file
+
+   #  fit the regression line and get the results
+     hd                     <-  hdEd                                       # original data
+     n                      <-  length(hd$SPECIMEN_ID)                      # number of specimens 
+     
+     hd.fit.outliers        <- lm(Fork_Length ~ Eye_Diameter, data=hd) # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     hd.fit.outliersummary  <- summary(hd.fit.outliers)                    # summary
+     keephd                 <- abs(residuals(hd.fit.outliers)) < 100            
+     hdnew                  <- hd[keephd,]                                   
+     hd.fit.new             <- lm(Fork_Length ~ Eye_Diameter, data=hdnew)
+     hd.fit.new.summary     <- summary(hd.fit.new)
+    
+     hd$predicted       <- predict(hd.fit.outliers)   # save the predicted values
+     hd$residuals       <- residuals(hd.fit.outliers) # save the residual values
+     o                  <- abs(residuals(hd.fit.outliers)) > 100
+     h                  <- hd[o,]
+     h$indx             <- as.integer(rownames(h))    # label values considered outliers
+     
+     ggplot(hd, aes(x = Eye_Diameter, y = Fork_Length)) +
+            ylab('Fork length (mm)') +
+            xlab("Eye diameter (mm)") + 
+            geom_smooth(method = "lm", se = FALSE, color = "grey") +                # plot regression slope
+            geom_segment(aes(xend = Eye_Diameter, yend = predicted), alpha = .5) +   # alpha to fade lines
+            geom_point(aes(color = residuals), size=1.5) +  
+            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +     # blue to white to red
+            geom_point(aes(y = predicted), shape = 21, size=1) +  
+            #scale_shape(solid = FALSE) +
+            geom_text(data=h,x = h$Eye_Diameter, y = h$Fork_Length+18, label = h$indx, size=3.0) +   #label outliers
+            geom_text(x = 20, y = 1000, 
+                      label = lm_eqn(hd, hd$Fork_Length, hd$Eye_Diameter, n), parse = TRUE, size=4.2)
+
+     while (!is.null(dev.list()))  dev.off()
+     img <-   paste('C:/github/sablehead/figures/Figure4.png',sep="")   # -- retrieve png 
+              knitr::include_graphics(img)
+
+```
+
+(ref:figure5) Scatterplot interorbital vs fork length.
+
+```{r figure5, fig.cap='(ref:figure5)', results='asis',echo=FALSE, fig.align = "center"}  
+
+  png("C:/github/sablehead/figures/Figure5.png",  width=450, height=350) # write png to file
+
+   #  fit the regression line and get the results
+     hd                     <-  hdId                                       # original data
+     n                      <-  length(hd$SPECIMEN_ID)                      # number of specimens 
+     
+     hd.fit.outliers        <-  lm(Fork_Length ~ InterOrbital_Distance, data=hd) # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     hd.fit.outliersummary  <-  summary(hd.fit.outliers)                    # summary
+     keephd                 <- abs(residuals(hd.fit.outliers)) < 100            
+     hdnew                  <- hd[keephd,]                                   
+     hd.fit.new             <- lm(Fork_Length ~ InterOrbital_Distance, data=hdnew)
+     hd.fit.new.summary     <- summary(hd.fit.new)
+    
+     hd$predicted       <- predict(hd.fit.outliers)   # save the predicted values
+     hd$residuals       <- residuals(hd.fit.outliers) # save the residual values
+     o                  <- abs(residuals(hd.fit.outliers)) > 100
+     h                  <- hd[o,]
+     h$indx             <- as.integer(rownames(h))    # label values considered outliers
+     
+     ggplot(hd, aes(x = InterOrbital_Distance, y = Fork_Length)) +
+            ylab('Fork length (mm)') +
+            xlab("InterOrbital Distance (mm)") + 
+            geom_smooth(method = "lm", se = FALSE, color = "grey") +                # plot regression slope
+            geom_segment(aes(xend = InterOrbital_Distance, yend = predicted), alpha = .5) +   # alpha to fade lines
+            geom_point(aes(color = residuals), size=1.5) +  
+            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +     # blue to white to red
+            geom_point(aes(y = predicted), shape = 21, size=1) +  
+            #scale_shape(solid = FALSE) +
+            geom_text(data=h,x = h$InterOrbital_Distance, y = h$Fork_Length+18, label = h$indx, size=3.0) +   #label outliers
+            geom_text(x = 50, y = 1000, 
+                      label = lm_eqn(hd, hd$Fork_Length, hd$InterOrbital_Distance, n), parse = TRUE, size=4.2)
+
+     while (!is.null(dev.list()))  dev.off()
+     img <-   paste('C:/github/sablehead/figures/Figure5.png',sep="")   # -- retrieve png 
+              knitr::include_graphics(img)
+```
+
+(ref:figure6) Scatterplot snout length  vs fork length.
+
+```{r figure6, fig.cap='(ref:figure6)', results='asis',echo=FALSE,fig.align = "center"}  
+
+png("C:/github/sablehead/figures/Figure6.png",   width=450, height=350) # write png to file
+
+   #  fit the regression line and get the results
+     hd                     <-  hdSl                                      # original data
+     n                      <-  length(hd$SPECIMEN_ID)                      # number of specimens 
+     
+     hd.fit.outliers        <-  lm(Fork_Length ~ Snout_length, data=hd) # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     hd.fit.outliersummary  <-  summary(hd.fit.outliers)                    # summary
+     keephd                 <-  abs(residuals(hd.fit.outliers)) < 100            
+     hdnew                  <-  hd[keephd,]                                   
+     hd.fit.new             <-  lm(Fork_Length ~ Snout_length, data=hdnew)
+     hd.fit.new.summary     <-  summary(hd.fit.new)
+    
+     hd$predicted       <- predict(hd.fit.outliers)   # save the predicted values
+     hd$residuals       <- residuals(hd.fit.outliers) # save the residual values
+     o                  <- abs(residuals(hd.fit.outliers)) > 100
+     h                  <- hd[o,]
+     h$indx             <- as.integer(rownames(h))    # label values considered outliers
+     
+     ggplot(hd, aes(x = Snout_length, y = Fork_Length)) +
+            ylab('Fork length (mm)') +
+            xlab("Snout length (mm)") + 
+            geom_smooth(method = "lm", se = FALSE, color = "grey") +                # plot regression slope
+            geom_segment(aes(xend = Snout_length, yend = predicted), alpha = .5) +   # alpha to fade lines
+            geom_point(aes(color = residuals), size=1.5) +  
+            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +     # blue to white to red
+            geom_point(aes(y = predicted), shape = 21, size=1) +  
+            #scale_shape(solid = FALSE) +
+            geom_text(data=h,x = h$Snout_length, y = h$Fork_Length+18, label = h$indx, size=3.0) +   #label outliers
+            geom_text(x = 50, y = 1000, 
+                      label = lm_eqn(hd, hd$Fork_Length, hd$Snout_length, n), parse = TRUE, size=4.2)
+
+     while (!is.null(dev.list()))  dev.off()
+     img <-   paste('C:/github/sablehead/figures/Figure6.png',sep="")   # -- retrieve png 
+              knitr::include_graphics(img)
+```
+
+(ref:figure7) Scatterplot post orbital to preoperculum  vs fork length.
+
+```{r figure7, fig.cap='(ref:figure7)', results='asis',echo=FALSE,fig.align = "center"}  
+
+     png("C:/github/sablehead/figures/Figure7.png",  width=450, height=340) # write png to file
+
+   #  fit the regression line and get the results
+     hd                     <-  hdPop                                      # original data
+     n                      <-  length(hd$SPECIMEN_ID)                      # number of specimens 
+     
+     hd.fit.outliers        <-  lm(Fork_Length ~ Postorbital_Preoperculum, data=hd) # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     hd.fit.outliersummary  <-  summary(hd.fit.outliers)                    # summary
+     keephd                 <-  abs(residuals(hd.fit.outliers)) < 100            
+     hdnew                  <-  hd[keephd,]                                   
+     hd.fit.new             <-  lm(Fork_Length ~ Postorbital_Preoperculum, data=hdnew)
+     hd.fit.new.summary     <-  summary(hd.fit.new)
+    
+     hd$predicted       <- predict(hd.fit.outliers)   # save the predicted values
+     hd$residuals       <- residuals(hd.fit.outliers) # save the residual values
+     o                  <- abs(residuals(hd.fit.outliers)) > 100
+     h                  <- hd[o,]
+     h$indx             <- as.integer(rownames(h))    # label values considered outliers
+     
+     ggplot(hd, aes(x = Postorbital_Preoperculum, y = Fork_Length)) +
+            ylab('Fork length (mm)') +
+            xlab("Postorbital to preoperculum (mm)") + 
+            geom_smooth(method = "lm", se = FALSE, color = "grey") +                # plot regression slope
+            geom_segment(aes(xend = Postorbital_Preoperculum, yend = predicted), alpha = .5) +   # alpha to fade lines
+            geom_point(aes(color = residuals), size=1.5) +  
+            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +     # blue to white to red
+            geom_point(aes(y = predicted), shape = 21, size=1) +  
+            #scale_shape(solid = FALSE) +
+            geom_text(data=h,x = h$Postorbital_Preoperculum, y = h$Fork_Length+18, label = h$indx, size=3.0) +   #label outliers
+            geom_text(x = 20, y = 1000, 
+                      label = lm_eqn(hd, hd$Fork_Length, hd$Postorbital_Preoperculum, n), parse = TRUE, size=4.2)
+
+     while (!is.null(dev.list()))  dev.off()
+     img <-   paste('C:/github/sablehead/figures/Figure7.png',sep="")   # -- retrieve png 
+              knitr::include_graphics(img)
+     
+```
+
+(ref:figure8) Scatterplot post orbital vs fork length.
+
+```{r figure8, fig.cap='(ref:figure8)', results='asis',echo=FALSE, fig.height=4, fig.align = "center"}  
+
+       png("C:/github/sablehead/figures/Figure8.png",  width=450, height=340) # write png to file
+
+   #  fit the regression line and get the results
+     hd                     <-  hdPo                                        # original data
+     n                      <-  length(hd$SPECIMEN_ID)                      # number of specimens 
+     
+     hd.fit.outliers        <-  lm(Fork_Length ~ Postorbital_Preoperculum, data=hd) # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     hd.fit.outliersummary  <-  summary(hd.fit.outliers)                    # summary
+     keephd                 <-  abs(residuals(hd.fit.outliers)) < 100            
+     hdnew                  <-  hd[keephd,]                                   
+     hd.fit.new             <-  lm(Fork_Length ~ Post_orbital_Head_length, data=hdnew)
+     hd.fit.new.summary     <-  summary(hd.fit.new)
+    
+     hd$predicted       <- predict(hd.fit.outliers)   # save the predicted values
+     hd$residuals       <- residuals(hd.fit.outliers) # save the residual values
+     o                  <- abs(residuals(hd.fit.outliers)) > 100
+     h                  <- hd[o,]
+     h$indx             <- as.integer(rownames(h))    # label values considered outliers
+     
+     ggplot(hd, aes(x = Post_orbital_Head_length, y = Fork_Length)) +
+            ylab('Fork length (mm)') +
+            xlab("Postorbital head length (mm)") + 
+            geom_smooth(method = "lm", se = FALSE, color = "grey") +                # plot regression slope
+            geom_segment(aes(xend = Post_orbital_Head_length, yend = predicted), alpha = .5) +   # alpha to fade lines
+            geom_point(aes(color = residuals), size=1.5) +  
+            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +     # blue to white to red
+            geom_point(aes(y = predicted), shape = 21, size=1) +  
+            #scale_shape(solid = FALSE) +
+            geom_text(data=h,x = h$Post_orbital_Head_length, y = h$Fork_Length+18, label = h$indx, size=3.0) +   #label outliers
+            geom_text(x = 50, y = 1000, 
+                      label = lm_eqn(hd, hd$Fork_Length, hd$Post_orbital_Head_length, n), parse = TRUE, size=4.2)
+
+     while (!is.null(dev.list()))  dev.off()
+     img <-   paste('C:/github/sablehead/figures/Figure8.png',sep="")   # -- retrieve png 
+              knitr::include_graphics(img)
+              
+```
+\clearpage

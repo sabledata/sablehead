@@ -1,0 +1,27 @@
+
+    #  fit the regression line and get the results on regular data including outliers(hdId)
+    hd                     <-  hdPop   # original data
+    hd.fit.outliers        <-  lm(Fork_Length ~ Eye_Diameter, data=hd)
+    hd.fit.outliersummary  <-  summary(hd.fit.outliers)
+    plot(hd.fit.outliers, which = 1)    # basically the first diagnostic plot (residuals) from autoplot(hd.fit.outliers) 
+    # plot(residuals(hd.fit.outliers))             # another way to plot the residuals
+    # abline(h=0)
+    
+    keephd             <- abs(residuals(hd.fit.outliers))<100
+    hdnew              <- hd[keephd,]
+    hd.fit.new         <- lm(Fork_Length ~ Postorbital_Preoperculum, data=hdnew)
+    hd.fit.new.summary <- summary(hd.fit.new)
+    
+    n  <-  length(hdnew$SPECIMEN_ID)   
+    #length(hd$SPECIMEN_ID)     # before 437  
+    
+     ggplotRegression(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdnew), 
+                                 expression("Postorbital to preoperculum length (mm)") ) + 
+                      geom_point(data =  hd, aes(Postorbital_Preoperculum, Fork_Length),
+                                 color= "#C2373A") +
+                      geom_point(data =  hdnew, aes(Postorbital_Preoperculum, Fork_Length),
+                                 color="#3478B5") +
+                      geom_text(x = 30, y = 1000, 
+                                 label = lm_eqn(hdPop, hdPop$Fork_Length, hdPop$Postorbital_Preoperculum, n), 
+                                 parse = TRUE, size=3.2, fontface = "plain")
+     

@@ -60,32 +60,30 @@
 \usepackage{\locRepo/tech-report}
 
 % header-includes from R markdown entry
-
+\usepackage{pdflscape}
 
 %%%%% Variables %%%%%
 
 % New definitions: Title, year, report number, authors
 % Protect lower case words (i.e., species names) in \Addlcwords{}, in "TechReport.sty"
-\newcommand{\trTitle}{Sablefish (\emph{Anoplopoma fimbria}) fork length predictions based on interorbital head length measurements.}
-\newcommand{\trYear}{20XX}
+\newcommand{\trTitle}{Results of sablefish (\emph{Anoplopoma fimbria}) head measurement study, putting our noggins together.}
+\newcommand{\trYear}{2020}
 \newcommand{\trReportNum}{nnn}
 % Optional
-\newcommand{\trAuthFootA}{Email: \href{mailto:First.Author@dfo-mpo.gc.ca}{\nolinkurl{First.Author@dfo-mpo.gc.ca}} \textbar{} telephone: (250) 756-5555}
-\newcommand{\trAuthsLong}{First. M. Last\textsuperscript{1} and Alex B. Smith\textsuperscript{2}}
-\newcommand{\trAuthsBack}{Last, F.M. and Smith, A.B.}
+\newcommand{\trAuthFootA}{Email: \href{mailto:Kathryn.Temple@dfo-mpo.gc.ca}{\nolinkurl{Kathryn.Temple@dfo-mpo.gc.ca}} \textbar{} telephone: (250) 756-xxxx}
+\newcommand{\trAuthsLong}{Kathryn x. Temple, Lisa C. Lacko and Brendan M. Connors}
+\newcommand{\trAuthsBack}{Kathryn x. Temple and Lacko, L.C. and Connors, B.M.}
 
 % New definition: Address
-\newcommand{\trAddy}{\textsuperscript{1}Pacific Biological Station\\
+\newcommand{\trAddy}{Pacific Biological Station\\
 Fisheries and Oceans Canada, 3190 Hammond Bay Road\\
-Nanaimo, British Columbia, V9T 6N7, Canada\\
-\textsuperscript{2}Far, far away\\
-Another Galaxy}
+Nanaimo, British Columbia, V9T 6N7, Canada\\}
 
 % Abstract
-\newcommand{\trAbstract}{Here is the abstract text. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+\newcommand{\trAbstract}{This document describes sampling activities and summarizes results}
 
 % Resume (i.e., French abstract)
-\newcommand{\trResume}{Voici le résumé. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.}
+\newcommand{\trResume}{}
 
 \newcommand{\trISBN}{}
 
@@ -176,57 +174,61 @@ Sablefish head morphometric project: Summary Mar 15, 2017.
 
 A simple linear regression was calculated to predict sablefish fork length based on interorbital head length.
 
-\#Tables
+\hypertarget{tables}{%
+\section{Tables}\label{tables}}
 
 
-\begin{table}[!h]
 
-\caption{\label{tab:table1}Definition of head dimensions measured and instructions for positioning the calipers.}
+\begin{table}
+
+\caption{\label{tab:table1}Definition of head dimensions measured and instructions for positioning the calipers. ~\\
+\hspace*{0.333em}\\}
+\centering
 \fontsize{8}{10}\selectfont
-\begin{tabular}[t]{ll}
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{2.2cm}>{\raggedright\arraybackslash}p{2.7cm}>{\raggedright\arraybackslash}p{4.7cm}}
 \toprule
-MEASUREMENT \vphantom{3} \vphantom{2} \vphantom{1} & INSTRUCTIONS.FOR.POSITIONING.CALIPERS\\
+Measurement.type & Head.dimensions & Instructions.for.positioning.calipers\\
 \midrule
-Eye Diameter (anterior-posterior diameter of eye socket) & Use the outward-facing points of the calipers. Stretch them firmly against the eye socket at the vertical midpoint of the eye\\
- & \\
-InterOrbital Distance (narrowest distance between eye sockets, measured on dorsal surface) & Measure at the horizontal midpoint of the eyes on the dorsal surface.\\
- & \\
-Snout length (tip of snout to anterior inner edge of eye socket) & Measure from the most forward point/centre of the snout, to the horizontal midpoint of the anterior edge of the eye socket\\
- & \\
-Upper jaw length (tip of snout to the posterior edge of the maxilla) & Measure from the most forward point/centre of the snout to the back of the maxilla.\\
- & \\
-Post orbital head length (Posterior inner edge of orbit to dorsal insertion of opercle) & Measure from the back of the eye socket (caliper vertically centred), to the ‘gill cover notch’ at the dorsal insertion of the opercle.  Hold the operculum taut and measure to the bone underneath the gill cover notch rather than to the flap of skin that forms the notch itself.\\
-Post orbital to preoperculum distance (posterior inner edge of orbit to visual insertion point of preopercle)?Need to re-word? & Measure from the back of the eye socket (caliper vertically centred), to the preopercle.  Lift the preopercle away from the fish slightly so that you can see the preopercle bone underneath the skin. Measure to the point at which you can see the preopercle bone insertion point (this will be underneath the skin and won’t necessarily be where the gill slit ends.\\
+Upper jaw length & tip of snout to the posterior edge of the maxilla & Measure from the most forward point/centre of the snout to the back of the maxilla.\\
+\hline
+Eye diameter & anterior-posterior diameter of eye socket & Use the outward-facing points of the calipers. Stretch them firmly against the eye socket at the vertical midpoint of the eye\\
+\hline
+InterOrbital distance & narrowest distance between eye sockets, measured on dorsal surface & Measure at the horizontal midpoint of the eyes on the dorsal surface.\\
+\hline
+Snout length & tip of snout to anterior inner edge of eye socket & Measure from the most forward point/centre of the snout, to the horizontal midpoint of the anterior edge of the eye socket\\
+\hline
+Post orbital to preoperculum distance & posterior inner edge of orbit to visual insertion point of preopercle & Measure from the back of the eye socket (caliper vertically centred), to the preopercle.  Lift the preopercle away from the fish slightly so that you can see the preopercle bone underneath the skin. Measure to the point at which you can see the preopercle bone insertion point (this will be underneath the skin and won’t necessarily be where the gill slit ends.\\
+\hline
+Post orbital head length & posterior inner edge of orbit to dorsal insertion of opercle & Measure from the back of the eye socket (caliper vertically centred), to the ‘gill cover notch’ at the dorsal insertion of the opercle.  Hold the operculum taut and measure to the bone underneath the gill cover notch rather than to the flap of skin that forms the notch itself.\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{table}[!h]
+\begin{table}
 
 \caption{\label{tab:table2}Ease of Use and Repeatability Considerations for each Measurement.}
+\centering
 \fontsize{8}{10}\selectfont
-\begin{tabular}[t]{lrrlrl}
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{1.6cm}>{\raggedleft\arraybackslash}p{0.6cm}>{\raggedleft\arraybackslash}p{0.6cm}>{\raggedleft\arraybackslash}p{1.7cm}>{\raggedleft\arraybackslash}p{1.2cm}>{\raggedright\arraybackslash}p{3.7cm}}
 \toprule
-Type & N & R & Ease.of.use & Repeatability & Considerations\\
+Measurement & N & R & Ease.of.use & Repeatability & Considerations\\
 \midrule
-Snout length & 437 & 0.976 & 4 & 5 & Bony part; can measure on right or left side\\
- &  &  &  &  & Must ensure caliper is in centre of snout\\
+Upper jaw length & 437 & 0.973 & 3 & 4 & Bony part; can measure on right or left side.  Electronic Calipers tended to malfunction when longer measurements attempted; had to use manual calipers for >15cm distances; somewhat awkward to measure. The end of the maxilla can be hard to define. Must ensure caliper is in center of snout\\
 \hline
-Upper jaw length & 437 & 0.973 & 3 & 4 & Bony part; can measure on right or left side\\
- &  &  & -ÿÿÿÿÿÿÿÿÿ b &  & Electronic Calipers tended to malfunction when longer measurements attempted; had to use manual calipers for >15cm distances; somewhat awkward to measure.\\
- &  &  &  &  & The end of the maxilla can be hard to define.\\
- &  &  &  &  & Must ensure caliper is in center of snout\\
+Eye diameter & 438 & 0.938 & 3 & 2 & Easy to define where to hold the calipers in the eye socket, but the tissue is soft/stretchy so its difficult to know how hard to press against the flesh; can measure on right or left side. Uses the outside rather than the inside of the calipers (? slower); Soft tissue so repeatability is questionable; somewhat awkward to measure\\
+\hline
 Interorbital distance & 437 & 0.971 & 5 & 5 & Bony part;  Easy to define where to hold calipers; so far there has been no reason (eg damage) to not include this measurement\\
-Post orbital to pre-operculum & 426 & 0.965 & 4 & 5 & Bony part; can measure on right or left side\\
- &  &  &  &  & Maybe need to improve definition of instruction of where to hold caliper on pre-operculum\\
-Post orbital head length & 130 & 0.956 & 3 & 2 & Can measure on right or left side\\
- &  &  &  &  & Operculum was cut off on some fish, likely to be cut off on commercially caught fish. Electronic Calipers tended to malfunction when longer measurements attempted; had to use manual calipers for >15 cm distances\\
- &  &  &  &  & \\
-Eye diameter & 438 & 0.938 & 3 & 2 & Easy to define where to hold the calipers in the eye socket, but the tissue is soft/stretchy so its difficult to know how hard to press against the flesh; can measure on right or left side\\
- &  &  &  &  & Uses the outside rather than the inside of the calipers (? slower); Soft tissue so repeatability is questionable; somewhat awkward to measure\\
+\hline
+Snout length & 437 & 0.976 & 4 & 5 & Bony part; can measure on right or left side; must ensure caliper is in centre of snout\\
+\hline
+Post orbital to pre-operculum & 426 & 0.965 & 4 & 5 & Bony part; can measure on right or left side.  Maybe need to improve definition of instruction of where to hold caliper on pre-operculum\\
+\hline
+Post orbital head length & 130 & 0.956 & 3 & 2 & Can measure on right or left side. Operculum was cut off on some fish, likely to be cut off on commercially caught fish. Electronic Calipers tended to malfunction when longer measurements attempted; had to use manual calipers for >15 cm distances\\
 \bottomrule
 \end{tabular}
 \end{table}
+\clearpage
+
 \hypertarget{figures}{%
 \section{Figures}\label{figures}}
 
@@ -237,7 +239,7 @@ Eye diameter & 438 & 0.938 & 3 & 2 & Easy to define where to hold the calipers i
 
 }
 
-\caption{Upper jaw measurement.}\label{fig:figure1}
+\caption{Sample locations.}\label{fig:figure1}
 \end{figure}
 
 \begin{figure}[htb]
@@ -246,7 +248,7 @@ Eye diameter & 438 & 0.938 & 3 & 2 & Easy to define where to hold the calipers i
 
 }
 
-\caption{Eye diameter measurement.}\label{fig:figure2}
+\caption{A. Upper jaw measurement; B. Eye diameter measurement; C. Interorbital distance; D. Snout length; E. Post orbital to preoperculum length measurement; F. Post orbital head length.}\label{fig:figure2}
 \end{figure}
 
 \begin{figure}[htb]
@@ -255,7 +257,7 @@ Eye diameter & 438 & 0.938 & 3 & 2 & Easy to define where to hold the calipers i
 
 }
 
-\caption{Interorbital measurement.}\label{fig:figure3}
+\caption{Scatterplot upper jaw vs fork length, measurements in millimeters.}\label{fig:figure3}
 \end{figure}
 
 \begin{figure}[htb]
@@ -264,7 +266,7 @@ Eye diameter & 438 & 0.938 & 3 & 2 & Easy to define where to hold the calipers i
 
 }
 
-\caption{Post orbital to preoperculum length measurement.}\label{fig:figure4}
+\caption{Scatterplot eye diameter vs fork length, measurements in millimeters.}\label{fig:figure4}
 \end{figure}
 
 \begin{figure}[htb]
@@ -273,51 +275,34 @@ Eye diameter & 438 & 0.938 & 3 & 2 & Easy to define where to hold the calipers i
 
 }
 
-\caption{Post orbital head length.}\label{fig:figure5}
+\caption{Scatterplot interorbital vs fork length.}\label{fig:figure5}
 \end{figure}
 
 \begin{figure}[htb]
 
-{\centering \pdftooltip{\includegraphics[width=6in]{C:/github/sablehead/figures/Figure1a}}{Figure \ref{fig:figure6}} 
+{\centering \pdftooltip{\includegraphics[width=6in]{C:/github/sablehead/figures/Figure6}}{Figure \ref{fig:figure6}} 
 
 }
 
-\caption{Scatterplot upper jaw vs fork length.}\label{fig:figure6}
+\caption{Scatterplot snout length vs fork length.}\label{fig:figure6}
 \end{figure}
 
 \begin{figure}[htb]
 
-{\centering \pdftooltip{\includegraphics[width=6in]{C:/github/sablehead/figures/Figure2a}}{Figure \ref{fig:figure7}} 
+{\centering \pdftooltip{\includegraphics[width=6in]{C:/github/sablehead/figures/Figure7}}{Figure \ref{fig:figure7}} 
 
 }
 
-\caption{Scatterplot eye diameter vs fork length.}\label{fig:figure7}
+\caption{Scatterplot post orbital to preoperculum vs fork length.}\label{fig:figure7}
 \end{figure}
 
 \begin{figure}[htb]
 
-{\centering \pdftooltip{\includegraphics[width=6in]{C:/github/sablehead/figures/Figure3a}}{Figure \ref{fig:figure8}} 
+{\centering \pdftooltip{\includegraphics[width=6in]{C:/github/sablehead/figures/Figure8}}{Figure \ref{fig:figure8}} 
 
 }
 
-\caption{Scatterplot interorbital vs fork length.}\label{fig:figure8}
+\caption{Scatterplot post orbital vs fork length.}\label{fig:figure8}
 \end{figure}
-
-\begin{figure}[htb]
-
-{\centering \pdftooltip{\includegraphics[width=6in]{C:/github/sablehead/figures/Figure4a}}{Figure \ref{fig:figure9}} 
-
-}
-
-\caption{Scatterplot post orbital to preoperculum vs fork length.}\label{fig:figure9}
-\end{figure}
-
-\begin{figure}[htb]
-
-{\centering \pdftooltip{\includegraphics[width=6in]{C:/github/sablehead/figures/Figure5a}}{Figure \ref{fig:figure10}} 
-
-}
-
-\caption{Scatterplot post orbital vs fork length.}\label{fig:figure10}
-\end{figure}
+\clearpage
 \end{document}
