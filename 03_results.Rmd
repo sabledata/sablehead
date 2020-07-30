@@ -1,6 +1,50 @@
 # Results
 
-A simple linear regression was calculated to predict sablefish fork length based on interorbital head length.
+```{r yisFORKLENGTH}
+
+    lmp <- function (modelobject) {                    #  p value function
+           if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
+                 f <- summary(modelobject)$fstatistic
+                 p <- pf(f[1],f[2],f[3],lower.tail=F)
+                 attributes(p) <- NULL
+                 return(p)
+    }
+
+    lmslp <- function (modelobject) {                    #  p value function
+             if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
+                 slp <- signif(modelobject$coef[[2]], 5)
+                 return(slp)
+    }
+    
+    lmR <- function (modelobject) {                    #  p value function
+             if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
+                 r2 =  format(summary(modelobject)$r.squared,  digits = 3)
+                 return(r2)
+    }
+    
+    
+    
+    options("scipen"=100, "digits"=3)
+    
+    details <-    paste("select * from Head_Measurements_Report", sep="")
+    #hd     <-    GetSQLData(details,"Sablefish")      # head details from SQL Server
+    hd      <-    read.csv("C:/github/sablehead/standalone/head_measurements.csv")  # master data
+    
+    hdUj    <-    hd[hd$Upper_jaw_length > 0,]         # upper jaw length
+    hdEd    <-    hd[hd$Eye_Diameter > 0,]             # eye diameter  
+    hdId    <-    hd[hd$InterOrbital_Distance > 0,]    # interorbital distance
+    hdSl    <-    hd[hd$Snout_length > 0,]             # snout length
+    hdPop   <-    hd[hd$Postorbital_Preoperculum > 0,] # postorbital to preoperculum
+    hdPo    <-    hd[hd$Post_orbital_Head_length > 0,] # postorbital head length
+
+```    
+   
+The mean values of the predictor variables were ...........  (Table \@ref(tab:table2)).  
+The top ranked measurement in terms of ‘Ease of Use’ and ‘Repeatability’ was Interorbital distance (Table \@ref(tab:table3)).    
+
+We found evidence of relationships between upper jaw length and fork length (p = `r lmp(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))`) ; eye diameter and fork length (p = `r lmp(lm(Fork_Length ~ Eye_Diameter, data=hdEd))`); interorbital distance and fork length (p = `r lmp(lm(Fork_Length ~ InterOrbital_Distance, data=hdId))` ); upper snout length and fork length (p = `r lmp(lm(Fork_Length ~ Snout_length, data=hdSl))`); postorbital to preoperculum length and fork length (p = `r lmp(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop))`); and postorbital head length and fork length (p = `r lmp(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo))`).
+
+The estimated slope is `r lmslp(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))` (SE `r coef(summary(lm(Fork_Length ~ Upper_jaw_length, data=hdUj)))[,"Std. Error"][2]`) units of fork length per unit of upper jaw length; the estimated slope is `r lmslp(lm(Fork_Length ~ Eye_Diameter, data=hdEd))` (SE `r  coef(summary(lm(Fork_Length ~ Eye_Diameter, data=hdEd)))[, "Std. Error"][2]`) units of fork length per unit of eye diameter; the estimated slope is `r lmslp(lm(Fork_Length ~ InterOrbital_Distance, data=hdId))` (SE `r coef(summary(lm(Fork_Length ~ InterOrbital_Distance, data=hdId)))[, "Std. Error"][2]`) units of fork length per unit of interorbital distance; the estimated slope is `r lmslp(lm(Fork_Length ~ Snout_length, data=hdSl))` (SE `r coef(summary(lm(Fork_Length ~ Snout_length, data=hdSl)))[, "Std. Error"][2]` units of fork length per unit of snout length; the estimated slope is `r lmslp(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop))` (SE `r coef(summary(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop)))[, "Std. Error"][2]`) units of fork length per unit of postorbital to preoperculum length; and the estimated slope is `r lmslp(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo))` (SE `r coef(summary(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo)))[, "Std. Error"][2]`) units of fork length per unit of postorbital head length.
 
 
 

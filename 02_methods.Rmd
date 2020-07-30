@@ -4,39 +4,11 @@ Sablefish head morphometric project: Summary Mar 15, 2017.
 
 1.	431 Sablefish heads were collected on the 2016 WCVI and WCHG surveys using a trip-wide length stratified sampling protocol.
 
-2.	We have measured the head dimensions of all 431. In addition, we measured (fork length and head dimensions) and recorded the sex of 7 small sablefish that were collected previously on a salmon survey.
+2.	The 438 heads measured were from fish that ranged from 240-1080 mm fork length. 212 were collected on trip 79190 (WCVI), and 219 were from trip 80378 (WCHG).  In addition to measuring the head dimensions as described below, we collected tissue for DNA analysis (small fin clips collected in to 95% Ethanol) from the first 138 fish measured, and otoliths from every specimen (excluding the 7 small sablefish collected on the salmon survey).
 
-3.	The 438 heads measured were from fish that ranged from 240-1080 mm fork length. 212 were collected on trip 79190 (WCVI), and 219 were from trip 80378 (WCHG).  In addition to measuring the head dimensions as described below, we collected tissue for DNA analysis (small fin clips collected in to 95% Ethanol) from the first 138 fish measured, and otoliths from every specimen (excluding the 7 small sablefish collected on the salmon survey).
-4.	Table 1 – Definition of head dimensions measured and instructions for positioning the calipers:
-MEASUREMENT	INSTRUCTIONS FOR POSITIONING CALIPERS
-Eye Diameter (anterior-posterior diameter of eye socket)
-	Use the outward-facing points of the calipers. Stretch them firmly against the eye socket at the vertical midpoint of the eye
-InterOrbital Distance (narrowest distance between eye sockets, measured on dorsal surface)
-	Measure at the horizontal midpoint of the eyes on the dorsal surface.
-Snout length (tip of snout to anterior inner edge of eye socket)
-	Measure from the most forward point/centre of the snout, to the horizontal midpoint of the anterior edge of the eye socket
-Upper jaw length (tip of snout to the posterior edge of the maxilla)
-	Measure from the most forward point/centre of the snout to the back of the maxilla. 
-Post orbital head length (Posterior inner edge of orbit to dorsal insertion of opercle)	Measure from the back of the eye socket (caliper vertically centred), to the ‘gill cover notch’ at the dorsal insertion of the opercle.  Hold the operculum taut and measure to the bone underneath the gill cover notch rather than to the flap of skin that forms the notch itself.
-Post orbital to preoperculum distance (posterior inner edge of orbit to visual insertion point of preopercle)?Need to re-word?	Measure from the back of the eye socket (caliper vertically centred), to the preopercle.  Lift the preopercle away from the fish slightly so that you can see the preopercle bone underneath the skin. Measure to the point at which you can see the preopercle bone insertion point (this will be underneath the skin and won’t necessarily be where the gill slit ends.
+3.	Definition of 6 head dimensions measured and instructions for positioning the calipers (Table \@ref(tab:table1)).
 
-a.	For all measurements except for eye diameter, use the inward-facing points of the calipers
-b.	Hold the calipers perpendicular to the plane of measurement and press firmly against the surface of the fish.  Do not press so hard that the flesh of the fish distorts.
-c.	Measure on the right side of the head (if that is not possible, measure on the left side). (Include a note that the measurement was taken on the left, and why)
-
-d.	Other head dimension measurements tested but not used:
-i.	Head height, but we were not confident that we could measure consistently because some heads were squished, and also it was hard to define exactly where it should be measured.
-ii.	‘Head length’ (horizontal distance from tip of snout through midline of head to posterior margin of cleithrum, measured on dorsal surface) as described in the literature – we rejected this measurement because it was not clear as to where the cleithrum was located on the outside of the sablefish head. 
-iii.	Pelvic or pectoral fin length – this did not work very well - it was unclear as to where the measurement should be taken – the rays just get thinner and thinner until it is just membrane.
-iv.	Posterior orbit to anterior part of the terminus of the cleithrum (the bone that forms the posterior portion of the gill chamber.  Tried measuring to the anterior part of the terminus (triangular, most dorsal notch) (lifted the operculum, measured to the bone underneath the pointy part of the operculum.  But it moved around a lot (maybe in an intact fish this would be a good landmark but with nothing to hold it still, it didn’t seem to work particularly well for this purpose.  The other landmarks on the head (including the part of the cleithrum under the gill cover notch) were more supported by the skull.
-v.	Snout to the anterior terminus of the cleithrum on the ventral side, but this was no good (too hard to be consistent in measuring).
-
-5.	After measuring 137 fish, we looked at the preliminary data (excel scatter plots showing dimension vs fork length, and the correlation coefficients), and decided that a) we had enough tissue for the development of a genetic sex determination test (so wouldn’t collect any more tissue going forward), and that b) we would drop the ‘post orbital head length measurement for the remaining fish, in order to save time. The reason being, it was not as easy  to measure (calipers - did not work as well for big measurements, end points were not easy to define, and is not as easily repeatable as the other dimensions).  Also the operculum was sometimes cut off (and therefore not measurable) and we also suspect that the operculum would be cut off in commercially caught fish when they are processing.
-6.	We also flagged the ‘eye diameter’ measurement as being weak (due to questionable repeatability) but carried on measuring this dimension on the remaining fish for completeness. 
-
-7.	A total of 438 heads were measured but each dimension measured had a slightly different sample size. Reasons for the missing measurements were noted in the sampling comments (for example, on occasion we forgot to measure a dimension, could not measure a dimension because the fish was damaged; we also started measuring the ‘post orbital to preoperculum distance’ only after the first 13 fish). If the right side of the fish was damaged so that a measurement wasn’t possible, we measured on the left side. We noted this, but these measurements are included in the dataset.
-
-8.	Each measurement was ranked in terms of ‘Ease of Use’ and ‘Repeatability’ (Table 2). 
+4.	Each measurement was ranked in terms of ‘Ease of Use’ and ‘Repeatability’ 
 
 
 \clearpage

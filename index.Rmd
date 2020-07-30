@@ -5,8 +5,8 @@ report_number: nnn
 author: |
   Kathryn x. Temple, 
   Lisa C. Lacko and
-  Brendan M. Connors
-author_list: "Kathryn x. Temple and Lacko, L.C. and Connors, B.M."
+  B C
+author_list: "Kathryn x. Temple and Lacko, L.C. and B.C. "
 region: Pacific Region
 isbn: ""
 address: |
@@ -148,7 +148,7 @@ library(grid)
   firstup <- function(x) {   # add capital first letter to first word
             substr(x, 1, 1) <- toupper(substr(x, 1, 1))
             x
-  }
+            }
   
   format_cells <- function(df, rows ,cols, value = c("italics", "bold", "strikethrough")){
             # select the correct markup

@@ -18,7 +18,7 @@ GetSQLData <- function(strSQL,strDbName) {
 #index ------------------------------------------------------------------------------------------------------------------------------
 
    details     <-   paste("select * from Head_Measurements_Report", sep="")
-   sd             <-    GetSQLData(details,"Sablefish")  # -- survey details
+   sd             <-    GetSQLData(details,"Sablefish")  # -- head details
    write.table( sd, file = paste(path,"head_measurements.csv", sep=''), row.names=FALSE, na="",col.names=TRUE,  sep=",")
 
   

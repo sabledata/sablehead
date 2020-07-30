@@ -1,6 +1,11 @@
 # Introduction
 
-The tag and release study has been conducted annually since 1991.  Tagged fish are recovered mainly in the commercial fishery (trap, trawl, hook and line) and processed at the point of landing through the Dockside Monitoring Program (DMP) currently operated by Archipelago Marine Research (AMR).  Tags are also mailed in by individuals or recovered on research trips.... 
+The tag and release study has been conducted annually since 1991.  Whole tagged fish are recovered mainly in the commercial fishery (trap, trawl, hook and line) and processed at the point of landing through the Dockside Monitoring Program (DMP) currently operated by Archipelago Marine Research (AMR).  In order to eliminate whole fish samples, we assessed whether sablefish fork length and weight could be predicted from 6 different head dimension measurements.  Simple linear regression models were calculated from 431 specimens collected on the 2016 WCVI and WCHG surveys using a length stratified sampling protocol.
 
-In order to ...
+
+
+
+
+
+
 
