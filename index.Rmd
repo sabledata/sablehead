@@ -88,7 +88,9 @@ options(kableExtra.latex.load_packages = FALSE)
 library(csasdown)
 message("year = ", rmarkdown::metadata$year)
 #browser()
-yr  <-  2020
+yr     <-  2020
+path   <-  "c:/github/sablehead/standalone/"
+
 library(RODBC)
 library(knitr)
 library(magick)

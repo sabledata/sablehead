@@ -1,14 +1,26 @@
 # Methods
 
-Sablefish head morphometric project: Summary Mar 15, 2017.
+## Sample collection and evaluation
 
-1.	431 Sablefish heads were collected on the 2016 WCVI and WCHG surveys using a trip-wide length stratified sampling protocol.
+Measurements of fork length (FL), round weight (RW), upper jaw length (UJ), eye diameter (ED), interorbital distance (ID), snout length (SL), post orbital to preoperculum distance (PP), and post orbital head length (PH) were obtained from 212 sablefish caught during the 2016 West Coast Vancouver Island (WCVI) survey [@Williams2018 and 219 sablefish caught during the 2016 West Coast Haida Gwaii (WCHG) survey [@Nottingham2018]. Seven small sablefish were collected during the 201? salmon survey.  In addition, sagittal otoliths and operculum clips were collected.  Fish sex and maturity were recorded at sea (Table \@ref(tab:table1)).    
 
-2.	The 438 heads measured were from fish that ranged from 240-1080 mm fork length. 212 were collected on trip 79190 (WCVI), and 219 were from trip 80378 (WCHG).  In addition to measuring the head dimensions as described below, we collected tissue for DNA analysis (small fin clips collected in to 95% Ethanol) from the first 138 fish measured, and otoliths from every specimen (excluding the 7 small sablefish collected on the salmon survey).
+The six cranial dimensions were considered as possible candidates for estimating fork length.  Post orbital head lengths (PH)  were abandoned after 130 fish due to measurement difficulties (Table \@ref(tab:table1)).  Each of the 6 head dimensions were measured by Mitutoyo absolute 500-??? digital calipers and ranked in terms of ease of use and repeatability.   (Table \@ref(:table2)). 
 
-3.	Definition of 6 head dimensions measured and instructions for positioning the calipers (Table \@ref(tab:table1)).
+Later, a pilot study was conducted on the feasability of the commercial sector returning heads, rather than entire fish.  In 2017, 360 heads were collected from J-cut sablefish on a trip to the Bowie Seamount.  Each operculum was marked with either one knife cut (male) or two knife cuts (female) (Figure x)  The first 99 heads of the pilot study were measured by 3 technicians for IO, SN, UJ and PP.  
 
-4.	Each measurement was ranked in terms of ‘Ease of Use’ and ‘Repeatability’ 
+## Genetic test 
 
+
+## Pilot Collection of Sablefish Heads
+
+Heads were received by DFO in good condition (intact and not deformed), segregated by set, for measuring and otolith extraction.  Operculum cuts worked well to indicate sex
+
+
+## Model evaluation
+
+
+# Discussion
+
+Routine biological sampling procedures have been modified so that commercial fisheries are now only returning heads, rather than entire fish 
 
 \clearpage

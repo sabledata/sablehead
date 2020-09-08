@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  30 JUL 2020 14:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  8 SEP 2020 06:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -996,12 +996,12 @@ LaTeX Info: Redefining \selectfont on input line 94.
 Package hyperref Info: Option `pageanchor' set `false' on input line 99.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <17.28> not available
 (Font)              Font shape `T1/phv/b/sl' tried instead on input line 99.
-<csas-style/images/e_dfo_c.png, id=36, 1215.54124pt x 88.33pt>
+<csas-style/images/e_dfo_c.png, id=52, 1215.54124pt x 88.33pt>
 File: csas-style/images/e_dfo_c.png Graphic file (type png)
 <use csas-style/images/e_dfo_c.png>
 Package pdftex.def Info: csas-style/images/e_dfo_c.png  used on input line 99.
 (pdftex.def)             Requested size: 274.0785pt x 19.91692pt.
-<csas-style/images/canada_c.png, id=37, 3014.26125pt x 719.68875pt>
+<csas-style/images/canada_c.png, id=53, 3014.26125pt x 719.68875pt>
 File: csas-style/images/canada_c.png Graphic file (type png)
 <use csas-style/images/canada_c.png>
 Package pdftex.def Info: csas-style/images/canada_c.png  used on input line 99.
@@ -1050,7 +1050,39 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 [2
 
-] (./techreport.toc)
+] (./techreport.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
+.
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.
+cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
+.
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+6.
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+6.
+(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 6.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 6.
+)
 \tf@toc=\write5
 \openout5 = `techreport.toc'.
 
@@ -1060,450 +1092,68 @@ Package microtype Info: Loading generic protrusion settings for font family
 
 ] [5
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
+]
+
+LaTeX Warning: Reference `tab:table1' on page 1 undefined on input line 123.
+
+
+LaTeX Warning: Reference `tab:table1' on page 1 undefined on input line 125.
+
+
+LaTeX Warning: Reference `:table2' on page 1 undefined on input line 125.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.130 \clearpage
+l.145 \clearpage
                  [1
 
 ]
 Package marginnote Info: Using workaround for absolute page number on input lin
-e 130.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-38.
-(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-cmr.
-cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-38.
-(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-138.
-(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-138.
-(c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 138.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 138.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 138.
-
-Underfull \hbox (badness 10000) in paragraph at lines 150--150
-[]\T1/phv/m/n/12 (+20) Table 1. |[][]Def-i-ni-tion of head di-men-sions mea-sur
-ed and in-struc-tions for po-si-tion-ing the
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 153.
-
-Overfull \hbox (3.65134pt too wide) in paragraph at lines 155--155
-[]|\T1/phv/m/n/8 Measurement.type|  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 174--174
-[]\T1/phv/m/n/12 (+20) Table 2. |[]Ta-ble of sam-ple size, mean and stan-dard d
-e-vi-a-tion for pre-dic-tor and re-sponse
- []
-
-
-Overfull \hbox (2.936pt too wide) in paragraph at lines 179--179
-[]|\T1/phv/m/n/8 mean|  
- []
-
-
-Overfull \hbox (7.39186pt too wide) in paragraph at lines 181--181
-[]|\T1/phv/m/n/8 57.953|  
- []
-
-
-Overfull \hbox (7.39186pt too wide) in paragraph at lines 181--181
-[]|\T1/phv/m/n/8 15.223|  
- []
-
-
-Overfull \hbox (6.14935pt too wide) in paragraph at lines 181--181
-[]|\T1/phv/m/n/8 573.272|  
- []
-
-
-Overfull \hbox (11.83981pt too wide) in paragraph at lines 181--182
-[]|\T1/phv/m/n/8 120.435|  
- []
-
-
-Overfull \hbox (7.39186pt too wide) in paragraph at lines 182--182
-[]|\T1/phv/m/n/8 25.902|  
- []
-
-
-Overfull \hbox (2.94391pt too wide) in paragraph at lines 182--182
-[]|\T1/phv/m/n/8 5.132|  
- []
-
-
-Overfull \hbox (6.14935pt too wide) in paragraph at lines 182--182
-[]|\T1/phv/m/n/8 573.299|  
- []
-
-
-Overfull \hbox (11.83981pt too wide) in paragraph at lines 182--183
-[]|\T1/phv/m/n/8 120.299|  
- []
-
-
-Overfull \hbox (7.39186pt too wide) in paragraph at lines 183--183
-[]|\T1/phv/m/n/8 40.373|  
- []
-
-
-Overfull \hbox (2.94391pt too wide) in paragraph at lines 183--183
-[]|\T1/phv/m/n/8 10.06|  
- []
-
-
-Overfull \hbox (6.14935pt too wide) in paragraph at lines 183--183
-[]|\T1/phv/m/n/8 573.364|  
- []
-
-
-Overfull \hbox (11.83981pt too wide) in paragraph at lines 183--184
-[]|\T1/phv/m/n/8 120.429|  
- []
-
-
-Overfull \hbox (7.39186pt too wide) in paragraph at lines 184--184
-[]|\T1/phv/m/n/8 44.814|  
- []
-
-
-Overfull \hbox (7.39186pt too wide) in paragraph at lines 184--184
-[]|\T1/phv/m/n/8 10.517|  
- []
-
-
-Overfull \hbox (6.14935pt too wide) in paragraph at lines 184--184
-[]|\T1/phv/m/n/8 573.272|  
- []
-
-
-Overfull \hbox (11.83981pt too wide) in paragraph at lines 184--185
-[]|\T1/phv/m/n/8 120.435|  
- []
-
-
-Overfull \hbox (7.39186pt too wide) in paragraph at lines 185--185
-[]|\T1/phv/m/n/8 31.495|  
- []
-
-
-Overfull \hbox (2.94391pt too wide) in paragraph at lines 185--185
-[]|\T1/phv/m/n/8 8.022|  
- []
-
-
-Overfull \hbox (6.14935pt too wide) in paragraph at lines 185--185
-[]|\T1/phv/m/n/8 571.338|  
- []
-
-
-Overfull \hbox (7.39186pt too wide) in paragraph at lines 185--186
-[]|\T1/phv/m/n/8 119.54|  
- []
-
-
-Overfull \hbox (7.39186pt too wide) in paragraph at lines 186--186
-[]|\T1/phv/m/n/8 60.852|  
- []
-
-
-Overfull \hbox (7.39186pt too wide) in paragraph at lines 186--186
-[]|\T1/phv/m/n/8 18.868|  
- []
-
-
-Overfull \hbox (6.14935pt too wide) in paragraph at lines 186--186
-[]|\T1/phv/m/n/8 566.462|  
- []
-
-
-Overfull \hbox (11.83981pt too wide) in paragraph at lines 186--187
-[]|\T1/phv/m/n/8 134.805|  
- []
-
-
-Overfull \hbox (3.37897pt too wide) in paragraph at lines 198--198
-[]|\T1/phv/m/n/8 Measurement|  
- []
-
-
-Overfull \hbox (12.09622pt too wide) in paragraph at lines 198--198
- []|\T1/phv/m/n/8 Repeatability|
- []
-
-
-Overfull \hbox (2.94391pt too wide) in paragraph at lines 200--200
-[]|\T1/phv/m/n/8 0.946|  
- []
-
-
-Overfull \hbox (2.94391pt too wide) in paragraph at lines 204--204
-[]|\T1/phv/m/n/8 0.943|  
- []
-
-
-Overfull \hbox (2.94391pt too wide) in paragraph at lines 206--206
-[]|\T1/phv/m/n/8 0.954|  
- []
-
-
-Overfull \hbox (2.94391pt too wide) in paragraph at lines 210--210
-[]|\T1/phv/m/n/8 0.914|  
- []
-
+e 145.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.214 \clearpage
-                 [2
+l.145 \clearpage
+                 [2]
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.214 \clearpage
-                 [3]pdfTeX warning (ext4): destination with the same identifier
- (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.214 \clearpage
-                 [4]
-<C:/github/sablehead/figures/Figure1.png, id=118, 1365.61392pt x 1934.6679pt>
-File: C:/github/sablehead/figures/Figure1.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure1.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure1.png  used on input
- line 222.
-(pdftex.def)             Requested size: 433.62pt x 614.29453pt.
-File: C:/github/sablehead/figures/Figure1.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure1.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure1.png  used on input
- line 222.
-(pdftex.def)             Requested size: 433.62pt x 614.29453pt.
-File: C:/github/sablehead/figures/Figure1.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure1.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure1.png  used on input
- line 222.
-(pdftex.def)             Requested size: 433.62pt x 614.29453pt.
-File: C:/github/sablehead/figures/Figure1.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure1.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure1.png  used on input
- line 222.
-(pdftex.def)             Requested size: 433.62pt x 614.29453pt.
-<C:/github/sablehead/figures/Figure2.png, id=120, 57.816pt x 57.816pt>
-File: C:/github/sablehead/figures/Figure2.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure2.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure2.png  used on input
- line 231.
-(pdftex.def)             Requested size: 433.62pt x 433.6444pt.
-File: C:/github/sablehead/figures/Figure2.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure2.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure2.png  used on input
- line 231.
-(pdftex.def)             Requested size: 433.62pt x 433.6444pt.
-File: C:/github/sablehead/figures/Figure2.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure2.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure2.png  used on input
- line 231.
-(pdftex.def)             Requested size: 433.62pt x 433.6444pt.
-File: C:/github/sablehead/figures/Figure2.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure2.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure2.png  used on input
- line 231.
-(pdftex.def)             Requested size: 433.62pt x 433.6444pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 235--235
-[]\T1/phv/m/n/12 (+20) Figure 2. |A. Up-per jaw mea-sure-ment; B. Eye di-am-e-t
-er mea-sure-ment; C. In-teror-bital
- []
+LaTeX Warning: Reference `tab:table2' on page 3 undefined on input line 150.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 235--235
-\T1/phv/m/n/12 (+20) dis-tance; D. Snout length; E. Post or-bital to pre-op-er-
-cu-lum length mea-sure-ment; F. Post
- []
+LaTeX Warning: Reference `tab:table3' on page 3 undefined on input line 152.
 
-<C:/github/sablehead/figures/Figure3.png, id=122, 385.44pt x 289.08pt>
-File: C:/github/sablehead/figures/Figure3.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure3.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure3.png  used on input
- line 240.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure3.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure3.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure3.png  used on input
- line 240.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure3.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure3.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure3.png  used on input
- line 240.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure3.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure3.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure3.png  used on input
- line 240.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-<C:/github/sablehead/figures/Figure4.png, id=124, 385.44pt x 289.08pt>
-File: C:/github/sablehead/figures/Figure4.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure4.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure4.png  used on input
- line 249.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure4.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure4.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure4.png  used on input
- line 249.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure4.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure4.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure4.png  used on input
- line 249.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure4.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure4.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure4.png  used on input
- line 249.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-<C:/github/sablehead/figures/Figure5.png, id=126, 385.44pt x 289.08pt>
-File: C:/github/sablehead/figures/Figure5.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure5.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure5.png  used on input
- line 258.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure5.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure5.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure5.png  used on input
- line 258.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure5.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure5.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure5.png  used on input
- line 258.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure5.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure5.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure5.png  used on input
- line 258.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-<C:/github/sablehead/figures/Figure6.png, id=128, 385.44pt x 289.08pt>
-File: C:/github/sablehead/figures/Figure6.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure6.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure6.png  used on input
- line 267.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure6.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure6.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure6.png  used on input
- line 267.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure6.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure6.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure6.png  used on input
- line 267.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure6.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure6.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure6.png  used on input
- line 267.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-<C:/github/sablehead/figures/Figure7.png, id=130, 385.44pt x 289.08pt>
-File: C:/github/sablehead/figures/Figure7.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure7.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure7.png  used on input
- line 276.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure7.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure7.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure7.png  used on input
- line 276.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure7.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure7.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure7.png  used on input
- line 276.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure7.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure7.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure7.png  used on input
- line 276.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-<C:/github/sablehead/figures/Figure8.png, id=132, 385.44pt x 289.08pt>
-File: C:/github/sablehead/figures/Figure8.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure8.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure8.png  used on input
- line 285.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure8.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure8.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure8.png  used on input
- line 285.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure8.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure8.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure8.png  used on input
- line 285.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-File: C:/github/sablehead/figures/Figure8.png Graphic file (type png)
-<use C:/github/sablehead/figures/Figure8.png>
-Package pdftex.def Info: C:/github/sablehead/figures/Figure8.png  used on input
- line 285.
-(pdftex.def)             Requested size: 401.50098pt x 291.10393pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
+
+AED: lastpage setting LastPage
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.291 \clearpage
-                 [5
+l.169 \end{document}
+                     [3
 
-] [6 <c:/github/sablehead/figures/Figure1.png>] [7 <c:/github/sablehead/figures
-/Figure2.png (PNG copy)>] [8 <c:/github/sablehead/figures/Figure3.png (PNG copy
-)> <c:/github/sablehead/figures/Figure4.png (PNG copy)>] [9 <c:/github/sablehea
-d/figures/Figure5.png (PNG copy)> <c:/github/sablehead/figures/Figure6.png (PNG
- copy)>] [10 <c:/github/sablehead/figures/Figure7.png (PNG copy)> <c:/github/sa
-blehead/figures/Figure8.png (PNG copy)>] 
-AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 292.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 292.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
 (./techreport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 292.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 292.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
 Package rerunfilecheck Info: File `techreport.out' has not changed.
-(rerunfilecheck)             Checksum: B8E06B4F1967A54F0D82CA361F48D275;345.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 292.
+(rerunfilecheck)             Checksum: 231B8973E6F9658D69387E30BA209CB2;651.
+
+LaTeX Warning: There were undefined references.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 17480 strings out of 482938
- 310205 string characters out of 5958759
- 633827 words of memory out of 5000000
- 32197 multiletter control sequences out of 15000+600000
- 589155 words of font info for 122 fonts, out of 8000000 for 9000
+ 17396 strings out of 482938
+ 307587 string characters out of 5958759
+ 617827 words of memory out of 5000000
+ 32118 multiletter control sequences out of 15000+600000
+ 584691 words of font info for 128 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 49i,14n,77p,1017b,498s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,14n,53p,1017b,417s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.
 enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-m
 athsy.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/l
@@ -1519,10 +1169,10 @@ aming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/lackol/
 AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/User
 s/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pf
 b>
-Output written on techreport.pdf (17 pages, 1397574 bytes).
+Output written on techreport.pdf (10 pages, 184414 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 33395 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 178 PDF objects out of 1000 (max. 8388607)
+ 151 compressed objects within 2 object streams
+ 31 named destinations out of 1000 (max. 500000)
+ 32363 words of extra memory for PDF output out of 35830 (max. 10000000)
 

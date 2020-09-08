@@ -1,7 +1,7 @@
-Measurement,N,R,Ease of use,Repeatability,Considerations
-Upper jaw length,437,0.946,3,4,Bony part; can measure on right or left side.  Electronic Calipers tended to malfunction when longer measurements attempted; had to use manual calipers for >15cm distances; somewhat awkward to measure. The end of the maxilla can be hard to define. Must ensure caliper is in center of snout
-Eye diameter,438,0.880,3,2,"Easy to define where to hold the calipers in the eye socket, but the tissue is soft/stretchy so its difficult to know how hard to press against the flesh; can measure on right or left side. Uses the outside rather than the inside of the calipers (? slower); Soft tissue so repeatability is questionable; somewhat awkward to measure"
-Interorbital distance,437,0.943,5,5,Bony part;  Easy to define where to hold calipers; so far there has been no reason (eg damage) to not include this measurement 
-Snout length,437,0.954,4,5,Bony part; can measure on right or left side; must ensure caliper is in centre of snout
-Post orbital to pre-operculum,426,0.930,4,5,Bony part; can measure on right or left side.  Maybe need to improve definition of instruction of where to hold caliper on pre-operculum 
-Post orbital head length,130,0.914,3,2,"Can measure on right or left side. Operculum was cut off on some fish, likely to be cut off on commercially caught fish. Electronic Calipers tended to malfunction when longer measurements attempted; had to use manual calipers for >15 cm distances"
+Head dimension,Head description,Caliper jaw position
+UJ,tip of snout to the posterior edge of the maxilla,Outside jaw measurement from forward point and centre of snout to back of maxilla
+ED,anterior-posterior diameter of eye socket,Inside jaw measurement firmly stretched against eye socket at vertical midpoint of eye
+ID,"narrowest distance between eye sockets, measured on dorsal surface",Outside jaw measurement of the horizontal midpoint of eyes on dorsal surface
+SL,tip of snout to anterior inner edge of eye socket,Outside jaw measurement from forward point and centre of snout to horizontal midpoint of anterior edge of eye socket
+PP,posterior inner edge of orbit to visual insertion point of preopercle,Outside jaw measurement from back of eye socket to preopercle bone insertion point. Preopercle must be lifted to expose preopercle bone underneath. 
+PH,posterior inner edge of orbit to dorsal insertion of opercle,Outside jaw measurement from back of eye socket to bone underneath gill cover notch at dorsal insertion of the opercle (rather than to flap of skin that forms notch).  The operculum must be held taut.

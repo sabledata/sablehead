@@ -10,20 +10,20 @@
                  return(p)
     }
 
-    lmslp <- function (modelobject) {                    #  p value function
+    lmslp <- function (modelobject) {                    #  slope (m) value function
              if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
                  slp <- signif(modelobject$coef[[2]], 5)
                  return(slp)
     }
     
-    lmR <- function (modelobject) {                    #  p value function
+    lmR <- function (modelobject) {                    #  r2 value function
              if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
                  r2 =  format(summary(modelobject)$r.squared,  digits = 3)
                  return(r2)
     }
     
     
-    
+    # y = Fork_Length, response variable
     options("scipen"=100, "digits"=3)
     
     details <-    paste("select * from Head_Measurements_Report", sep="")
@@ -39,8 +39,9 @@
 
 ```    
    
-The mean values of the predictor variables were ...........  (Table \@ref(tab:table2)).  
-The top ranked measurement in terms of ‘Ease of Use’ and ‘Repeatability’ was Interorbital distance (Table \@ref(tab:table3)).    
+The mean values of the predictor and  response variables  (Table \@ref(tab:table2)).  
+
+Given the ease of measurement, we suggest that Interorbital distance be used to predict sablefish fork lengths and weights (Table \@ref(tab:table3)). 
 
 We found evidence of relationships between upper jaw length and fork length (p = `r lmp(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))`) ; eye diameter and fork length (p = `r lmp(lm(Fork_Length ~ Eye_Diameter, data=hdEd))`); interorbital distance and fork length (p = `r lmp(lm(Fork_Length ~ InterOrbital_Distance, data=hdId))` ); upper snout length and fork length (p = `r lmp(lm(Fork_Length ~ Snout_length, data=hdSl))`); postorbital to preoperculum length and fork length (p = `r lmp(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop))`); and postorbital head length and fork length (p = `r lmp(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo))`).
 
@@ -48,7 +49,9 @@ The estimated slope is `r lmslp(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))` 
 
 
 
+# Acknowledgments
 
+We thank ...
 
 
 

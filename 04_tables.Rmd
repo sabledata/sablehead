@@ -1,38 +1,65 @@
 # Tables
-(ref:Table1Caption) Definition of head dimensions measured and instructions for positioning the calipers.
-\ \
-\ \
+
+(ref:Table1Caption) Summary of sablefish biological data collected. Tally of fork lengths (FL), round weight (RW), upper jaw length (UJ),  eye diameter (ED), interorbital distance (ID), snout length (SL)), post orbital to preoperculum distance (PP), post orbital head length (PH), females (F), males (M), sagittal otoliths (O) and operculum clips (DNA) listed by survey.
+
 ```{r table1, echo=FALSE}
-     options(knitr.kable.NA = '')
 
-     table1   <-  read.csv("c:/github/sablehead/standalone/table1.csv", header=T)
-     kableExtra::kable(table1,
-                     booktabs = TRUE,linesep = "",
-                     format = "latex",  caption = "(ref:Table1Caption)") %>%
-                     row_spec(1,  hline_after = T) %>%
-                     row_spec(2,  hline_after = T) %>%
-                     row_spec(3,  hline_after = T) %>%
-                     row_spec(4,  hline_after = T) %>%
-                     row_spec(5,  hline_after = T) %>%
+  sp   <-  read.csv("c:/github/sablehead/standalone/table1.csv", header=T)
 
-     
-     kableExtra::kable_styling(font_size = 8) %>%
-                      column_spec(1, width  = "2.2cm") %>%
-                      column_spec(2, width  = "2.7cm") %>%
-                      column_spec(3, width  = "4.7cm") 
+  kableExtra::kable(sp, booktabs = TRUE,
+                   format = "latex",
+                   caption = "(ref:Table1Caption)") %>%
+  kableExtra::kable_styling(font_size = 8, position = "center") %>%
+                   add_header_above(c(" "= 3,
+                           "Cranial measurements" = 6, 
+                           "Sex" = 2,
+                           " " = 3))
 
 ```
-(ref:Table2Caption) Table of sample size, mean and standard deviation for predictor and response variables.
+\clearpage
+
+(ref:Table2Caption) Head dimensions measured and caliper jaw positions.
+\ \
+\ \
 
 ```{r table2, echo=FALSE}
+     options(knitr.kable.NA = '')
+     graph_directory <- 'C:/github/sablehead/figures/'
+     df   <-  read.csv("c:/github/sablehead/standalone/table2.csv", header=T)
+     names(df)  <- c("Head dimension","Head description","Caliper jaw position")
+
+     # Change to names of my local images
+     #df$Image = c(paste(graph_directory,'ca.png',sep=''),
+      #            paste(graph_directory,'Figure2b.png',sep=''),
+      #            paste(graph_directory,'Figure2c.png',sep=''),
+      #            paste(graph_directory,'Figure2d.png',sep=''),
+      #            paste(graph_directory,'Figure2e.png',sep=''),
+      #            paste(graph_directory,'Figure2f.png',sep=''))
+     
+     # Add appropriate rmarkdown tagging
+     #df$Image <- sprintf('![](%s){width=50px}', df$Image)
+     
+     kableExtra::kable(df, booktabs = TRUE, format = "latex", 
+                           caption = "(ref:Table2Caption)") %>%  
+     kableExtra::kable_styling(full_width = T, latex_options="scale_down") %>%
+                      column_spec(3, width  = "2.5cm") %>%
+                      column_spec(1, width  = "1.1cm") %>%
+                      column_spec(2, width  = "1.6cm")
+     
+```
+
+
+(ref:Table3Caption) Table of sample size, mean and standard deviation for predictor and response variables.
+
+```{r table3, echo=FALSE}
 
     hd                     <-  hdUj                     # table of sample size, mean and sd for variables
     fl.nme                 <-  "Fork length"
     n                      <-  length(hd$SPECIMEN_ID)                   
-    mn                     <-  round(mean(hd$Upper_jaw_length),3)
-    mnfl                   <-  round(mean(hd$Fork_Length),3)
-    std                    <-  round(sd(hd$Upper_jaw_length),3)
-    stdfl                  <-  round(sd(hd$Fork_Length),3)
+    mn                     <-  round(mean(hd$Upper_jaw_length),2)
+    mnfl                   <-  round(mean(hd$Fork_Length),2)
+    std                    <-  round(sd(hd$Upper_jaw_length),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
     
     head.data <-  data.frame(measurement="Upper jaw length",n,mn, std, fl.nme, mnfl, stdfl)
     head.data$measurement  <- as.character(head.data$measurement)
@@ -40,46 +67,46 @@
  
     hd                     <-  hdEd                     # table of sample size, mean and sd for variables
     n                      <-  length(hd$SPECIMEN_ID)                   
-    mn                     <-  round(mean(hd$Eye_Diameter),3)
-    mnfl                   <-  round(mean(hd$Fork_Length),3)
-    std                    <-  round(sd(hd$Eye_Diameter),3)
-    stdfl                  <-  round(sd(hd$Fork_Length),3)
+    mn                     <-  round(mean(hd$Eye_Diameter),2)
+    mnfl                   <-  round(mean(hd$Fork_Length),2)
+    std                    <-  round(sd(hd$Eye_Diameter),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
   
     head.data[2,] <- c("Eye diameter",n,mn, std, fl.nme, mnfl, stdfl)
     
     hd                     <-  hdId                     # table of sample size, mean and sd for variables
     n                      <-  length(hd$SPECIMEN_ID)                   
-    mn                     <-  round(mean(hd$InterOrbital_Distance),3)
-    mnfl                   <-  round(mean(hd$Fork_Length),3)
-    std                    <-  round(sd(hd$InterOrbital_Distance),3)
-    stdfl                  <-  round(sd(hd$Fork_Length),3)
+    mn                     <-  round(mean(hd$InterOrbital_Distance),2)
+    mnfl                   <-  round(mean(hd$Fork_Length),2)
+    std                    <-  round(sd(hd$InterOrbital_Distance),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
   
     head.data[3,] <- c("InterOrbital distance",n, mn, std, fl.nme, mnfl, stdfl)
     
     hd                     <-  hdSl                     # table of sample size, mean and sd for variables
     n                      <-  length(hd$SPECIMEN_ID)                   
-    mn                     <-  round(mean(hd$Snout_length),3)
-    mnfl                   <-  round(mean(hd$Fork_Length),3)
-    std                    <-  round(sd(hd$Snout_length),3)
-    stdfl                  <-  round(sd(hd$Fork_Length),3)
+    mn                     <-  round(mean(hd$Snout_length),2)
+    mnfl                   <-  round(mean(hd$Fork_Length),2)
+    std                    <-  round(sd(hd$Snout_length),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
   
     head.data[4,] <-c("Snout length",n, mn, std, fl.nme, mnfl, stdfl)
     
     hd                     <-  hdPop                     # table of sample size, mean and sd for variables
     n                      <-  length(hd$SPECIMEN_ID)                   
-    mn                     <-  round(mean(hd$Postorbital_Preoperculum),3)
-    mnfl                   <-  round(mean(hd$Fork_Length),3)
-    std                    <-  round(sd(hd$Postorbital_Preoperculum),3)
-    stdfl                  <-  round(sd(hd$Fork_Length),3)
+    mn                     <-  round(mean(hd$Postorbital_Preoperculum),2)
+    mnfl                   <-  round(mean(hd$Fork_Length),2)
+    std                    <-  round(sd(hd$Postorbital_Preoperculum),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
   
     head.data[5,] <- c("Post orbital to preoperculum length",n,mn, std, fl.nme, mnfl, stdfl)
     
     hd                     <-  hdPo                     # table of sample size, mean and sd for variables
     n                      <-  length(hd$SPECIMEN_ID)                   
-    mn                     <-  round(mean(hd$Post_orbital_Head_length),3)
-    mnfl                   <-  round(mean(hd$Fork_Length),3)
-    std                    <-  round(sd(hd$Post_orbital_Head_length),3)
-    stdfl                  <-  round(sd(hd$Fork_Length),3)
+    mn                     <-  round(mean(hd$Post_orbital_Head_length),2)
+    mnfl                   <-  round(mean(hd$Fork_Length),2)
+    std                    <-  round(sd(hd$Post_orbital_Head_length),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
   
     head.data[6,]     <- c("Post orbital head length",n,mn, std, fl.nme, mnfl, stdfl)
     names(head.data)  <- c("Predictor variable", "n", "mean", "sd", "Response variable", "mean", "sd")
@@ -99,12 +126,12 @@
 ```   
    
 
-(ref:Table3Caption) Ease of use and repeatability considerations for each measurement.
+(ref:Table4Caption) Ease of use and repeatability considerations for each measurement.
 
-```{r table3, echo=FALSE}
+```{r table4, echo=FALSE}
      options(knitr.kable.NA = '')
 
-     table2      <-  read.csv("c:/github/sablehead/standalone/table2.csv", header=T)
+     table2      <-  read.csv("c:/github/sablehead/standalone/table3.csv", header=T)
      table2[1,3] <-  lmR(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))
      table2[2,3] <-  lmR(lm(Fork_Length ~ Eye_Diameter, data=hdEd))
      table2[3,3] <-  lmR(lm(Fork_Length ~ InterOrbital_Distance, data=hdId))

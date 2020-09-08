@@ -1,6 +1,9 @@
 # Introduction
 
-The tag and release study has been conducted annually since 1991.  Whole tagged fish are recovered mainly in the commercial fishery (trap, trawl, hook and line) and processed at the point of landing through the Dockside Monitoring Program (DMP) currently operated by Archipelago Marine Research (AMR).  In order to eliminate whole fish samples, we assessed whether sablefish fork length and weight could be predicted from 6 different head dimension measurements.  Simple linear regression models were calculated from 431 specimens collected on the 2016 WCVI and WCHG surveys using a length stratified sampling protocol.
+Stock indices are derived from commercial trap catch rates, trap survey catch rates, and estimates of trap vulnerable biomass determined from tag-recovery data.  
+
+The tag and release study has been conducted annually since 1991.  Whole tagged fish are recovered mainly in the commercial fishery (trap, trawl, hook and line) and processed at the point of landing through the Dockside Monitoring Program (DMP) currently operated by Archipelago Marine Research (AMR).  In order to eliminate whole fish samples, we assessed whether sablefish fork length and weight could be predicted from 6 different head dimension measurements.  Simple linear regression models were calculated from 438 sablefish  (240-1080 mm) collected on 2 biennial DFO Groundfish Synoptic Bottom Trawl surveys in 2016 and one salmon survey (details).
+
 
 
 
