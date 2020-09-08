@@ -1,20 +1,20 @@
 ---
-title: "Results of sablefish (*Anoplopoma fimbria*) head measurement study, putting our noggins together."
+title: "Estimation of Fork Length using Cranial Measurements of sablefish (*Anoplopoma fimbria*)."
 year: 2020
 report_number: nnn
 author: |
   Kathryn x. Temple, 
   Lisa C. Lacko and
-  B C
-author_list: "Kathryn x. Temple and Lacko, L.C. and B.C. "
+  Bre
+author_list: "Kathryn x. Temple and Lacko, L.C. and Connors, B.M. "
 region: Pacific Region
 isbn: ""
 address: |
      Pacific Biological Station\
      Fisheries and Oceans Canada, 3190 Hammond Bay Road\
      Nanaimo, British Columbia, V9T 6N7, Canada\
-phone: "(555) 555-5555"
-author_footnote: "Email: Kathryn.Temple@dfo-mpo.gc.ca | telephone: (250) 756-xxxx"
+phone: "(250) 756-7000"
+author_footnote: "Email: Kathryn.Temple@dfo-mpo.gc.ca | telephone: (250) 756-7366"
 abstract: |
   This document describes sampling activities and summarizes results 
 
