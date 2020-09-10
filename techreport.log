@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  10 SEP 2020 07:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/W32TeX) (preloaded format=pdflatex 2020.3.4)  10 SEP 2020 08:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1145,27 +1145,27 @@ File: C:/github/sablehead/figures/Figure1.png Graphic file (type png)
 Package pdftex.def Info: C:/github/sablehead/figures/Figure1.png  used on input
  line 159.
 (pdftex.def)             Requested size: 433.62pt x 487.8213pt.
-<C:/github/sablehead/figures/Figure2.png, id=134, 57.816pt x 57.816pt>
+<C:/github/sablehead/figures/Figure2.png, id=134, 770.88pt x 867.24pt>
 File: C:/github/sablehead/figures/Figure2.png Graphic file (type png)
 <use C:/github/sablehead/figures/Figure2.png>
 Package pdftex.def Info: C:/github/sablehead/figures/Figure2.png  used on input
  line 168.
-(pdftex.def)             Requested size: 433.62pt x 433.6444pt.
+(pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 File: C:/github/sablehead/figures/Figure2.png Graphic file (type png)
 <use C:/github/sablehead/figures/Figure2.png>
 Package pdftex.def Info: C:/github/sablehead/figures/Figure2.png  used on input
  line 168.
-(pdftex.def)             Requested size: 433.62pt x 433.6444pt.
+(pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 File: C:/github/sablehead/figures/Figure2.png Graphic file (type png)
 <use C:/github/sablehead/figures/Figure2.png>
 Package pdftex.def Info: C:/github/sablehead/figures/Figure2.png  used on input
  line 168.
-(pdftex.def)             Requested size: 433.62pt x 433.6444pt.
+(pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 File: C:/github/sablehead/figures/Figure2.png Graphic file (type png)
 <use C:/github/sablehead/figures/Figure2.png>
 Package pdftex.def Info: C:/github/sablehead/figures/Figure2.png  used on input
  line 168.
-(pdftex.def)             Requested size: 433.62pt x 433.6444pt.
+(pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 172--172
 []\T1/phv/m/n/12 (+20) Figure 2. |A. Up-per jaw mea-sure-ment; B. Eye di-am-e-t
@@ -1367,7 +1367,7 @@ aming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb><c:/Users/lackol/
 AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/User
 s/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pf
 b>
-Output written on techreport.pdf (16 pages, 676101 bytes).
+Output written on techreport.pdf (16 pages, 2878199 bytes).
 PDF statistics:
  239 PDF objects out of 1000 (max. 8388607)
  197 compressed objects within 2 object streams
