@@ -1,11 +1,11 @@
 ---
-title: "Estimation of Fork Length using Cranial Measurements of sablefish (*Anoplopoma fimbria*)."
+title: "Estimation of fork length using cranial measurements of sablefish (*Anoplopoma fimbria*)."
 year: 2020
 report_number: nnn
 author: |
   Kathryn x. Temple, 
   Lisa C. Lacko and
-  Bre
+  Brendan M. Conners
 author_list: "Kathryn x. Temple and Lacko, L.C. and Connors, B.M. "
 region: Pacific Region
 isbn: ""

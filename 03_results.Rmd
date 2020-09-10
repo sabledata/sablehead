@@ -49,9 +49,6 @@ The estimated slope is `r lmslp(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))` 
 
 
 
-# Acknowledgments
-
-We thank ...
 
 
 

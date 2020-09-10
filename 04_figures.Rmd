@@ -15,9 +15,9 @@
 
 (ref:figure1) Sample locations.
 
-```{r figure1, fig.cap='(ref:figure1)',warning=FALSE, echo=FALSE, message=FALSE, error= FALSE, width=5.5, height=5.0,fig.align='center'}
+```{r figure1, fig.cap='(ref:figure1)',warning=FALSE, echo=FALSE, message=FALSE, error= FALSE, width=5.9, height=8.5,fig.align='center'}
 
-    png("C:/github/sablehead/figures/Figure1.png",  width = 480, height = 630, units = "px") # write png to file
+    png("C:/github/sablehead/figures/Figure1.png", units="px", width=1600, height=1800, res=150) # write png to file
     sql          <-   "select * from Head_Measurements_Report where SLAT > 0"  # head measurement data
     pointdata    <-   GetSQLData(sql,"Sablefish")   # retrieve from seamount database
 
@@ -44,7 +44,7 @@
                      guides(size=FALSE) + 
                      guides(fill=guide_legend(title="Trip id")) +
                      xlab("Longitude") + ylab("Latitude") + 
-                     theme(  text = element_text(size=40),
+                     theme(  text = element_text(size=20),
                           plot.title      = element_blank(),
                           legend.position = c(.19, 0.35),
                           legend.justification = c("right", "top"),
@@ -68,7 +68,7 @@
                      pad_y = unit(1.0, "in"),
                      height = unit(0.5, "cm"),
                      width  = unit(5.95,"cm"),
-                     text_cex = 2.2)   +
+                     text_cex = 1.0)   +
                      coord_sf(crs = 4326)
 
     while (!is.null(dev.list()))  dev.off()

@@ -4,11 +4,10 @@
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Methods}{1}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Sample collection and evaluation}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Genetic test}{1}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Pilot Collection of Sablefish Heads}{1}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Model evaluation}{2}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.2}Genetic test development}{1}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Model evaluation}{2}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Discussion}{2}{section.3}%
 \contentsline {section}{\numberline {4}Results}{3}{section.4}%
-\contentsline {section}{\numberline {5}Acknowledgments}{3}{section.5}%
-\contentsline {section}{\numberline {6}Discussion}{3}{section.6}%
-\contentsline {section}{\numberline {7}Acknowledgments}{3}{section.7}%
+\contentsline {section}{\numberline {5}Figures}{3}{section.5}%
+\contentsline {section}{\numberline {6}Discussion}{9}{section.6}%
+\contentsline {section}{\numberline {7}Acknowledgments}{9}{section.7}%
