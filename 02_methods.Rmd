@@ -1,24 +1,40 @@
 # Methods
 
-## Sample collection and evaluation
+##Estimation of Fork Length using Cranial Measurements
 
-Measurements of fork length (FL), round weight (RW), upper jaw length (UJ), eye diameter (ED), interorbital distance (ID), snout length (SL), post orbital to preoperculum distance (PP), and post orbital head length (PH) were obtained from 212 sablefish caught during the 2016 West Coast Vancouver Island (WCVI) survey [@Williams2018] and 219 sablefish caught during the 2016 West Coast Haida Gwaii (WCHG) survey [@Nottingham2018] (Figure \@ref(fig:figure1)). Seven small sablefish were collected during the 201? (Kathryn) salmon survey.  In addition, sagittal otoliths and operculum clips (DNA) were collected.  Fish sex and maturity were recorded at sea (Table \@ref(tab:table1)).    
+Mitutoyo ABSOLUTE® 500-762-20 Coolant Proof Digimatic Caliper
 
-The six cranial dimensions were considered as possible candidates for estimating fork length.  Post orbital head lengths (PH)  were abandoned after 130 fish due to measurement difficulties (Table \@ref(tab:table1)).  Each of the 6 head dimensions were measured by Mitutoyo absolute 500-??? (Kathryn) digital calipers and ranked in terms of ease of use and repeatability.   (Table \@ref(:table2)). 
+### Survey sample collection 
 
-Later, a pilot study was conducted with the commercial sector returning sablefish heads, rather than the entire fish.  In 2017, 360 heads were collected from J-cut sablefish on a trip to the Bowie Seamount.  Each operculum was marked with either one knife cut (male) or two knife cuts (female) (Figure x)  The first 99 heads of the pilot study were measured by 3 technicians for IO, SN, UJ and PP.  
+Measurements of fork length (FL), round weight (RW), upper jaw length (UJ), eye diameter (ED), interorbital distance (IO), snout length (SL), post orbital to preoperculum distance (PP), and post orbital head length (PH) were obtained from sablefish caught on selected surveys (Table \@ref(tab:table1)).  Fish sex and maturity were recorded and sagittal otoliths and operculum clips (DNA) were collected at sea. 
+
+
+### Pilot study sample Collection
+
+In 2017, a pilot study was conducted with the commercial sector returning sablefish heads, rather than the entire fish.  A total of 360 heads were collected from J-cut sablefish on a trip to the S$\text{\underline{G}}$aan $\text{\underline{K}}$inghlas - Bowie (SK-B) seamount.  Each operculum was marked with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix) ).  The first 99 heads of the pilot study were measured by three technicians for IO, SN, UJ and PP lengths. 
+
+
+### Sampling on shore
+
+On shore,  the heads were thawed, and cranial dimensions were measured using electronic calipers. Ageing structures (sagittal otoliths) were also collected from each head.  Operculum clips were collected from the first 137 fish measured (79 male and 58 female), and were stored in vials containing 95% ethanol, to be used for DNA extraction and the development of a genetic test for fish gender. 
+
+### Head measurements
+
+The six cranial dimensions were ranked by samplers on a five point rating scale in terms of ease of use and repeatability with electronic Mitutoyo 500 series calipers. The ease of use metric focused on three key attributes of measurement learnability (task understanding), efficiency (task-completion time) and difficulty (task performance ease).  The repeatability metric focused on ranking the efficiency of a measurement for repeated caliper placement, taking into consideration the soft and hard head tissues.
 
 ## Genetic test development
 
 DNA multiplex polymerase chain reactions (PCRs) were conducted using fluorescently labelled forward primers.	X-insert and Y-insert specific primers developed by @Rondeau2013 were used, but the X-insert forward and Y-nested reverse were redesigned to produce slightly smaller PCR products.   
 
+## Pilot study
 
 
-## Model evaluation
+
+
 
 
 # Discussion
 
-Routine biological sampling procedures have been modified so that commercial fisheries are now only returning heads, rather than entire fish 
+Routine biological sampling procedures have been modified so that commercial fisheries are now only returning heads, rather than entire fish.   
 
 \clearpage

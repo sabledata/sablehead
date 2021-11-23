@@ -13,13 +13,15 @@
     
 ```
 
-(ref:figure1) Sample locations.
+(ref:figure1) Sample locations in 2016 from the WCVI survey (GFBIO trip id 79190),  WCHG survey (GFBIO trip id 80378) and salmon survey (?).
 
 ```{r figure1, fig.cap='(ref:figure1)',warning=FALSE, echo=FALSE, message=FALSE, error= FALSE, width=5.9, height=8.5,fig.align='center'}
 
     png("C:/github/sablehead/figures/Figure1.png", units="px", width=1600, height=1800, res=150) # write png to file
     sql          <-   "select * from Head_Measurements_Report where SLAT > 0"  # head measurement data
-    pointdata    <-   GetSQLData(sql,"Sablefish")   # retrieve from seamount database
+    #pointdata    <-   GetSQLData(sql,"Sablefish")   # retrieve from seamount database
+    #write.table(pointdata, file = paste(path,"figure1.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+    pointdata    <-  read.csv(paste(path,'figure1.csv',sep=''),header=T)  # read from csv
 
     lon          <-   data.frame(pointdata$SLAT)
     lat          <-   data.frame(pointdata$SLON)
@@ -38,7 +40,7 @@
                                       size = .2) +
                      geom_point(data =   points_df,   aes(pointdata.SLON, pointdata.SLAT,  
                                                           fill=factor(pointdata.TRIP_ID),  size=0.7) , 
-                                                          colour="gray50", shape=21, size=6) +            
+                                                          colour="gray50", shape=21, size=5) +            
                      theme_minimal()    +
                      guides(fill=FALSE) + 
                      guides(size=FALSE) + 
@@ -78,54 +80,11 @@
  
 ```
 
-(ref:figure2) A. Upper jaw measurement;  B. Eye diameter measurement;  C. Interorbital distance;  D. Snout length;  E. Post orbital to preoperculum length measurement; F. Post orbital head length.
+(ref:figure2) Scatterplot upper jaw vs fork length, measurements in millimeters.
 
-```{r figure2, fig.cap='(ref:figure2)', results='asis',echo=FALSE,fig.height = 8, fig.width = 8,  fig.align = "center"} 
+```{r figure2, fig.cap='(ref:figure2)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"} 
 
-   png("C:/github/sablehead/figures/Figure2.png", units="px", width=1600, height=1800, res=150)# write png to file
-    
-   img         <- readPNG("C:/github/sablehead/figures/Figure2a.png")
-   g           <- rasterGrob(img, interpolate=TRUE)   # get image A. Upper jaw measurement
-   img2        <- readPNG("C:/github/sablehead/figures/Figure2b.png")
-   g2          <- rasterGrob(img2, interpolate=TRUE)  # get image B. Eye diameter measurement
-   img3        <- readPNG("C:/github/sablehead/figures/Figure2c.png")
-   g3          <- rasterGrob(img3, interpolate=TRUE)  # get image C. Interorbital measurement
-   img4        <- readPNG("C:/github/sablehead/figures/Figure2d.png")
-   g4          <- rasterGrob(img4, interpolate=TRUE)  # get image D. Snout length 
-   img5        <- readPNG("C:/github/sablehead/figures/Figure2e.png")
-   g5          <- rasterGrob(img5, interpolate=TRUE)  # get image E. Post orbital to preoperculum length measurement
-   img6        <- readPNG("C:/github/sablehead/figures/Figure2f.png")
-   g6          <- rasterGrob(img6, interpolate=TRUE)  # get image F. Post orbital head length.   
-   
-
-   ggplot(data.frame(x = 1:3, y = 1:3), aes(x, y)) +
-          geom_point(size = 0.00001, color="white") +
-
-          annotation_custom(g,   xmin = 0.7,    xmax = 2.1,   ymin = 2.45,  ymax = 3.2)   +   
-          geom_text(x=0.99,  y=2.7, label="A.", size=0.6) + 
-          annotation_custom(g2,  xmin = 1.87,   xmax = 3.2,   ymin = 2.45,  ymax = 3.2)   +   
-          geom_text(x=2.1,   y=2.7, label="B.", size=0.6) +  
-          annotation_custom(g3,  xmin = 0.7,    xmax = 2.1,   ymin = 1.65,  ymax = 2.4)   +    
-          geom_text(x=0.99,  y=2.0, label="C.", size=0.6) + 
-          annotation_custom(g4,  xmin = 1.87,   xmax = 3.2,   ymin = 1.65,  ymax = 2.4)   +   
-          geom_text(x=2.1,   y=2.0, label="D.", size=0.6) +  
-          annotation_custom(g5,  xmin = 0.7,    xmax = 2.1,   ymin = 0.85,  ymax = 1.6)   +   
-          geom_text(x=0.99,  y=1.22,label="E.", size=0.6) +  
-          annotation_custom(g6,  xmin = 1.87,   xmax = 3.35,  ymin = 0.85,  ymax = 1.6)   +   
-          geom_text(x=2.1,   y=1.22,label="F.", size=0.6) +
-          theme_bw()
-   
-     while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/Figure2.png',sep="")   # -- retrieve png 
-              knitr::include_graphics(img)
-
-```
-
-(ref:figure3) Scatterplot upper jaw vs fork length, measurements in millimeters.
-
-```{r figure3, fig.cap='(ref:figure3)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"} 
-
-     png("C:/github/sablehead/figures/Figure3.png", units="px", width=1600, height=1200, res=300) # write png to file
+     png("C:/github/sablehead/figures/figure2.png", units="px", width=1600, height=1200, res=300) # write png to file
 
      new_theme <- theme_bw() %+replace% 
                   theme(legend.position = c(0.84, 0.3))
@@ -157,16 +116,16 @@
                       parse = TRUE, size=4.2)
 
      while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/Figure3.png',sep="")   # -- retrieve png 
+     img <-   paste('C:/github/sablehead/figures/figure2.png',sep="")   # -- retrieve png 
               knitr::include_graphics(img)
 
 ```
 
-(ref:figure4) Scatterplot eye diameter vs fork length, measurements in millimeters.
+(ref:figure3) Scatterplot eye diameter vs fork length, measurements in millimeters.
 
-```{r figure4, fig.cap='(ref:figure4)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"} 
+```{r figure3, fig.cap='(ref:figure3)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"} 
 
-     png("C:/github/sablehead/figures/Figure4.png", units="px", width=1600, height=1200, res=300) # write png to file
+     png("C:/github/sablehead/figures/figure3.png", units="px", width=1600, height=1200, res=300) # write png to file
 
    #  fit the regression line and get the results
      hd                     <-  hdEd                                      # original data
@@ -198,18 +157,18 @@
                       parse = TRUE, size=4.2)
 
      while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/Figure4.png',sep="")   # -- retrieve png 
+     img <-   paste('C:/github/sablehead/figures/figure3.png',sep="")   # -- retrieve png 
               knitr::include_graphics(img)
 
 ```
 
-(ref:figure5) Scatterplot interorbital vs fork length.
+(ref:figure4) Scatterplot interorbital vs fork length.
 
-```{r figure5, fig.cap='(ref:figure5)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
+```{r figure4, fig.cap='(ref:figure4)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
 
-  png("C:/github/sablehead/figures/Figure5.png", units="px", width=1600, height=1200, res=300) # write png to file
+     png("C:/github/sablehead/figures/figure4.png", units="px", width=1600, height=1200, res=300) # write png to file
 
-   #  fit the regression line and get the results
+     #  fit the regression line and get the results
      hd                     <-  hdId                                       # original data
      n                      <-  length(hd$SPECIMEN_ID)                      # number of specimens 
      hd.fit.outliers        <-  lm(Fork_Length ~ InterOrbital_Distance, data=hd) # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
@@ -237,15 +196,15 @@
                       parse = TRUE, size=4.2)
 
      while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/Figure5.png',sep="")   # -- retrieve png 
+     img <-   paste('C:/github/sablehead/figures/figure4.png',sep="")   # -- retrieve png 
               knitr::include_graphics(img)
 ```
 
-(ref:figure6) Scatterplot snout length  vs fork length.
+(ref:figure5) Scatterplot snout length  vs fork length.
 
-```{r figure6, fig.cap='(ref:figure6)', results='asis', dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
+```{r figure5, fig.cap='(ref:figure5)', results='asis', dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
 
-png("C:/github/sablehead/figures/Figure6.png",  units="px", width=1600, height=1200, res=300) # write png to file
+png("C:/github/sablehead/figures/figure5.png",  units="px", width=1600, height=1200, res=300) # write png to file
 
    #  fit the regression line and get the results
      hd                     <-  hdSl                                     # snout length data
@@ -275,15 +234,15 @@ png("C:/github/sablehead/figures/Figure6.png",  units="px", width=1600, height=1
                       parse = TRUE, size=4.2)
 
      while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/Figure6.png', sep="")   # -- retrieve png 
+     img <-   paste('C:/github/sablehead/figures/figure5.png', sep="")   # -- retrieve png 
               knitr::include_graphics(img)
 ```
 
-(ref:figure7) Scatterplot post orbital to preoperculum length vs fork length.
+(ref:figure6) Scatterplot post orbital to preoperculum length vs fork length.
 
-```{r figure7, fig.cap='(ref:figure7)', results='asis', dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
+```{r figure6, fig.cap='(ref:figure6)', results='asis', dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
 
-     png("C:/github/sablehead/figures/Figure7.png",units="px", width=1600, height=1200, res=300) # write png to file
+     png("C:/github/sablehead/figures/figure6.png",units="px", width=1600, height=1200, res=300) # write png to file
 
    #  fit the regression line and get the results
      hd                     <-  hdPop                       # post orbital to preoperculum length data
@@ -314,16 +273,16 @@ png("C:/github/sablehead/figures/Figure6.png",  units="px", width=1600, height=1
                       parse = TRUE, size=4.2) # y = mx + b label
 
      while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/Figure7.png',sep="")   # -- retrieve png 
+     img <-   paste('C:/github/sablehead/figures/figure6.png',sep="")   # -- retrieve png 
               knitr::include_graphics(img)
      
 ```
 
-(ref:figure8) Scatterplot of post orbital length vs fork length.
+(ref:figure7) Scatterplot of post orbital length vs fork length.
 
-```{r figure8, fig.cap='(ref:figure8)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
+```{r figure7, fig.cap='(ref:figure7)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
 
-     png("C:/github/sablehead/figures/Figure8.png", units="px", width=1600, height=1200, res=300) # write png to file
+     png("C:/github/sablehead/figures/figure7.png", units="px", width=1600, height=1200, res=300) # write png to file
 
      #  fit the regression line and get the results
      hd                     <-  hdPo                                        # post orbital length data
@@ -355,7 +314,7 @@ png("C:/github/sablehead/figures/Figure6.png",  units="px", width=1600, height=1
                       parse = TRUE, size=4.2)  # y = mx + b label
 
      while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/Figure8.png',sep="")   # -- retrieve png 
+     img <-   paste('C:/github/sablehead/figures/figure7.png',sep="")   # -- retrieve png 
               knitr::include_graphics(img)
               
 ```

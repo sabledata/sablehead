@@ -26,19 +26,17 @@
     # y = Fork_Length, response variable
     options("scipen"=100, "digits"=3)
     
-    details <-    paste("select * from Head_Measurements_Report", sep="")
-    #hd     <-    GetSQLData(details,"Sablefish")      # head details from SQL Server
-    hd      <-    read.csv("C:/github/sablehead/standalone/head_measurements.csv")  # master data
-    
-    hdUj    <-    hd[hd$Upper_jaw_length > 0,]         # upper jaw length
-    hdEd    <-    hd[hd$Eye_Diameter > 0,]             # eye diameter  
-    hdId    <-    hd[hd$InterOrbital_Distance > 0,]    # interorbital distance
-    hdSl    <-    hd[hd$Snout_length > 0,]             # snout length
-    hdPop   <-    hd[hd$Postorbital_Preoperculum > 0,] # postorbital to preoperculum
-    hdPo    <-    hd[hd$Post_orbital_Head_length > 0,] # postorbital head length
 
 ```    
    
+#  Sample collection
+
+The endemic and endangered status makes, P. denisonii an important freshwater species of study and the biometrics information is useful for more effective management of in-situ conservation. A total of 306 specimens comprising 111 males, 97 females and 98 indeterminate were used for the study. The smallest length of captured fish was 3.30 cm and highest was 14.00 cm in TL (Table 1).
+
+A total of 438 specimens comprising xx males and xx females were collected for six head measurements (UJ,ED,IO,SL, PP, PH),  fork length, round weight, otoliths and DNA. 
+Post orbital head length (Posterior inner edge of orbit to dorsal insertion of opercle) was also measured, but this was abandoned after 130 measurements, to save time, and because it was not possible to measure this on a number of the heads for a variety of reasons (opercula had been cut off from some heads, it was awkward to take longer measurements using the electronic calipers, and the end points of the measurement were difficult to define.  
+
+
 The mean values of the predictor and  response variables  (Table \@ref(tab:table2)).  
 
 Given the ease of measurement, we suggest that Interorbital distance be used to predict sablefish fork lengths and weights (Table \@ref(tab:table3)). 
@@ -47,8 +45,10 @@ We found evidence of relationships between upper jaw length and fork length (p =
 
 The estimated slope is `r lmslp(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))` (SE `r coef(summary(lm(Fork_Length ~ Upper_jaw_length, data=hdUj)))[,"Std. Error"][2]`) units of fork length per unit of upper jaw length; the estimated slope is `r lmslp(lm(Fork_Length ~ Eye_Diameter, data=hdEd))` (SE `r  coef(summary(lm(Fork_Length ~ Eye_Diameter, data=hdEd)))[, "Std. Error"][2]`) units of fork length per unit of eye diameter; the estimated slope is `r lmslp(lm(Fork_Length ~ InterOrbital_Distance, data=hdId))` (SE `r coef(summary(lm(Fork_Length ~ InterOrbital_Distance, data=hdId)))[, "Std. Error"][2]`) units of fork length per unit of interorbital distance; the estimated slope is `r lmslp(lm(Fork_Length ~ Snout_length, data=hdSl))` (SE `r coef(summary(lm(Fork_Length ~ Snout_length, data=hdSl)))[, "Std. Error"][2]` units of fork length per unit of snout length; the estimated slope is `r lmslp(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop))` (SE `r coef(summary(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop)))[, "Std. Error"][2]`) units of fork length per unit of postorbital to preoperculum length; and the estimated slope is `r lmslp(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo))` (SE `r coef(summary(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo)))[, "Std. Error"][2]`) units of fork length per unit of postorbital head length.
 
+#  Pilot Collection of Sablefish Heads as a Biological Sample
 
+Heads were received by DFO in good condition (intact and not deformed), segregated by set, for measuring and otolith extraction.  Operculum cuts worked well to indicate sex
 
+#  Repeatability of measurements between technicians
 
-
-
+\clearpage

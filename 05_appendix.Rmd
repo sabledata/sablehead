@@ -8,33 +8,67 @@ After that, all subsequent sections will be turned into appendices. -->
 
 \clearpage
 
-# THE FIRST APPENDIX {#app:first-appendix}
+# IMAGES OF THE SIX CRANIAL DIMENSION MEASUREMENTS.{#app:first-appendix}
 
-Content here.
+A. Upper jaw measurement (UJ);  B. Eye diameter measurement (ED);  C. Interorbital distance (ID);  D. Snout length (SL);  E. Post orbital to preoperculum length measurement (PP); F. Post orbital head length (PH).
 
-```{r test1, fig.cap="Test"}
-plot(1)
+
+```{r appendixA}
+ png(paste(graph_directory,"AppendixA.png", sep=""), units="px", width=1600, height=1800, res=150)# write png to file
+    
+   img         <- readPNG(paste(graph_directory,"Figure2a.png", sep=""))
+   g           <- rasterGrob(img, interpolate=TRUE)   # get image A. Upper jaw measurement
+   img2        <- readPNG(paste(graph_directory,"Figure2b.png", sep=""))
+   g2          <- rasterGrob(img2, interpolate=TRUE)  # get image B. Eye diameter measurement
+   img3        <- readPNG("C:/github/sablehead/figures/Figure2c.png")
+   g3          <- rasterGrob(img3, interpolate=TRUE)  # get image C. Interorbital measurement
+   img4        <- readPNG("C:/github/sablehead/figures/Figure2d.png")
+   g4          <- rasterGrob(img4, interpolate=TRUE)  # get image D. Snout length 
+   img5        <- readPNG("C:/github/sablehead/figures/Figure2e.png")
+   g5          <- rasterGrob(img5, interpolate=TRUE)  # get image E. Post orbital to preoperculum length measurement
+   img6        <- readPNG("C:/github/sablehead/figures/Figure2f.png")
+   g6          <- rasterGrob(img6, interpolate=TRUE)  # get image F. Post orbital head length.   
+ 
+   ggplot(data.frame(x = 1:3, y = 1:3), aes(x, y)) +
+          geom_point(size = 0.00001, color="white") +
+
+          annotation_custom(g,   xmin = 0.7,    xmax = 2.1,   ymin = 2.45,  ymax = 3.2)   +   
+          #geom_text(x=0.99,  y=2.7, label="A.", size=0.6, color="white") + 
+          annotation_custom(g2,  xmin = 1.87,   xmax = 3.2,   ymin = 2.45,  ymax = 3.2)   +   
+          #geom_text(x=2.1,   y=2.7, label="B.", size=0.6, color="white") +  
+          annotation_custom(g3,  xmin = 0.7,    xmax = 2.1,   ymin = 1.65,  ymax = 2.4)   +    
+          #geom_text(x=0.99,  y=2.0, label="C.", size=0.6, color="white") + 
+          annotation_custom(g4,  xmin = 1.87,   xmax = 3.2,   ymin = 1.65,  ymax = 2.4)   +   
+          #geom_text(x=2.1,   y=2.0, label="D.", size=0.6, color="white") +  
+          annotation_custom(g5,  xmin = 0.7,    xmax = 2.1,   ymin = 0.85,  ymax = 1.6)   +   
+          #geom_text(x=0.99,  y=1.22,label="E.", size=0.6, color="white") +  
+          annotation_custom(g6,  xmin = 1.87,   xmax = 3.35,  ymin = 0.85,  ymax = 1.6)   +   
+          #geom_text(x=2.1,   y=1.22,label="F.", size=0.6, color="white") +
+          theme(axis.title.x = element_text(colour = "white"),
+          axis.title.y = element_text(colour = "white"),
+          text=element_text(color="white"),
+          axis.text=element_text(color="white"),
+          panel.background = element_rect(fill = 'white', color = 'white'),
+          axis.ticks.y = element_blank(),
+          axis.ticks.x = element_blank()) 
+         
+   
+     while (!is.null(dev.list()))  dev.off()
+     img <-   paste(paste(graph_directory,"AppendixA.png", sep=""))   # -- retrieve png 
+              knitr::include_graphics(img)
 ```
-
-
-```{r test2, results='asis'}
-csasdown::csas_table(data.frame(x = c("a", "a", "b"), y = c(1, 2, 3)), caption = "Test")
-```
-
-\begin{equation}
-  1 + 1
-  \label{eq:test2}
-\end{equation}
-
-See Figure \@ref(fig:test1) for the example appendix figure.
-
-See Table \@ref(tab:test2) for the example appendix table.
 
 \clearpage
 
-# THE SECOND APPENDIX, FOR FUN {#app:second-appendix}
+# SEX DETERMINATION BY OPERCULUM MARKING {#app:second-appendix}
 
-More content.
+Operculum knife cuts for sablefish males (A) and females (B).
+
+```{r AppendixB, results='asis'}
+img <- paste(graph_directory,'AppendixB.png',sep='') 
+      knitr::include_graphics(img)
+```
+\clearpage
 
 <!-- At the end of your appendices add: -->
 `r if(knitr:::is_latex_output()) '% end csasdown appendix'`

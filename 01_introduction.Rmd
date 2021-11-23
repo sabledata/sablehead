@@ -1,5 +1,38 @@
 # Introduction
 
-Sablefish (*Anoplopoma fimbria*) stock indices are derived from commercial and survey trap catch rates and estimates of trap vulnerable biomass determined from tag-recovery data.  The tag and release study has been conducted annually since 1991.  Whole tagged fish are recovered mainly in the commercial fishery (trap, trawl, hook and line) and processed at the point of landing through the Dockside Monitoring Program (DMP) currently operated by Archipelago Marine Research (AMR).  In order to eliminate whole fish samples, we assessed whether sablefish fork length and weight could be predicted from 6 different head dimension measurements.  Simple linear regression models were calculated from 438 sablefish  (240-1080 mm) collected on 2 biennial DFO Groundfish Synoptic Bottom Trawl surveys in 2016 and one salmon survey (details).
+  Biological samples of British Columbia (BC) sablefish (*Anoplopoma fimbria*) have been collected from commercial fishing operations since 1995 [@Haist2001] and processed by the Department of Fisheries and Oceans (DFO) port samplers and contracted service providers. In addition, tagged fish recovered in commercial fisheries (trap, trawl, hook and line) have been received at the point of landing via the dockside monitoring program (DMP) and sampled by Archipelago Marine Research (AMR) since the early 1990's.   These data provide a fishery dependent source of age composition data for the two-sex structured operating model of the coastal Management Strategy Evaluation (MSE) [@Cox2019].
+
+Movement to a head only catch sampling program was initiated to improve the number of returns and increase the range of sizes in the samples.  Six fish head dimension measurements of upper jaw length, eye diameter, interorbital distance, snout length, post orbital to preoperculum distance and post orbital head length were obtained from the 212 sablefish caught during the 2016 West Coast Vancouver Island (WCVI) survey [@Williams2018] and 219 sablefish caught during the 2016 West Coast Haida Gwaii (WCHG) survey [@Nottingham2018].  Seven small sablefish were collected during the 201? salmon survey  (Figure \@ref(fig:figure1)).  
+
+```{r sampleCount} 
+
+    pointdata    <-  read.csv(paste(path,'figure1.csv',sep=''),header=T)  # read from csv
+    females      <-  pointdata[pointdata$SPECIMEN_SEX_DESC=='FEMALE',]
+    males        <-  pointdata[pointdata$SPECIMEN_SEX_DESC=='MALE',]
+
+```
+
+Regression models were developed by using measurements taken from `r length(females$SPECIMEN_ID)` females and `r length(males$SPECIMEN_ID)` males sampled in 2016.  
+
+```{r words}   
+
+#  DFO staff and contracted service providers conduct routine biological sampling of sablefish in support of the two-sex structured operating model of the coastal Management Strategy Evaluation (MSE) # #[@Cox2019].  
+
+#The department's port samplers have collected whole round biological samples at the time of landing as part of the voluntary commercial trap catch sampling program since 1995 [Haist2001].  The at-sea #observer program (ASOP) also collected biological data from the partial at-sea observer coverage (10% of sea days) on commercial trips from 2001 through to 2005 [@IFMP2001], [@IFMP2004]. 
+
+#In addition, biological samples have been processed by at-sea observers from the offshore seamount fishery that began as an experimental fishery in the 80's [@Murie1996] and moved to a limited-entry #fishery in 2001 [@IFMP2001]. Vessels without an observer have been required to retain a sample of 50/60 frozen sablefish for the department. The service provider Archipelago Marine Research (AMR) has #been responsible for the sablefish tag recovery program since the early 1990's, including the collection and biological sampling of tagged fish.
+#Simple linear regression was used to estimate the relationship between each head dimension and fork length.  Head dimension measurements were also ranked on a scale of one to five in terms of ease of use and repeatability.  Interorbial head length (IO) proved to be a good predictor of fork length for sablefish and ranked high in terms of task completion time, understanding and performance ease for repeated caliper placement.
+
+#   Previous research has assessed the relationship between head measurements [@Serafy1996; @Park2019TotalLE], head and mandible lengths [@Isermann2005] or relative eye size [@Richardson2015] to estimate length in other fish.
+
+#  Head morphology showed sexual dimorphism as well [@mesa2005].
+
+#  Morphometric characters  [@]
+# The statistical relationship between total length (TL) and total body weight (W) of the fish was derived using the formula:
+# log W = log a + b log TL  
+# Where, W is the weight of fish (g); a is the intercept (constant); TL is
+# the total length of fish (cm) and b is the regression coefficient (slope).
 
 
+ 
+```

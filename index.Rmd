@@ -1,12 +1,11 @@
 ---
 title: "Estimation of fork length using cranial measurements of sablefish (*Anoplopoma fimbria*)."
-year: 2020
+year: 2021
 report_number: nnn
 author: |
-  Kathryn x. Temple, 
-  Lisa C. Lacko and
-  Brendan M. Conners
-author_list: "Kathryn x. Temple and Lacko, L.C. and Connors, B.M. "
+  Kathryn x. Temple and Kendra Holt and
+  Lisa C. Lacko 
+author_list: "Kathryn x. Temple,  K. Holt and Lacko, L.C."
 region: Pacific Region
 isbn: ""
 address: |
@@ -16,12 +15,12 @@ address: |
 phone: "(250) 756-7000"
 author_footnote: "Email: Kathryn.Temple@dfo-mpo.gc.ca | telephone: (250) 756-7366"
 abstract: |
-  This document describes sampling activities and summarizes results 
+  Routine biological sampling of whole round sablefish from commercial fishing operations have occurred since the early 1990's.  Historically, specimens have been obtained through a voluntary catch sampling program and tagged sablefish recovery program. In order to improve the quantity and size range of samples received, we investigated the potential for obtaining biological information using heads, rather than the entire fish.   In 2016, 438 sablefish (240-1080 mm) were sampled at sea and six different fish head measurements were assessed to see if they could predict fork length.  Genetic samples (100) were collected to develop methods for DNA-based sex identification.   A pilot study was conducted in 2017 with head-only samples and sex determination provided by a commercial vessel, followed by scientific sampling on shore.   Regression analysis results show that the interorbital distance measurement was a good predictor of sablefish fork length, while samplers ranked it the most efficient and easily repeatable.   Genetic results indicate xx% accuracy in fisher sex detection.  Subsequently, the 2018 sampling collection program was modified so that returns of whole round sablefish were replaced by head-only samples with knife cuts on the operculum to indicate sex.
 
   
 abstract_other: |
  
-
+ 
 output:
  csasdown::techreport_pdf:
    french: false
@@ -88,8 +87,9 @@ options(kableExtra.latex.load_packages = FALSE)
 library(csasdown)
 message("year = ", rmarkdown::metadata$year)
 #browser()
-yr     <-  2020
-path   <-  "c:/github/sablehead/standalone/"
+yr              <-  2021
+path            <-  "c:/github/sablehead/standalone/"
+graph_directory <-  "c:/github/sablehead/figures/"
 
 library(RODBC)
 library(knitr)
@@ -120,9 +120,9 @@ library(grid)
                                           strDbName,";
                                           Trusted_Connection=Yes",
                                           sep=""))
-            dat <- sqlQuery(cnn, strSQL)
-            odbcClose(cnn)
-            return(dat) 
+         dat <- sqlQuery(cnn, strSQL)
+         odbcClose(cnn)
+         return(dat) 
                                             }
   
   panLab <- function( x, y, txt, ... ) { # Allows text to be placed at 0<x<1, 0<y<1)
@@ -232,4 +232,18 @@ library(grid)
   
 ```
 
+``` {r GlobalDataTable}
+
+    details <-    paste("select * from Head_Measurements_Report", sep="")
+    #hd     <-    GetSQLData(details,"Sablefish")      # head details from SQL Server
+    #write.table(hd , file = paste(path,"head_measurements.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
+    hd      <-    read.csv(paste(path,"head_measurements.csv",sep=""), header = T)  # master data
+    
+    hdUj    <-    hd[hd$Upper_jaw_length > 0,]         # upper jaw length
+    hdEd    <-    hd[hd$Eye_Diameter > 0,]             # eye diameter  
+    hdId    <-    hd[hd$InterOrbital_Distance > 0,]    # interorbital distance
+    hdSl    <-    hd[hd$Snout_length > 0,]             # snout length
+    hdPop   <-    hd[hd$Postorbital_Preoperculum > 0,] # postorbital to preoperculum
+    hdPo    <-    hd[hd$Post_orbital_Head_length > 0,] # postorbital head length
+```
 

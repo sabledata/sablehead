@@ -1,13 +1,23 @@
-\babel@toc {english}{}
-\contentsline {section}{ABSTRACT}{iv}{section*.2}%
-\contentsline {section}{R\'{E}SUM\'{E}}{v}{section*.3}%
+\babel@toc {english}{}\relax 
+\contentsline {section}{ABSTRACT}{v}{section*.2}%
+\contentsline {section}{R\'{E}SUM\'{E}}{vi}{section*.3}%
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Methods}{1}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Sample collection and evaluation}{1}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Genetic test development}{1}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Model evaluation}{2}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.0.1}Survey sample collection}{1}{subsubsection.2.0.1}%
+\contentsline {subsubsection}{\numberline {2.0.2}Pilot study sample Collection}{1}{subsubsection.2.0.2}%
+\contentsline {subsubsection}{\numberline {2.0.3}Sampling on shore}{2}{subsubsection.2.0.3}%
+\contentsline {subsubsection}{\numberline {2.0.4}Head measurements}{2}{subsubsection.2.0.4}%
+\contentsline {subsection}{\numberline {2.1}Genetic test development}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Pilot study}{2}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Discussion}{2}{section.3}%
 \contentsline {section}{\numberline {4}Results}{3}{section.4}%
-\contentsline {section}{\numberline {5}Figures}{3}{section.5}%
-\contentsline {section}{\numberline {6}Discussion}{9}{section.6}%
-\contentsline {section}{\numberline {7}Acknowledgments}{9}{section.7}%
+\contentsline {section}{\numberline {5}Sample collection}{3}{section.5}%
+\contentsline {section}{\numberline {6}Pilot Collection of Sablefish Heads as a Biological Sample}{3}{section.6}%
+\contentsline {section}{\numberline {7}Repeatability of measurements between technicians}{3}{section.7}%
+\contentsline {section}{\numberline {8}Tables}{4}{section.8}%
+\contentsline {section}{\numberline {9}Figures}{7}{section.9}%
+\contentsline {section}{\numberline {10}Discussion}{11}{section.10}%
+\contentsline {section}{\numberline {11}Acknowledgments}{11}{section.11}%
+\contentsline {section}{Appendices}{11}{section*.16}%
+\contentsline {section}{\numberline {A}IMAGES OF THE SIX CRANIAL DIMENSION MEASUREMENTS.}{12}{appendix.1.A}%
+\contentsline {section}{\numberline {B}SEX DETERMINATION BY OPERCULUM MARKING}{13}{appendix.1.B}%

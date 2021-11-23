@@ -1,4 +1,7 @@
-"Survey","FL","WR","UJ","ED","ID","SL","PP","PH","F","M","Otoliths","DNA","Total"
-"2016 WCHG",219,219,219,219,218,219,207,52,111,108,219,59,219
-"2016 WCVI ",212,212,211,212,212,211,212,78,105,107,212,78,212
-"Salmon",7,0,7,7,7,7,7,0,0,7,0,0,7
+Head dimension,Head description,Caliper jaw position
+UJ,Tip of snout to the posterior edge of the maxilla.,Outside caliper jaw measurement from forward point and centre of snout to back of maxilla.
+ED,Anterior-posterior diameter of eye socket.,Inside caliper jaw measurement firmly stretched against eye socket at vertical midpoint of eye.
+IO,"Narrowest distance between eye sockets, measured on dorsal surface.",Outside caliper jaw measurement of the horizontal midpoint of eyes on dorsal surface.
+SL,Tip of snout to anterior inner edge of eye socket.,Outside caliper jaw measurement from forward point and centre of snout to horizontal midpoint of anterior edge of eye socket.
+PP,Posterior inner edge of orbit to visual insertion point of preopercle.,Outside caliper jaw measurement from back of eye socket to preopercle bone insertion point. Preopercle must be lifted to expose preopercle bone underneath. 
+PH,Posterior inner edge of orbit to dorsal insertion of opercle.,Outside caliper jaw measurement from back of eye socket to bone underneath gill cover notch at dorsal insertion of the opercle.  The operculum must be held taut.
