@@ -1,6 +1,6 @@
 # Tables
 
-(ref:Table1Caption) Description of head dimensions measured and description of caliper jaw positions.
+(ref:Table1Caption) List of head dimensions, measurement descriptions and specification of caliper jaw placement.
 \ \
 \ \
 
@@ -37,16 +37,33 @@
 ```
 \ \
 \ \
-(ref:Table2Caption) Summary of sablefish biological data collected. Tally of fork lengths (FL), round weight (RW), upper jaw length (UJ),  eye diameter (ED), interorbital distance (IO), snout length (SL), post orbital to preoperculum distance (PP), post orbital head length (PH), females (F), males (M), sagittal otoliths (O) and operculum clips (DNA) listed by survey.
+(ref:Table2Caption) Primers used in the development of a genetic test for determining sablefish sex.
+\ \
+\ \
+```{r table2,  results="asis",echo=FALSE, warning=FALSE, message=FALSE}
+
+   dna <- read.csv(paste(path,'Table2.csv',sep=''),header=T)  # read from csv
+   kableExtra::kable(dna, booktabs = TRUE,
+                     format = "latex",
+                     caption = "(ref:Table2Caption)") %>%
+   
+   kableExtra::kable_styling(font_size = 10, position = "left",latex_options = "hold_position") %>%
+                     row_spec(0, bold="true") 
+   
+
+```
+\ \
+\ \
+(ref:Table3Caption) Summary of sablefish biological data collected. Tally of fork lengths (FL), round weight (RW), upper jaw length (UJ),  eye diameter (ED), interorbital distance (ID), snout length (SL), post orbital to preoperculum distance (PP), post orbital head length (PO), females (F), males (M), sagittal otoliths and operculum clips (DNA) are listed by survey.
 \ \
 \ \
 
-```{r table2, results="asis",echo=FALSE, warning=FALSE, message=FALSE}
+```{r table3, results="asis",echo=FALSE, warning=FALSE, message=FALSE}
 
     sample <- paste("select  CASE WHEN TRIP_ID = 0 THEN 'Salmon' WHEN trip_id = 80378 THEN '2016 WCHG'  ",
                     " ELSE '2016 WCVI ' END AS Survey,  ",
-                    " SUM(FL) AS FL, SUM(RW) AS WR, SUM(UJ) AS UJ, SUM(ED) AS ED, ",
-                    " SUM(ID) AS IO, SUM(SL) AS SL, SUM(PP) AS PP, SUM(PH) AS PH, ",
+                    " SUM(FL) AS FL, SUM(WR) AS WR, SUM(UJ) AS UJ, SUM(ED) AS ED, ",
+                    " SUM(ID) AS ID, SUM(SL) AS SL, SUM(PP) AS PP, SUM(PH) AS PH, ",
                     " SUM(F) AS F,   SUM(M) AS M,   SUM(O)  AS Otoliths,  ",
                     " SUM(D) AS DNA, SUM(FL) AS Total  from    ",       
                     " (SELECT   TRIP_ID, CASE WHEN Fork_Length > 0 THEN 1 ELSE 0 END AS FL, ",
@@ -65,22 +82,32 @@
                     "  group by CASE WHEN TRIP_ID = 0 THEN 'Salmon' WHEN trip_id = 80378  ",
                     "  THEN '2016 WCHG' ELSE '2016 WCVI ' END", sep="")
    # samplecnt <-    GetSQLData(sample,"Sablefish")  # -- counts of biological samples
-   # write.table(samplecnt , file = paste(path,"Table2.csv", sep=''), row.names=FALSE, na="", col.names=TRUE, sep=",")
-   samplecnt <- read.csv(paste(path,'Table2.csv',sep=''),header=T)  # read from csv
+   # write.table(samplecnt , file = paste(path,"Table3.csv", sep=''), row.names=FALSE, na="", col.names=TRUE, sep=",")
+   samplecnt <- read.csv(paste(path,'Table3.csv',sep=''),header=T)  # read from csv
+   
+   last.line  <-   c('Total', sum(samplecnt$FL), sum(samplecnt$RW),
+                         sum(samplecnt$UJ), sum(samplecnt$ED),
+                         sum(samplecnt$ID), sum(samplecnt$SL),
+                         sum(samplecnt$PP), sum(samplecnt$PH),
+                         sum(samplecnt$F),  sum(samplecnt$M),
+                         sum(samplecnt$Otoliths), sum(samplecnt$DNA),sum(samplecnt$Total))
+   samplecnt$Survey <- as.character(samplecnt$Survey)
+   samplecnt        <- rbind(samplecnt, last.line)
    
    kableExtra::kable(samplecnt, booktabs = TRUE,
                      format = "latex",
-                     caption = "(ref:Table2Caption)") %>%
+                     caption = "(ref:Table3Caption)") %>%
    
    kableExtra::kable_styling(font_size = 10, position = "left",latex_options = "hold_position") %>%
-                     row_spec(0, bold="true") 
+                     row_spec(0, bold="true")  %>%
+                     row_spec(3, hline_after = T)
    
 ```
 
-(ref:Table3Caption) Table of sample size, mean and standard deviation for predictor and response variables for each head dimension.
+(ref:Table4Caption) Table of sample size, mean and standard deviation for predictor and response variables for each head dimension.
 \ \
 
-```{r table3, echo=FALSE}
+```{r table4, echo=FALSE}
 
     hd                     <-  hdUj                     # table of sample size, mean and sd for variables
     fl.nme                 <-  "Fork length"
@@ -90,7 +117,7 @@
     std                    <-  round(sd(hd$Upper_jaw_length),2)
     stdfl                  <-  round(sd(hd$Fork_Length),2)
     
-    head.data    <-  data.frame(measurement="Upper jaw length",n,mn, std, fl.nme, mnfl, stdfl)
+    head.data    <-  data.frame(measurement="Upper jaw length (UJ)",n,mn, std, fl.nme, mnfl, stdfl)
     head.data$measurement  <- as.character(head.data$measurement)
     #typeof(head.data$measurement)
     
@@ -101,7 +128,7 @@
     std                    <-  round(sd(hd$Eye_Diameter),2)
     stdfl                  <-  round(sd(hd$Fork_Length),2)
     
-    head.data[2,] <- c("Eye diameter",n,mn, std, fl.nme, mnfl, stdfl)
+    head.data[2,] <- c("Eye diameter (ED)",n,mn, std, fl.nme, mnfl, stdfl)
     
     hd                     <-  hdId                     # table of sample size, mean and sd for variables
     n                      <-  length(hd$SPECIMEN_ID)                   
@@ -110,7 +137,7 @@
     std                    <-  round(sd(hd$InterOrbital_Distance),2)
     stdfl                  <-  round(sd(hd$Fork_Length),2)
   
-    head.data[3,] <- c("InterOrbital distance",n, mn, std, fl.nme, mnfl, stdfl)
+    head.data[3,] <- c("InterOrbital distance (ID)",n, mn, std, fl.nme, mnfl, stdfl)
     
     hd                     <-  hdSl                     # table of sample size, mean and sd for variables
     n                      <-  length(hd$SPECIMEN_ID)                   
@@ -119,7 +146,7 @@
     std                    <-  round(sd(hd$Snout_length),2)
     stdfl                  <-  round(sd(hd$Fork_Length),2)
   
-    head.data[4,] <-c("Snout length",n, mn, std, fl.nme, mnfl, stdfl)
+    head.data[4,] <-c("Snout length (SL)",n, mn, std, fl.nme, mnfl, stdfl)
     
     hd                     <-  hdPop                     # table of sample size, mean and sd for variables
     n                      <-  length(hd$SPECIMEN_ID)                   
@@ -128,25 +155,25 @@
     std                    <-  round(sd(hd$Postorbital_Preoperculum),2)
     stdfl                  <-  round(sd(hd$Fork_Length),2)
   
-    head.data[5,] <- c("Post orbital to preoperculum length",n,mn, std, fl.nme, mnfl, stdfl)
+    head.data[5,] <- c("Post orbital to preoperculum length (PP)",n,mn, std, fl.nme, mnfl, stdfl)
     
-    hd                     <-  hdPo                     # table of sample size, mean and sd for variables
+    hd                     <-  hdPo                     # table of sample size, mean and sd for Post orbital (PH) variable
     n                      <-  length(hd$SPECIMEN_ID)                   
     mn                     <-  round(mean(hd$Post_orbital_Head_length),2)
     mnfl                   <-  round(mean(hd$Fork_Length),2)
     std                    <-  round(sd(hd$Post_orbital_Head_length),2)
     stdfl                  <-  round(sd(hd$Fork_Length),2)
   
-    head.data[6,]     <- c("Post orbital head length",n,mn, std, fl.nme, mnfl, stdfl)
+    head.data[6,]     <- c("Post orbital head length (PO)",n,mn, std, fl.nme, mnfl, stdfl)
     names(head.data)  <- c("Predictor variable", "n", "mean", "sd", "Response variable", "mean", "sd")
     
     kableExtra::kable(head.data,
                      booktabs = TRUE,linesep = "",
-                     format = "latex",  caption = "(ref:Table3Caption)") %>%
+                     format = "latex",  caption = "(ref:Table4Caption)") %>%
      
     kableExtra::kable_styling(font_size = 10, position = "left",latex_options = "hold_position") %>%
                       row_spec(0, bold="true") %>%
-                      column_spec(1, width  = "4.9cm") %>%
+                      column_spec(1, width  = "5.9cm") %>%
                       column_spec(2, width  = "0.6cm") %>%
                       column_spec(3, width  = "0.6cm") %>%
                       column_spec(4, width  = "1.6cm") %>%
@@ -156,15 +183,16 @@
     
 
 ```
-(ref:Table4Caption) Ease of use and repeatability considerations for each measurement.number, ease of use and  repeatability five point ranking where  5-Great; 4- Good; 3-Moderate; 2-Questionable; 1-Terrible. 
+(ref:Table5Caption) Ease of use and repeat ability considerations for each measurement.number, ease of use and repeatability five point ranking where  5-Great; 4- Good; 3-Moderate; 2-Questionable; 1-Terrible. 
 
-on each head dimension manual calipers for >15cm distances other metrics indicate if calipers were limited after >15 cm,  bilateral measurements were possible and if the measurement involved bone.
+```{r table5, echo=FALSE}
 
-```{r table4, echo=FALSE}
+#  Notes:  on each head dimension manual calipers for >15cm distances other metrics indicate if calipers were limited after >15 cm,  bilateral 
+#   measurements were possible and if the measurement involved bone.
 
  options(knitr.kable.NA = '')
 
-     repeatable   <-  read.csv(paste(path,"Table4.csv", sep=""), header=T)
+     repeatable   <-  read.csv(paste(path,"Table5.csv", sep=""), header=T)
      #table4[1,3] <-  lmR(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))   # r value if needed 
      #table4[2,3] <-  lmR(lm(Fork_Length ~ Eye_Diameter, data=hdEd))
      #table4[3,3] <-  lmR(lm(Fork_Length ~ InterOrbital_Distance, data=hdId))
@@ -176,12 +204,12 @@ on each head dimension manual calipers for >15cm distances other metrics indicat
      
      names(repeatable)  <- c("Head Dimension",    
                              "Ease of use", "Repeatable", 
-                             "Caliper limitation", "Bilateral measurement", 
-                             "Bone measurement",   "Considerations")
+                             "Caliper limitation", "Bilateral", 
+                             "Bone",   "Considerations")
      
      kableExtra::kable(repeatable,
                      booktabs = TRUE,linesep = "",
-                     format = "latex",  caption = "(ref:Table4Caption)") %>%
+                     format = "latex",  caption = "(ref:Table5Caption)") %>%
                      row_spec(1,  hline_after = T) %>%
                      row_spec(2,  hline_after = T) %>%
                      row_spec(3,  hline_after = T) %>%
@@ -201,9 +229,9 @@ on each head dimension manual calipers for >15cm distances other metrics indicat
 
 ```
 
-(ref:Table5Caption) Estimated slope and 
+(ref:Table6Caption) Estimated slope and 
 
-```{r table5, echo=FALSE}
+```{r table6, echo=FALSE}
 
   upper.jaw.slope    <-  lmslp(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))
   upper.jaw.SE       <-  coef(summary(lm(Fork_Length ~ Upper_jaw_length, data=hdUj)))[,"Std. Error"][2]

@@ -1,11 +1,11 @@
 ---
-title: "Estimation of fork length using cranial measurements of sablefish (*Anoplopoma fimbria*)."
+title: "Estimation of fork length using cranial measurements of sablefish (*Anoplopoma fimbria*) in British Columbia."
 year: 2021
 report_number: nnn
 author: |
-  Kathryn x. Temple and Kendra Holt and
+  Kathryn x. Temple and Kendra R. Holt and
   Lisa C. Lacko 
-author_list: "Kathryn x. Temple,  K. Holt and Lacko, L.C."
+author_list: "Kathryn x. Temple,  K.R. Holt and Lacko, L.C."
 region: Pacific Region
 isbn: ""
 address: |
@@ -15,11 +15,11 @@ address: |
 phone: "(250) 756-7000"
 author_footnote: "Email: Kathryn.Temple@dfo-mpo.gc.ca | telephone: (250) 756-7366"
 abstract: |
-  Routine biological sampling of whole round sablefish from commercial fishing operations have occurred since the early 1990's.  Historically, specimens have been obtained through a voluntary catch sampling program and tagged sablefish recovery program. In order to improve the quantity and size range of samples received, we investigated the potential for obtaining biological information using heads, rather than the entire fish.   In 2016, 438 sablefish (240-1080 mm) were sampled at sea and six different fish head measurements were assessed to see if they could predict fork length.  Genetic samples (100) were collected to develop methods for DNA-based sex identification.   A pilot study was conducted in 2017 with head-only samples and sex determination provided by a commercial vessel, followed by scientific sampling on shore.   Regression analysis results show that the interorbital distance measurement was a good predictor of sablefish fork length, while samplers ranked it the most efficient and easily repeatable.   Genetic results indicate xx% accuracy in fisher sex detection.  Subsequently, the 2018 sampling collection program was modified so that returns of whole round sablefish were replaced by head-only samples with knife cuts on the operculum to indicate sex.
+  Routine biological sampling of whole round sablefish from commercial fishing operations in British Columbia have occurred since the early 1990's.  Historically, specimens have been obtained through a voluntary catch sampling program and tagged sablefish recovery program. In order to improve the quantity and size range of samples received, we investigated the potential for obtaining biological information using heads, rather than the entire fish.   In 2016, 438 sablefish (240-1080 mm) were sampled at sea and six different fish head measurements were assessed to see if they could predict fork length.  Genetic samples (137) were collected to develop methods for DNA-based sex identification.  A pilot study was conducted in 2017 with head-only samples and sex determination provided by a commercial vessel, followed by scientific sampling on shore.  Regression analysis results show that the interorbital distance measurement was a good predictor of sablefish fork length, while samplers ranked it the most efficient and easily repeatable.  Initial genetic samples (130/137) were successfully PCR amplified from genomic DNA and results indicate 92% accuracy in sex detection.  Subsequently, the 2018 sampling collection program was modified so that returns of whole round sablefish were replaced by head-only samples with knife cuts on the operculum to indicate sex.
 
-  
 abstract_other: |
- 
+  Routine biological sampling of whole round sablefish from commercial fishing operations in British ColumbRoutine biological sampling of whole round sablefish from commercial fishing operations in British Columbia have occurred since the early 1990’s. Historically, specimens have been obtained through a voluntary catch sampling program and tagged sablefish recovery program. In order to improve the quality of samples received, we investigated the potential for obtaining biological information using heads, rather than the entire fish. In 2016, 438 sablefish (240-1080 mm) were sampled at sea and six different fish head measurements were assessed to see if they could predict fork length. Genetic samples (137) were collected to develop methods for DNA-based sex identification. A pilot study was conducted in 2017 with head-only samples and sex determination provided by a commercial vessel, followed by scientific sampling on shore. Regression analysis results show that the interorbital distance measurement was a good predictor of sablefish fork length, while samplers ranked it the most efficient and easily repeatable. Initial genetic samples (130/137) were successfully PCR amplified from genomic DNA and results indicate 92% accuracy in sex detection. Fisher sex determination was xx%. Subsequently, the 2018 sampling collection program was modified so that returns of whole round sablefish were replaced by head-only samples with knife cuts on the operculum to indicate sex.
+
  
 output:
  csasdown::techreport_pdf:

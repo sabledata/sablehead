@@ -10,23 +10,23 @@ After that, all subsequent sections will be turned into appendices. -->
 
 # IMAGES OF THE SIX CRANIAL DIMENSION MEASUREMENTS.{#app:first-appendix}
 
-A. Upper jaw measurement (UJ);  B. Eye diameter measurement (ED);  C. Interorbital distance (ID);  D. Snout length (SL);  E. Post orbital to preoperculum length measurement (PP); F. Post orbital head length (PH).
+A. Upper jaw measurement (UJ);  B. Eye diameter measurement (ED);  C. Interorbital distance (ID);  D. Snout length (SL);  E. Post orbital to preoperculum length measurement (PP); F. Post orbital head length (PO).
 
 
 ```{r appendixA}
  png(paste(graph_directory,"AppendixA.png", sep=""), units="px", width=1600, height=1800, res=150)# write png to file
     
-   img         <- readPNG(paste(graph_directory,"Figure2a.png", sep=""))
+   img         <- readPNG(paste(graph_directory,"AppendixAa.png", sep=""))
    g           <- rasterGrob(img, interpolate=TRUE)   # get image A. Upper jaw measurement
-   img2        <- readPNG(paste(graph_directory,"Figure2b.png", sep=""))
+   img2        <- readPNG(paste(graph_directory,"AppendixAb.png", sep=""))
    g2          <- rasterGrob(img2, interpolate=TRUE)  # get image B. Eye diameter measurement
-   img3        <- readPNG("C:/github/sablehead/figures/Figure2c.png")
+   img3        <- readPNG("C:/github/sablehead/figures/AppendixAc.png")
    g3          <- rasterGrob(img3, interpolate=TRUE)  # get image C. Interorbital measurement
-   img4        <- readPNG("C:/github/sablehead/figures/Figure2d.png")
+   img4        <- readPNG("C:/github/sablehead/figures/AppendixAd.png")
    g4          <- rasterGrob(img4, interpolate=TRUE)  # get image D. Snout length 
-   img5        <- readPNG("C:/github/sablehead/figures/Figure2e.png")
+   img5        <- readPNG("C:/github/sablehead/figures/AppendixAe.png")
    g5          <- rasterGrob(img5, interpolate=TRUE)  # get image E. Post orbital to preoperculum length measurement
-   img6        <- readPNG("C:/github/sablehead/figures/Figure2f.png")
+   img6        <- readPNG("C:/github/sablehead/figures/AppendixAf.png")
    g6          <- rasterGrob(img6, interpolate=TRUE)  # get image F. Post orbital head length.   
  
    ggplot(data.frame(x = 1:3, y = 1:3), aes(x, y)) +
