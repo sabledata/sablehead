@@ -1,40 +1,26 @@
 # Methods
 
-##Estimation of Fork Length using Cranial Measurements
+##  Experimental Study 2016
 
-Mitutoyo ABSOLUTE® 500-762-20 Coolant Proof Digimatic Caliper
+### Sample collection
 
-### Survey sample collection 
+Sablefish were selected for sampling during the 2016 biennial DFO Groundfish Synoptic Bottom Trawl surveys, following a trip-wide length stratified selection protocol. A tally of 212 fish were sampled on the West Coast Vancouver Island survey [@Williams2018] and 219 fish were sampled on the West Coast Haida Gwaii survey [@Nottingham2018]. In addition, seven small sablefish were collected during the 2016 salmon survey (Figure \@ref(fig:figure1)). 
 
-Measurements of fork length (FL), round weight (RW), upper jaw length (UJ), eye diameter (ED), interorbital distance (IO), snout length (SL), post orbital to preoperculum distance (PP), and post orbital head length (PH) were obtained from sablefish caught on selected surveys (Table \@ref(tab:table1)).  Fish sex and maturity were recorded and sagittal otoliths and operculum clips (DNA) were collected at sea. 
+For each selected fish, fork length, round weight, fish sex and maturity (determined by internal examination of the gonads) were recorded at sea. The heads were removed, tagged and frozen.  On shore, cranial dimensions were measured using Mitutoyo Absolute® 500-762-20 coolant proof digimatic calipers. Ageing structures (sagittal otoliths) were also collected from each head.  Operculum clips (DNA) were collected from the first 137 fish measured (79 male and 58 female), and stored in vials containing 95% ethanol.
 
+### Estimation of Fork Length using Cranial Measurements
 
-### Pilot study sample Collection
+A number of cranial dimensions were considered as possible candidates for estimating fork length:  upper jaw length (UJ), eye diameter (ED), interorbital distance (ID), snout length (SL), post orbital to preoperculum distance (PP), and post orbital (PO) head length (Table \@ref(tab:table1); Appendix \@ref(app:second-appendix)).   The head length to fork length relationships were calculated by linear regression.
 
-In 2017, a pilot study was conducted with the commercial sector returning sablefish heads, rather than the entire fish.  A total of 360 heads were collected from J-cut sablefish on a trip to the S$\text{\underline{G}}$aan $\text{\underline{K}}$inghlas - Bowie (SK-B) seamount.  Each operculum was marked with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix) ).  The first 99 heads of the pilot study were measured by three technicians for IO, SN, UJ and PP lengths. 
+Each cranial dimension was ranked by samplers on a five point rating scale in terms of ease of use and repeatability with electronic calipers. The ease of use metric focused on three key attributes of the measurement learnability (task understanding), efficiency (task-completion time) and degree of difficulty (task performance ease).  The repeatability metric focused on ranking each measurement under repeated caliper placement, taking into consideration the soft and hard head tissues.  
 
+### Genetic test development for gender determination
 
-### Sampling on shore
+DNA multiplex polymerase chain reactions (PCRs) were conducted using fluorescently labelled forward primers.	X-insert and Y-insert specific primers developed by @Rondeau2013 were used, but the X-insert forward and Y-nested reverse were redesigned to produce slightly smaller PCR products (Table \@ref(tab:table2)).   Sex specific alleles were size fractionated in an ABI 3730 capillary DNA analyzer and were scored with ABI GeneMapper using an internal lane sizing standard. 
 
-On shore,  the heads were thawed, and cranial dimensions were measured using electronic calipers. Ageing structures (sagittal otoliths) were also collected from each head.  Operculum clips were collected from the first 137 fish measured (79 male and 58 female), and were stored in vials containing 95% ethanol, to be used for DNA extraction and the development of a genetic test for fish gender. 
+## Pilot study 2017
 
-### Head measurements
+In 2017, a pilot study was conducted with the commercial sector returning sablefish head only samples.  A total of 360 heads were collected from J-cut sablefish on a limited-entry fishery trip to the S$\text{\underline{G}}$aan $\text{\underline{K}}$inghlas - Bowie (SK-B) seamount.  Each operculum was marked by commercial fishers with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix)).  Scientific sampling occurred on shore, with the first 99 heads of the pilot study measured by three technicians for ID, SL, UJ and PP.  Fin clips were forwarded to the molecular genetics lab for sex determination.	
 
-The six cranial dimensions were ranked by samplers on a five point rating scale in terms of ease of use and repeatability with electronic Mitutoyo 500 series calipers. The ease of use metric focused on three key attributes of measurement learnability (task understanding), efficiency (task-completion time) and difficulty (task performance ease).  The repeatability metric focused on ranking the efficiency of a measurement for repeated caliper placement, taking into consideration the soft and hard head tissues.
-
-## Genetic test development
-
-DNA multiplex polymerase chain reactions (PCRs) were conducted using fluorescently labelled forward primers.	X-insert and Y-insert specific primers developed by @Rondeau2013 were used, but the X-insert forward and Y-nested reverse were redesigned to produce slightly smaller PCR products.   
-
-## Pilot study
-
-
-
-
-
-
-# Discussion
-
-Routine biological sampling procedures have been modified so that commercial fisheries are now only returning heads, rather than entire fish.   
 
 \clearpage

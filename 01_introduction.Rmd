@@ -1,8 +1,11 @@
 # Introduction
 
-  Biological samples of British Columbia (BC) sablefish (*Anoplopoma fimbria*) have been collected from commercial fishing operations since 1995 [@Haist2001] and processed by the Department of Fisheries and Oceans (DFO) port samplers and contracted service providers. In addition, tagged fish recovered in commercial fisheries (trap, trawl, hook and line) have been received at the point of landing via the dockside monitoring program (DMP) and sampled by Archipelago Marine Research (AMR) since the early 1990's.   These data provide a fishery dependent source of age composition data for the two-sex structured operating model of the coastal Management Strategy Evaluation (MSE) [@Cox2019].
-
-Movement to a head only catch sampling program was initiated to improve the number of returns and increase the range of sizes in the samples.  Six fish head dimension measurements of upper jaw length, eye diameter, interorbital distance, snout length, post orbital to preoperculum distance and post orbital head length were obtained from the 212 sablefish caught during the 2016 West Coast Vancouver Island (WCVI) survey [@Williams2018] and 219 sablefish caught during the 2016 West Coast Haida Gwaii (WCHG) survey [@Nottingham2018].  Seven small sablefish were collected during the 201? salmon survey  (Figure \@ref(fig:figure1)).  
+  Biological samples of British Columbia (BC) sablefish (*Anoplopoma fimbria*) have been collected from a voluntary catch sampling program since 1995 [@Haist2001] and processed by the Department of Fisheries and Oceans (DFO) port samplers and contracted service providers. In addition, whole tagged fish recovered in commercial fisheries (trap, trawl, hook and line) have been received at the point of landing via the dockside monitoring program (DMP) and sampled by Archipelago Marine Research (AMR) since the early 1990's.   These data provide a fishery dependent source of age and size composition data for the two-sex structured operating model of the coastal Management Strategy Evaluation (MSE) [@Cox2019].  
+  
+  In recent years, a sablefish head only catch sampling and tagging program was developed in order to improve the number of returns, maintain the quality of the biological data and increase the range of fish sizes.  Instead of returning the whole fish, commercial crew j-cut the fish as per commercial practice, view the gonads to determine sex, mark the sex with knife cuts on the operculum and store the head (and/or floy tag) for later sampling by the department and AMR.
+  
+  Previous research has accurately estimated fish lengths from i) head measurements [@Serafy1996; @Park2019], ii) head and mandible lengths [@Isermann2005] and iii) relative eye size [@Richardson2015].  In our research, six unique sablefish head dimensions including fork length (FL), eye diameter (ED), interorbital distance (ID), snout length (SL), post orbital to preoperculum distance (PP) and post orbital head length (PO) were regressed against fork length (FL).  In addition, a task performance ranking system was developed to reveal the most accurate and efficient cranial measurement. 
+   
 
 ```{r sampleCount} 
 
@@ -12,11 +15,20 @@ Movement to a head only catch sampling program was initiated to improve the numb
 
 ```
 
-Regression models were developed by using measurements taken from `r length(females$SPECIMEN_ID)` females and `r length(males$SPECIMEN_ID)` males sampled in 2016.  
+In 2016, standard biological data including operculum clips (DNA) were obtained on several research surveys from `r length(females$SPECIMEN_ID)` female and `r length(males$SPECIMEN_ID)` male sablefish, followed by cranial measurements at the Pacific Biological Station (PBS). Methods for DNA-based sex identification were developed by the PBS Molecular Genetics lab.  In 2017, a pilot study was conducted on a commercial vessel.  Head-only samples with sex markings were collected at sea, followed by scientific sampling on shore.  DNA analysis measured the commercial fisher sex accuracy.
 
-```{r words}   
+In this technical report we describe the results of 1) the relationship between head measurements and fork length; 2) the feasibility of the head measurements; 3) the methods of DNA sex detection; and 4) the fisher-determined sex accuracy via genetic methods.   Successful application of this research has resulted in program revisions in the catch sampling programs and shore-side sampling of sablefish in 2018. 
 
-#  DFO staff and contracted service providers conduct routine biological sampling of sablefish in support of the two-sex structured operating model of the coastal Management Strategy Evaluation (MSE) # #[@Cox2019].  
+
+```{r words_surplus}   
+
+#ORDER OF EVENTS:
+#1. 2016 sample sablefish on research surveys, collect bio data and DNA
+#2. 2016 head measurements on shore PBS lab
+#3. 2016 develop dna sex id by PBS Molecular Genetics lab
+#4. 2017 collect head samples on commercial vessel
+#5  2017 measure head samples 
+#6. 2017 use DNA to determine fisher sex accuracy
 
 #The department's port samplers have collected whole round biological samples at the time of landing as part of the voluntary commercial trap catch sampling program since 1995 [Haist2001].  The at-sea #observer program (ASOP) also collected biological data from the partial at-sea observer coverage (10% of sea days) on commercial trips from 2001 through to 2005 [@IFMP2001], [@IFMP2004]. 
 

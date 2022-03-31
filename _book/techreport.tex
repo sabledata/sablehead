@@ -66,13 +66,13 @@
 
 % New definitions: Title, year, report number, authors
 % Protect lower case words (i.e., species names) in \Addlcwords{}, in "TechReport.sty"
-\newcommand{\trTitle}{Estimation of fork length using cranial measurements of sablefish (\emph{Anoplopoma fimbria}).}
+\newcommand{\trTitle}{Estimation of fork length using cranial measurements of sablefish (\emph{Anoplopoma fimbria}) in British Columbia.}
 \newcommand{\trYear}{2021}
 \newcommand{\trReportNum}{nnn}
 % Optional
-\newcommand{\trAuthFootA}{Email: \href{mailto:Kathryn.Temple@dfo-mpo.gc.ca}{\nolinkurl{Kathryn.Temple@dfo-mpo.gc.ca}} \textbar{} telephone: (250) 756-7366}
-\newcommand{\trAuthsLong}{Kathryn x. Temple and Kendra Holt and Lisa C. Lacko}
-\newcommand{\trAuthsBack}{Kathryn x. Temple, K. Holt and Lacko, L.C.}
+\newcommand{\trAuthFootA}{Email: \link{mailto:Kathryn.Temple@dfo-mpo.gc.ca}{\nolinkurl{Kathryn.Temple@dfo-mpo.gc.ca}} \textbar{} telephone: (250) 756-7366}
+\newcommand{\trAuthsLong}{Kathryn x. Temple and Kendra R. Holt and Lisa C. Lacko}
+\newcommand{\trAuthsBack}{Kathryn x. Temple, K.R. Holt and Lacko, L.C.}
 
 % New definition: Address
 \newcommand{\trAddy}{Pacific Biological Station\\
@@ -80,17 +80,65 @@ Fisheries and Oceans Canada, 3190 Hammond Bay Road\\
 Nanaimo, British Columbia, V9T 6N7, Canada\\}
 
 % Abstract
-\newcommand{\trAbstract}{Routine biological sampling of whole round sablefish from commercial fishing operations have occurred since the early 1990's. Historically, specimens have been obtained through a voluntary catch sampling program and tagged sablefish recovery program. In order to improve the quantity and size range of samples received, we investigated the potential for obtaining biological information using heads, rather than the entire fish. In 2016, 438 sablefish (240-1080 mm) were sampled at sea and six different fish head measurements were assessed to see if they could predict fork length. Genetic samples (100) were collected to develop methods for DNA-based sex identification. A pilot study was conducted in 2017 with head-only samples and sex determination provided by a commercial vessel, followed by scientific sampling on shore. Regression analysis results show that the interorbital distance measurement was a good predictor of sablefish fork length, while samplers ranked it the most efficient and easily repeatable. Genetic results indicate xx\% accuracy in fisher sex detection. Subsequently, the 2018 sampling collection program was modified so that returns of whole round sablefish were replaced by head-only samples with knife cuts on the operculum to indicate sex.}
+\newcommand{\trAbstract}{Routine biological sampling of whole round sablefish from commercial fishing operations in British Columbia have occurred since the early 1990's. Historically, specimens have been obtained through a voluntary catch sampling program and tagged sablefish recovery program. In order to improve the quantity and size range of samples received, we investigated the potential for obtaining biological information using heads, rather than the entire fish. In 2016, 438 sablefish (240-1080 mm) were sampled at sea and six different fish head measurements were assessed to see if they could predict fork length. Genetic samples (137) were collected to develop methods for DNA-based sex identification. A pilot study was conducted in 2017 with head-only samples and sex determination provided by a commercial vessel, followed by scientific sampling on shore. Regression analysis results show that the interorbital distance measurement was a good predictor of sablefish fork length, while samplers ranked it the most efficient and easily repeatable. Initial genetic samples (130/137) were successfully PCR amplified from genomic DNA and results indicate 92\% accuracy in sex detection. Subsequently, the 2018 sampling collection program was modified so that returns of whole round sablefish were replaced by head-only samples with knife cuts on the operculum to indicate sex.}
 
 % Resume (i.e., French abstract)
-\newcommand{\trResume}{}
+\newcommand{\trResume}{Routine biological sampling of whole round sablefish from commercial fishing operations in British ColumbRoutine biological sampling of whole round sablefish from commercial fishing operations in British Columbia have occurred since the early 1990's. Historically, specimens have been obtained through a voluntary catch sampling program and tagged sablefish recovery program. In order to improve the quality of samples received, we investigated the potential for obtaining biological information using heads, rather than the entire fish. In 2016, 438 sablefish (240-1080 mm) were sampled at sea and six different fish head measurements were assessed to see if they could predict fork length. Genetic samples (137) were collected to develop methods for DNA-based sex identification. A pilot study was conducted in 2017 with head-only samples and sex determination provided by a commercial vessel, followed by scientific sampling on shore. Regression analysis results show that the interorbital distance measurement was a good predictor of sablefish fork length, while samplers ranked it the most efficient and easily repeatable. Initial genetic samples (130/137) were successfully PCR amplified from genomic DNA and results indicate 92\% accuracy in sex detection. Fisher sex determination was xx\%. Subsequently, the 2018 sampling collection program was modified so that returns of whole round sablefish were replaced by head-only samples with knife cuts on the operculum to indicate sex.}
 
 \newcommand{\trISBN}{}
 
+\DeclareGraphicsExtensions{.png,.pdf}
 %%%%% Start %%%%%
 
 % Start the document
 \IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+
+% commands and environments needed by pandoc snippets
+% extracted from the output of `pandoc -s`
+%% Make R markdown code chunks work
+\usepackage{array}
+\usepackage{amssymb,amsmath}
+\usepackage{color}
+\usepackage{fancyvrb}
+
+% From default template:
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\},formatcom=\color[rgb]{0.00,0.00,0.00}}
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textit{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textit{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textit{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textit{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
 \begin{document}
 
 %%%% Front matter %%%%%
@@ -106,83 +154,97 @@ Nanaimo, British Columbia, V9T 6N7, Canada\\}
 \renewcommand{\footrulewidth}{0.5pt}  % footer line
 %\pagestyle{fancy}\fancyhead[c]{Draft: Do not cite or circulate}  % Header text
 
+\newcommand{\lt}{\ensuremath <}
+\newcommand{\gt}{\ensuremath >}
+
+%Defines cslreferences environment
+%Required by pandoc 2.8
+%Copied from https://github.com/rstudio/rmarkdown/issues/1649
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newenvironment{cslreferences}%
+  {}%
+  {\par}
+
 %%%%% Main document %%%%%
 \hypertarget{introduction}{%
 \section{Introduction}\label{introduction}}
 
-Biological samples of British Columbia (BC) sablefish (\emph{Anoplopoma fimbria}) have been collected from commercial fishing operations since 1995 (Haist and Wyeth \protect\hyperlink{ref-Haist2001}{2001}) and processed by the Department of Fisheries and Oceans (DFO) port samplers and contracted service providers. In addition, tagged fish recovered in commercial fisheries (trap, trawl, hook and line) have been received at the point of landing via the dockside monitoring program (DMP) and sampled by Archipelago Marine Research (AMR) since the early 1990's. These data provide a fishery dependent source of age composition data for the two-sex structured operating model of the coastal Management Strategy Evaluation (MSE) (Cox et al. \protect\hyperlink{ref-Cox2019}{2019}).
+Biological samples of British Columbia (BC) sablefish (\emph{Anoplopoma fimbria}) have been collected from a voluntary catch sampling program since 1995 (\protect\hyperlink{ref-Haist2001}{Haist and Wyeth 2001}) and processed by the Department of Fisheries and Oceans (DFO) port samplers and contracted service providers. In addition, whole tagged fish recovered in commercial fisheries (trap, trawl, hook and line) have been received at the point of landing via the dockside monitoring program (DMP) and sampled by Archipelago Marine Research (AMR) since the early 1990's. These data provide a fishery dependent source of age and size composition data for the two-sex structured operating model of the coastal Management Strategy Evaluation (MSE) (\protect\hyperlink{ref-Cox2019}{Cox et al. 2019}).
 
-Movement to a head only catch sampling program was initiated to improve the number of returns and increase the range of sizes in the samples. Six fish head dimension measurements of upper jaw length, eye diameter, interorbital distance, snout length, post orbital to preoperculum distance and post orbital head length were obtained from the 212 sablefish caught during the 2016 West Coast Vancouver Island (WCVI) survey (Williams et al. \protect\hyperlink{ref-Williams2018}{2018}) and 219 sablefish caught during the 2016 West Coast Haida Gwaii (WCHG) survey (Nottingham et al. \protect\hyperlink{ref-Nottingham2018}{2018}). Seven small sablefish were collected during the 201? salmon survey (Figure~\ref{fig:figure1}).
+In recent years, a sablefish head only catch sampling and tagging program was developed in order to improve the number of returns, maintain the quality of the biological data and increase the range of fish sizes. Instead of returning the whole fish, commercial crew j-cut the fish as per commercial practice, view the gonads to determine sex, mark the sex with knife cuts on the operculum and store the head (and/or floy tag) for later sampling by the department and AMR.
 
-Regression models were developed by using measurements taken from 216 females and 222 males sampled in 2016.
+Previous research has accurately estimated fish lengths from i) head measurements (\protect\hyperlink{ref-Serafy1996}{Serafy et al. 1996}; \protect\hyperlink{ref-Park2019}{Park et al. 2019}), ii) head and mandible lengths (\protect\hyperlink{ref-Isermann2005}{Isermann and Vandergoot 2005}) and iii) relative eye size (\protect\hyperlink{ref-Richardson2015}{Richardson et al. 2015}). In our research, six unique sablefish head dimensions including fork length (FL), eye diameter (ED), interorbital distance (ID), snout length (SL), post orbital to preoperculum distance (PP) and post orbital head length (PO) were regressed against fork length (FL). In addition, a task performance ranking system was developed to reveal the most accurate and efficient cranial measurement.
+
+In 2016, standard biological data including operculum clips (DNA) were obtained on several research surveys from 216 female and 222 male sablefish, followed by cranial measurements at the Pacific Biological Station (PBS). Methods for DNA-based sex identification were developed by the PBS Molecular Genetics lab. In 2017, a pilot study was conducted on a commercial vessel. Head-only samples with sex markings were collected at sea, followed by scientific sampling on shore. DNA analysis measured the commercial fisher sex accuracy.
+
+In this technical report we describe the results of 1) the relationship between head measurements and fork length; 2) the feasibility of the head measurements; 3) the methods of DNA sex detection; and 4) the fisher-determined sex accuracy via genetic methods. Successful application of this research has resulted in program revisions in the catch sampling programs and shore-side sampling of sablefish in 2018.
 
 \hypertarget{methods}{%
 \section{Methods}\label{methods}}
 
-\#\#Estimation of Fork Length using Cranial Measurements
+\hypertarget{experimental-study-2016}{%
+\subsection{Experimental Study 2016}\label{experimental-study-2016}}
 
-Mitutoyo ABSOLUTE® 500-762-20 Coolant Proof Digimatic Caliper
+\hypertarget{sample-collection}{%
+\subsubsection{Sample collection}\label{sample-collection}}
 
-\hypertarget{survey-sample-collection}{%
-\subsubsection{Survey sample collection}\label{survey-sample-collection}}
+Sablefish were selected for sampling during the 2016 biennial DFO Groundfish Synoptic Bottom Trawl surveys, following a trip-wide length stratified selection protocol. A tally of 212 fish were sampled on the West Coast Vancouver Island survey (\protect\hyperlink{ref-Williams2018}{Williams et al. 2018}) and 219 fish were sampled on the West Coast Haida Gwaii survey (\protect\hyperlink{ref-Nottingham2018}{Nottingham et al. 2018}). In addition, seven small sablefish were collected during the 2016 salmon survey (Figure~\ref{fig:figure1}).
 
-Measurements of fork length (FL), round weight (RW), upper jaw length (UJ), eye diameter (ED), interorbital distance (IO), snout length (SL), post orbital to preoperculum distance (PP), and post orbital head length (PH) were obtained from sablefish caught on selected surveys (Table~\ref{tab:table1}). Fish sex and maturity were recorded and sagittal otoliths and operculum clips (DNA) were collected at sea.
+For each selected fish, fork length, round weight, fish sex and maturity (determined by internal examination of the gonads) were recorded at sea. The heads were removed, tagged and frozen. On shore, cranial dimensions were measured using Mitutoyo Absolute® 500-762-20 coolant proof digimatic calipers. Ageing structures (sagittal otoliths) were also collected from each head. Operculum clips (DNA) were collected from the first 137 fish measured (79 male and 58 female), and stored in vials containing 95\% ethanol.
 
-\hypertarget{pilot-study-sample-collection}{%
-\subsubsection{Pilot study sample Collection}\label{pilot-study-sample-collection}}
+\hypertarget{estimation-of-fork-length-using-cranial-measurements}{%
+\subsubsection{Estimation of Fork Length using Cranial Measurements}\label{estimation-of-fork-length-using-cranial-measurements}}
 
-In 2017, a pilot study was conducted with the commercial sector returning sablefish heads, rather than the entire fish. A total of 360 heads were collected from J-cut sablefish on a trip to the S\(\text{\underline{G}}\)aan \(\text{\underline{K}}\)inghlas - Bowie (SK-B) seamount. Each operculum was marked with either one knife cut (male) or two knife cuts (female) (Appendix~\ref{app:second-appendix} ). The first 99 heads of the pilot study were measured by three technicians for IO, SN, UJ and PP lengths.
+A number of cranial dimensions were considered as possible candidates for estimating fork length: upper jaw length (UJ), eye diameter (ED), interorbital distance (ID), snout length (SL), post orbital to preoperculum distance (PP), and post orbital (PO) head length (Table~\ref{tab:table1}; Appendix~\ref{app:second-appendix}). The head length to fork length relationships were calculated by linear regression.
 
-\hypertarget{sampling-on-shore}{%
-\subsubsection{Sampling on shore}\label{sampling-on-shore}}
+Each cranial dimension was ranked by samplers on a five point rating scale in terms of ease of use and repeatability with electronic calipers. The ease of use metric focused on three key attributes of the measurement learnability (task understanding), efficiency (task-completion time) and degree of difficulty (task performance ease). The repeatability metric focused on ranking each measurement under repeated caliper placement, taking into consideration the soft and hard head tissues.
 
-On shore, the heads were thawed, and cranial dimensions were measured using electronic calipers. Ageing structures (sagittal otoliths) were also collected from each head. Operculum clips were collected from the first 137 fish measured (79 male and 58 female), and were stored in vials containing 95\% ethanol, to be used for DNA extraction and the development of a genetic test for fish gender.
+\hypertarget{genetic-test-development-for-gender-determination}{%
+\subsubsection{Genetic test development for gender determination}\label{genetic-test-development-for-gender-determination}}
 
-\hypertarget{head-measurements}{%
-\subsubsection{Head measurements}\label{head-measurements}}
+DNA multiplex polymerase chain reactions (PCRs) were conducted using fluorescently labelled forward primers. X-insert and Y-insert specific primers developed by \protect\hyperlink{ref-Rondeau2013}{Rondeau et al.} (\protect\hyperlink{ref-Rondeau2013}{2013}) were used, but the X-insert forward and Y-nested reverse were redesigned to produce slightly smaller PCR products (Table~\ref{tab:table2}). Sex specific alleles were size fractionated in an ABI 3730 capillary DNA analyzer and were scored with ABI GeneMapper using an internal lane sizing standard.
 
-The six cranial dimensions were ranked by samplers on a five point rating scale in terms of ease of use and repeatability with electronic Mitutoyo 500 series calipers. The ease of use metric focused on three key attributes of measurement learnability (task understanding), efficiency (task-completion time) and difficulty (task performance ease). The repeatability metric focused on ranking the efficiency of a measurement for repeated caliper placement, taking into consideration the soft and hard head tissues.
+\hypertarget{pilot-study-2017}{%
+\subsection{Pilot study 2017}\label{pilot-study-2017}}
 
-\hypertarget{genetic-test-development}{%
-\subsection{Genetic test development}\label{genetic-test-development}}
+In 2017, a pilot study was conducted with the commercial sector returning sablefish head only samples. A total of 360 heads were collected from J-cut sablefish on a limited-entry fishery trip to the S\(\text{\underline{G}}\)aan \(\text{\underline{K}}\)inghlas - Bowie (SK-B) seamount. Each operculum was marked by commercial fishers with either one knife cut (male) or two knife cuts (female) (Appendix~\ref{app:second-appendix}). Scientific sampling occurred on shore, with the first 99 heads of the pilot study measured by three technicians for ID, SL, UJ and PP. Fin clips were forwarded to the molecular genetics lab for sex determination.
 
-DNA multiplex polymerase chain reactions (PCRs) were conducted using fluorescently labelled forward primers. X-insert and Y-insert specific primers developed by Rondeau et al. (\protect\hyperlink{ref-Rondeau2013}{2013}) were used, but the X-insert forward and Y-nested reverse were redesigned to produce slightly smaller PCR products.
+\clearpage
 
-\hypertarget{pilot-study}{%
-\subsection{Pilot study}\label{pilot-study}}
+\hypertarget{results-and-discussion}{%
+\section{Results and Discussion}\label{results-and-discussion}}
+
+\hypertarget{experimental-study-2016-1}{%
+\subsection{Experimental Study 2016}\label{experimental-study-2016-1}}
+
+A total of 438 specimens comprising 222 males and 216 females were used for the study. The smallest fork length of the collected specimens was 240 mm, the highest was 1080 mm, and an average of 573.2990868 (Table~\ref{tab:table3}).
+
+The mean values of the predictor and response variables collected for five of the six head measurements (UJ, ED, IO, SL, PP, PH)(Table~\ref{tab:table2}). The PH head was abandoned after 130 sablefish due to the time consuming and technical difficulties performing this measurement.
+
+We found evidence of relationships between upper jaw length and fork length (p = \ensuremath{9.358\times 10^{-278}}) ; eye diameter and fork length (p = \ensuremath{5.34\times 10^{-203}}); interorbital distance and fork length (p = \ensuremath{5.539\times 10^{-272}} ); upper snout length and fork length (p = \ensuremath{4.593\times 10^{-292}}); postorbital to preoperculum length and fork length (p = \ensuremath{2.024\times 10^{-247}}); and postorbital head length and fork length (p = 0).
+
+, fork length, round weight, otoliths and DNA. Post orbital head length (Posterior inner edge of orbit to dorsal insertion of opercle) was also measured, but this was abandoned after 130 measurements, to save time, and because it was not possible to measure this on a number of the heads for a variety of reasons (opercula had been cut off from some heads, it was awkward to take longer measurements using the electronic calipers, and the end points of the measurement were difficult to define.
+
+\hypertarget{estimation-of-fork-length-using-cranial-measurements-1}{%
+\subsection{Estimation of Fork Length using Cranial Measurements}\label{estimation-of-fork-length-using-cranial-measurements-1}}
+
+Given the ease of measurement, we suggest that Interorbital distance be used to predict sablefish fork lengths and weights (Table~\ref{tab:table3}).
+
+The estimated slope is 7.695 (SE 0.088) units of fork length per unit of upper jaw length; the estimated slope is 21.994 (SE 0.389) units of fork length per unit of eye diameter; the estimated slope is 11.622 (SE 0.138) units of fork length per unit of interorbital distance; the estimated slope is 11.182 (SE 0.118 units of fork length per unit of snout length; the estimated slope is 14.373 (SE 0.191) units of fork length per unit of postorbital to preoperculum length; and the estimated slope is 6.83 (SE 0.185) units of fork length per unit of postorbital head length.
+
+\hypertarget{pilot-collection-of-sablefish-heads-as-a-biological-sample}{%
+\subsection{Pilot Collection of Sablefish Heads as a Biological Sample}\label{pilot-collection-of-sablefish-heads-as-a-biological-sample}}
+
+Heads were received by DFO in good condition (intact and not deformed), segregated by set, for measuring and otolith extraction. Operculum cuts worked well to indicate sex
+
+\hypertarget{repeatability-of-measurements-between-technicians}{%
+\subsection{Repeatability of measurements between technicians}\label{repeatability-of-measurements-between-technicians}}
 
 \hypertarget{discussion}{%
 \section{Discussion}\label{discussion}}
 
 Routine biological sampling procedures have been modified so that commercial fisheries are now only returning heads, rather than entire fish.
-
-\clearpage
-
-\hypertarget{results}{%
-\section{Results}\label{results}}
-
-\hypertarget{sample-collection}{%
-\section{Sample collection}\label{sample-collection}}
-
-The endemic and endangered status makes, P. denisonii an important freshwater species of study and the biometrics information is useful for more effective management of in-situ conservation. A total of 306 specimens comprising 111 males, 97 females and 98 indeterminate were used for the study. The smallest length of captured fish was 3.30 cm and highest was 14.00 cm in TL (Table 1).
-
-A total of 438 specimens comprising xx males and xx females were collected for six head measurements (UJ,ED,IO,SL, PP, PH), fork length, round weight, otoliths and DNA. Post orbital head length (Posterior inner edge of orbit to dorsal insertion of opercle) was also measured, but this was abandoned after 130 measurements, to save time, and because it was not possible to measure this on a number of the heads for a variety of reasons (opercula had been cut off from some heads, it was awkward to take longer measurements using the electronic calipers, and the end points of the measurement were difficult to define.
-
-The mean values of the predictor and response variables (Table~\ref{tab:table2}).
-
-Given the ease of measurement, we suggest that Interorbital distance be used to predict sablefish fork lengths and weights (Table~\ref{tab:table3}).
-
-We found evidence of relationships between upper jaw length and fork length (p = \ensuremath{9.358\times 10^{-278}}) ; eye diameter and fork length (p = \ensuremath{5.34\times 10^{-203}}); interorbital distance and fork length (p = \ensuremath{5.539\times 10^{-272}} ); upper snout length and fork length (p = \ensuremath{4.593\times 10^{-292}}); postorbital to preoperculum length and fork length (p = \ensuremath{2.024\times 10^{-247}}); and postorbital head length and fork length (p = 0).
-
-The estimated slope is 7.695 (SE 0.088) units of fork length per unit of upper jaw length; the estimated slope is 21.994 (SE 0.389) units of fork length per unit of eye diameter; the estimated slope is 11.622 (SE 0.138) units of fork length per unit of interorbital distance; the estimated slope is 11.182 (SE 0.118 units of fork length per unit of snout length; the estimated slope is 14.373 (SE 0.191) units of fork length per unit of postorbital to preoperculum length; and the estimated slope is 6.83 (SE 0.185) units of fork length per unit of postorbital head length.
-
-\hypertarget{pilot-collection-of-sablefish-heads-as-a-biological-sample}{%
-\section{Pilot Collection of Sablefish Heads as a Biological Sample}\label{pilot-collection-of-sablefish-heads-as-a-biological-sample}}
-
-Heads were received by DFO in good condition (intact and not deformed), segregated by set, for measuring and otolith extraction. Operculum cuts worked well to indicate sex
-
-\hypertarget{repeatability-of-measurements-between-technicians}{%
-\section{Repeatability of measurements between technicians}\label{repeatability-of-measurements-between-technicians}}
 
 \clearpage
 
@@ -193,7 +255,7 @@ Heads were received by DFO in good condition (intact and not deformed), segregat
 
 \begin{table}[!h]
 
-\caption{\label{tab:table1}Description of head dimensions measured and description of caliper jaw positions. ~\\
+\caption{\label{tab:table1}List of head dimensions, measurement descriptions and specification of caliper jaw placement. ~\\
 \hspace*{0.333em}\\}
 \fontsize{10}{12}\selectfont
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{1.9cm}>{\raggedright\arraybackslash}p{6.0cm}>{\raggedright\arraybackslash}p{7.5cm}}
@@ -204,14 +266,14 @@ UJ & Tip of snout to the posterior edge of the maxilla. & Outside caliper jaw me
 \midrule
 ED & Anterior-posterior diameter of eye socket. & Inside caliper jaw measurement firmly stretched against eye socket at vertical midpoint of eye.\\
 \midrule
-IO & Narrowest distance between eye sockets, measured on dorsal surface. & Outside caliper jaw measurement of the horizontal midpoint of eyes on dorsal surface.\\
+ID & Narrowest distance between eye sockets, measured on dorsal surface. & Outside caliper jaw measurement of the horizontal midpoint of eyes on dorsal surface.\\
 \midrule
 SL & Tip of snout to anterior inner edge of eye socket. & Outside caliper jaw measurement from forward point and centre of snout to horizontal midpoint of anterior edge of eye socket.\\
 \midrule
 PP & Posterior inner edge of orbit to visual insertion point of preopercle. & Outside caliper jaw measurement from back of eye socket to preopercle bone insertion point. Preopercle must be lifted to expose preopercle bone underneath.\\
 \midrule
 \addlinespace
-PH & Posterior inner edge of orbit to dorsal insertion of opercle. & Outside caliper jaw measurement from back of eye socket to bone underneath gill cover notch at dorsal insertion of the opercle.  The operculum must be held taut.\\
+PO & Posterior inner edge of orbit to dorsal insertion of opercle. & Outside caliper jaw measurement from back of eye socket to bone underneath gill cover notch at dorsal insertion of the opercle.  The operculum must be held taut.\\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -221,68 +283,88 @@ PH & Posterior inner edge of orbit to dorsal insertion of opercle. & Outside cal
 
 \begin{table}[!h]
 
-\caption{\label{tab:table2}Summary of sablefish biological data collected. Tally of fork lengths (FL), round weight (RW), upper jaw length (UJ), eye diameter (ED), interorbital distance (IO), snout length (SL), post orbital to preoperculum distance (PP), post orbital head length (PH), females (F), males (M), sagittal otoliths (O) and operculum clips (DNA) listed by survey. ~\\
+\caption{\label{tab:table2}Primers used in the development of a genetic test for determining sablefish sex. ~\\
 \hspace*{0.333em}\\}
 \fontsize{10}{12}\selectfont
-\begin{tabular}[t]{lrrrrrrrrrrrrr}
+\begin{tabular}[t]{llr}
 \toprule
-\textbf{Survey} & \textbf{FL} & \textbf{RW} & \textbf{UJ} & \textbf{ED} & \textbf{IO} & \textbf{SL} & \textbf{PP} & \textbf{PH} & \textbf{F} & \textbf{M} & \textbf{Otoliths} & \textbf{DNA} & \textbf{Total}\\
+\textbf{Locus} & \textbf{Sequence} & \textbf{Fragment.Size}\\
+\midrule
+X-insert-DFO\_F1 & 6FAM-CACCGCTCATGTACACTTTG & 321\\
+X-insert-2R & TGCTGCACTGTACCATCAAA & \\
+Y-nested-1F & NED-GTCAGAAGGCAGTGGTGTAGT & 234\\
+Y-nested-MGL\_2R & CGCTTGCAGATACTACTGAATG & \\
+\bottomrule
+\end{tabular}
+\end{table}
+~\\
+\hspace*{0.333em}\\
+
+
+\begin{table}[!h]
+
+\caption{\label{tab:table3}Summary of sablefish biological data collected. Tally of fork lengths (FL), round weight (RW), upper jaw length (UJ), eye diameter (ED), interorbital distance (ID), snout length (SL), post orbital to preoperculum distance (PP), post orbital head length (PO), females (F), males (M), sagittal otoliths and operculum clips (DNA) are listed by survey. ~\\
+\hspace*{0.333em}\\}
+\fontsize{10}{12}\selectfont
+\begin{tabular}[t]{llllllllllllll}
+\toprule
+\textbf{Survey} & \textbf{FL} & \textbf{RW} & \textbf{UJ} & \textbf{ED} & \textbf{ID} & \textbf{SL} & \textbf{PP} & \textbf{PO} & \textbf{F} & \textbf{M} & \textbf{Otoliths} & \textbf{DNA} & \textbf{Total}\\
 \midrule
 2016 WCHG & 219 & 219 & 219 & 219 & 218 & 219 & 207 & 52 & 111 & 108 & 219 & 59 & 219\\
 2016 WCVI & 212 & 212 & 211 & 212 & 212 & 211 & 212 & 78 & 105 & 107 & 212 & 78 & 212\\
 Salmon & 7 & 0 & 7 & 7 & 7 & 7 & 7 & 0 & 0 & 7 & 0 & 0 & 7\\
+\midrule
+Total & 438 & 431 & 437 & 438 & 437 & 437 & 426 & 0 & 216 & 222 & 431 & 137 & 438\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{table}[!h]
 
-\caption{\label{tab:table3}Table of sample size, mean and standard deviation for predictor and response variables for each head dimension. ~\\}
+\caption{\label{tab:table4}Table of sample size, mean and standard deviation for predictor and response variables for each head dimension. ~\\}
 \fontsize{10}{12}\selectfont
-\begin{tabular}[t]{>{\raggedright\arraybackslash}p{4.9cm}>{\raggedright\arraybackslash}p{0.6cm}>{\raggedright\arraybackslash}p{0.6cm}>{\raggedright\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{0.8cm}>{\raggedright\arraybackslash}p{0.6cm}}
+\begin{tabular}[t]{>{\raggedright\arraybackslash}p{5.9cm}>{\raggedright\arraybackslash}p{0.6cm}>{\raggedright\arraybackslash}p{0.6cm}>{\raggedright\arraybackslash}p{1.6cm}>{\raggedright\arraybackslash}p{2.1cm}>{\raggedright\arraybackslash}p{0.8cm}>{\raggedright\arraybackslash}p{0.6cm}}
 \toprule
 \textbf{Predictor variable} & \textbf{n} & \textbf{mean} & \textbf{sd} & \textbf{Response variable} & \textbf{mean} & \textbf{sd}\\
 \midrule
-Upper jaw length & 437 & 57.95 & 15.22 & Fork length & 573.27 & 120.44\\
-Eye diameter & 438 & 25.9 & 5.13 & Fork length & 573.3 & 120.3\\
-InterOrbital distance & 437 & 40.37 & 10.06 & Fork length & 573.36 & 120.43\\
-Snout length & 437 & 44.81 & 10.52 & Fork length & 573.27 & 120.44\\
-Post orbital to preoperculum length & 426 & 31.5 & 8.02 & Fork length & 571.34 & 119.54\\
-Post orbital head length & 130 & 60.85 & 18.87 & Fork length & 566.46 & 134.8\\
+Upper jaw length (UJ) & 437 & 57.95 & 15.22 & Fork length & 573.27 & 120.44\\
+Eye diameter (ED) & 438 & 25.9 & 5.13 & Fork length & 573.3 & 120.3\\
+InterOrbital distance (ID) & 437 & 40.37 & 10.06 & Fork length & 573.36 & 120.43\\
+Snout length (SL) & 437 & 44.81 & 10.52 & Fork length & 573.27 & 120.44\\
+Post orbital to preoperculum length (PP) & 426 & 31.5 & 8.02 & Fork length & 571.34 & 119.54\\
+Post orbital head length (PO) & 130 & 60.85 & 18.87 & Fork length & 566.46 & 134.8\\
 \bottomrule
 \end{tabular}
 \end{table}
 
-
-on each head dimension manual calipers for \textgreater15cm distances other metrics indicate if calipers were limited after \textgreater15 cm, bilateral measurements were possible and if the measurement involved bone.
 \begin{table}
 
-\caption{\label{tab:table4}Ease of use and repeatability considerations for each measurement.number, ease of use and repeatability five point ranking where 5-Great; 4- Good; 3-Moderate; 2-Questionable; 1-Terrible.}
+\caption{\label{tab:table5}Ease of use and repeat ability considerations for each measurement.number, ease of use and repeatability five point ranking where 5-Great; 4- Good; 3-Moderate; 2-Questionable; 1-Terrible.}
 \fontsize{10}{12}\selectfont
 \begin{tabular}[t]{>{\raggedright\arraybackslash}p{1.0cm}>{\raggedleft\arraybackslash}p{0.6cm}>{\raggedleft\arraybackslash}p{1.7cm}>{\raggedright\arraybackslash}p{1.2cm}>{\raggedright\arraybackslash}p{1.7cm}>{\raggedright\arraybackslash}p{1.7cm}>{\raggedright\arraybackslash}p{4.2cm}}
 \toprule
 \multicolumn{1}{c}{\textbf{ }} & \multicolumn{2}{c}{\textbf{5 Point}} & \multicolumn{1}{c}{\textbf{ }} & \multicolumn{2}{c}{\textbf{Measurement}} & \multicolumn{1}{c}{\textbf{ }} \\
 \cmidrule(l{3pt}r{3pt}){2-3} \cmidrule(l{3pt}r{3pt}){5-6}
-Head Dimension & Ease of use & Repeatable & Caliper limitation & Bilateral measurement & Bone measurement & Considerations\\
+Head Dimension & Ease of use & Repeatable & Caliper limitation & Bilateral & Bone & Considerations\\
 \midrule
 UJ & 3 & 4 & x & x & x & End of the maxilla difficult to define. Caliper jaw position must be in center of snout.\\
 \midrule
 ED & 3 & 2 &  & x &  & Caliper outside jaw position on soft tissue in eye socket may result in measurement differences.\\
 \midrule
-IO & 5 & 5 &  &  & x & Tissue is compressed to obtain bone measurement. Easy to determine caliper jaw position.\\
+ID & 5 & 5 &  &  & x & Tissue is compressed to obtain bone measurement. Easy to determine caliper jaw position.\\
 \midrule
 SL & 4 & 5 &  & x & x & Caliper jaw position must be in center of snout.\\
 \midrule
 PP & 4 & 5 &  & x & x & Caliper position on pre-operculum may result in measurement differences.\\
 \midrule
-PH & 3 & 2 & x & x &  & Operculum damage from handling was observed on several fish.\\
+PO & 3 & 2 & x & x &  & Operculum damage from handling was observed on several fish.\\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \begin{table}
 
-\caption{\label{tab:table5}Estimated slope and}
+\caption{\label{tab:table6}Ease of use and repeat ability considerations for each measurement.number, ease of use and repeatability five point ranking where 5-Great; 4- Good; 3-Moderate; 2-Questionable; 1-Terrible.}
 \fontsize{10}{12}\selectfont
 \begin{tabular}[t]{lll}
 \toprule
@@ -367,16 +449,6 @@ Post orbital head length & 6.8299 & 0.185\\
 \end{figure}
 \clearpage
 
-\hypertarget{discussion-1}{%
-\section{Discussion}\label{discussion-1}}
-
-Interorbial head length (IO) proved to be a good predictor of fork length for sablefish.
-
-\hypertarget{acknowledgments}{%
-\section{Acknowledgments}\label{acknowledgments}}
-
-We thank \ldots{}
-
 \begin{appendices}
 \counterwithin{figure}{section}
 \counterwithin{table}{section}
@@ -387,7 +459,7 @@ We thank \ldots{}
 \section{IMAGES OF THE SIX CRANIAL DIMENSION MEASUREMENTS.}
 \label{app:first-appendix}
 
-A. Upper jaw measurement (UJ); B. Eye diameter measurement (ED); C. Interorbital distance (ID); D. Snout length (SL); E. Post orbital to preoperculum length measurement (PP); F. Post orbital head length (PH).
+A. Upper jaw measurement (UJ); B. Eye diameter measurement (ED); C. Interorbital distance (ID); D. Snout length (SL); E. Post orbital to preoperculum length measurement (PP); F. Post orbital head length (PO).
 \begin{center}\includegraphics[width=6in]{C:/github/sablehead/figures/AppendixA} \end{center}
 
 \clearpage
@@ -401,19 +473,41 @@ Operculum knife cuts for sablefish males (A) and females (B).
 
 \end{appendices}
 
+\clearpage
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\noindent \vspace{-2em} \setlength{\parindent}{-0.2in} \setlength{\leftskip}{0.2in} \setlength{\parskip}{8pt}
+
 \hypertarget{refs}{}
-\leavevmode\hypertarget{ref-Cox2019}{}%
-Cox, S.P., Holt, K., and Johnson, S. 2019. Evaluating the robustness of management procedures for the Sablefish (*anoplopoma fimbria*) fishery in British Columbia, Canada for 2017-18. DFO Can. Sci. Advis. Sec. Res. Doc. 2019/032: vi + 79 p.
+\begin{CSLReferences}{1}{0}
+\leavevmode{\hypertarget{ref-Cox2019}{}}%
+Cox, S.P., Holt, K., and Johnson, S. 2019. Evaluating the robustness of management procedures for the {Sablefish} (*anoplopoma fimbria*) fishery in {British Columbia, Canada} for 2017-18. DFO Can. Sci. Advis. Sec. Res. Doc. 2019/032. vi + 79 p.
 
-\leavevmode\hypertarget{ref-Haist2001}{}%
-Haist, R.H., V., and Wyeth, M. 2001. Sablefish Stock Assessment for 2001 and Advice to Managers for 2002. DFO Can. Sci. Advis. Sec. Res. Doc. 2001/135.
+\leavevmode{\hypertarget{ref-Haist2001}{}}%
+Haist, R.H., V., and Wyeth, M. 2001. Sablefish {Stock Assessment} for 2001 and {Advice to Managers} for 2002. DFO Can. Sci. Advis. Sec. Res. Doc. 2001/135.
 
-\leavevmode\hypertarget{ref-Nottingham2018}{}%
+\leavevmode{\hypertarget{ref-Isermann2005}{}}%
+Isermann, D.A., and Vandergoot, C.S. 2005. Predicting walleye total length from head and mandible measurements. North American Journal of Fisheries Management 25(1): 316--321. Taylor \& Francis.
+
+\leavevmode{\hypertarget{ref-Nottingham2018}{}}%
 Nottingham, M.K., Williams, D.C., Wyeth, M.R., and Olsen, N. 2018. Summary of the west coast haida gwaii synoptic bottom trawl survey, august 25 - september 26, 2016. Can. Manuscr. Rep. Fish. Aquat. Sci. 3151: viii: 51 p.
 
-\leavevmode\hypertarget{ref-Rondeau2013}{}%
+\leavevmode{\hypertarget{ref-Park2019}{}}%
+Park, I.-S., Kim, Y.J., Choi, H.J., Oh, S.-Y., Noh, C.H., and Lee, S.-H. 2019. Total length estimation from head dimensions of artificially propagated brown croaker miichthys miiuy.
+
+\leavevmode{\hypertarget{ref-Richardson2015}{}}%
+Richardson, J., Shears, N., and Taylor, R. 2015. Using relative eye size to estimate the length of fish from a single camera image. Marine Ecology Progress Series 538.
+
+\leavevmode{\hypertarget{ref-Rondeau2013}{}}%
 Rondeau, E.B., Messmer, A.M., Sanderson, D.S., Jantzen, S.G., Schalburg, K.R. von, Minkley, D.R., Leong, J.S., Macdonald, G.M., Davidsen, A.E., Parker, W.A., Mazzola, R.S.A., Campbell, B., and Koop, B.F. 2013. Genomics of sablefish (anoplopoma fimbria): Expressed genes, mitochondrial phylogeny, linkage map and identification of a putative sex gene. BMC Genomics 14(1): 452. Journal Article.
 
-\leavevmode\hypertarget{ref-Williams2018}{}%
+\leavevmode{\hypertarget{ref-Serafy1996}{}}%
+Serafy, J.E., Schmitz, C.M., Capo, T.R., Clarke, M.E., and Ault, J.S. 1996. Total length estimation of red drum from head dimensions. The Progressive Fish-Culturist 58(4): 289--290. Taylor \& Francis.
+
+\leavevmode{\hypertarget{ref-Williams2018}{}}%
 Williams, D.C., Nottingham, M.K., Olsen, N., and Wyeth, M.R. 2018. Summary of the west coast vancouver island synoptic bottom trawl survey, may 24 - june 15, 2016. Can. Manuscr. Rep. Fish. Aquat. Sci. 3137: viii: 54 p.
+
+\end{CSLReferences}
 \end{document}
