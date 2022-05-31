@@ -1,6 +1,6 @@
 # Tables
 
-(ref:Table1Caption) List of head dimensions for upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum distance (L~PP~) and post orbital head length (L~PO~) measurement descriptions and specification of caliper jaw placement.  Matching images found in Appendix A.
+(ref:Table1Caption) List of head dimensions for upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum distance (L~PP~) and post orbital head length (L~PO~) measurement descriptions and specification of caliper jaw placement.  Many follow the morphological measurements described in [@Shaw1997].  The matching images are found in Appendix A.
 \ \
 \ \ 
 
