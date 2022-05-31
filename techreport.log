@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.5)  31 MAY 2022 14:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.5)  31 MAY 2022 15:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1482,7 +1482,7 @@ Overfull \hbox (2.23044pt too wide) in paragraph at lines 390--390
 [6
 
 ] [7]
-<C:/github/sablehead/figures/Figure1.png, id=259, 770.88pt x 867.24pt>
+<C:/github/sablehead/figures/Figure1.png, id=260, 770.88pt x 867.24pt>
 File: C:/github/sablehead/figures/Figure1.png Graphic file (type png)
 <use C:/github/sablehead/figures/Figure1.png>
 Package pdftex.def Info: C:/github/sablehead/figures/Figure1.png  used on input
@@ -1503,7 +1503,7 @@ File: C:/github/sablehead/figures/Figure1.png Graphic file (type png)
 Package pdftex.def Info: C:/github/sablehead/figures/Figure1.png  used on input
  line 407.
 (pdftex.def)             Requested size: 433.62pt x 487.8213pt.
-<C:/github/sablehead/figures/figure2.png, id=261, 332.442pt x 390.258pt>
+<C:/github/sablehead/figures/figure2.png, id=262, 332.442pt x 390.258pt>
 File: C:/github/sablehead/figures/figure2.png Graphic file (type png)
 <use C:/github/sablehead/figures/figure2.png>
 Package pdftex.def Info: C:/github/sablehead/figures/figure2.png  used on input
@@ -1534,7 +1534,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 416--417
  
  []
 
-<C:/github/sablehead/figures/figure3.png, id=263, 332.442pt x 390.258pt>
+<C:/github/sablehead/figures/figure3.png, id=264, 332.442pt x 390.258pt>
 File: C:/github/sablehead/figures/figure3.png Graphic file (type png)
 <use C:/github/sablehead/figures/figure3.png>
 Package pdftex.def Info: C:/github/sablehead/figures/figure3.png  used on input
@@ -1569,7 +1569,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 423--424
 
  <C:/github/sablehead/figures/Figure1.png>] [9 <C:/github/sablehead/figures/fig
 ure2.png (PNG copy)>] [10 <C:/github/sablehead/figures/figure3.png (PNG copy)>]
-<c:/github/sablehead/figures/AppendixA.png, id=279, 770.88pt x 867.24pt>
+<c:/github/sablehead/figures/AppendixA.png, id=280, 770.88pt x 867.24pt>
 File: c:/github/sablehead/figures/AppendixA.png Graphic file (type png)
 <use c:/github/sablehead/figures/AppendixA.png>
 Package pdftex.def Info: c:/github/sablehead/figures/AppendixA.png  used on inp
@@ -1594,7 +1594,7 @@ ut line 440.
 
 
  <c:/github/sablehead/figures/AppendixA.png (PNG copy)>]
-<c:/github/sablehead/figures/AppendixB.png, id=285, 480.29437pt x 599.99156pt>
+<c:/github/sablehead/figures/AppendixB.png, id=286, 480.29437pt x 599.99156pt>
 File: c:/github/sablehead/figures/AppendixB.png Graphic file (type png)
 <use c:/github/sablehead/figures/AppendixB.png>
 Package pdftex.def Info: c:/github/sablehead/figures/AppendixB.png  used on inp
@@ -1627,11 +1627,11 @@ Package rerunfilecheck Info: File `techreport.out' has not changed.
 (rerunfilecheck)             Checksum: 27537AC18F03FF64900545D645C7F58E;3054.
  ) 
 Here is how much of TeX's memory you used:
- 23810 strings out of 478582
- 428828 string characters out of 2843873
+ 23807 strings out of 478582
+ 428804 string characters out of 2843873
  783825 words of memory out of 3000000
  41276 multiletter control sequences out of 15000+600000
- 539905 words of font info for 201 fonts, out of 8000000 for 9000
+ 539780 words of font info for 199 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,17n,90p,1442b,538s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.e
@@ -1650,9 +1650,9 @@ C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
 pfb><C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhv
 r8a.pfb><C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic
 /uhvro8a.pfb>
-Output written on techreport.pdf (20 pages, 4034747 bytes).
+Output written on techreport.pdf (20 pages, 4034923 bytes).
 PDF statistics:
- 363 PDF objects out of 1000 (max. 8388607)
+ 364 PDF objects out of 1000 (max. 8388607)
  68 named destinations out of 1000 (max. 500000)
  71906 words of extra memory for PDF output out of 74296 (max. 10000000)
 
