@@ -1,5 +1,5 @@
 ---
-title: "Estimation of fork length using cranial measurements of sablefish (*Anoplopoma fimbria*) in British Columbia."
+title: "Estimation of fork length using cranial measurements of sablefish (*Anoplopoma fimbria*) in British Columbia"
 year: 2022
 report_number: nnn
 author: |

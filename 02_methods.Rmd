@@ -12,7 +12,7 @@ Operculum clips (DNA) were collected from the first 137 fish measured (79 male a
 
 
 
-### Molecular Genetics Laboratory (MGL) sablefish genetic sex-determination
+### Molecular Genetics Laboratory (MGL) genetic sex-determination
 
 DNA multiplex polymerase chain reactions (PCRs) were conducted using fluorescently labelled forward primers.	X-insert and Y-insert specific primers developed by @Rondeau2013 were used, but the X-insert forward and Y-nested reverse were redesigned to produce slightly smaller PCR products (Table \@ref(tab:table2)).   Sex specific alleles were size fractionated in an ABI 3730 capillary DNA analyzer and were scored with ABI GeneMapper using an internal lane sizing standard. 
 
