@@ -1,0 +1,40 @@
+upper.jaw.slope    <-  lmslp(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))
+  upper.jaw.SE       <-  coef(summary(lm(Fork_Length ~ Upper_jaw_length, data=hdUj)))[,"Std. Error"][2]
+
+  slope.head              <- data.frame(measurement="head",slope=2.5, SE=6.6)
+  slope.head$measurement  <-  as.character(slope.head$measurement)
+  names(slope.head)       <-  c("Head dimension", "slope", "SE")
+  
+  slope.head[1,] <- c("Upper jaw length", upper.jaw.slope, round(upper.jaw.SE,3))
+
+  eye.diameter.slope <-  lmslp(lm(Fork_Length ~ Eye_Diameter, data=hdEd))
+  eye.diameter.SE    <-  coef(summary(lm(Fork_Length ~ Eye_Diameter, data=hdEd)))[, "Std. Error"][2]
+
+  slope.head[2,] <- c("Eye diameter", eye.diameter.slope, round(eye.diameter.SE,3))
+
+  interorbital.slope <-  lmslp(lm(Fork_Length ~ InterOrbital_Distance, data=hdId))
+  interorbital.SE    <-  coef(summary(lm(Fork_Length ~ InterOrbital_Distance, data=hdId)))[, "Std. Error"][2]
+
+  slope.head[3,] <- c("InterOrbital distance", interorbital.slope, round(interorbital.SE,3))
+
+  snoutlength.slope <-  lmslp(lm(Fork_Length ~ Snout_length, data=hdSl))
+  snoutlength.SE    <-  coef(summary(lm(Fork_Length ~ Snout_length, data=hdSl)))[, "Std. Error"][2]
+
+  slope.head[4,]    <-  c("Snout length", snoutlength.slope, round(snoutlength.SE,3))
+
+  postorb.Preoper.slope <-  lmslp(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop))
+  postorb.Preoper.SE    <-  coef(summary(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop)))[, "Std. Error"][2]
+
+  slope.head[5,] <- c("Post orbital to preoperculum length", postorb.Preoper.slope, round(postorb.Preoper.SE,3))
+
+  post.orbital.slope    <-  lmslp(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo))
+  post.orbital.SE       <-  coef(summary(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo)))[, "Std. Error"][2]
+
+  slope.head[6,]     <- c("Post orbital head length", post.orbital.slope, round(post.orbital.SE,3))
+  
+  kableExtra::kable( slope.head,
+                     booktabs = TRUE,linesep = "",
+                     format = "latex",  caption = "(ref:Table6Caption)") %>%
+                     row_spec(0, bold="true") %>%
+  kableExtra::kable_styling(font_size = 10, position = "left")
+  
