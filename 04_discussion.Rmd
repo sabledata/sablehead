@@ -1,6 +1,42 @@
 # Discussion
 
-All the cranial dimensions emerged as good predictors of fork length for sablefish.   The head lengths of L~UJ~ and L~ID~ were determined to have the lowest average error when measured by three highly experienced technicians using a standardized protocol.  Given that the L~ID~ measurement could also be performed accurately, repeatedly, and quickly by experienced samplers, we determined that L~ID~ be used to predict sablefish fork lengths.   As a result, in 2018, routine biological sampling procedures were modified so that commercial fisheries are now only returning head samples to the PBS science division, rather than entire fish.  
+All the cranial dimensions emerged as good predictors of fork length for sablefish.   The head lengths of L~UJ~ and L~ID~ were determined to have the lowest average error when measured by three highly experienced technicians using a standardized protocol.  Given that the L~ID~ measurement could also be performed accurately, repeatedly, and quickly by experienced samplers, we determined that interorbital distance (L~ID~) be used to predict sablefish fork lengths.   As a result, in 2018, routine biological sampling procedures were modified so that commercial fisheries are now only returning head samples to the PBS science division, rather than entire fish. 
+
+NOTE HERE, DO WE WANT TO EXPLORE THIS: did we get bigger fish returned from the fishery after 2018?  no, due to the large numbers of sub-legal sablefish that have shown up in the fishery
+Before 2018 44% of fish samples were legal sized and after, only 13%.
+
+
+```{r beforeNafter}
+
+    # did we get bigger fish returned from the fishery after 2018 -- nope because of all the baby sablefish that flooded the fishery
+    #   Recruitment is one of the dominant processes regulating fish population productivity
+
+     samples  <- paste(" SELECT TRIP_SUB_TYPE_CODE, TRIP_SUB_TYPE_DESC, [trip year], fishing_year,   ",
+                       "dbo.ll_SableFishingYearNo(fishing_year) AS fynum, ",
+		                   "SPECIMEN_ID, SAMPLE_ID, SPECIMEN_SEX_CODE, Fork_Length, SPECIMEN_AGE  ",
+		                   "FROM  dbo.GENERIC_GFBIO_COMMERCIAL_SPECIMENS_LWSMO  ",
+		                    "WHERE (Fork_Length >0)  AND  ([trip year] > 2015)   ",
+                          "AND (SPECIMEN_AGE IS NULL) " , sep='')  
+
+    #specimens     <- GetSQLData(samples ,"Sablefish")
+    #write.table( specimens, file = paste(path,"CommSpecimensCY.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+    specimens     <-  read.csv(paste(path,"CommSpecimensCY.csv", sep=''), header=T) # read from csv
+    # print(head(specimens))
+    specimens  <- specimens %>%  mutate(GR = ifelse(fishing_year %in% c('FY 2016/2017','FY 2017/2018'), 1, 2))
+    
+    specimens.before  <-  specimens[specimens$GR==1,]
+    a  <- specimens.before[specimens.before$Fork_Length>=550,]
+    legal.before <-  length(a$Fork_Length)/length(specimens.before$Fork_Length)  # 44%
+        
+    specimens.after   <-  specimens[specimens$GR==2,]
+    b  <- specimens.after[specimens.after$Fork_Length>=550,]
+    legal.after<-  length(b$Fork_Length)/length(specimens.after$Fork_Length)   # 13%
+
+    #unique(specimens$fishing_year)
+    print(legal.before)
+    print(legal.after)
+
+```
 
 # Acknowledgments
 
