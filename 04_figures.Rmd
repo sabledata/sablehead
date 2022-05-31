@@ -1,21 +1,8 @@
 # Figures
-```{r functionsForFigures}
-
-    lm_eqn    <-   function(df,y,x, N){   # y = mx + b function  m=slope b=intercept
-                        mod    <-  lm(y ~ x, df);
-                        eq     <-  substitute(italic(y) == b + m %.% italic(x)*","~~italic(r)^2~"="~r2~", n ="~italic(n)~" ", 
-                        list(b  =  format(unname(coef(mod)[1]),    digits = 2),
-                             m  =  format(unname(coef(mod)[2]),    digits = 3),
-                             r2 =  format(summary(mod)$r.squared,  digits = 3),
-                             n  =  N))
-                        as.character(as.expression(eq));
-                        }
-    
-```
 
 (ref:figure1) Sample locations in 2016 from the WCVI survey (GFBIO trip id 79190),  WCHG survey (GFBIO trip id 80378) and salmon survey (?).
 
-```{r figure1, fig.cap='(ref:figure1)',warning=FALSE, echo=FALSE, message=FALSE, error= FALSE, width=5.9, height=8.5,fig.align='center'}
+```{r figure1, fig.cap='(ref:figure1)',warning=FALSE, echo=FALSE, message=FALSE, error= FALSE, width=5.9, height=8.5, fig.align='center'}
 
     png("C:/github/sablehead/figures/Figure1.png", units="px", width=1600, height=1800, res=150) # write png to file
     sql          <-   "select * from Head_Measurements_Report where SLAT > 0"  # head measurement data
@@ -79,243 +66,290 @@
    
  
 ```
-
-(ref:figure2) Scatterplot upper jaw vs fork length, measurements in millimeters.
-
-```{r figure2, fig.cap='(ref:figure2)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"} 
-
-     png("C:/github/sablehead/figures/figure2.png", units="px", width=1600, height=1200, res=300) # write png to file
-
-     new_theme <- theme_bw() %+replace% 
-                  theme(legend.position = c(0.84, 0.3))
-     theme_set(new_theme)   # alter the bw theme so that legend has a position
+```{r figure_data_fit_regression_male_female}
+  
+  #  fit the regression lines and get the prediction results separately for male, female and head measurements
+  #  before putting in ggplot - very necessary 
      
-     #  fit the regression line and get the results
-     hd                     <-  hdUj                                        # Upper_jaw_length data
-     n                      <-  length(hd$SPECIMEN_ID)                      # sample size
-     hd.fit.outliers        <-  lm(Fork_Length ~ Upper_jaw_length, data=hd) # linear model
-     hd$predicted           <-  predict(hd.fit.outliers)         # save the predicted values
-     hd$residuals           <-  residuals(hd.fit.outliers)       # save the residual values
-     out.liers              <-  abs(residuals(hd.fit.outliers)) > 100
-     h                      <-  hd[out.liers,]
-     h$indx                 <-  as.integer(rownames(h))    # label values considered outliers
-     h$lbdist               <-  sign(h$residuals) * 20     # label distance
+     cranial.f                     <-  hdUj[hdUj$SPECIMEN_SEX_DESC=="FEMALE",]  # Upper jaw  length data
+     cranial.f$n                   <-  length(cranial.f$HeadBarcode)                   # number of specimens 
+     cranial.fit.outliers.f        <-  lm(Fork_Length ~ Upper_jaw_length, data=cranial.f)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.f  <-  summary(cranial.fit.outliers.f)                 # summary
+
+     cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
+     cranial.f$residuals           <-  residuals(cranial.fit.outliers.f) # save the residual values
+
+     cranial.m                     <-  hdUj[hdUj$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
+     cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
+     cranial.fit.outliers.m        <-  lm(Fork_Length ~ Upper_jaw_length, data=cranial.m)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.m  <-  summary(cranial.fit.outliers.m)                 # summary
+
+     cranial.m$predicted           <-  predict(cranial.fit.outliers.m)   # save the predicted values
+     cranial.m$residuals           <-  residuals(cranial.fit.outliers.m) # save the residual values
+
+     cranial.uj  <-  rbind( cranial.f, cranial.m )
+     names(cranial.uj)[6] <- "hlength" 
+
+     cranial.f                     <-  hdEd[hdEd$SPECIMEN_SEX_DESC=="FEMALE",]  # Eye Diameter length data
+     cranial.f$n                   <-  length(cranial.f$HeadBarcode)                   # number of specimens 
+     cranial.fit.outliers.f        <-  lm(Fork_Length ~ Eye_Diameter, data=cranial.f)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.f  <-  summary(cranial.fit.outliers.f)                 # summary
+
+     cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
+     cranial.f$residuals           <-  residuals(cranial.fit.outliers.f) # save the residual values
+
+     cranial.m                     <-  hdEd[hdEd$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
+     cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
+     cranial.fit.outliers.m        <-  lm(Fork_Length ~ Eye_Diameter, data=cranial.m)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.m  <-  summary(cranial.fit.outliers.m)                 # summary
+
+     cranial.m$predicted           <-  predict(cranial.fit.outliers.m)   # save the predicted values
+     cranial.m$residuals           <-  residuals(cranial.fit.outliers.m) # save the residual values
+
+     cranial.ed  <-  rbind( cranial.f, cranial.m )
+     names(cranial.ed)[6] <- "hlength"
+
+     cranial.f                     <-  hdId[hdId$SPECIMEN_SEX_DESC=="FEMALE",]  # InterOrbital distance data
+     cranial.f$n                   <-  length(cranial.f$HeadBarcode)                   # number of specimens 
+     cranial.fit.outliers.f        <-  lm(Fork_Length ~ InterOrbital_Distance, data=cranial.f)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.f  <-  summary(cranial.fit.outliers.f)                 # summary
+
+     cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
+     cranial.f$residuals           <-  residuals(cranial.fit.outliers.f) # save the residual values
+
+     cranial.m                     <-  hdId[hdId$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
+     cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
+     cranial.fit.outliers.m        <-  lm(Fork_Length ~ InterOrbital_Distance, data=cranial.m)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.m  <-  summary(cranial.fit.outliers.m)                 # summary
+
+     cranial.m$predicted           <-  predict(cranial.fit.outliers.m)   # save the predicted values
+     cranial.m$residuals           <-  residuals(cranial.fit.outliers.m) # save the residual values
+
+     cranial.id  <-  rbind( cranial.f, cranial.m )
+     names(cranial.id)[6] <- "hlength"
+
+     cranial.f                     <-  hdSl[hdSl$SPECIMEN_SEX_DESC=="FEMALE",]         # Snout length data
+     cranial.f$n                   <-  length(cranial.f$HeadBarcode)                   # number of specimens 
+     cranial.fit.outliers.f        <-  lm(Fork_Length ~ Snout_length, data=cranial.f)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.f  <-  summary(cranial.fit.outliers.f)                 # summary
+
+     cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
+     cranial.f$residuals           <-  residuals(cranial.fit.outliers.f) # save the residual values
+
+     cranial.m                     <-  hdSl[hdSl$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
+     cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
+     cranial.fit.outliers.m        <-  lm(Fork_Length ~ Snout_length, data=cranial.m)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.m  <-  summary(cranial.fit.outliers.m)                 # summary
+
+     cranial.m$predicted           <-  predict(cranial.fit.outliers.m)   # save the predicted values
+     cranial.m$residuals           <-  residuals(cranial.fit.outliers.m) # save the residual values
+
+     cranial.sl <-  rbind( cranial.f, cranial.m )
+     names(cranial.sl)[6] <- "hlength"
      
-     ggplot(hd, aes(x = Upper_jaw_length, y = Fork_Length)) +
-            ylab('Fork length (mm)')      +
-            xlab("Upper jaw length (mm)") + 
-            geom_smooth(method = "lm", se = FALSE, color = "grey") +                     # plot regression slope
-            geom_segment(aes(xend = Upper_jaw_length, yend = predicted), alpha = .2) +   # alpha to fade lines
-            geom_point(aes(color = residuals), size=1) +  
-            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +     
-            geom_point(aes(y = predicted), shape = 21, size=1) +  
-            geom_text(data=h,x = h$Upper_jaw_length, y = h$Fork_Length + h$lbdist, 
-                      label = h$SPECIMEN_ID, size=3.0) +                                   #  label outliers
-            geom_text(x = 55, y = 1000, 
-                      label = lm_eqn(hd, hd$Fork_Length, hd$Upper_jaw_length, n),  # y = mx + b label
-                      parse = TRUE, size=4.2)
+     cranial.f                     <-  hdPop[hdPop$SPECIMEN_SEX_DESC=="FEMALE",]  # Postorbital_Preoperculum length data
+     cranial.f$n                   <-  length(cranial.f$HeadBarcode)              # number of specimens 
+     cranial.fit.outliers.f        <-  lm(Fork_Length ~ Postorbital_Preoperculum, data=cranial.f)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.f  <-  summary(cranial.fit.outliers.f)         # summary
+
+     cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
+     cranial.f$residuals           <-  residuals(cranial.fit.outliers.f) # save the residual values
+
+     cranial.m                     <-  hdPop[hdPop$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
+     cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
+     cranial.fit.outliers.m        <-  lm(Fork_Length ~ Postorbital_Preoperculum, data=cranial.m)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.m  <-  summary(cranial.fit.outliers.m)         # summary
+
+     cranial.m$predicted           <-  predict(cranial.fit.outliers.m)   # save the predicted values
+     cranial.m$residuals           <-  residuals(cranial.fit.outliers.m) # save the residual values
+
+     cranial.pp <-  rbind( cranial.f, cranial.m )
+     names(cranial.pp)[6] <- "hlength"
+
+     cranial.f                     <-  hdPo[hdPo$SPECIMEN_SEX_DESC=="FEMALE",]  # Post orbital Head length data
+     cranial.f$n                   <-  length(cranial.f$HeadBarcode)              # number of specimens 
+     cranial.fit.outliers.f        <-  lm(Fork_Length ~ Post_orbital_Head_length, data=cranial.f)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.f  <-  summary(cranial.fit.outliers.f)         # summary
+
+     cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
+     cranial.f$residuals           <-  residuals(cranial.fit.outliers.f) # save the residual values
+
+     cranial.m                     <-  hdPo[hdPo$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
+     cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
+     cranial.fit.outliers.m        <-  lm(Fork_Length ~ Post_orbital_Head_length, data=cranial.m)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliersummary.m  <-  summary(cranial.fit.outliers.m)         # summary
+
+     cranial.m$predicted           <-  predict(cranial.fit.outliers.m)   # save the predicted values
+     cranial.m$residuals           <-  residuals(cranial.fit.outliers.m) # save the residual values
+
+     cranial.po <-  rbind( cranial.f, cranial.m )
+     names(cranial.po)[6] <- "hlength"
+
+   
+```
+(ref:figure2) Relationship between cranial lengths (UJ, ED, ID) vs fork length in millimeters.  Predicted points represented by black circles, measured values colored by residual scale.
+
+```{r figure2, fig.cap='(ref:figure2)', results='asis', out.width = "470px", fig.align='left'}
+   
+     png("C:/github/sablehead/figures/Figure2.png", units="px", width=2300, height=2700, res=500) # write png to file
+
+     library(viridis)
+     
+     cranial <- rbind(cranial.uj,cranial.ed, cranial.id)  # facet wrap all 5 cranial measurements
+     cranial$facet = factor(cranial$measure, levels = c("UJ", "ED", "ID"))
+
+     ggplot(cranial, aes(x = hlength, y = Fork_Length)) +
+            scale_y_continuous(limits = c(200, 1200)) +
+            ylab('Fork length (mm)') +
+            xlab("Cranial dimension (mm)") + 
+            geom_smooth(method = "lm",se = FALSE,color = "grey") +                          # plot regression slope
+            geom_segment(aes(xend = hlength, yend = predicted), color= "black", size=0.15, alpha = .35) +  # lines
+                              # color residuals https://drsimonj.svbtle.com/visualising-residuals
+            geom_point(aes(color = abs(residuals), size = abs(residuals))) +                # residuals
+            scale_size(range=c(0.1,0.9)) + 
+            scale_color_gradient2(low = "grey", mid = "#1ebecd", high = "orange")  +   
+            guides( size = FALSE) +
+       
+            geom_point(aes(y = predicted), shape = 20, size=0.25)     +    # plot predicted circles
+       
+                stat_regline_equation(label.x=85, label.y=450, aes(label = ..eq.label..), size=2.1, 
+                                      label.x.npc = "right",
+                                      label.y.npc = "bottom") +   # y = mx+b and r2 values added to plot
+       
+                stat_regline_equation(label.x=85, label.y = 350,  aes(label = ..rr.label..), size=2.1,
+                                      label.x.npc = "right",
+                                      label.y.npc = "bottom") +  # r square value
+       
+                stat_cor( aes(label = paste(
+                      if_else(readr::parse_number(..p.label..) < 0.001,    # p value
+                              "p<0.001", ..p.label..), sep = "~`,   `~")),
+                               label.x=85,
+                               label.y = 250, size=2.1,
+                               label.x.npc = "right",
+                               label.y.npc = "bottom")  +
+                geom_text(size=2.0, aes(x=20,y=1140,label= paste0("n=",n)))  +
+                
+                facet_grid( facet ~ SPECIMEN_SEX_DESC) +   # facet wrap
+       
+                theme(legend.position=c(0.87,0.56),legend.key.size = unit(1.4, 'mm'),    # legend position
+                      legend.text=element_text(size=6), legend.title = element_text(size=6)) +
+                theme(legend.box = 'horizontal')  + 
+                labs(color="residuals") + 
+                      theme(strip.text.x = element_text(size=7),
+                      strip.text.y = element_text(size=7),
+                      strip.background = element_rect(size=0.25,colour="black", fill="lightgray")) +
+                      theme(panel.border = element_rect(color = "black",
+                                    fill = NA,
+                                    size = 0.25)) +
+                      theme(axis.title.y = element_text(size = 7), axis.title.x = element_text(size = 7) ) +
+                      theme(axis.text = element_text(size = 6)) +
+                      theme(panel.background = element_rect(fill = "white",
+                                colour = "white",
+                                size = 0.35, linetype = "solid"),  # control the grey lines
+                                panel.grid.major = element_line(size = 0.125, linetype = 'solid',
+                                colour = "grey"), 
+                                panel.grid.minor = element_line(size = 0.125, linetype = 'solid',
+                                colour = "grey"))
 
      while (!is.null(dev.list()))  dev.off()
      img <-   paste('C:/github/sablehead/figures/figure2.png',sep="")   # -- retrieve png 
               knitr::include_graphics(img)
-
-```
-
-(ref:figure3) Scatterplot eye diameter vs fork length, measurements in millimeters.
-
-```{r figure3, fig.cap='(ref:figure3)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"} 
-
-     png("C:/github/sablehead/figures/figure3.png", units="px", width=1600, height=1200, res=300) # write png to file
-
-   #  fit the regression line and get the results
-     hd                     <-  hdEd                                      # original data
-     n                      <-  length(hd$SPECIMEN_ID)                    # number of specimens 
-     hd.fit.outliers        <-  lm(Fork_Length ~ Eye_Diameter, data=hd)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21)
-                                                                         # plot(hd$Eye_Diameter,hd$Fork_Length, xlim=c(0,20),ylim=c(0,400)) 
-                                                                         # abline(hd.fit.outliers)
-     hd.fit.outliersummary  <-  summary(hd.fit.outliers)               
-     hd$predicted           <-  predict(hd.fit.outliers)   # save the predicted values
-     hd$residuals           <-  residuals(hd.fit.outliers) # save the residual values
-     o                      <-  abs(residuals(hd.fit.outliers)) > 100
-     h                      <-  hd[o,]
-     h$indx                 <-  as.integer(rownames(h))    # label values considered outliers
-     h$lbdist               <-  sign(h$residuals) * 20
      
-     ggplot(hd, aes(x = Eye_Diameter, y = Fork_Length)) +
+```
+(ref:figure3) Relationship between cranial lengths (SL, PP, PO) vs fork length in millimeters.    Predicted points represented by black circles, measured values colored by residual scale.
+
+```{r figure3, fig.cap='(ref:figure3)', results='asis',  out.width = "470px", fig.align='left'}
+   
+     png("C:/github/sablehead/figures/Figure3.png", units="px", width=2300, height=2700, res=500) # write png to file
+      
+     cranial <- rbind(cranial.sl, cranial.pp, cranial.po)  # facet wrap all 3 cranial measurements
+     cranial$facet = factor(cranial$measure, levels = c("SL","PP","PO"))
+ 
+     ggplot(cranial, aes(x = hlength, y = Fork_Length)) +
+            scale_y_continuous(limits = c(200, 1200)) +
             ylab('Fork length (mm)') +
-            xlab("Eye diameter (mm)") + 
-            geom_smooth(method = "lm", se = FALSE, color = "grey") +                # plot regression slope
-            geom_segment(aes(xend = Eye_Diameter, yend = predicted), alpha = .2) +   # alpha to fade lines
-            geom_point(aes(color = residuals), size=1)  +  
-            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +    
-            geom_point(aes(y = predicted), shape = 21, size=1)  +                   #   plot predicted white circles
-            geom_text(data=h,x = h$Eye_Diameter, y = h$Fork_Length + h$lbdist, 
-                      label = h$indx, size=3.0) +   # label outliers
-                      #label= h$SPECIMEN_ID, size=3) +
-            geom_text(x = 25, y = 1000, 
-                      label = lm_eqn(hd, hd$Fork_Length, hd$Eye_Diameter, n),  # y = mx + b label
-                      parse = TRUE, size=4.2)
+            xlab("Cranial dimension (mm)") + 
+            geom_smooth(method = "lm",se = FALSE,color = "grey") +                          # plot regression slope
+            geom_segment(aes(xend = hlength, yend = predicted), color= "black", size=0.15, alpha = .35) +  # lines
+                              # color residuals https://drsimonj.svbtle.com/visualising-residuals
+            geom_point(aes(color = abs(residuals), size = abs(residuals))) +                # residuals
+            scale_size(range=c(0.1,0.9)) + 
+            scale_color_gradient2(low = "grey", mid = "#1ebecd", high = "orange")  +   
+            guides( size = FALSE) +
+       
+            geom_point(aes(y = predicted), shape = 20, size=0.25)     +    # plot predicted circles
+       
+                stat_regline_equation(label.x=100, label.y=450, aes(label = ..eq.label..), size=2.1, 
+                                      label.x.npc = "right",
+                                      label.y.npc = "bottom") +   # y = mx+b and r2 values added to plot
+       
+                stat_regline_equation(label.x=100, label.y = 350,  aes(label = ..rr.label..), size=2.1,
+                                      label.x.npc = "right",
+                                      label.y.npc = "bottom") +  # r square value
+       
+                stat_cor( aes(label = paste(
+                      if_else(readr::parse_number(..p.label..) < 0.001,    # p value
+                              "p<0.001", ..p.label..), sep = "~`,   `~")),
+                               label.x=100,
+                               label.y = 250, size=2.1,
+                               label.x.npc = "right",
+                               label.y.npc = "bottom")  +
+                geom_text(size=2.0, aes(x=20,y=1140,label= paste0("n=",n)))  +
+                
+                facet_grid( facet ~ SPECIMEN_SEX_DESC) +   # facet wrap
+       
+                theme(legend.position=c(0.87,0.56),legend.key.size = unit(1.4, 'mm'),    # legend position
+                      legend.text=element_text(size=6), legend.title = element_text(size=6)) +
+                theme(legend.box = 'horizontal')  + 
+                labs(color="residuals") + 
+                      theme(strip.text.x = element_text(size=7),
+                      strip.text.y = element_text(size=7),
+                      strip.background = element_rect(size=0.25,colour="black", fill="lightgray")) +
+                      theme(panel.border = element_rect(color = "black",
+                                    fill = NA,
+                                    size = 0.25)) +
+                      theme(axis.title.y = element_text(size = 7), axis.title.x = element_text(size = 7) ) +
+                      theme(axis.text = element_text(size = 6)) +
+                      theme(panel.background = element_rect(fill = "white",
+                                colour = "white",
+                                size = 0.35, linetype = "solid"),  # control the grey lines
+                                panel.grid.major = element_line(size = 0.125, linetype = 'solid',
+                                colour = "grey"), 
+                                panel.grid.minor = element_line(size = 0.125, linetype = 'solid',
+                                colour = "grey"))
 
      while (!is.null(dev.list()))  dev.off()
      img <-   paste('C:/github/sablehead/figures/figure3.png',sep="")   # -- retrieve png 
               knitr::include_graphics(img)
-
-```
-
-(ref:figure4) Scatterplot interorbital vs fork length.
-
-```{r figure4, fig.cap='(ref:figure4)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
-
-     png("C:/github/sablehead/figures/figure4.png", units="px", width=1600, height=1200, res=300) # write png to file
-
-     #  fit the regression line and get the results
-     hd                     <-  hdId                                       # original data
-     n                      <-  length(hd$SPECIMEN_ID)                      # number of specimens 
-     hd.fit.outliers        <-  lm(Fork_Length ~ InterOrbital_Distance, data=hd) # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
-     hd.fit.outliersummary  <-  summary(hd.fit.outliers)                    # summary
-
-     hd$predicted          <-   predict(hd.fit.outliers)   # save the predicted values
-     hd$residuals          <-   residuals(hd.fit.outliers) # save the residual values
-     o                     <-   abs(residuals(hd.fit.outliers)) > 100
-     h                     <-   hd[o,]
-     h$indx                <-   as.integer(rownames(h))    # label values considered outliers
-     h$lbdist              <-   sign(h$residuals) * 20
-     
-     ggplot(hd, aes(x = InterOrbital_Distance, y = Fork_Length)) +
-            ylab('Fork length (mm)') +
-            xlab("InterOrbital Distance (mm)") + 
-            geom_smooth(method = "lm", se = FALSE, color = "grey") +                # plot regression slope
-            geom_segment(aes(xend = InterOrbital_Distance, yend = predicted), alpha = .5) +   # alpha to fade lines
-            geom_point(aes(color = residuals), size=1) +  
-            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +   
-            geom_point(aes(y = predicted), shape = 21, size=1) +                       #   plot predicted white circles
-            geom_text(data=h,x = h$InterOrbital_Distance, y = h$Fork_Length + h$lbdist, 
-                      label = h$indx, size=3.0) +   #label outliers
-            geom_text(x = 45, y = 1000, 
-                      label = lm_eqn(hd, hd$Fork_Length, hd$InterOrbital_Distance, n), 
-                      parse = TRUE, size=4.2)
-
-     while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/figure4.png',sep="")   # -- retrieve png 
-              knitr::include_graphics(img)
-```
-
-(ref:figure5) Scatterplot snout length  vs fork length.
-
-```{r figure5, fig.cap='(ref:figure5)', results='asis', dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
-
-png("C:/github/sablehead/figures/figure5.png",  units="px", width=1600, height=1200, res=300) # write png to file
-
-   #  fit the regression line and get the results
-     hd                     <-  hdSl                                     # snout length data
-     n                      <-  length(hd$SPECIMEN_ID)                   # number of specimens 
-     hd.fit.outliers        <-  lm(Fork_Length ~ Snout_length, data=hd)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
-     hd.fit.outliersummary  <-  summary(hd.fit.outliers)                 # summary
-
-     hd$predicted           <-  predict(hd.fit.outliers)   # save the predicted values
-     hd$residuals           <-  residuals(hd.fit.outliers) # save the residual values
-     o                      <-  abs(residuals(hd.fit.outliers)) > 100
-     h                      <-  hd[o,]
-     h$indx                 <-  as.integer(rownames(h))    # label values considered outliers
-     h$lbdist               <-  sign(h$residuals) * 20
-     
-     ggplot(hd, aes(x = Snout_length, y = Fork_Length)) +
-            ylab('Fork length (mm)') +
-            xlab("Snout length (mm)") + 
-            geom_smooth(method = "lm", se = FALSE, color = "grey") +                # plot regression slope
-            geom_segment(aes(xend = Snout_length, yend = predicted), alpha = .5) +   # alpha to fade lines
-            geom_point(aes(color = residuals), size=1) +  
-            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +     
-            geom_point(aes(y = predicted), shape = 21, size=1) +               #   plot predicted white circles
-            geom_text(data=h,x = h$Snout_length, y = h$Fork_Length + h$lbdist, 
-                      label = h$indx, size=3.0) +   # label outliers
-            geom_text(x = 45, y = 1000, 
-                      label = lm_eqn(hd, hd$Fork_Length, hd$Snout_length, n), 
-                      parse = TRUE, size=4.2)
-
-     while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/figure5.png', sep="")   # -- retrieve png 
-              knitr::include_graphics(img)
-```
-
-(ref:figure6) Scatterplot post orbital to preoperculum length vs fork length.
-
-```{r figure6, fig.cap='(ref:figure6)', results='asis', dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
-
-     png("C:/github/sablehead/figures/figure6.png",units="px", width=1600, height=1200, res=300) # write png to file
-
-   #  fit the regression line and get the results
-     hd                     <-  hdPop                       # post orbital to preoperculum length data
-     n                      <-  length(hd$SPECIMEN_ID)      # number of specimens 
-     hd.fit.outliers        <-  lm(Fork_Length ~ Postorbital_Preoperculum, data=hd) # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
-     hd.fit.outliersummary  <-  summary(hd.fit.outliers)                    # summary
-
-     hd$predicted       <- predict(hd.fit.outliers)   # save the predicted values
-     hd$residuals       <- residuals(hd.fit.outliers) # save the residual values
-     o                  <- abs(residuals(hd.fit.outliers)) > 100
-     h                  <- hd[o,]
-     h$indx             <- as.integer(rownames(h))    # label values considered outliers
-     h$lbdist           <- sign(h$residuals) * 20
-     
-     ggplot(hd, aes(x = Postorbital_Preoperculum, y = Fork_Length)) +
-            ylab('Fork length (mm)') +
-            xlab("Postorbital to preoperculum (mm)") + 
-            geom_smooth(method = "lm", se = FALSE, color = "grey") +                # plot regression slope
-            geom_segment(aes(xend = Postorbital_Preoperculum, yend = predicted), alpha = .5) +   # alpha to fade lines
-            geom_point(aes(color = residuals), size=1) +                            #   plot residuals
-            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +    
-            geom_point(aes(y = predicted), shape = 21, size=1) +                     #   plot predicted white circles
-            geom_text(data=h,
-                      x = h$Postorbital_Preoperculum, y = h$Fork_Length + h$lbdist, 
-                      label = h$indx, size=3.0) +   # label outliers
-            geom_text(x = 30, y = 1000, 
-                      label = lm_eqn(hd, hd$Fork_Length, hd$Postorbital_Preoperculum, n), 
-                      parse = TRUE, size=4.2) # y = mx + b label
-
-     while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/figure6.png',sep="")   # -- retrieve png 
-              knitr::include_graphics(img)
      
 ```
 
-(ref:figure7) Scatterplot of post orbital length vs fork length.
 
-```{r figure7, fig.cap='(ref:figure7)', results='asis',echo=FALSE, dpi=500, out.width = "400px", out.height ="290px", fig.align = "center"}
+```{r beforeNafter}
 
-     png("C:/github/sablehead/figures/figure7.png", units="px", width=1600, height=1200, res=300) # write png to file
+     samples  <- paste(" SELECT TRIP_SUB_TYPE_CODE, TRIP_SUB_TYPE_DESC, [trip year], fishing_year,   ",
+                           "dbo.ll_SableFishingYearNo(fishing_year) AS fynum, ",
+		"SPECIMEN_ID, SAMPLE_ID, SPECIMEN_SEX_CODE, Fork_Length, SPECIMEN_AGE  ",
+		"FROM  dbo.GENERIC_GFBIO_COMMERCIAL_SPECIMENS_LWSMO  ",
+		"WHERE (Fork_Length >0)  AND  ([trip year] > 2015)   ",
+                "AND (SPECIMEN_AGE IS NULL) " , sep='')  
 
-     #  fit the regression line and get the results
-     hd                     <-  hdPo                                        # post orbital length data
-     n                      <-  length(hd$SPECIMEN_ID)                      # number of specimens 
-     hd.fit.outliers        <-  lm(Fork_Length ~ Post_orbital_Head_length, data=hd) # linear regression model 
-     #plot(hd.fit.outliers, which = 1, pch=21)   # plot(hd$Post_orbital_Head_length,hd$Fork_Length)  # abline(hd.fit.outliers)
-     hd.fit.outliersummary  <-  summary(hd.fit.outliers)                    # summary
+    #specimens     <- GetSQLData(samples ,"Sablefish")
+    #write.table( specimens, file = paste(path,"CommSpecimensCY.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+    specimens     <-  read.csv(paste(path,"CommSpecimensCY.csv", sep=''), header=T) # read from csv
+    # print(head(specimens))
+    specimens  <- specimens %>%  mutate(GR = ifelse(fishing_year %in% c('FY 2016/2017','FY 2017/2018'), 1, 2))
+    
+    specimens.before  <-  specimens[specimens$GR==1,]
+    a  <- specimens.before[specimens.before$Fork_Length>=550,]
+    legal.before <-  length(a$Fork_Length)/length(specimens.before$Fork_Length)  # 44%
+        
+    specimens.after   <-  specimens[specimens$GR==2,]
+    b  <- specimens.after[specimens.after$Fork_Length>=550,]
+    legal.after<-  length(b$Fork_Length)/length(specimens.after$Fork_Length)   # 13%
 
-     hd$predicted       <- predict(hd.fit.outliers)       #   save the predicted values
-     hd$residuals       <- residuals(hd.fit.outliers)     #   save the residual values
-     o                  <- abs(residuals(hd.fit.outliers)) > 100
-     h                  <- hd[o,]
-     h$indx             <- as.integer(rownames(h))       # create label values considered outliers
-     h$lbdist           <- sign(h$residuals) * 20
-     
-     ggplot(hd, aes(x = Post_orbital_Head_length, y = Fork_Length)) +
-            ylab('Fork length (mm)') +
-            xlab("Postorbital head length (mm)") + 
-            geom_smooth(method = "lm", se = FALSE, color = "grey") +                #   plot regression slope
-            geom_segment(aes(xend = Post_orbital_Head_length, yend = predicted), alpha = .5) +  # alpha to fade lines
-            geom_point(aes(color = residuals), size=1) +                          #   plot residuals
-            scale_color_gradient2(low = "#d19c2f", mid = "#1ebecd", high = "purple") +   
-            geom_point(aes(y = predicted), shape = 21, size=1) +                 #   plot predicted white circles
-            geom_text(data=h,
-                      x = h$Post_orbital_Head_length, y = h$Fork_Length + h$lbdist, 
-                      label = h$indx, size=3.0) +   # label outliers
-            geom_text(x = 75, y = 1100, 
-                      label = lm_eqn(hd, hd$Fork_Length, hd$Post_orbital_Head_length, n), 
-                      parse = TRUE, size=4.2)  # y = mx + b label
+    #unique(specimens$fishing_year)
+    
 
-     while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/figure7.png',sep="")   # -- retrieve png 
-              knitr::include_graphics(img)
-              
 ```
 \clearpage

@@ -1,12 +1,9 @@
 # Discussion
 
-Interorbial head length (IO) proved to be a good predictor of fork length for sablefish.
-
-
-
-
-
+All the cranial dimensions emerged as good predictors of fork length for sablefish.   The head lengths of L~UJ~ and L~ID~ were determined to have the lowest average error when measured by three highly experienced technicians using a standardized protocol.  Given that the L~ID~ measurement could also be performed accurately, repeatedly, and quickly by experienced samplers, we determined that L~ID~ be used to predict sablefish fork lengths.   As a result, in 2018, routine biological sampling procedures were modified so that commercial fisheries are now only returning head samples to the PBS science division, rather than entire fish.  
 
 # Acknowledgments
 
-We thank ...
+We thank Schon Acheson and Kristina Castle for lending their skilled technical expertise for this report.  We also thank the crew of the Pacific Viking for participating in the pilot project.
+
+\clearpage

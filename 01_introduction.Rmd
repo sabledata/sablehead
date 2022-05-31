@@ -4,7 +4,7 @@
   
   In recent years, a sablefish head only catch sampling and tagging program was developed in order to improve the number of returns, maintain the quality of the biological data and increase the range of fish sizes.  Instead of returning the whole fish, commercial crew j-cut the fish as per commercial practice, view the gonads to determine sex, mark the sex with knife cuts on the operculum and store the head (and/or floy tag) for later sampling by the department and AMR.
   
-  Previous research has accurately estimated fish lengths from i) head measurements [@Serafy1996; @Park2019], ii) head and mandible lengths [@Isermann2005] and iii) relative eye size [@Richardson2015].  In our research, six unique sablefish head dimensions including fork length (FL), eye diameter (ED), interorbital distance (ID), snout length (SL), post orbital to preoperculum distance (PP) and post orbital head length (PO) were regressed against fork length (FL).  In addition, a task performance ranking system was developed to reveal the most accurate and efficient cranial measurement. 
+  Previous research has accurately estimated fish lengths from i) various head dimensions [@Serafy1996; @Park2007], ii) head and mandible lengths [@Isermann2005] and iii) ratio of head height to eye diameter [@Richardson2015].  In our research, six unique sablefish head dimensions including upper jaw (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum distance (L~PP~) and post orbital head length (L~PO~) were regressed against fork length (L~FL~).  In addition, a task performance ranking system was developed to reveal the most accurate and efficient cranial measurement. 
    
 
 ```{r sampleCount} 
@@ -15,19 +15,19 @@
 
 ```
 
-In 2016, standard biological data including operculum clips (DNA) were obtained on several research surveys from `r length(females$SPECIMEN_ID)` female and `r length(males$SPECIMEN_ID)` male sablefish, followed by cranial measurements at the Pacific Biological Station (PBS). Methods for DNA-based sex identification were developed by the PBS Molecular Genetics lab.  In 2017, a pilot study was conducted on a commercial vessel.  Head-only samples with sex markings were collected at sea, followed by scientific sampling on shore.  DNA analysis measured the commercial fisher sex accuracy.
+In 2016, standard biological data including operculum clips (DNA) were obtained on several research surveys from `r length(females$SPECIMEN_ID)` female and `r length(males$SPECIMEN_ID)` male sablefish, followed by cranial measurements at the Pacific Biological Station (PBS). Methods for DNA-based sex identification were developed by the PBS Molecular Genetics Laboratory (MGL).  In 2017, a pilot study was conducted on a commercial vessel.  Head-only samples with sex markings were collected at sea, followed by scientific sampling on shore.  DNA analysis measured the commercial fisher sex accuracy.
 
-In this technical report we describe the results of 1) the relationship between head measurements and fork length; 2) the feasibility of the head measurements; 3) the methods of DNA sex detection; and 4) the fisher-determined sex accuracy via genetic methods.   Successful application of this research has resulted in program revisions in the catch sampling programs and shore-side sampling of sablefish in 2018. 
+In this technical report we describe the results of 1) the relationship between the 2016 cranial dimensions and fork length; 2) the feasibility of each head measurement; 3) the test developed for DNA sex detection; and 4) the most consistent measurement from the 2017 pilot study.   Successful application of this research has resulted in program revisions in the catch sampling programs and shore-side sampling of sablefish in 2018. 
 
 
 ```{r words_surplus}   
 
 #ORDER OF EVENTS:
 #1. 2016 sample sablefish on research surveys, collect bio data and DNA
-#2. 2016 head measurements on shore PBS lab
+#2. 2016 head measurements on shore PBS lab, evaluate measurements with 5 point scale
 #3. 2016 develop dna sex id by PBS Molecular Genetics lab
 #4. 2017 collect head samples on commercial vessel
-#5  2017 measure head samples 
+#5  2017 measure head samples with 3 samplers to develop Index of Average Error
 #6. 2017 use DNA to determine fisher sex accuracy
 
 #The department's port samplers have collected whole round biological samples at the time of landing as part of the voluntary commercial trap catch sampling program since 1995 [Haist2001].  The at-sea #observer program (ASOP) also collected biological data from the partial at-sea observer coverage (10% of sea days) on commercial trips from 2001 through to 2005 [@IFMP2001], [@IFMP2004]. 
@@ -35,7 +35,10 @@ In this technical report we describe the results of 1) the relationship between 
 #In addition, biological samples have been processed by at-sea observers from the offshore seamount fishery that began as an experimental fishery in the 80's [@Murie1996] and moved to a limited-entry #fishery in 2001 [@IFMP2001]. Vessels without an observer have been required to retain a sample of 50/60 frozen sablefish for the department. The service provider Archipelago Marine Research (AMR) has #been responsible for the sablefish tag recovery program since the early 1990's, including the collection and biological sampling of tagged fish.
 #Simple linear regression was used to estimate the relationship between each head dimension and fork length.  Head dimension measurements were also ranked on a scale of one to five in terms of ease of use and repeatability.  Interorbial head length (IO) proved to be a good predictor of fork length for sablefish and ranked high in terms of task completion time, understanding and performance ease for repeated caliper placement.
 
-#   Previous research has assessed the relationship between head measurements [@Serafy1996; @Park2019TotalLE], head and mandible lengths [@Isermann2005] or relative eye size [@Richardson2015] to estimate length in other fish.
+#   [@Serafy1996]   head measurements regression
+#   [@Park2019TotalLE]  head measurements regression
+#   [@Isermann2005] head and mandible lengths regression
+#   [@Richardson2015] ratio of head height to eye diameter regression
 
 #  Head morphology showed sexual dimorphism as well [@mesa2005].
 

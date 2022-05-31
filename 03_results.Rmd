@@ -1,4 +1,4 @@
-# Results and Discussion
+# Results
 
 ```{r fishData}
 
@@ -12,69 +12,234 @@
     fish.avg     <-   mean(fish$Fork_Length)
     
 ```
+```{r head.stats}
+
+    hd                     <-  hdUj[hdUj$SPECIMEN_SEX_DESC=='FEMALE',]        # UPPER JAW: female table of sample size, mean and sd for variables
+    sex                    <-  'female'
+    fl.nme                 <-  "Fork length"
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$Upper_jaw_length),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$Upper_jaw_length),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+    slope                  <-  round(lmslp(lm(Fork_Length ~ Upper_jaw_length, data=hd)),1)
+    se                     <-  round(coef(summary(lm(Fork_Length ~ Upper_jaw_length, data=hd)))[,"Std. Error"][2],2)  # se should be one more decimal place than for what 
+    r2                     <-  format(summary(lm(Fork_Length ~ Upper_jaw_length, data=hd))$r.squared,  digits = 3)    # they are computed for
+    r                      <-  format(cor(hd$Upper_jaw_length,hd$Fork_Length),  digits = 3) 
+    measurement            <-  "UJ"
+    name                   <-  "upper jaw length"
+    mf.uj                  <-  lm(Fork_Length ~ Upper_jaw_length, data=hd)
+    
+    head.stats <- data.frame(measurement = character(),
+                             sex = character(),
+                             n     = integer(),
+                             slope = double(),
+                             se    = double(),
+                             r2    = double(),
+                             r     = double(),
+                             mn    = double(), 
+                             std   = double(),
+                             mnfl  = double(),
+                             stdfl = double(),
+                             name  = character(),
+                             stringsAsFactors = FALSE)
+    
+    head.stats[1,]    <-  c(measurement,sex, n, slope, se, r2, r, mn, std,  mnfl, stdfl, name )
+    
+    hd                     <-  hdUj[hdUj$SPECIMEN_SEX_DESC=='MALE',]          #UPPER JAW: male table of sample size, mean and sd for variables
+    sex                    <-  'male'
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$Upper_jaw_length),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$Upper_jaw_length),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+    mm.uj                  <-  lm(Fork_Length ~ Upper_jaw_length, data=hd)
+    
+    head.stats[2,] <- c("UJ", sex, n,
+                       slope=round(lmslp(lm(Fork_Length ~ Upper_jaw_length, data=hd)),1),
+                       se=round(coef(summary(lm(Fork_Length ~ Upper_jaw_length, data=hd)))[, "Std. Error"][2],2),
+                       r2=format(summary(lm(Fork_Length ~ Upper_jaw_length, data=hd))$r.squared,  digits = 3),
+                       r=format(cor(hd$Upper_jaw_length,hd$Fork_Length),  digits = 3), 
+                       mn, std,  mnfl, stdfl,"upper jaw length")
+    
+    head.stats$measurement  <- as.character(head.stats$measurement)
+    #typeof(head.stats$measurement)
+    
+    hd                     <-  hdEd[hdEd$SPECIMEN_SEX_DESC=='FEMALE',]        #EYE DIAMETER: female table of sample size, mean and sd for variables
+    sex                    <-  'female'
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$Eye_Diameter),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$Eye_Diameter),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+    mf.ed                  <-  lm(Fork_Length ~ Eye_Diameter, data=hd)    
+    
+    head.stats[3,] <- c("ED", sex,n,
+                       slope=round(lmslp(lm(Fork_Length ~ Eye_Diameter, data=hd)),1),
+                       se=round(coef(summary(lm(Fork_Length ~ Eye_Diameter, data=hd)))[, "Std. Error"][2],2),
+                       r2=format(summary(lm(Fork_Length ~ Eye_Diameter, data=hd))$r.squared,  digits = 3),
+                       r=format(cor(hd$Eye_Diameter,hd$Fork_Length),  digits = 3), 
+                       mn, std,  mnfl, stdfl, "eye diameter")
+    
+    hd                     <-  hdEd[hdEd$SPECIMEN_SEX_DESC=='MALE',]        #EYE DIAMETER: male table of sample size, mean and sd for variables
+    sex                    <-  'male'
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$Eye_Diameter),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$Eye_Diameter),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+    
+    head.stats[4,] <- c("ED", sex,n,
+                       slope=round(lmslp(lm(Fork_Length ~ Eye_Diameter, data=hd)),1),
+                       se=round(coef(summary(lm(Fork_Length ~ Eye_Diameter, data=hd)))[, "Std. Error"][2],2),
+                       r2=format(summary(lm(Fork_Length ~ Eye_Diameter, data=hd))$r.squared,  digits = 3),
+                       r=format(cor(hd$Eye_Diameter,hd$Fork_Length),  digits = 3), 
+                       mn, std,  mnfl, stdfl, "eye diameter")  
+
+  
+    
+    hd                     <-  hdId[hdId$SPECIMEN_SEX_DESC=='FEMALE',]      # INTERORBITAL DISTANCE: female table of sample size, mean and sd for variables
+    sex                    <-  'female'
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$InterOrbital_Distance),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$InterOrbital_Distance),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+  
+    head.stats[5,] <- c("ID", sex,n,
+                       slope=round(lmslp(lm(Fork_Length ~ InterOrbital_Distance, data=hd)),1),
+                       se=round(coef(summary(lm(Fork_Length ~ InterOrbital_Distance, data=hd)))[, "Std. Error"][2],2),
+                       r2= format(summary(lm(Fork_Length ~ InterOrbital_Distance, data=hd))$r.squared,  digits = 2),
+                       r=format(cor(hd$InterOrbital_Distance,hd$Fork_Length),  digits = 2), 
+                       mn, std,  mnfl, stdfl,"interorbital distance")
+    
+    hd                     <-  hdId[hdId$SPECIMEN_SEX_DESC=='MALE',]       # INTERORBITAL DISTANCE: male table of sample size, mean and sd for variables
+    sex                    <-  'male'
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$InterOrbital_Distance),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$InterOrbital_Distance),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+  
+    head.stats[6,] <- c("ID", sex,n,
+                       slope=round(lmslp(lm(Fork_Length ~ InterOrbital_Distance, data=hd)),1),
+                       se=round(coef(summary(lm(Fork_Length ~ InterOrbital_Distance, data=hd)))[, "Std. Error"][2],2),
+                       r2= format(summary(lm(Fork_Length ~ InterOrbital_Distance, data=hd))$r.squared,  digits = 3),
+                       r=format(cor(hd$InterOrbital_Distance,hd$Fork_Length),  digits = 3),
+                       mn, std,  mnfl, stdfl,"interorbital distance")
+    
+    
+    hd                     <-  hdSl[hdSl$SPECIMEN_SEX_DESC=='FEMALE',]     # SNOUT LENGTH: female table of sample size, mean and sd for variables
+    sex                    <-  'female'
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$Snout_length),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$Snout_length),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+  
+    head.stats[7,] <-c("SL", sex,n,
+                      slope=round(lmslp(lm(Fork_Length ~ Snout_length, data=hd)),1),
+                      se=round(coef(summary(lm(Fork_Length ~ Snout_length, data=hd)))[, "Std. Error"][2],2),
+                      r2= format(summary(lm(Fork_Length ~ Snout_length, data=hd))$r.squared,  digits = 3),
+                      r=format(cor(hd$Snout_length,hd$Fork_Length),  digits = 3),
+                      mn, std,  mnfl, stdfl,"snout length")
+    
+    hd                     <-  hdSl[hdSl$SPECIMEN_SEX_DESC=='MALE',]     # SNOUT LENGTH: male table of sample size, mean and sd for variables
+    sex                    <-  'male'
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$Snout_length),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$Snout_length),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+  
+    head.stats[8,] <-c("SL", sex,n,
+                      slope=round(lmslp(lm(Fork_Length ~ Snout_length, data=hd)),1),
+                      se=round(coef(summary(lm(Fork_Length ~ Snout_length, data=hd)))[, "Std. Error"][2],2),
+                      r2= format(summary(lm(Fork_Length ~ Snout_length, data=hd))$r.squared,  digits = 3),
+                      r=format(cor(hd$Snout_length,hd$Fork_Length),  digits = 3),
+                      mn, std,  mnfl, stdfl, "snout length")
+    
+    hd                     <-  hdPop[hdPop$SPECIMEN_SEX_DESC=='FEMALE',]    #POSTORBITAL PREOPERCULUM: female table of sample size, mean and sd for variables
+    sex                    <-  'female'
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$Postorbital_Preoperculum),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$Postorbital_Preoperculum),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+
+    head.stats[9,] <- c("PP",sex,n,
+                       slope=round(lmslp(lm(Fork_Length ~ Postorbital_Preoperculum, data=hd)),1),
+                       se=round(coef(summary(lm(Fork_Length ~ Postorbital_Preoperculum, data=hd)))[, "Std. Error"][2],2),
+                       r2=format(summary(lm(Fork_Length ~ Postorbital_Preoperculum, data=hd))$r.squared,  digits = 3),
+                       r=format(cor(hd$Postorbital_Preoperculum,hd$Fork_Length),  digits = 3),
+                       mn, std,  mnfl, stdfl,"postorbital preoperculum length")
+
+    hd                     <-  hdPop[hdPop$SPECIMEN_SEX_DESC=='MALE',]    #POSTORBITAL PREOPERCULUM: male table of sample size, mean and sd for variables
+    sex                    <-  'male'
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$Postorbital_Preoperculum),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$Postorbital_Preoperculum),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+
+    head.stats[10,] <- c("PP",sex,n,
+                       slope=round(lmslp(lm(Fork_Length ~ Postorbital_Preoperculum, data=hd)),1),
+                       se=round(coef(summary(lm(Fork_Length ~ Postorbital_Preoperculum, data=hd)))[, "Std. Error"][2],2),
+                       r2=format(summary(lm(Fork_Length ~ Postorbital_Preoperculum, data=hd))$r.squared,  digits = 3),
+                       r=format(cor(hd$Postorbital_Preoperculum,hd$Fork_Length),  digits = 3),
+                       mn, std,  mnfl, stdfl,"postorbital preoperculum length")  
+    
+    hd                     <-  hdPo[hdPo$SPECIMEN_SEX_DESC=='FEMALE',]    #POSTORBITAL HEAD LENGTH: female table of sample size, mean and sd for variables
+    sex                    <-  'female'
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$Post_orbital_Head_length),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$Post_orbital_Head_length),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+
+    head.stats[11,] <- c("PO",sex,n,
+                       slope=round(lmslp(lm(Fork_Length ~ Post_orbital_Head_length, data=hd)),1),
+                       se=round(coef(summary(lm(Fork_Length ~ Post_orbital_Head_length, data=hd)))[, "Std. Error"][2],2),
+                       r2=format(summary(lm(Fork_Length ~ Post_orbital_Head_length, data=hd))$r.squared,  digits = 3),
+                       r=format(cor(hd$Post_orbital_Head_length,hd$Fork_Length),  digits = 3),
+                       mn, std,  mnfl, stdfl, "postorbital head length")
+
+    hd                     <-  hdPo[hdPo$SPECIMEN_SEX_DESC=='MALE',]    #POSTORBITAL HEAD LENGTH: male table of sample size, mean and sd for variables
+    sex                    <-  'male'
+    n                      <-  length(hd$SPECIMEN_ID)                   
+    mn                     <-  round(mean(hd$Post_orbital_Head_length),1)
+    mnfl                   <-  round(mean(hd$Fork_Length),1)
+    std                    <-  round(sd(hd$Post_orbital_Head_length),2)
+    stdfl                  <-  round(sd(hd$Fork_Length),2)
+
+    head.stats[12,] <- c("PO",sex,n,
+                       slope=round(lmslp(lm(Fork_Length ~ Post_orbital_Head_length, data=hd)),1),
+                       se=round(coef(summary(lm(Fork_Length ~ Post_orbital_Head_length, data=hd)))[, "Std. Error"][2],2),
+                       r2=format(summary(lm(Fork_Length ~ Post_orbital_Head_length, data=hd))$r.squared,  digits = 3),
+                       r=format(cor(hd$Post_orbital_Head_length,hd$Fork_Length),  digits = 3),
+                       mn, std,  mnfl, stdfl, "postorbital head length") 
+    
+    top.fish        <- head.stats %>% group_by(sex) %>% slice_max(order_by = r, n = 2)   # get top 2 r  values male and female
+    
+    
+    
+    
+    
+```
 
 ##  Experimental Study 2016
+  
+A total of 438 specimens comprising `r count.males` males and `r count.females` females were used for the study.  The smallest fork length of the collected specimens was `r fish.min` mm, the highest was `r fish.max` mm, and the average was `r round(fish.avg,1)` mm (Table \@ref(tab:table3)).  The post orbital head length (L~PO~) measurement was abandoned after 130 sablefish due to sample quality and technical complications.  
 
-A total of 438 specimens comprising `r count.males` males and `r count.females` females were used for the study.  The smallest fork length of the collected specimens was `r fish.min` mm, the highest was `r fish.max` mm, and an average of `r fish.avg` (Table \@ref(tab:table3)).  
+Table \@ref(tab:table4) lists the statistics of the cranial dimensions (L~UJ~, L~ED~, L~ID~, L~SL~, L~PP~, L~PO~) as predictors of the response variable fork length (L~FL~).  All cranial dimensions were highly correlated with fork length (Figure \@ref(fig:figure2) and Figure \@ref(fig:figure3)).  The correlation coefficient (r) was highest for female measurements of `r top.fish$name[1]` (`r top.fish$r[1]`) and  `r top.fish$name[2]` (`r top.fish$r[2]`) and male measurements of `r top.fish$name[3]` (`r top.fish$r[3]`) and  `r top.fish$name[4]` (`r top.fish$r[4]`).
 
+The aquatic science research technicians scored interorbital distance (L~ID~) as the highest on the five point scale for ease of use and repeatable criteria, and eye diameter (L~ED~) and postorbital head length (L~PO~) were scored as the lowest (Table \@ref(tab:table5)).  L~ID~ (narrowest distance between the eye sockets) proved the easiest measurement as the tissue could be easily compressed with the caliper jaws to obtain bone measurements.  L~ED~ (anterior-posterior diameter of eye socket) proved hard to repeat on soft tissue and L~PO~ (posterior inner edge of orbit to dorsal insertion of opercle) was difficult to measure since many opercula were damaged during head removal by J-cut.  
 
-```{r yisFORKLENGTH}
+### Molecular Genetics Laboratory (MGL) genetic sex-determinations
 
-    lmp <- function (modelobject) {                    #  p value function
-           if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
-                 f <- summary(modelobject)$fstatistic
-                 p <- pf(f[1],f[2],f[3],lower.tail=F)
-                 attributes(p) <- NULL
-                 return(p)
-    }
+Genomic DNA (130 of 137 fin clips) were successfully PCR amplified.  The accuracy of sex detection by the science technicians from the 2016 experimental study was 92% (119/130). 
 
-    lmslp <- function (modelobject) {                    #  slope (m) value function
-             if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
-                 slp <- signif(modelobject$coef[[2]], 5)
-                 return(slp)
-    }
-    
-    lmR <- function (modelobject) {                    #  r2 value function
-             if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
-                 r2 =  format(summary(modelobject)$r.squared,  digits = 3)
-                 return(r2)
-    }
-    
-    
-    # y = Fork_Length, response variable
-    options("scipen"=100, "digits"=3)
-    
+##  Pilot study 2017
 
-```    
+The 360 heads were received from the commercial vessel in good condition and operculum cuts worked well to indicate sex. The first 99 heads (`r count99[1]` from Cobb Seamount, `r count99[2]` from Eikelberg seamount) were measured once by three expert science technicians for each cranial dimension of L~UJ~, L~ID~, L~SL~ and L~PP~ (Table \@ref(tab:table6)).  The cranial dimensions of L~ED~ and L~PO~ were eliminated after the results from the experimental study. The cranial measurements that produced the lower average error were upper jaw (L~UJ~) and interorbial distance (L~ID~) with IAE values of `r IAE.UJ` % and `r IAE.ID` %, respectively (Table \@ref(tab:table6)). The accuracy of the commercial fisher sex detection from the DNA gender analysis was xx% (x/95).
 
-
-The mean values of the predictor and response variables collected for five of the six head measurements (UJ, ED, IO, SL, PP, PH)(Table \@ref(tab:table2)).  The PH head was abandoned after 130 sablefish due to the time consuming and technical difficulties performing this measurement.
-
-We found evidence of relationships between upper jaw length and fork length (p = `r lmp(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))`) ; eye diameter and fork length (p = `r lmp(lm(Fork_Length ~ Eye_Diameter, data=hdEd))`); interorbital distance and fork length (p = `r lmp(lm(Fork_Length ~ InterOrbital_Distance, data=hdId))` ); upper snout length and fork length (p = `r lmp(lm(Fork_Length ~ Snout_length, data=hdSl))`); postorbital to preoperculum length and fork length (p = `r lmp(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop))`); and postorbital head length and fork length (p = `r lmp(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo))`).
-
-,  fork length, round weight, otoliths and DNA. 
-Post orbital head length (Posterior inner edge of orbit to dorsal insertion of opercle) was also measured, but this was abandoned after 130 measurements, to save time, and because it was not possible to measure this on a number of the heads for a variety of reasons (opercula had been cut off from some heads, it was awkward to take longer measurements using the electronic calipers, and the end points of the measurement were difficult to define.  
-
-
-## Estimation of Fork Length using Cranial Measurements
-
-
-
-
-Given the ease of measurement, we suggest that Interorbital distance be used to predict sablefish fork lengths and weights (Table \@ref(tab:table3)). 
-
-
-
-The estimated slope is `r lmslp(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))` (SE `r coef(summary(lm(Fork_Length ~ Upper_jaw_length, data=hdUj)))[,"Std. Error"][2]`) units of fork length per unit of upper jaw length; the estimated slope is `r lmslp(lm(Fork_Length ~ Eye_Diameter, data=hdEd))` (SE `r  coef(summary(lm(Fork_Length ~ Eye_Diameter, data=hdEd)))[, "Std. Error"][2]`) units of fork length per unit of eye diameter; the estimated slope is `r lmslp(lm(Fork_Length ~ InterOrbital_Distance, data=hdId))` (SE `r coef(summary(lm(Fork_Length ~ InterOrbital_Distance, data=hdId)))[, "Std. Error"][2]`) units of fork length per unit of interorbital distance; the estimated slope is `r lmslp(lm(Fork_Length ~ Snout_length, data=hdSl))` (SE `r coef(summary(lm(Fork_Length ~ Snout_length, data=hdSl)))[, "Std. Error"][2]` units of fork length per unit of snout length; the estimated slope is `r lmslp(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop))` (SE `r coef(summary(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop)))[, "Std. Error"][2]`) units of fork length per unit of postorbital to preoperculum length; and the estimated slope is `r lmslp(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo))` (SE `r coef(summary(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo)))[, "Std. Error"][2]`) units of fork length per unit of postorbital head length.
-
-##  Pilot Collection of Sablefish Heads as a Biological Sample
-
-Heads were received by DFO in good condition (intact and not deformed), segregated by set, for measuring and otolith extraction.  Operculum cuts worked well to indicate sex
-
-##  Repeatability of measurements between technicians
-
-# Discussion
-
-Routine biological sampling procedures have been modified so that commercial fisheries are now only returning heads, rather than entire fish.   
-
-\clearpage

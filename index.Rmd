@@ -1,11 +1,11 @@
 ---
 title: "Estimation of fork length using cranial measurements of sablefish (*Anoplopoma fimbria*) in British Columbia."
-year: 2021
+year: 2022
 report_number: nnn
 author: |
-  Kathryn x. Temple and Kendra R. Holt and
-  Lisa C. Lacko 
-author_list: "Kathryn x. Temple,  K.R. Holt and Lacko, L.C."
+  Kathryn x. Temple and Lisa C. Lacko and
+  Kendra R. Holt 
+author_list: "Kathryn x. Temple,  L.C. Lacko and Holt K.R."
 region: Pacific Region
 isbn: ""
 address: |
@@ -15,10 +15,9 @@ address: |
 phone: "(250) 756-7000"
 author_footnote: "Email: Kathryn.Temple@dfo-mpo.gc.ca | telephone: (250) 756-7366"
 abstract: |
-  Routine biological sampling of whole round sablefish from commercial fishing operations in British Columbia have occurred since the early 1990's.  Historically, specimens have been obtained through a voluntary catch sampling program and tagged sablefish recovery program. In order to improve the quantity and size range of samples received, we investigated the potential for obtaining biological information using heads, rather than the entire fish.   In 2016, 438 sablefish (240-1080 mm) were sampled at sea and six different fish head measurements were assessed to see if they could predict fork length.  Genetic samples (137) were collected to develop methods for DNA-based sex identification.  A pilot study was conducted in 2017 with head-only samples and sex determination provided by a commercial vessel, followed by scientific sampling on shore.  Regression analysis results show that the interorbital distance measurement was a good predictor of sablefish fork length, while samplers ranked it the most efficient and easily repeatable.  Initial genetic samples (130/137) were successfully PCR amplified from genomic DNA and results indicate 92% accuracy in sex detection.  Subsequently, the 2018 sampling collection program was modified so that returns of whole round sablefish were replaced by head-only samples with knife cuts on the operculum to indicate sex.
+  Routine biological sampling of whole round sablefish from commercial fishing operations in British Columbia have occurred since the early 1990’s. Historically, specimens have been obtained through a voluntary catch sampling program and tagged sablefish recovery program. In order to improve the range of samples received, we investigated the potential for obtaining biological information using heads, rather than the entire fish. In 2016, 438 sablefish (240-1080 mm) were sampled at sea and six different fish head measurements were assessed to see if they could predict fork length. Genetic samples (137) were collected to develop methods for DNA-based sex identification. A pilot study was conducted in 2017 with 360 head-only samples with sex markings provided by a commercial vessel, followed by scientific sampling on shore. Regression analysis results reveal that the interorbital distance measurement was a good predictor of sablefish fork length, while samplers ranked it the most efficient and easily repeatable. Initial genomic DNA (130 of 137) were successfully PCR amplified and results indicate 92% accuracy in sampler sex detection.  DNA audit of fisher sex determination was xx%. Subsequently, the 2018 sampling collection program was modified so that returns of whole round sablefish were replaced by head-only samples with knife cuts on the operculum to indicate sex.
 
 abstract_other: |
-  Routine biological sampling of whole round sablefish from commercial fishing operations in British ColumbRoutine biological sampling of whole round sablefish from commercial fishing operations in British Columbia have occurred since the early 1990’s. Historically, specimens have been obtained through a voluntary catch sampling program and tagged sablefish recovery program. In order to improve the quality of samples received, we investigated the potential for obtaining biological information using heads, rather than the entire fish. In 2016, 438 sablefish (240-1080 mm) were sampled at sea and six different fish head measurements were assessed to see if they could predict fork length. Genetic samples (137) were collected to develop methods for DNA-based sex identification. A pilot study was conducted in 2017 with head-only samples and sex determination provided by a commercial vessel, followed by scientific sampling on shore. Regression analysis results show that the interorbital distance measurement was a good predictor of sablefish fork length, while samplers ranked it the most efficient and easily repeatable. Initial genetic samples (130/137) were successfully PCR amplified from genomic DNA and results indicate 92% accuracy in sex detection. Fisher sex determination was xx%. Subsequently, the 2018 sampling collection program was modified so that returns of whole round sablefish were replaced by head-only samples with knife cuts on the operculum to indicate sex.
 
  
 output:
@@ -112,6 +111,9 @@ library(maps)
 library(ggspatial)
 library(png)
 library(grid)
+library(gridExtra)
+library(stringr)
+library(ggpubr)
 
 #  ----   G L O B A L --- F U N C T I O N S ---------------------------------
   GetSQLData <- function(strSQL,strDbName) {    # connect to SQL Server
@@ -175,7 +177,7 @@ library(grid)
            
             if(region %in% c("figure", "device")) {
               ds <- dev.size("in")
-              # xy coordinates of device corners in user coordinates
+              # xy coordinates of device corners in user co ordinates
               x <- grconvertX(c(0, ds[1]), from="in", to="user")
               y <- grconvertY(c(0, ds[2]), from="in", to="user")
            
@@ -233,17 +235,125 @@ library(grid)
 ```
 
 ``` {r GlobalDataTable}
-
+    # head measurements from research study 2016
     details <-    paste("select * from Head_Measurements_Report", sep="")
-    #hd     <-    GetSQLData(details,"Sablefish")      # head details from SQL Server
-    #write.table(hd , file = paste(path,"head_measurements.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
-    hd      <-    read.csv(paste(path,"head_measurements.csv",sep=""), header = T)  # master data
+    # hd     <-    GetSQLData(details,"Sablefish")      # head details from SQL Server
+
+    # write.table(hd , file = paste(path,"head_measurements.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
+    hd      <-    read.csv(paste(path,"head_measurements.csv",sep=''), header = T)  # master data
     
-    hdUj    <-    hd[hd$Upper_jaw_length > 0,]         # upper jaw length
-    hdEd    <-    hd[hd$Eye_Diameter > 0,]             # eye diameter  
-    hdId    <-    hd[hd$InterOrbital_Distance > 0,]    # interorbital distance
-    hdSl    <-    hd[hd$Snout_length > 0,]             # snout length
-    hdPop   <-    hd[hd$Postorbital_Preoperculum > 0,] # postorbital to preoperculum
-    hdPo    <-    hd[hd$Post_orbital_Head_length > 0,] # postorbital head length
+    # separate out the 2016 research data for scatterplots
+    hdUj  <- select(filter(hd, Upper_jaw_length > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, Upper_jaw_length) 
+    hdUj  <- hdUj%>% mutate(measure = 'UJ')  # upper jaw length data
+
+    hdEd  <- select(filter(hd, Eye_Diameter > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, Eye_Diameter)
+    hdEd  <- hdEd%>% mutate(measure = 'ED') # Eye Diameter data
+    
+    hdId  <- select(filter(hd, InterOrbital_Distance > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, InterOrbital_Distance)
+    hdId  <- hdId%>% mutate(measure = 'ID') # InterOrbital Distance data
+    
+    hdSl <-  select(filter(hd, Snout_length > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, Snout_length)  
+    hdSl <-  hdSl%>% mutate(measure = 'SL') # Snout length data
+    
+    hdPop <- select(filter(hd, Postorbital_Preoperculum > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, Postorbital_Preoperculum )        
+    hdPop <- hdPop%>% mutate(measure = 'PP')  # Postorbital Preoperculum data
+    
+    hdPo  <- select(filter(hd, Post_orbital_Head_length > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, Post_orbital_Head_length)   
+    hdPo  <- hdPo%>% mutate(measure = 'PO')   # Post orbital Head length data
+    
+    # head measurements from pilot study, trip to seamount
+    head99    <-  read.csv(paste(path,"head_measurements_Seamount_Pilot.csv",sep=""), header = T)
+    head99$id <-  as.numeric(str_sub(head99$DNA.VIAL.BARCODE, 10, 12)) - 200   # add id column
+    count99   <-  table(head99['White.bag.label'])  # count of how many came from Cobb and Eickelberg
+    
+    library(dplyr)
+    library(matrixStats)
+    
+    # create sample table with Mean and SDev in 2 columns
+    mhd.ID  <- c('InterOrbital.DistanceA','InterOrbital.DistanceB','InterOrbital.DistanceC')
+    mhd.SL  <- c('Snout.lengthA','Snout.lengthB','Snout.lengthC')  
+    mhd.UJ  <- c('Upper.jaw.lengthA','Upper.jaw.lengthB','Upper.jaw.lengthC')  
+    mhd.PP  <- c('Post.orbital.to.PreoperculumA','Post.orbital.to.PreoperculumB','Post.orbital.to.PreoperculumC')     
+
+    # mean and sdev added
+    head99.data <- head99 %>% 
+                   mutate(ID.Mean= rowMeans(.[mhd.ID]), ID.stdev=rowSds(as.matrix(.[mhd.ID])),
+                          SL.Mean= rowMeans(.[mhd.SL]), SL.stdev=rowSds(as.matrix(.[mhd.SL])),
+                          UJ.Mean= rowMeans(.[mhd.UJ]), UJ.stdev=rowSds(as.matrix(.[mhd.UJ])),
+                          PP.Mean= rowMeans(.[mhd.PP]), PP.stdev=rowSds(as.matrix(.[mhd.PP]))   )
+    
+    head99.dat   <- head99.data[order(head99.data$ID.Mean),]
+    num          <- length(head99.dat$id)  # count fish
+    head99.dat$observation   <- c(1:num)
+ 
+    # master data for 99 head measurements
+    sample.ID  <-   cbind(type='ID',head99.dat[,c(34,25:27,    6,11,16)])
+    sample.SL  <-   cbind(type='SL',head99.dat[,c(34,25,28,29, 7,12,17)] )
+    sample.UJ  <-   cbind(type='UJ',head99.dat[,c(34,25,30,31, 8,13,18)] )
+    sample.PP  <-   cbind(type='PP',head99.dat[,c(34,25,32,33, 9,14,19)] )
+    
+    colnames(sample.SL) <- colnames(sample.ID)
+    colnames(sample.UJ) <- colnames(sample.ID)
+    colnames(sample.PP) <- colnames(sample.ID)    
+    
+    samples         <-   rbind(sample.ID, sample.SL, sample.UJ, sample.PP )
+    names(samples)  <-  c("type","obs","id","SMean","Sstdev","A","B","C")
+    #print(tail(samples,44))
+
+    write.table(samples, file = paste(path,"export.samples.csv", sep=''), row.names=FALSE, na="", col.names=TRUE, sep=",")
+    
+    # now add columns for IAE:  Index of Average Error
+    head99.dat  <- head99.dat %>%   #IAE = 1/N Σ (1/RΣ (|Xij - Xj|/ Xj))
+                   mutate(IDSumABCDiv3techs = (abs((InterOrbital.DistanceA-ID.Mean)/ID.Mean) + 
+                                               abs((InterOrbital.DistanceB-ID.Mean)/ID.Mean) + 
+                                               abs((InterOrbital.DistanceC-ID.Mean)/ID.Mean))/3,
+                          SLSumABCDiv3techs = (abs((Snout.lengthA-SL.Mean)/SL.Mean) + 
+                                               abs((Snout.lengthB-SL.Mean)/SL.Mean) + 
+                                               abs((Snout.lengthC-SL.Mean)/SL.Mean))/3,
+                          UJSumABCDiv3techs = (abs((Upper.jaw.lengthA-UJ.Mean)/UJ.Mean) + 
+                                               abs((Upper.jaw.lengthB-UJ.Mean)/UJ.Mean) + 
+                                               abs((Upper.jaw.lengthC-UJ.Mean)/UJ.Mean))/3,
+                          PPSumABCDiv3techs = (abs((Post.orbital.to.PreoperculumA-PP.Mean)/PP.Mean) + 
+                                               abs((Post.orbital.to.PreoperculumB-PP.Mean)/PP.Mean) + 
+                                               abs((Post.orbital.to.PreoperculumC-PP.Mean)/PP.Mean))/3 )
+
+    #IAE = 1/N Σ (1/RΣ (|Xij - Xj|/ Xj))  sum of all calcs/ 99
+    IAE.ID <- round(sum(head99.dat$IDSumABCDiv3techs) / length(head99.dat$IDSumABCDiv3techs) * 100.0,1)  
+    IAE.SL <- round(sum(head99.dat$SLSumABCDiv3techs) / length(head99.dat$SLSumABCDiv3techs) * 100.0,1)
+    IAE.UJ <- round(sum(head99.dat$UJSumABCDiv3techs) / length(head99.dat$UJSumABCDiv3techs) * 100.0,1)
+    IAE.PP <- round(sum(head99.dat$PPSumABCDiv3techs) / length(head99.dat$PPSumABCDiv3techs) * 100.0,1)
+    
+    # results of IAE
+    # print(paste("ID=",format(IAE.ID,1),"SL=",IAE.SL,"UJ=",IAE.UJ,"PP=",IAE.PP))
+    
+    
 ```
+```{r yisFORKLENGTH}
+
+    lmp <- function (modelobject) {                    #  p value function
+           if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
+                 f <- summary(modelobject)$fstatistic
+                 p <- pf(f[1],f[2],f[3],lower.tail=F)
+                 attributes(p) <- NULL
+                 return(p)
+    }
+
+    lmslp <- function (modelobject) {                    #  slope (m) value function
+             if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
+                 slp <- signif(modelobject$coef[[2]], 5)
+                 return(slp)
+    }
+    
+    lmR <- function (modelobject) {                    #  r2 value function
+             if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
+                 r2 =  format(summary(modelobject)$r.squared,  digits = 3)
+                 return(r2)
+    }
+    
+    
+    # y = Fork_Length, response variable
+    options("scipen"=100, "digits"=3)
+    
+
+```    
 

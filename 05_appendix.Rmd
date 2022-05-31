@@ -20,13 +20,13 @@ A. Upper jaw measurement (UJ);  B. Eye diameter measurement (ED);  C. Interorbit
    g           <- rasterGrob(img, interpolate=TRUE)   # get image A. Upper jaw measurement
    img2        <- readPNG(paste(graph_directory,"AppendixAb.png", sep=""))
    g2          <- rasterGrob(img2, interpolate=TRUE)  # get image B. Eye diameter measurement
-   img3        <- readPNG("C:/github/sablehead/figures/AppendixAc.png")
+   img3        <- readPNG(paste(graph_directory,"AppendixAc.png", sep=""))
    g3          <- rasterGrob(img3, interpolate=TRUE)  # get image C. Interorbital measurement
-   img4        <- readPNG("C:/github/sablehead/figures/AppendixAd.png")
+   img4        <- readPNG(paste(graph_directory,"AppendixAd.png", sep=""))
    g4          <- rasterGrob(img4, interpolate=TRUE)  # get image D. Snout length 
-   img5        <- readPNG("C:/github/sablehead/figures/AppendixAe.png")
+   img5        <- readPNG(paste(graph_directory,"AppendixAe.png", sep=""))
    g5          <- rasterGrob(img5, interpolate=TRUE)  # get image E. Post orbital to preoperculum length measurement
-   img6        <- readPNG("C:/github/sablehead/figures/AppendixAf.png")
+   img6        <- readPNG(paste(graph_directory,"AppendixAf.png", sep=""))
    g6          <- rasterGrob(img6, interpolate=TRUE)  # get image F. Post orbital head length.   
  
    ggplot(data.frame(x = 1:3, y = 1:3), aes(x, y)) +
@@ -62,7 +62,7 @@ A. Upper jaw measurement (UJ);  B. Eye diameter measurement (ED);  C. Interorbit
 
 # SEX DETERMINATION BY OPERCULUM MARKING {#app:second-appendix}
 
-Operculum knife cuts for sablefish males (A) and females (B).
+Instructions for sex determinations and operculum knife cuts for sablefish males and females.
 
 ```{r AppendixB, results='asis'}
 img <- paste(graph_directory,'AppendixB.png',sep='') 
