@@ -18,7 +18,7 @@ DNA multiplex polymerase chain reactions (PCRs) were conducted using fluorescent
 
 ## Pilot study 2017
 
-In 2017, a pilot study was conducted with the commercial sector returning sablefish head only samples.  A total of 360 heads were collected from J-cut sablefish on a limited-entry fishery trip to the Cobb and Eickelberg seamounts.  Each operculum was marked by commercial fishers with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix)).  
+In 2017, a pilot study was conducted with the commercial sector returning sablefish head only samples.  A total of 360 heads were collected from J-cut sablefish on a limited-entry fishery trip to the Cobb and Eickelberg seamounts (Figure \@ref(fig:figure1)).  Each operculum was marked by commercial fishers with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix)).  
 
 Scientific sampling occurred on shore, with the first 99 heads of the pilot study measured by three samplers for L~ID~, L~SL~, L~UJ~ and L~PP~.  Given that three highly experienced technicians were used to conduct the same measurements of the each head morphometric, the Index of Average Error (IAE) (Beamish 1981) was used to find the most consistent cranial measurement. It is defined as:
 $$

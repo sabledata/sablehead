@@ -1,6 +1,6 @@
 # Figures
 
-(ref:figure1) Sample locations in 2016 from the WCVI survey (GFBIO trip id 79190),  WCHG survey (GFBIO trip id 80378) and salmon survey (?).
+(ref:figure1) Sample locations from the 2016 WCVI, WCHG and salmon research surveys and 2017 pilot study.
 
 ```{r figure1, fig.cap='(ref:figure1)',warning=FALSE, echo=FALSE, message=FALSE, error= FALSE, width=5.9, height=8.5, fig.align='center'}
 
@@ -15,6 +15,13 @@
     spid         <-   data.frame(pointdata$SPECIMEN_ID)
     trip         <-   data.frame(pointdata$TRIP_ID)
     df           <-   as.data.frame(cbind(lon,lat,spid,trip))   # add year, lat, long, specimen_id to dataframe
+
+    # add pilot survey coordinates for general fishing area
+    a <- c(46.7093,-130.82812, 1, 338773 ) #  cobb
+    b <- c(48.2828,-133.204, 2, 338773 )    #   eickelburg
+    
+    df           <-  rbind(df,a)
+    df           <-  rbind(df,b)
                      
     canada       <-   readOGR(dsn = "C:/github/sablehead/storage",layer ="awscntry_geo", verbose = FALSE)  # open shapefile   
     shapef_can   <-   fortify(canada)    # fortify for ggplot require.
@@ -29,36 +36,36 @@
                                                           fill=factor(pointdata.TRIP_ID),  size=0.7) , 
                                                           colour="gray50", shape=21, size=5) +            
                      theme_minimal()    +
-                     guides(fill=FALSE) + 
-                     guides(size=FALSE) + 
-                     guides(fill=guide_legend(title="Trip id")) +
+                     guides(fill="none") + 
+                     guides(size="none") + 
+                     guides(fill=guide_legend(title="Trip")) +
                      xlab("Longitude") + ylab("Latitude") + 
                      theme(  text = element_text(size=20),
-                          plot.title      = element_blank(),
-                          legend.position = c(.19, 0.35),
-                          legend.justification = c("right", "top"),
-                          legend.box.just = "right",
-                          legend.margin = margin(6, 6, 6, 6)
-
-                          )
+                             plot.title      = element_blank(),
+                             legend.position = c(.29, 0.45),
+                             legend.justification = c("right", "top"),
+                             legend.box.just = "right",
+                             legend.margin = margin(6, 6, 6, 6)
+                          )   
    
     map_projected  <- map +   # reproject to make it look better
     coord_map()  +
     annotation_north_arrow(location = "bl", which_north = "true",  # north arrow
-                           pad_x  = unit(3.75, "cm"),  
-                           pad_y  = unit(4.5,  "cm"),
+                           pad_x  = unit(1.0, "cm"),  
+                           pad_y  = unit(2.5,  "cm"),
                            height = unit(2.5,  "cm"),
                            width  = unit(2.5,  "cm"),
                            style  = north_arrow_fancy_orienteering)
     
     map_projected        +
     annotation_scale(location = "bl",
-                     pad_x = unit(1.0, "in"),  
-                     pad_y = unit(1.0, "in"),
+                     pad_x = unit(0.5, "in"),  
+                     pad_y = unit(0.5, "in"),
                      height = unit(0.5, "cm"),
                      width  = unit(5.95,"cm"),
                      text_cex = 1.0)   +
-                     coord_sf(crs = 4326)
+                     coord_sf(crs = 4326)  +
+                     scale_fill_discrete(name = "Research Trip", labels = c("Salmon", "WCVI", "WCHG","Seamount Pilot"))
 
     while (!is.null(dev.list()))  dev.off()
     img <-   paste('C:/github/sablehead/figures/Figure1.png',sep="")   # -- retrieve png 

@@ -26,7 +26,7 @@ In this technical report we describe the results of 1) the relationship between 
 #1. 2016 sample sablefish on research surveys, collect bio data and DNA
 #2. 2016 head measurements on shore PBS lab, evaluate measurements with 5 point scale
 #3. 2016 develop dna sex id by PBS Molecular Genetics lab
-#4. 2017 collect head samples on commercial vessel
+#4. 2017 collect head samples on commercial vessel FOS TRIP 338773  Pacific Viking
 #5  2017 measure head samples with 3 samplers to develop Index of Average Error
 #6. 2017 use DNA to determine fisher sex accuracy
 
