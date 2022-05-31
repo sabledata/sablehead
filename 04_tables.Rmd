@@ -131,7 +131,7 @@ length (L~PO~), measurement descriptions and specification of caliper jaw placem
 \ \
 \ \
 \ \
-(ref:Table4Caption) Statistics associated with simple linear regressions using measurements (mm) of cranial lengths (upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum length (L~PP~), post orbital head length (L~PO~) as predictors of the fork length (L~FL~) of 438 sablefish collected from research surveys in 2016.  All models were significant at P <0.001. 
+(ref:Table4Caption) Statistics associated with simple linear regressions using measurements (mm) of cranial lengths: upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum length (L~PP~) and post orbital head length (L~PO~) as predictors of the fork length (L~FL~) of 438 sablefish collected from research surveys in 2016.  All models were significant at P <0.001. 
 \ \
 \ \
 
