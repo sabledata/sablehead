@@ -1,13 +1,15 @@
 # Discussion
 
-All the cranial dimensions emerged as good predictors of fork length for sablefish.   The head lengths of L~UJ~ and L~ID~ were determined to have the lowest average error when measured by three highly experienced technicians using a standardized protocol.  Given that the L~ID~ measurement could also be performed accurately, repeatedly, and quickly by experienced samplers, we determined that interorbital distance (L~ID~) be used to predict sablefish fork lengths.   As a result, in 2018, routine biological sampling procedures were modified so that commercial fisheries are now only returning head samples to the PBS science division, rather than entire fish. Now...what to say..
-1.  This has lead to improved length composition sampling --  nope -figure below before 2018 - lots of variety of lengths, not so much after...2.  After 2018, the large sized fish rec'd -- nope - legal before 2018 = 44%, after = 13%.
+All the cranial dimensions emerged as good predictors of fork length for sablefish.   The head lengths of L~UJ~ and L~ID~ were determined to have the lowest average error when measured by three highly experienced technicians using a standardized protocol.  Given that the L~ID~ measurement could also be performed accurately, repeatedly, and quickly by experienced samplers, we determined that interorbital distance (L~ID~) be used to predict sablefish fork lengths.   As a result, in 2018, routine biological sampling procedures were modified so that commercial fisheries are now only returning head samples to the PBS science division, rather than entire fish. 
 
-(ref: figureComposition) commercial length composition
+Now...what to say..
+1.  This has lead to improved length composition sampling --  nope -figures/figureDiscussion, before 2018 - lots of variety of lengths, not so much after...2.  After 2018, the large sized fish rec'd -- nope - legal before 2018 = 44%, after = 13%.
 
-```{r figureComposition, fig.cap='(ref:figureDiscussion)', results='asis',  out.width = "410px", out.height = "400px",fig.align='left'}
+
+
+```{r figureComposition,  results='asis',  out.width = "410px", out.height = "400px",fig.align='left'}
    
-     png("C:/github/sablehead/figures/FigureDiscussion.png", units="px", width=1600, height=1800, res=150) # write png to file
+    #png("C:/github/sablehead/figures/FigureDiscussion.png", units="px", width=1600, height=1800, res=150) # write png to file
 
     # did we get bigger fish returned from the fishery after 2018 -- nope because of all the baby sablefish that flooded the fishery
     #   Recruitment is one of the dominant processes regulating fish population productivity
@@ -77,7 +79,7 @@ All the cranial dimensions emerged as good predictors of fork length for sablefi
         geom_vline(xintercept = 5.5, col="red",  linetype="dashed")  +
         theme(axis.text.x = element_text(angle = 90)) 
 
-   p + facet_wrap(~trip.year) + 
+   p2<-p + facet_wrap(~trip.year) + 
         geom_text(data=df.text,aes(label=paste(" n=",count.value), 
                                   color = as.factor(sex), x=-Inf,y=Inf), 
                                   size = 2.5, hjust=-0.1, vjust=c(6,8,6,8,6,8,6,8)) +
@@ -88,9 +90,9 @@ All the cranial dimensions emerged as good predictors of fork length for sablefi
                                   color = as.factor(sex), x=-Inf,y=Inf), 
                                   size = 2.5, hjust=-2.9, vjust=c(6,8,6,8,6,8,6,8) )
    
-     while (!is.null(dev.list()))  dev.off()
-     img <-   paste('C:/github/sablehead/figures/figureDiscussion.png',sep="")   # -- retrieve png 
-              knitr::include_graphics(img)
+    # while (!is.null(dev.list()))  dev.off()
+    # img <-   paste('C:/github/sablehead/figures/figureDiscussion.png',sep="")   # -- retrieve png 
+    #         knitr::include_graphics(img)
     
 
 ```
