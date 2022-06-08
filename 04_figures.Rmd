@@ -27,14 +27,24 @@
     shapef_can   <-   fortify(canada)    # fortify for ggplot require.
     points_df    <-   fortify(df)
     
+    seamounts    <-   readOGR(dsn = "C:/github/sablehead/storage",layer ="twoSeamounts_geo", verbose = FALSE)  # open shapefile
+    seam_can     <-   fortify(seamounts)    # fortify for ggplot require.
+    
     map          <-  ggplot() +
                      geom_polygon(data = shapef_can,  
                                   aes(x = long, y = lat, group = group), 
                                       fill="gray40",  
                                       size = .2) +
+                     geom_polygon(data = seam_can, aes(x = long, y =  lat, group = group), color = "lightgray", alpha = 0, linetype = 1)  +
                      geom_point(data =   points_df,   aes(pointdata.SLON, pointdata.SLAT,  
                                                           fill=factor(pointdata.TRIP_ID),  size=0.7) , 
-                                                          colour="gray50", shape=21, size=5) +            
+                                                          colour="lightgray", shape=21, size=5) + 
+                     geom_text(aes(x =  -130.000, y = 46.7093, label = "Cobb"),
+                                    alpha = 1,
+                                    color = "grey40")  +
+                     geom_text(aes(x =  -131.6040, y = 48.2828, label = "Eickelberg"),
+                                    alpha = 1,
+                                    color = "grey40")  +
                      theme_minimal()    +
                      guides(fill="none") + 
                      guides(size="none") + 
@@ -60,7 +70,7 @@
     map_projected        +
     annotation_scale(location = "bl",
                      pad_x = unit(0.5, "in"),  
-                     pad_y = unit(0.5, "in"),
+                     pad_y = unit(0.3, "in"),
                      height = unit(0.5, "cm"),
                      width  = unit(5.95,"cm"),
                      text_cex = 1.0)   +
@@ -332,31 +342,5 @@
 ```
 
 
-```{r beforeNafter}
 
-     samples  <- paste(" SELECT TRIP_SUB_TYPE_CODE, TRIP_SUB_TYPE_DESC, [trip year], fishing_year,   ",
-                           "dbo.ll_SableFishingYearNo(fishing_year) AS fynum, ",
-		"SPECIMEN_ID, SAMPLE_ID, SPECIMEN_SEX_CODE, Fork_Length, SPECIMEN_AGE  ",
-		"FROM  dbo.GENERIC_GFBIO_COMMERCIAL_SPECIMENS_LWSMO  ",
-		"WHERE (Fork_Length >0)  AND  ([trip year] > 2015)   ",
-                "AND (SPECIMEN_AGE IS NULL) " , sep='')  
-
-    #specimens     <- GetSQLData(samples ,"Sablefish")
-    #write.table( specimens, file = paste(path,"CommSpecimensCY.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
-    specimens     <-  read.csv(paste(path,"CommSpecimensCY.csv", sep=''), header=T) # read from csv
-    # print(head(specimens))
-    specimens  <- specimens %>%  mutate(GR = ifelse(fishing_year %in% c('FY 2016/2017','FY 2017/2018'), 1, 2))
-    
-    specimens.before  <-  specimens[specimens$GR==1,]
-    a  <- specimens.before[specimens.before$Fork_Length>=550,]
-    legal.before <-  length(a$Fork_Length)/length(specimens.before$Fork_Length)  # 44%
-        
-    specimens.after   <-  specimens[specimens$GR==2,]
-    b  <- specimens.after[specimens.after$Fork_Length>=550,]
-    legal.after<-  length(b$Fork_Length)/length(specimens.after$Fork_Length)   # 13%
-
-    #unique(specimens$fishing_year)
-    
-
-```
 \clearpage

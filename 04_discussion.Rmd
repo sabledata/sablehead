@@ -1,22 +1,23 @@
 # Discussion
 
-All the cranial dimensions emerged as good predictors of fork length for sablefish.   The head lengths of L~UJ~ and L~ID~ were determined to have the lowest average error when measured by three highly experienced technicians using a standardized protocol.  Given that the L~ID~ measurement could also be performed accurately, repeatedly, and quickly by experienced samplers, we determined that interorbital distance (L~ID~) be used to predict sablefish fork lengths.   As a result, in 2018, routine biological sampling procedures were modified so that commercial fisheries are now only returning head samples to the PBS science division, rather than entire fish. 
+All the cranial dimensions emerged as good predictors of fork length for sablefish.   The head lengths of L~UJ~ and L~ID~ were determined to have the lowest average error when measured by three highly experienced technicians using a standardized protocol.  Given that the L~ID~ measurement could also be performed accurately, repeatedly, and quickly by experienced samplers, we determined that interorbital distance (L~ID~) be used to predict sablefish fork lengths.   As a result, in 2018, routine biological sampling procedures were modified so that commercial fisheries are now only returning head samples to the PBS science division, rather than entire fish. Now...what to say..
+1.  This has lead to improved length composition sampling --  nope -figure below before 2018 - lots of variety of lengths, not so much after...2.  After 2018, the large sized fish rec'd -- nope - legal before 2018 = 44%, after = 13%.
 
-NOTE HERE, DO WE WANT TO EXPLORE THIS: did we get bigger fish returned from the fishery after 2018?  no, due to the large numbers of sub-legal sablefish that have shown up in the fishery
-Before 2018 44% of fish samples were legal sized and after, only 13%.
+(ref: figureComposition) commercial length composition
 
-
-```{r beforeNafter}
+```{r figureComposition, fig.cap='(ref:figureDiscussion)', results='asis',  out.width = "410px", out.height = "400px",fig.align='left'}
+   
+     png("C:/github/sablehead/figures/FigureDiscussion.png", units="px", width=1600, height=1800, res=150) # write png to file
 
     # did we get bigger fish returned from the fishery after 2018 -- nope because of all the baby sablefish that flooded the fishery
     #   Recruitment is one of the dominant processes regulating fish population productivity
-
+     library(dplyr)
      samples  <- paste(" SELECT TRIP_SUB_TYPE_CODE, TRIP_SUB_TYPE_DESC, [trip year], fishing_year,   ",
                        "dbo.ll_SableFishingYearNo(fishing_year) AS fynum, ",
 		                   "SPECIMEN_ID, SAMPLE_ID, SPECIMEN_SEX_CODE, Fork_Length, SPECIMEN_AGE  ",
 		                   "FROM  dbo.GENERIC_GFBIO_COMMERCIAL_SPECIMENS_LWSMO  ",
-		                    "WHERE (Fork_Length >0)  AND  ([trip year] > 2015)   ",
-                          "AND (SPECIMEN_AGE IS NULL) " , sep='')  
+		                   "WHERE (Fork_Length >0)  AND  ([trip year] > 2015)   ",
+                       "AND (SPECIMEN_AGE IS NULL) " , sep='')  
 
     #specimens     <- GetSQLData(samples ,"Sablefish")
     #write.table( specimens, file = paste(path,"CommSpecimensCY.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
@@ -33,8 +34,64 @@ Before 2018 44% of fish samples were legal sized and after, only 13%.
     legal.after<-  length(b$Fork_Length)/length(specimens.after$Fork_Length)   # 13%
 
     #unique(specimens$fishing_year)
-    print(legal.before)
-    print(legal.after)
+    #print(legal.before)
+    #print(legal.after)
+    
+      gear.samples  <- paste(" SELECT  TRIP_SUB_TYPE_CODE, TRIP_SUB_TYPE_DESC, [trip year], fishing_year, ",
+                             "dbo.ll_SableFishingYearNo(fishing_year) AS fynum, SPECIMEN_ID, SAMPLE_ID, ",
+                             "SPECIMEN_SEX_CODE, Fork_Length, SPECIMEN_AGE,  GEAR_DESC ",
+                             "FROM  dbo.GENERIC_GFBIO_COMMERCIAL_SPECIMENS_LWSMO ",
+                             "WHERE  (Fork_Length > 0) AND ([trip year] > 2015)" , sep='')  
+
+    #gear.specimens     <- GetSQLData(gear.samples ,"Sablefish")
+    #write.table( gear.specimens, file = paste(path,"GearCommSpecimensCY.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+    gear.specimens     <-  read.csv(paste(path,"GearCommSpecimensCY.csv", sep=''), header=T) # read from csv
+    #print(head(gear.specimens))
+    
+     # sex in(1,2) only  for calendar years, 2020 only has 6 so left out  
+     gear.fishery <- gear.specimens[gear.specimens$SPECIMEN_SEX_CODE %in% c(1,2) & gear.specimens$trip.year != 2020,]
+                           # previous query: all fishing years Levels: FY 2016/2017 FY 2017/2018 FY 2018/2019 FY 2019/2020
+                           # & gear.specimens$fynum %in% c(12,13,14,15),]
+
+     # group data into 5 cm intervals    
+     gear.fishery <- gear.fishery %>% mutate(lengthcm = 
+			         cut(Fork_Length/10, breaks=seq(0, 100,by=5)))  
+     names(gear.fishery)  <- c("TRIP_SUB_TYPE_CODE" ,"TRIP_SUB_TYPE_DESC" ,"trip.year" ,  "fishing_year" , "fynum"  ,
+                               "SPECIMEN_ID" ,  "SAMPLE_ID" , "sex" , "Fork_Length" ,  "SPECIMEN_AGE" ,
+                               "GEAR_DESC" , "lengthcm"  )
+   
+   library(plyr)  # mean, standard deviation and count
+   df.text<-ddply( gear.fishery,.(trip.year, sex),summarise,
+                                   mean.value= round(mean(Fork_Length)/10,1) ,
+                                   stdev.value =  round(sd(Fork_Length)/10,1)   , 
+                                   count.value = length(SPECIMEN_ID))
+ 
+
+   p <- ggplot( gear.fishery, aes(x = lengthcm)) +
+         #ggtitle("commercial length composition") +
+         geom_histogram(aes(color = as.factor(sex),
+                 	                     fill = as.factor(sex)), 
+                 	                     stat="count",  position = "identity",alpha = 0.3)     +
+                                       scale_fill_manual(values = c("#00AFBB", "#E7B800")) +
+                                       scale_color_manual(values = c("#00AFBB", "#E7B800")) +
+        geom_vline(xintercept = 5.5, col="red",  linetype="dashed")  +
+        theme(axis.text.x = element_text(angle = 90)) 
+
+   p + facet_wrap(~trip.year) + 
+        geom_text(data=df.text,aes(label=paste(" n=",count.value), 
+                                  color = as.factor(sex), x=-Inf,y=Inf), 
+                                  size = 2.5, hjust=-0.1, vjust=c(6,8,6,8,6,8,6,8)) +
+        geom_text(data=df.text,aes(label = paste("mean=", mean.value ) , 
+                                  color = as.factor(sex), x=-Inf,y=Inf), 
+                                  size = 2.5, hjust=-0.9, vjust=c(6,8,6,8,6,8,6,8))   +
+        geom_text(data=df.text,aes(label=paste("SD=", stdev.value ), 
+                                  color = as.factor(sex), x=-Inf,y=Inf), 
+                                  size = 2.5, hjust=-2.9, vjust=c(6,8,6,8,6,8,6,8) )
+   
+     while (!is.null(dev.list()))  dev.off()
+     img <-   paste('C:/github/sablehead/figures/figureDiscussion.png',sep="")   # -- retrieve png 
+              knitr::include_graphics(img)
+    
 
 ```
 
