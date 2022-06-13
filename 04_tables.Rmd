@@ -153,7 +153,7 @@
                       align = c("l","l","c","c","c","c","c","c","c","c"),
                       format = "latex",  caption = "(ref:Table4Caption)") %>%
 
-     add_header_above(c(" "=7, "Predictor"= 2, "Response L$_{LF}$" = 2), bold=T, escape = F) %>% 
+     add_header_above(c(" "=7, "Predictor"= 2, "Response L$_{FL}$" = 2), bold=T, escape = F) %>% 
      kableExtra::kable_styling(font_size = 10, position = "left",latex_options = "hold_position") %>%
                       row_spec(0, bold = "true") %>%
                       row_spec(c(2,4,6,8,10), hline_after = T) %>%
