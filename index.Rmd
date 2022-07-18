@@ -114,6 +114,7 @@ library(grid)
 library(gridExtra)
 library(stringr)
 library(ggpubr)
+library(here)
 
 #  ----   G L O B A L --- F U N C T I O N S ---------------------------------
   GetSQLData <- function(strSQL,strDbName) {    # connect to SQL Server

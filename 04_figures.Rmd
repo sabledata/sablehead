@@ -8,8 +8,11 @@
     sql          <-   "select * from Head_Measurements_Report where SLAT > 0"  # head measurement data
     #pointdata    <-   GetSQLData(sql,"Sablefish")   # retrieve from seamount database
     #write.table(pointdata, file = paste(path,"figure1.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
-    pointdata    <-  read.csv(paste(path,'figure1.csv',sep=''),header=T)  # read from csv
-
+    #pointdata    <-  read.csv(paste(path,'figure1.csv',sep=''),header=T)  # read from csv
+    
+    #K.Holt: changed pointdata to use here function when reading
+    pointdata    <-read.csv(here("standalone", "figure1.csv"))
+    
     lon          <-   data.frame(pointdata$SLAT)
     lat          <-   data.frame(pointdata$SLON)
     spid         <-   data.frame(pointdata$SPECIMEN_ID)
