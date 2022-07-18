@@ -4,6 +4,10 @@
 
 ```{r figure1, fig.cap='(ref:figure1)',warning=FALSE, echo=FALSE, message=FALSE, error= FALSE, width=5.9, height=8.5, fig.align='center'}
 
+    library(here)
+    library(rgdal)
+    library(ggfortify)
+
     png("C:/github/sablehead/figures/Figure1.png", units="px", width=1600, height=1800, res=150) # write png to file
     sql          <-   "select * from Head_Measurements_Report where SLAT > 0"  # head measurement data
     #pointdata    <-   GetSQLData(sql,"Sablefish")   # retrieve from seamount database
@@ -25,7 +29,7 @@
     
     df           <-  rbind(df,a)
     df           <-  rbind(df,b)
-                     
+   
     canada       <-   readOGR(dsn = "C:/github/sablehead/storage",layer ="awscntry_geo", verbose = FALSE)  # open shapefile   
     shapef_can   <-   fortify(canada)    # fortify for ggplot require.
     points_df    <-   fortify(df)
