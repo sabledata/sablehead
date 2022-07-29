@@ -1,11 +1,56 @@
 # Introduction
 
-  Biological samples of British Columbia (BC) sablefish (*Anoplopoma fimbria*) have been collected from fishery based voluntary catch sampling program since 1995 [@Haist2001].  Samples were processed by the Department of Fisheries and Oceans (DFO) port samplers and/or contracted service providers. In addition, whole tagged fish were recovered in commercial fisheries (trap, trawl, hook and line) at the point of landing via the dockside monitoring program (DMP) and sampled by Archipelago Marine Research (AMR) since the early 1990's.  These data provide a fishery dependent source of age and size composition data for the two-sex structured operating model of the coastal Management Strategy Evaluation (MSE) [@Cox2019].  
-  
-  The sablefish head-only catch sampling and tagging program began in 2018 in an effort to improve the number of returns from fishers, maintain the quality of the biological data and expand the spatial distribution of samples. Instead of returning the whole fish, commercial crew J-cut the fish as per commercial practice, view the gonads to determine sex, mark the sex with knife cuts on the operculum and store the head (and/or floy tag) for later sampling by DFO and AMR.
-  
-  Previous research on other fish species has accurately estimated lengths from head dimensions [@Serafy1996; @Park2007], head and mandible lengths [@Isermann2005], and head height to eye diameter ratio [@Richardson2015].  In this technical report we expand on previous research and describe the results of 1) the 2016 experimental study of cranial dimensions regressed against fork length; 2) the sampler defined ease of head measurement; 3) DNA sex detection methods; and 4) the compared consistency of the 2017 pilot study head measurements. 
 
+<!-- KH: The following chunk of text is an alternative version of the intro. I am implementing some of the changes I suggested below, as well as some additional changes to outline specific objectives. Please feel free to borrow from whatever parts of it you want.  Your original text (with some embedded comments) is still maintained below.
+
+
+ Biological samples of British Columbia (BC) Sablefish (*Anoplopoma fimbria*) from trap and hook & line fisheries have been collected from a fishery-based voluntary catch sampling program since 1995 [@Haist2001].  Prior to 2018, catch samples were collected dockside from whole fish by Fisheries and Oceans Canada (DFO) port samplers and/or contracted service providers via the dockside monitoring program (DMP). In addition, tagged fish were collected whole from commercial fisheries (trap, trawl, hook & line) at the point of landing also by the dockside monioting program. Biological data collected during catch sampling included fork length and sex. In addition, otoliths were collected and archived for future ageing analyses.  These data provide a fishery-dependent source of age and size composition data for the two-sex age structured operating model used as part of the BC Management Strategy Evaluation (MSE) [@Cox2019, DFO 2020].
+
+ Between 2016 and 2017, DFO undertook research to evaluate the potential to switch to a 'head only' catch sampling program for Sablefish trap and hook & line fisheries.  Head-only sampling allows commercial crew to collect samples directly while at sea, thereby eliminating the need to rely on port samplers for dockside data collection as well as the need for fishing vessels to store whole fish. Instead, commercial crew J-cut the fish at-sea as per commercial practice, view the gonads to determine sex, mark the sex with knife cuts on the operculum, and store the frozen head (and/or floy tag) for later sampling by science personal. The key motivation for switching to a head-only sampling programs was to increase the number and spatial distribution of fishery samples, while simultaneously maintaining the quality of biological data.  
+
+ Length data from commercial fishery catch is a key input to the BC Sablefish operating model (Kendra to add citation), so switching to a head-only sampling program requires the development of methods for obtaining length information using heads, rather than the entire fish.  Previous research on other fish species has shown that lengths can be accurately estimated from head dimensions [@Serafy1996; @Park2007], head and mandible lengths [@Isermann2005], and head height to eye diameter ratio [@Richardson2015]. As part of the 2016 and 2017 studies, we explored relationships between Sablefish fork length and various head morphometric measurements to determine if fork length could be reliably estimated from head measurements. 
+ 
+In this technical report, we describe two research investigations conducted in 2016 and 2017 as part of the evaluation of head-only catch sampling for Sablefish. A brief overview of these two studies is as follows:
+
+1) **Experimental Study - 2016**
+The experimental study in 2016 focused on method development for head-only Sablefish sampling using fishery independent survey samples. Six different cranial measurement options were considered and evaluated as part of this study.  Specific objectives were to:
+     * Identify which of six different cranial measurements are reliable predictors of fork length based on logistic regression model fits.
+     * Evaluate each of the six cranial measurement methods based on ease of use and repeatability for science technicians.
+     * Assess the accuracy of sex identification by aquatic science technicians using DNA analysis
+
+2)	**Fishery Pilot Study - 2017**
+Following promising preliminary results from the 2016 experimental study, a fishery pilot study was undertaken in 2017 to test the logistics of implementing a head-only sampling program for the commercial fishery.  The pilot study involved commercial fishers collecting head samples while at-sea and recording a sex ID for each sample, followed by scientific sampling of heads on shore.  Two of the cranial measurement options considered in the experimental study were dropped from the pilot study due to challenges identified at that stage. Specific objectives for the fishery pilot study were to:
+* Assess ease of sample collection for commercial fishers as well as the condition of collected heads received for at-shore sampling.
+* Quantify among-sampler precision for the four different cranial measurements considered using measurements from three different aquatic science technicians.
+
+Methods and results for each of these studies are descibed in detail in the following sections of this report.  Based on favourable results from these studies, the Sablefish catch sampling program switched to a head-only protocol in 2018 (Appendix xx?).
+ 
+ 
+-->
+ 
+  Biological samples of British Columbia (BC) Sablefish (*Anoplopoma fimbria*) <!--To add: from trap and hook & line fisheries --> have been collected from a fishery-based voluntary catch sampling program since 1995 [@Haist2001]. <!-- Prior to 2018, --> Catch samples were processed <!--KH: could we replace 'processed' with 'collected directly from landed catch' --> by the Department of Fisheries and Oceans (DFO) port samplers and/or contracted service providers. In addition, whole tagged fish were recovered in commercial fisheries (trap, trawl, hook and line) at the point of landing via the dockside monitoring program (DMP) and sampled by Archipelago Marine Research (AMR) <!--KH: why use 'contracted service providers' above and AMR here?  Could we just use 'contracted Science personal' here as well? --> since the early 1990's. 
+  
+
+<!--KH suggestion to add:  Biological data collected from both catch and tagging samples typically include length, weight, sex, maturity stage, and otoliths for subsequent ageing. (Lisa - can you confirm that this list is correct?)-->
+
+  These data provide a fishery dependent source of age and size composition data for the two-sex structured operating model of the coastal Management Strategy Evaluation (MSE) [@Cox2019].  <!-- KH suggestion to replace previous sentence with this: These data provide a fishery dependent source of age and size composition data for the two-sex age structured operating model used as part of the BC Management Strategy Evaluation (MSE) [@Cox2019].-->
+
+<!--KH: would also be good to add this more recent reference to the above sentence: https://www.dfo-mpo.gc.ca/csas-sccs/Publications/ScR-RS/2020/2020_025-eng.html -->  
+  
+  
+<!-- KH questions: 
+- am I correct in my edit above that the voluntary catch-sampling program is only for H&L and trap since most trawl has (had) mandatory observers collecting samples 
+- also - just to confirm ... was port sampling voluntary?  Or, was it just the additional tag recoveries that were voluntary?-->
+
+
+ The sablefish head-only catch sampling and tagging program began in 2018 in an effort to improve the number of returns from fishers, maintain the quality of the biological data and expand the spatial distribution of samples. Instead of returning whole fish, commercial crew J-cut the fish at-sea as per commercial practice, view the gonads to determine sex, mark the sex with knife cuts on the operculum, and store the frozen head (and/or floy tag) for later sampling by science personal at shore. 
+  
+  <!--KH: I think it would help to give a bot more up front context on why length is needed --> Previous research on other fish species has accurately estimated lengths from head dimensions [@Serafy1996; @Park2007], head and mandible lengths [@Isermann2005], and head height to eye diameter ratio [@Richardson2015].  In this technical report we expand on previous research and describe the results of 1) the 2016 experimental study of cranial dimensions regressed against fork length; 2) the sampler defined ease of head measurement; 3) DNA sex detection methods; and 4) the compared consistency of the 2017 pilot study head measurements.  <!--KH: I think it would help if the numbered list here linked more to the two studies described below "The 2016 Experimental study and the 2017 pilot study".  I have suggested a way to do this in the alternative intro above. -->
+  
+
+
+
+ 
 ```{r sampleCount} 
 
     pointdata    <-  read.csv(paste(path,'figure1.csv',sep=''),header=T)  # read from csv
