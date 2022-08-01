@@ -239,7 +239,7 @@ eick.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="EICKELBERG",])
 ``` 
 
 \ \
-(ref:Table6Caption) Summary of sablefish biological data collected from the 2017 pilot study to Cobb (n=`r cobb.count`) and Eickelberg (n=`r eick.count`) seamounts, measured by three expert technicians using a standardized protocol for the 2017 pilot study.  Index of Average Error (IAE) % values are reported for each of the cranial lengths.   
+(ref:Table6Caption) Summary of sablefish biological data collected from the 2017 pilot study to Cobb (n=`r cobb.count`) and Eickelberg (n=`r eick.count`) seamounts, measured by three expert technicians using a standardized protocol for the 2017 pilot study.  Index of Average Error (IAE) % values are reported for each of the cranial lengths.
 \ \
 
 ```{r table6, echo=FALSE}
