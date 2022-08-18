@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.5)  18 AUG 2022 15:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.5)  18 AUG 2022 15:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -967,7 +967,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 147.
 
 pdfTeX warning: pdflatex.exe (file ./tech-report-cover.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<tech-report-cover.pdf, id=83, 614.295pt x 794.97pt>
+<tech-report-cover.pdf, id=27, 614.295pt x 794.97pt>
 File: tech-report-cover.pdf Graphic file (type pdf)
 <use tech-report-cover.pdf>
 Package pdftex.def Info: tech-report-cover.pdf  used on input line 147.
@@ -988,7 +988,7 @@ nd PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ./tech-report-cover.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<tech-report-cover.pdf, id=86, page=1, 614.295pt x 794.97pt>
+<tech-report-cover.pdf, id=30, page=1, 614.295pt x 794.97pt>
 File: tech-report-cover.pdf Graphic file (type pdf)
 <use tech-report-cover.pdf, page 1>
 Package pdftex.def Info: tech-report-cover.pdf , page1 used on input line 147.
@@ -1017,7 +1017,7 @@ Package pdftex.def Info: tech-report-cover.pdf , page1 used on input line 147.
 
 pdfTeX warning: pdflatex.exe (file ./csas-style/pages/AquatTechInsCover.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<csas-style/pages/AquatTechInsCover.pdf, id=104, 614.295pt x 794.97pt>
+<csas-style/pages/AquatTechInsCover.pdf, id=48, 614.295pt x 794.97pt>
 File: csas-style/pages/AquatTechInsCover.pdf Graphic file (type pdf)
 <use csas-style/pages/AquatTechInsCover.pdf>
 Package pdftex.def Info: csas-style/pages/AquatTechInsCover.pdf  used on input 
@@ -1040,7 +1040,7 @@ DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ./csas-style/pages/AquatTechInsCover.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<csas-style/pages/AquatTechInsCover.pdf, id=107, page=1, 614.295pt x 794.97pt>
+<csas-style/pages/AquatTechInsCover.pdf, id=51, page=1, 614.295pt x 794.97pt>
 File: csas-style/pages/AquatTechInsCover.pdf Graphic file (type pdf)
 <use csas-style/pages/AquatTechInsCover.pdf, page 1>
 Package pdftex.def Info: csas-style/pages/AquatTechInsCover.pdf , page1 used on
@@ -1080,61 +1080,84 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+
+LaTeX Warning: Reference `LastPage' on page ii undefined on input line 147.
+
 [2
 
-] (techreport.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 6
-.
+] (techreport.toc)
+\tf@toc=\write6
+\openout6 = `techreport.toc'.
+
+[3
+
+]
+
+LaTeX Warning: Reference `LastPage' on page iv undefined on input line 147.
+
+[4
+
+]
+
+LaTeX Warning: Reference `LastPage' on page v undefined on input line 147.
+
+[5
+
+]
+\cslhangindent=\skip109
+
+LaTeX Warning: Reference `fig:figure1' on page 1 undefined on input line 187.
+
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+89.
 (C:\Users\lackol\AppData\Local\Programs\MiKTeX\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) (C:\Users\lackol\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 6
-.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+89.
 (C:\Users\lackol\AppData\Local\Programs\MiKTeX\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-6.
+189.
 (C:\Users\lackol\AppData\Local\Programs\MiKTeX\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-6.
+189.
 (C:\Users\lackol\AppData\Local\Programs\MiKTeX\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 6.
+(Font)              <10.95> on input line 189.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 6.
+(Font)              <8> on input line 189.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 6.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 6.
+(Font)              <6> on input line 189.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 189
+.
 (C:\Users\lackol\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\lackol\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 6.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 189
+.
 (C:\Users\lackol\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\lackol\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
-\tf@toc=\write6
-\openout6 = `techreport.toc'.
+)
 
-[3
+LaTeX Warning: Reference `tab:table1' on page 1 undefined on input line 189.
 
-] [4
 
-] [5
+LaTeX Warning: Reference `app:first-appendix' on page 1 undefined on input line
+ 189.
 
-]
-\cslhangindent=\skip109
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
@@ -1147,6 +1170,16 @@ l.192
 Package marginnote Info: Using workaround for absolute page number on input lin
 e 192.
 
+LaTeX Warning: Reference `tab:table2' on page 2 undefined on input line 198.
+
+
+LaTeX Warning: Reference `fig:figure1' on page 2 undefined on input line 203.
+
+
+LaTeX Warning: Reference `app:second-appendix' on page 2 undefined on input lin
+e 203.
+
+
 ! LaTeX Error: \begin{equation*} on input line 207 ended by \end{equation}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
@@ -1156,10 +1189,10 @@ Type  H <return>  for immediate help.
 l.209 \end{equation}
                      
 Here is how much of TeX's memory you used:
- 23593 strings out of 478582
- 424908 string characters out of 2843873
- 740908 words of memory out of 3000000
- 41178 multiletter control sequences out of 15000+600000
+ 23545 strings out of 478582
+ 424172 string characters out of 2843873
+ 737501 words of memory out of 3000000
+ 41147 multiletter control sequences out of 15000+600000
  513485 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  78i,17n,90p,1331b,538s stack positions out of 10000i,1000n,20000p,200000b,80000s
