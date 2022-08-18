@@ -1,15 +1,18 @@
 # Discussion
 
-<!--KH: If we decide to used the bulleted objectives list for each of the two studies I suggested in the into (or, something similar), this discussion could be re-structured to explicitly answer each of those objectives. I'm happy to help with this if you'd like. Let me know.--> 
+All cranial dimensions collected in the research investigation were found to be good predictors of sablefish fork length (L~FL~) with resulting r^2^ values for male and female sablefish >0.88.  However, the catch sampling program implemented the interorbital distance (L~ID~) length measurement as the new standard based on feedback from the experienced technicians.  This measurement could be performed quickly, accurately and repeatedly.  In general, they reported measurement errors were more probable when the calipers were placed on soft tissues, rather than bone.  Other errors were a result of the manner in which the sablefish were handled before measurement, ie. the operculum was cut off.  Samplers also reported that the smaller sablefish placed limitations on performing cranial measurements.  Future studies could expand the size range to include small fish to determine those factors that influence predictions of L~FL~.  During this phase of the research investigation, the Pacific Biological Station Molecular Genetics Laboratory successfully developed a genetic protocol to determine sex.
 
-All the cranial dimensions emerged as good predictors of fork length for sablefish.   The head lengths of L~UJ~ and L~ID~ were determined to have the lowest average error when measured by three highly experienced technicians using a standardized protocol.  Given that the L~ID~ measurement could also be performed accurately, repeatedly, and quickly by experienced samplers, we determined that interorbital distance (L~ID~) should be used to predict sablefish fork lengths.   As a result, in 2018, routine biological sampling procedures were modified so that commercial fisheries are now only returning head samples, rather than entire fish. 
+The pilot commercial fishing trip for collection of sablefish heads returned high quality samples and fishers were successful in fish sex determinations (I hope x %).  These pilot samples were measured by three experienced technicians using a standardized protocol that determined  L~UJ~ and L~ID~ had lower average errors over L~SL~ and L~PP~.  This matched the comments on the  difficulty in caliper jaw positioning during the L~SL~ and L~PP~ measurements.  Success with this pilot may be useful for other species such as Pacific halibut who experience predation problems on longline surveys, or difficult to measure deep water species.
 
-These changes have greatly reduced the burden on fishers <!--KH: was the previous burden based on having to store whole fish? Would be good to here and / or in initial intro section --> and maintained our length composition sampling for sablefish. <!--KH: given that we haven't presented any sample size data for 2018-2021, we could omit the next section from the discussion and instead focus on the outcome simply being the decision to switch to head-only sampling starting in 2018. We could then recommend that a follow-up review in a couple years to better examine how sampling rates and distribution have changed.  I'm also not completely sure to what extent low sampling in 2021 was due to covid vs. some sectors just forgetting to take samples (i.e., longline) combined with taking time to get through the backlog of samples. I think more time would help tease these apart--> However, our overall goals were also intended to expand spatial distribution of samples and increase the number of samples.  Unfortunately, these goals were not met given sampling challenges caused by COVID restrictions that began in early 2020. Now that travel restrictions are being lifted we are hopeful that our sampling coverage will expand improving our overall data confidence.
-
-<!--KH: More discussion of the results of the sex assignments by fishers will be needed here as well once those results are available.  -->
+As a result of our study, routine biological sampling procedures in 2018 were modified so that commercial fisheries are now only returning head samples, rather than the entire fish. These changes have improved the fishers ability to freeze, store and transport samples.    We recommend that a follow-up review in a couple years to better examine how sampling rates, length composition and spatial distribution have changed to improve our overall data confidence.
 
 
 ```{r figureComposition,  results='asis',  out.width = "410px", out.height = "400px",fig.align='left'}
+
+    #However, our overall goals were also intended to expand spatial distribution of samples and increase the number of samples.  
+    #Unfortunately, these goals were not met given sampling challenges caused by COVID restrictions that began in early 2020.  
+    #Now that travel restrictions are being lifted we are hopeful that our sampling coverage will expand improving our overall data confidence.  
+    
    
     #png("C:/github/sablehead/figures/FigureDiscussion.png", units="px", width=1600, height=1800, res=150) # write png to file
 
@@ -17,11 +20,11 @@ These changes have greatly reduced the burden on fishers <!--KH: was the previou
     #   Recruitment is one of the dominant processes regulating fish population productivity
      library(dplyr)
      samples  <- paste(" SELECT TRIP_SUB_TYPE_CODE, TRIP_SUB_TYPE_DESC, [trip year], fishing_year,   ",
-                       "dbo.ll_SableFishingYearNo(fishing_year) AS fynum, ",
-		                   "SPECIMEN_ID, SAMPLE_ID, SPECIMEN_SEX_CODE, Fork_Length, SPECIMEN_AGE  ",
-		                   "FROM  dbo.GENERIC_GFBIO_COMMERCIAL_SPECIMENS_LWSMO  ",
-		                   "WHERE (Fork_Length >0)  AND  ([trip year] > 2015)   ",
-                       "AND (SPECIMEN_AGE IS NULL) " , sep='')  
+                       " dbo.ll_SableFishingYearNo(fishing_year) AS fynum, ",
+		                   " SPECIMEN_ID, SAMPLE_ID, SPECIMEN_SEX_CODE, Fork_Length, SPECIMEN_AGE  ",
+		                   " FROM  dbo.GENERIC_GFBIO_COMMERCIAL_SPECIMENS_LWSMO  ",
+		                   " WHERE (Fork_Length >0)  AND  ([trip year] > 2015)   ",
+                       " AND (SPECIMEN_AGE IS NULL) " , sep='')  
 
     #specimens     <- GetSQLData(samples ,"Sablefish")
     #write.table( specimens, file = paste(path,"CommSpecimensCY.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
@@ -30,22 +33,22 @@ These changes have greatly reduced the burden on fishers <!--KH: was the previou
     specimens  <- specimens %>%  mutate(GR = ifelse(fishing_year %in% c('FY 2016/2017','FY 2017/2018'), 1, 2))
     
     specimens.before  <-  specimens[specimens$GR==1,]
-    a  <- specimens.before[specimens.before$Fork_Length>=550,]
-    legal.before <-  length(a$Fork_Length)/length(specimens.before$Fork_Length)  # 44%
+    a                 <-  specimens.before[specimens.before$Fork_Length>=550,]
+    legal.before      <-  length(a$Fork_Length)/length(specimens.before$Fork_Length)  # 44%  count of big fish/ total fish pre2018 
         
     specimens.after   <-  specimens[specimens$GR==2,]
     b  <- specimens.after[specimens.after$Fork_Length>=550,]
-    legal.after<-  length(b$Fork_Length)/length(specimens.after$Fork_Length)   # 13%
+    legal.after<-  length(b$Fork_Length)/length(specimens.after$Fork_Length)   # 13% count of big fish/ total fish post 2108
 
-    #unique(specimens$fishing_year)
+    #unique(specimens$fishing_year)   # indicates the fishing years
     #print(legal.before)
     #print(legal.after)
     
       gear.samples  <- paste(" SELECT  TRIP_SUB_TYPE_CODE, TRIP_SUB_TYPE_DESC, [trip year], fishing_year, ",
-                             "dbo.ll_SableFishingYearNo(fishing_year) AS fynum, SPECIMEN_ID, SAMPLE_ID, ",
-                             "SPECIMEN_SEX_CODE, Fork_Length, SPECIMEN_AGE,  GEAR_DESC ",
-                             "FROM  dbo.GENERIC_GFBIO_COMMERCIAL_SPECIMENS_LWSMO ",
-                             "WHERE  (Fork_Length > 0) AND ([trip year] > 2015)" , sep='')  
+                             " dbo.ll_SableFishingYearNo(fishing_year) AS fynum, SPECIMEN_ID, SAMPLE_ID, ",
+                             " SPECIMEN_SEX_CODE, Fork_Length, SPECIMEN_AGE,  GEAR_DESC ",
+                             " FROM  dbo.GENERIC_GFBIO_COMMERCIAL_SPECIMENS_LWSMO ",
+                             " WHERE  (Fork_Length > 0) AND ([trip year] > 2015)" , sep='')  
 
     #gear.specimens     <- GetSQLData(gear.samples ,"Sablefish")
     #write.table( gear.specimens, file = paste(path,"GearCommSpecimensCY.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
@@ -94,13 +97,13 @@ These changes have greatly reduced the burden on fishers <!--KH: was the previou
    
     # while (!is.null(dev.list()))  dev.off()
     # img <-   paste('C:/github/sablehead/figures/figureDiscussion.png',sep="")   # -- retrieve png 
-    #         knitr::include_graphics(img)
+    #          knitr::include_graphics(img)
     
 
 ```
 
 # Acknowledgments
 
-We thank Schon Acheson and Kristina Castle for lending their skilled technical expertise for this report.  We also thank the crew of the Pacific Viking for participating in the pilot project.
+We thank Schon Acheson and Kristina Castle for lending their skilled technical expertise for this report.  We also thank the Molecular Genetics Laboratory at PBS for developing a sablefish gender test. A special thanks to the crew of the Pacific Viking for participating in the pilot project.
 
 \clearpage
