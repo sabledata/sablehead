@@ -2,7 +2,7 @@
 
   Biological samples of British Columbia (BC) sablefish (*Anoplopoma fimbria*) from trap and hook & line fisheries have been collected from a fishery-based voluntary catch sampling program since 1995 [@Haist2001].  Prior to 2018, samples of whole fish were collected dockside by Fisheries and Oceans Canada (DFO) port samplers and/or contracted service providers via the dockside monitoring program (DMP). In addition, tagged fish were collected whole from commercial fisheries (trap, trawl, hook & line) at the point of landing also by the dockside monitoring program. Biological data collected during catch sampling included fork length and sex. Otoliths were collected and archived for future ageing analyses.  These data provide a fishery-dependent source of age and size composition data for the two-sex age structured operating model used as part of the BC Management Strategy Evaluation (MSE) [@Cox2019, DFO 2020].
 
-  Between 2016 and 2017, DFO undertook research to evaluate the potential monitoring change to a 'head only' catch sampling program for sablefish trap and hook & line fisheries.  Head-only sampling allows commercial crew to collect samples directly while at sea, thereby eliminating the need to rely on port samplers for dockside data collection as well as the need for fishing vessels to store whole fish. Instead, commercial crew J-cut the fish at-sea as per commercial practice, examine the gonads to determine sex, mark the sex with knife cuts on the operculum, and store the frozen head (and/or floy tag) for later sampling by science personal. The key motivation for switching to a head-only sampling program was to increase the number and spatial distribution of fishery samples, while simultaneously maintaining the quality of biological data.
+  Between 2016 and 2017, DFO undertook research to evaluate the potential monitoring change to a 'head only' catch sampling program for sablefish trap and hook & line fisheries.  Head only sampling allows commercial crew to collect samples directly while at sea, thereby eliminating the need to rely on port samplers for dockside data collection as well as the need for fishing vessels to store whole fish. Instead, commercial crew J-cut the fish at-sea as per commercial practice, examine the gonads to determine sex, mark the sex with knife cuts on the operculum, and store the frozen head (and/or floy tag) for later sampling by science personal. The key motivation for switching to a head only sampling program was to increase the number and spatial distribution of fishery samples, while simultaneously maintaining the quality of biological data.
 
   Evaluation of a new program necessitated the development and testing of methods.  Previous research on other fish species has shown that lengths can be accurately estimated from head dimensions [@Serafy1996; @Park2007], head and mandible lengths [@Isermann2005], and head height to eye diameter ratio [@Richardson2015]. 
   
@@ -23,7 +23,7 @@
 #ORDER OF EVENTS:
 #1. 2016 sample sablefish on research surveys, collect bio data and DNA
 #2. 2016 head measurements on shore PBS lab, evaluate measurements with 5 point scale
-#3. 2016 develop dna sex id by PBS Molecular Genetics lab
+#3. 2016 develop dna sex id by PBS Molecular Genetics Lab
 #4. 2017 collect head samples on commercial vessel FOS TRIP 338773  Pacific Viking
 #5  2017 measure head samples with 3 samplers to develop Index of Average Error
 #6. 2017 use DNA to determine fisher sex accuracy

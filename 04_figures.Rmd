@@ -1,6 +1,6 @@
 # Figures
 
-(ref:figure1) Sample locations from the 2016 WCVI, WCHG and salmon research surveys and 2017 pilot study.
+(ref:figure1) Sample locations from the 2016 WCVI, 2016 WCHG research surveys and 2017 pilot study.  The sample locations of the salmon survey are unknown.
 
 ```{r figure1, fig.cap='(ref:figure1)',warning=FALSE, echo=FALSE, message=FALSE, error= FALSE, width=5.9, height=8.5, fig.align='center'}
 
@@ -14,7 +14,7 @@
     #write.table(pointdata, file = paste(path,"figure1.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
     #pointdata    <-  read.csv(paste(path,'figure1.csv',sep=''),header=T)  # read from csv
     
-    #K.Holt: changed pointdata to use here function when reading
+    #K.Holt: changed point data to use here function when reading
     pointdata    <-read.csv(here("standalone", "figure1.csv"))
     
     lon          <-   data.frame(pointdata$SLAT)
@@ -29,6 +29,7 @@
     
     df           <-  rbind(df,a)
     df           <-  rbind(df,b)
+    df           <-  df[df$pointdata.TRIP_ID !=0,]
    
     canada       <-   readOGR(dsn = "C:/github/sablehead/storage",layer ="awscntry_geo", verbose = FALSE)  # open shapefile   
     shapef_can   <-   fortify(canada)    # fortify for ggplot require.
@@ -82,12 +83,11 @@
                      width  = unit(5.95,"cm"),
                      text_cex = 1.0)   +
                      coord_sf(crs = 4326)  +
-                     scale_fill_discrete(name = "Research Trip", labels = c("Salmon", "WCVI", "WCHG","Seamount Pilot"))
+                     scale_fill_discrete(name = "Research Trip", labels = c("WCVI", "WCHG","Seamount Pilot"))
 
     while (!is.null(dev.list()))  dev.off()
     img <-   paste('C:/github/sablehead/figures/Figure1.png',sep="")   # -- retrieve png 
             knitr::include_graphics(img)
-   
  
 ```
 ```{r figure_data_fit_regression_male_female}
@@ -219,8 +219,8 @@
 
      library(viridis)
      
-     cranial <- rbind(cranial.uj,cranial.ed, cranial.id)  # facet wrap all 5 cranial measurements
-     cranial$facet = factor(cranial$measure, levels = c("UJ", "ED", "ID"))
+     cranial       <- rbind(cranial.uj,cranial.ed, cranial.id)  # facet wrap all 5 cranial measurements
+     cranial$facet <- factor(cranial$measure, levels = c("UJ", "ED", "ID"))
 
      ggplot(cranial, aes(x = hlength, y = Fork_Length)) +
             scale_y_continuous(limits = c(200, 1200)) +
