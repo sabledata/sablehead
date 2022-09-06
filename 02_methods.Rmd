@@ -8,13 +8,13 @@ Sablefish were randomly selected for sampling during the 2016 biennial DFO Groun
 
 For each sampled fish, fork length, round weight, sex, and maturity were recorded at sea. The heads were removed, labelled with an unique ID and frozen.  On shore, six different cranial dimensions were considered, including upper jaw (L~UJ~), eye diameter (L~ED~), interorbital distance  (L~ID~), snout length (L~SL~), post orbital to preoperculum distance (L~PP~) and post orbital head length (L~PO~) (Table \@ref(tab:table1), Appendix \@ref(app:first-appendix)). All measurements were taken using Mitutoyo Absolute® 500-762-20 coolant proof digimatic calipers.  The post orbital head length (L~PO~) measurement was abandoned after testing 130 sablefish due to low sample quality and technical issues. 
 
-At the time of sampling, each cranial dimension was evaluated by experienced samplers (Kathryn, how many samplers) on a five point rating scale in terms of two distinct metrics: 1. ease of use and 2. repeatability. The ease of use metric focused on three key attributes of the measurement: learn-ability (task understanding), efficiency (task-completion time) and degree of difficulty (task performance ease).  The repeatability metric focused on ranking each measurement under repeated caliper placement.  At the same time, notes were made for each cranial dimension whether the caliper jaws were placed on soft or hard (bone) head tissues, as this would affect how repeatable and accurate the measurements can be obtained.    
+At the time of sampling, each cranial dimension was evaluated by three experienced samplers on a five point rating scale in terms of two distinct metrics: 1. ease of use and 2. repeatability. The ease of use metric focused on three key attributes of the measurement: learn-ability (task understanding), efficiency (task-completion time) and degree of difficulty (task performance ease).  The repeatability metric focused on ranking each measurement under repeated caliper placement, taking into consideration the inside or outside jaw placement on soft or hard (bone) head tissues.  A proper understanding of use of digimatic calipers may affect the sampler's ability to obtain a measurement that is both repeatable and accurate. 
 
 Once head measurements were completed, sagittal otoliths were collected for future ageing from all fish. Operculum clips (DNA) were also collected from the first 137 fish measured and forwarded to the Molecular Genetics Laboratory (MGL) for analysis and gender test development.
 
 ### Data Analysis
 
-Using the lm() function in R [@R], fork lengths (L~FL~) were estimated by a simple linear regression model, using the six cranial measurements as predictor variables to see how well each could predict fork length.  Model fit was evaluated in terms of statistical significance (p-value less than 0.05) and coefficients of determination (R^2^). <!-- KH: Is R-square usually a capital R, not lower case?-->
+Using the lm() function in R [@R], fork lengths (L~FL~) were estimated by a simple linear regression model, using the six cranial measurements as predictor variables to see how well each could predict fork length.  Model fit was evaluated in terms of statistical significance (p-value less than 0.05) and coefficients of determination (R^2^).
 
 ### Gender Test Development
 
@@ -25,8 +25,6 @@ In the Molecular Genetics Laboratory (MGL), gender test methods were successfull
 ### Data Collection
 
 In 2017, a pilot study was conducted with the commercial sector returning sablefish head-only samples.  A total of 360 heads were collected from J-cut sablefish on a limited-entry fishery trip to the Cobb and Eickelberg seamounts (Figure \@ref(fig:figure1)).  Each operculum was marked by commercial fishers with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix)).  
-
-<!-- KH note: In the above paragraph you use head-only (i.e., with the dash), whereas most other places you use 'head only'.  Should pick one and use throughout. I think I kinda like the dash, but maybe it is more work to change to this??  Go with whatever you prefer.-->
 
 Scientific sampling occurred on shore, with the first 99 heads of the pilot study measured by three experienced technicians for L~ID~, L~SL~, L~UJ~ and L~PP~ to determine the most repeatable measurement.  The cranial dimensions of L~ED~ and L~PO~ were eliminated after the results from the 2016 experimental study.
 
@@ -42,7 +40,7 @@ where N is the number of sablefish measured for each cranial measurement, R is t
 -->
 
 
-The precision of cranial measurements among readers was quanitified using and Index of Average Error (IAE) [@Beamish1981]. @Beamish1981 used IAE as a metric for comparing the precision of age determinations among different readers; however, given that three highly trained technicians were used to conduct the same measurements, we do not look at differences in IAE among technicians. Instead, we compare IAE among the four cranial dimensions considered to identify which one provided the most consistent measurement among readers. In our case, IAE was defined as:
+The precision of cranial measurements among readers was quantified using and Index of Average Error (IAE) [@Beamish1981]. @Beamish1981 used IAE as a metric for comparing the precision of age determinations among different readers; however, given that three highly trained technicians were used to conduct the same measurements, we do not look at differences in IAE among technicians. Instead, we compare IAE among the four cranial dimensions considered to identify which one provided the most consistent measurement among readers. In our case, IAE was defined as:
 $$
 IAE=\frac{1}{N}\sum_{j = 1}^{N}\left[\frac{1}{R}\sum_{i = 1}^{R}\frac{|X_{ij} - X_j|}{X_j}\right]
 $$
