@@ -4,8 +4,8 @@ year: 2022
 report_number: nnn
 author: |
   Lisa C. Lacko and Kathryn L. Temple and 
-  Kendra R. Holt and Janine x. Supernault
-author_list: "L.C. Lacko, Kathryn L. Temple and Holt K.R. and Supernault J.x."
+  Kendra R. Holt and Janine x. Supernault and Rob Kronlund, Malcolm Wyeth, and Brendan Conners 
+author_list: "L.C. Lacko, Kathryn L. Temple and Holt K.R. and Supernault J.x and Rob Kronlund, Malcolm Wyeth, and Brendan Conners "
 region: Pacific Region
 isbn: ""
 address: |
