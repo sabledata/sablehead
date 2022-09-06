@@ -267,7 +267,9 @@ library(rgdal)
     # head measurements from pilot study, trip to seamount
     head99    <-  read.csv(paste(path,"head_measurements_Seamount_Pilot.csv",sep=""), header = T)
     head99$id <-  as.numeric(str_sub(head99$DNA.VIAL.BARCODE, 10, 12)) - 200   # add id column
-    count99   <-  table(head99['White.bag.label'])  # count of how many came from Cobb and Eickelberg
+    #count99   <-  table(head99['White.bag.label'])  # count of how many came from Cobb and Eickelberg ERROR!
+    countCobb   <-  length(head99[head99$White.bag.label == "COBB",])
+    countEick   <-  length(head99[head99$White.bag.label == "EICKELBERG",])
     
     library(dplyr)
     library(matrixStats)
