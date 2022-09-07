@@ -68,6 +68,26 @@ Instructions for sex determinations and operculum knife cuts for sablefish males
 img <- paste(graph_directory,'AppendixB.png',sep='') 
       knitr::include_graphics(img)
 ```
+
+# SABLEFISH BIOSAMPLE COLLECTION PROGRAM NOTICE {#app:third-appendix}
+
+Instructions for the sablefish biosample collection program.
+
+```{r AppendixC, results='asis'}
+img <- paste(graph_directory,'AppendixC.png',sep='') 
+      knitr::include_graphics(img)
+```
+
+
+# TAGGED SABLEFISH PROGRAM NOTICE {#app:third-appendix}
+
+Instructions for the tagged sablefish collection program.
+
+```{r AppendixD, results='asis'}
+img <- paste(graph_directory,'AppendixD.png',sep='') 
+      knitr::include_graphics(img)
+```
+
 \clearpage
 
 <!-- At the end of your appendices add: -->

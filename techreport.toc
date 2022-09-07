@@ -17,6 +17,7 @@
 \contentsline {section}{\numberline {4}Discussion}{5}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Identification of Preferred Head Cranial Dimension}{5}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Implementation of Head-Only Catch Sampling in 2018}{5}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Future Monitoring and Research Requirements}{6}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Acknowledgments}{6}{section.5}%
 \contentsline {section}{\numberline {6}Tables}{7}{section.6}%
 \contentsline {section}{\numberline {7}Figures}{10}{section.7}%
