@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.5)  6 SEP 2022 17:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.5)  6 SEP 2022 20:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1162,13 +1162,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.260 
-       [4]
+l.254 \section{Discussion}\label{discussion}}
+                                              [4]
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.277 
+l.272 
        [5]
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has 
 been already used, duplicate ignored
@@ -1630,7 +1630,7 @@ C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
 pfb><C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhv
 r8a.pfb><C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic
 /uhvro8a.pfb>
-Output written on techreport.pdf (23 pages, 4050294 bytes).
+Output written on techreport.pdf (23 pages, 4050497 bytes).
 PDF statistics:
  429 PDF objects out of 1000 (max. 8388607)
  87 named destinations out of 1000 (max. 500000)
