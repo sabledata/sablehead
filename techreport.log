@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.5)  7 SEP 2022 10:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.5)  7 SEP 2022 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -810,7 +810,11 @@ ftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count341
 \l__pdf_internal_box=\box71
-) (techreport.aux)
+) (techreport.aux
+
+LaTeX Warning: Label `app:third-appendix' multiply defined.
+
+)
 \openout1 = `techreport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 142.
@@ -967,7 +971,7 @@ Package hyperref Info: Option `pageanchor' set `false' on input line 147.
 
 pdfTeX warning: pdflatex.exe (file ./tech-report-cover.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<tech-report-cover.pdf, id=111, 614.295pt x 794.97pt>
+<tech-report-cover.pdf, id=119, 614.295pt x 794.97pt>
 File: tech-report-cover.pdf Graphic file (type pdf)
 <use tech-report-cover.pdf>
 Package pdftex.def Info: tech-report-cover.pdf  used on input line 147.
@@ -988,7 +992,7 @@ nd PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ./tech-report-cover.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<tech-report-cover.pdf, id=114, page=1, 614.295pt x 794.97pt>
+<tech-report-cover.pdf, id=122, page=1, 614.295pt x 794.97pt>
 File: tech-report-cover.pdf Graphic file (type pdf)
 <use tech-report-cover.pdf, page 1>
 Package pdftex.def Info: tech-report-cover.pdf , page1 used on input line 147.
@@ -1017,7 +1021,7 @@ Package pdftex.def Info: tech-report-cover.pdf , page1 used on input line 147.
 
 pdfTeX warning: pdflatex.exe (file ./csas-style/pages/AquatTechInsCover.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<csas-style/pages/AquatTechInsCover.pdf, id=132, 614.295pt x 794.97pt>
+<csas-style/pages/AquatTechInsCover.pdf, id=140, 614.295pt x 794.97pt>
 File: csas-style/pages/AquatTechInsCover.pdf Graphic file (type pdf)
 <use csas-style/pages/AquatTechInsCover.pdf>
 Package pdftex.def Info: csas-style/pages/AquatTechInsCover.pdf  used on input 
@@ -1040,7 +1044,7 @@ DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex.exe (file ./csas-style/pages/AquatTechInsCover.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<csas-style/pages/AquatTechInsCover.pdf, id=135, page=1, 614.295pt x 794.97pt>
+<csas-style/pages/AquatTechInsCover.pdf, id=143, page=1, 614.295pt x 794.97pt>
 File: csas-style/pages/AquatTechInsCover.pdf Graphic file (type pdf)
 <use csas-style/pages/AquatTechInsCover.pdf, page 1>
 Package pdftex.def Info: csas-style/pages/AquatTechInsCover.pdf , page1 used on
@@ -1164,6 +1168,11 @@ been already used, duplicate ignored
                    \relax 
 l.254 \section{Discussion}\label{discussion}}
                                               [4]
+
+LaTeX Warning: Reference `app:fourth-appendix' on page 5 undefined on input lin
+e 266.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1482,7 +1491,7 @@ Overfull \hbox (1.72751pt too wide) in paragraph at lines 421--421
 [8
 
 ] [9]
-<figures/Figure1.png, id=325, 770.88pt x 867.24pt>
+<figures/Figure1.png, id=332, 770.88pt x 867.24pt>
 File: figures/Figure1.png Graphic file (type png)
 <use figures/Figure1.png>
 Package pdftex.def Info: figures/Figure1.png  used on input line 438.
@@ -1499,7 +1508,7 @@ File: figures/Figure1.png Graphic file (type png)
 <use figures/Figure1.png>
 Package pdftex.def Info: figures/Figure1.png  used on input line 438.
 (pdftex.def)             Requested size: 433.62pt x 487.8213pt.
-<figures/Figure2.png, id=327, 332.442pt x 390.258pt>
+<figures/Figure2.png, id=334, 332.442pt x 390.258pt>
 File: figures/Figure2.png Graphic file (type png)
 <use figures/Figure2.png>
 Package pdftex.def Info: figures/Figure2.png  used on input line 447.
@@ -1526,7 +1535,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 447--448
  
  []
 
-<figures/Figure3.png, id=329, 332.442pt x 390.258pt>
+<figures/Figure3.png, id=336, 332.442pt x 390.258pt>
 File: figures/Figure3.png Graphic file (type png)
 <use figures/Figure3.png>
 Package pdftex.def Info: figures/Figure3.png  used on input line 454.
@@ -1557,7 +1566,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 454--455
 
  <./figures/Figure1.png>] [11 <./figures/Figure2.png (PNG copy)>] [12 <./figure
 s/Figure3.png (PNG copy)>]
-<figures/AppendixA.png, id=346, 770.88pt x 867.24pt>
+<figures/AppendixA.png, id=353, 770.88pt x 867.24pt>
 File: figures/AppendixA.png Graphic file (type png)
 <use figures/AppendixA.png>
 Package pdftex.def Info: figures/AppendixA.png  used on input line 471.
@@ -1578,7 +1587,7 @@ Package pdftex.def Info: figures/AppendixA.png  used on input line 471.
 
 
  <./figures/AppendixA.png (PNG copy)>]
-<figures/AppendixB.png, id=352, 480.29437pt x 599.99156pt>
+<figures/AppendixB.png, id=359, 480.29437pt x 599.99156pt>
 File: figures/AppendixB.png Graphic file (type png)
 <use figures/AppendixB.png>
 Package pdftex.def Info: figures/AppendixB.png  used on input line 479.
@@ -1597,23 +1606,65 @@ Package pdftex.def Info: figures/AppendixB.png  used on input line 479.
 (pdftex.def)             Requested size: 433.62pt x 541.69028pt.
 [14
 
- <./figures/AppendixB.png>] 
+ <./figures/AppendixB.png>]
+<figures/AppendixC.png, id=367, 449.42906pt x 586.44093pt>
+File: figures/AppendixC.png Graphic file (type png)
+<use figures/AppendixC.png>
+Package pdftex.def Info: figures/AppendixC.png  used on input line 485.
+(pdftex.def)             Requested size: 433.62pt x 565.8314pt.
+File: figures/AppendixC.png Graphic file (type png)
+<use figures/AppendixC.png>
+Package pdftex.def Info: figures/AppendixC.png  used on input line 485.
+(pdftex.def)             Requested size: 433.62pt x 565.8314pt.
+File: figures/AppendixC.png Graphic file (type png)
+<use figures/AppendixC.png>
+Package pdftex.def Info: figures/AppendixC.png  used on input line 485.
+(pdftex.def)             Requested size: 433.62pt x 565.8314pt.
+File: figures/AppendixC.png Graphic file (type png)
+<use figures/AppendixC.png>
+Package pdftex.def Info: figures/AppendixC.png  used on input line 485.
+(pdftex.def)             Requested size: 433.62pt x 565.8314pt.
+[15 <./figures/AppendixC.png>]
+<figures/AppendixD.png, id=374, 501.37312pt x 654.94687pt>
+File: figures/AppendixD.png Graphic file (type png)
+<use figures/AppendixD.png>
+Package pdftex.def Info: figures/AppendixD.png  used on input line 491.
+(pdftex.def)             Requested size: 433.62pt x 566.4713pt.
+File: figures/AppendixD.png Graphic file (type png)
+<use figures/AppendixD.png>
+Package pdftex.def Info: figures/AppendixD.png  used on input line 491.
+(pdftex.def)             Requested size: 433.62pt x 566.4713pt.
+File: figures/AppendixD.png Graphic file (type png)
+<use figures/AppendixD.png>
+Package pdftex.def Info: figures/AppendixD.png  used on input line 491.
+(pdftex.def)             Requested size: 433.62pt x 566.4713pt.
+File: figures/AppendixD.png Graphic file (type png)
+<use figures/AppendixD.png>
+Package pdftex.def Info: figures/AppendixD.png  used on input line 491.
+(pdftex.def)             Requested size: 433.62pt x 566.4713pt.
+[16 <./figures/AppendixD.png>] 
 AED: lastpage setting LastPage
-[15
+[17
 
 
 ] (techreport.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `techreport.out' has not changed.
-(rerunfilecheck)             Checksum: 95CAB660FE0A4D0E327203A9C312D650;4235.
+(rerunfilecheck)             Checksum: B71F22C5975017071265FE979DD4F42B;4730.
  ) 
 Here is how much of TeX's memory you used:
- 23843 strings out of 478582
- 428594 string characters out of 2843873
- 783982 words of memory out of 3000000
- 41291 multiletter control sequences out of 15000+600000
+ 23869 strings out of 478582
+ 429133 string characters out of 2843873
+ 784079 words of memory out of 3000000
+ 41311 multiletter control sequences out of 15000+600000
  539779 words of font info for 201 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 78i,17n,90p,1338b,538s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 78i,17n,90p,1331b,538s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.e
 nc}{C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.
 enc}{C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-rm.enc
@@ -1630,9 +1681,9 @@ C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
 pfb><C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhv
 r8a.pfb><C:/Users/lackol/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic
 /uhvro8a.pfb>
-Output written on techreport.pdf (23 pages, 4051979 bytes).
+Output written on techreport.pdf (25 pages, 4244921 bytes).
 PDF statistics:
- 433 PDF objects out of 1000 (max. 8388607)
- 87 named destinations out of 1000 (max. 500000)
- 71962 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 456 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 71988 words of extra memory for PDF output out of 74296 (max. 10000000)
 

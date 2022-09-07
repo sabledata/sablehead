@@ -79,7 +79,7 @@ img <- paste(graph_directory,'AppendixC.png',sep='')
 ```
 
 
-# TAGGED SABLEFISH PROGRAM NOTICE {#app:third-appendix}
+# TAGGED SABLEFISH PROGRAM NOTICE {#app:fourth-appendix}
 
 Instructions for the tagged sablefish collection program.
 
