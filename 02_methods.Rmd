@@ -18,13 +18,13 @@ Using the lm() function in R [@R], fork lengths (L~FL~) were estimated by a simp
 
 ### Gender Test Development
 
-In the Molecular Genetics Laboratory (MGL), gender test methods were successfully developed.   DNA multiplex polymerase chain reactions (PCRs) were performed using fluorescently labelled forward primers.	X-insert and Y-insert specific primers developed by @Rondeau2013 were used, but the X-insert forward and Y-nested reve   rse were redesigned to produce slightly smaller PCR products (Table \@ref(tab:table2)).   Sex specific alleles were size fractionated in an ABI 3730 capillary DNA analyzer and were scored with ABI GeneMapper using an internal lane sizing standard. 
+In the Molecular Genetics Laboratory (MGL), gender test methods were successfully developed.   DNA multiplex polymerase chain reactions (PCRs) were performed using fluorescently labelled forward primers.	X-insert and Y-insert specific primers developed by @Rondeau2013 were used, but the X-insert forward and Y-nested reverse were redesigned to produce slightly smaller PCR products (Table \@ref(tab:table2)).   Sex specific alleles were size fractionated in an ABI 3730 capillary DNA analyzer and were scored with ABI GeneMapper using an internal lane sizing standard. 
 
 ## Fishery Pilot Study 2017
 
 ### Data Collection
 
-In 2017, a pilot study was conducted with the commercial sector returning sablefish head-only samples.  A total of 360 heads were collected from J-cut sablefish on a limited-entry fishery trip to the Cobb and Eickelberg seamounts (Figure \@ref(fig:figure1)).  Each operculum was marked by commercial fishers with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix)).  
+In 2017, a pilot study was conducted with the commercial sector returning sablefish samples.  A total of 360 heads were collected from J-cut sablefish on a limited-entry fishery trip to the Cobb and Eickelberg seamounts (Figure \@ref(fig:figure1)).  Each operculum was marked by commercial fishers with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix)).  
 
 Scientific sampling occurred on shore, with the first 99 heads of the pilot study measured by three experienced technicians for L~ID~, L~SL~, L~UJ~ and L~PP~ to determine the most repeatable measurement.  The cranial dimensions of L~ED~ and L~PO~ were eliminated after the results from the 2016 experimental study.
 
@@ -35,8 +35,5 @@ $$
 IAE=\frac{1}{N}\sum_{j = 1}^{N}\left[\frac{1}{R}\sum_{i = 1}^{R}\frac{|X_{ij} - X_j|}{X_j}\right]
 $$
 where N is the number of sablefish measured for each cranial measurement, R is the number of times each cranial measurement was taken by a technician, $X_{ij}$ is the average cranial length for the jth sablefish, and $X_{ij}$ is the ith cranial measurement of the jth sablefish.
-
-
-<!--KH note: The @Beamish1981 citation shows up as being year 2011 in pdf -->
 
 Fin clips (95 of 99) were forwarded to the molecular genetics lab for an audit of fisher sex determination. 
