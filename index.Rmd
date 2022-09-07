@@ -1,5 +1,5 @@
 ---
-title: "Development of methods in support of a head-only catch sampling program for sablefish (*Anoplopoma fimbria*) in British Columbia"
+title: "Development of methods in support of a head-only sampling program for sablefish (*Anoplopoma fimbria*) in British Columbia"
 year: 2022
 report_number: nnn
 author: |
@@ -247,22 +247,28 @@ library(rgdal)
     hd      <-    read.csv(paste(path,"head_measurements.csv",sep=''), header = T)  # master data
     
     # separate out the 2016 research data for scatterplots
-    hdUj  <- select(filter(hd, Upper_jaw_length > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, Upper_jaw_length) 
+    hdUj  <- select(filter(hd, Upper_jaw_length > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,
+                    Fork_Length,Whole_Round_Weight, HeadBarcode, Upper_jaw_length) 
     hdUj  <- hdUj%>% mutate(measure = 'UJ')  # upper jaw length data
 
-    hdEd  <- select(filter(hd, Eye_Diameter > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, Eye_Diameter)
+    hdEd  <- select(filter(hd, Eye_Diameter > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,
+                    Whole_Round_Weight, HeadBarcode, Eye_Diameter)
     hdEd  <- hdEd%>% mutate(measure = 'ED') # Eye Diameter data
     
-    hdId  <- select(filter(hd, InterOrbital_Distance > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, InterOrbital_Distance)
+    hdId  <- select(filter(hd, InterOrbital_Distance > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,
+                    Whole_Round_Weight, HeadBarcode, InterOrbital_Distance)
     hdId  <- hdId%>% mutate(measure = 'ID') # InterOrbital Distance data
     
-    hdSl <-  select(filter(hd, Snout_length > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, Snout_length)  
+    hdSl <-  select(filter(hd, Snout_length > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,
+                    Fork_Length,Whole_Round_Weight, HeadBarcode, Snout_length)  
     hdSl <-  hdSl%>% mutate(measure = 'SL') # Snout length data
     
-    hdPop <- select(filter(hd, Postorbital_Preoperculum > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, Postorbital_Preoperculum )        
+    hdPop <- select(filter(hd, Postorbital_Preoperculum > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,
+                    Fork_Length,Whole_Round_Weight, HeadBarcode, Postorbital_Preoperculum )        
     hdPop <- hdPop%>% mutate(measure = 'PP')  # Postorbital Preoperculum data
     
-    hdPo  <- select(filter(hd, Post_orbital_Head_length > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,Fork_Length,Whole_Round_Weight, HeadBarcode, Post_orbital_Head_length)   
+    hdPo  <- select(filter(hd, Post_orbital_Head_length > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,
+                    Fork_Length,Whole_Round_Weight, HeadBarcode, Post_orbital_Head_length)   
     hdPo  <- hdPo%>% mutate(measure = 'PO')   # Post orbital Head length data
     
     # head measurements from pilot study, trip to seamount
