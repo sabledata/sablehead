@@ -62,7 +62,7 @@ A. Upper jaw measurement (UJ);  B. Eye diameter measurement (ED);  C. Interorbit
 
 # SEX DETERMINATION BY OPERCULUM MARKING {#app:second-appendix}
 
-Instructions for sex determinations and operculum knife cuts for sablefish males and females.
+Instructions for sex determinations and operculum knife cuts for Sablefish males and females.
 
 ```{r AppendixB, results='asis'}
 img <- paste(graph_directory,'AppendixB.png',sep='') 
@@ -71,7 +71,7 @@ img <- paste(graph_directory,'AppendixB.png',sep='')
 
 # SABLEFISH BIOSAMPLE COLLECTION PROGRAM NOTICE {#app:third-appendix}
 
-Instructions for the sablefish biosample collection program.
+Instructions for the Sablefish biosample collection program.
 
 ```{r AppendixC, results='asis'}
 img <- paste(graph_directory,'AppendixC.png',sep='') 
@@ -81,7 +81,7 @@ img <- paste(graph_directory,'AppendixC.png',sep='')
 
 # TAGGED SABLEFISH PROGRAM NOTICE {#app:fourth-appendix}
 
-Instructions for the tagged sablefish collection program.
+Instructions for the tagged Sablefish collection program.
 
 ```{r AppendixD, results='asis'}
 img <- paste(graph_directory,'AppendixD.png',sep='') 

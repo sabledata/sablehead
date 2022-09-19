@@ -50,7 +50,7 @@
 \ \
 \ \
 \ \
-(ref:Table2Caption) Primers used in the development of a genetic test for determining sablefish sex, developed by the Pacific Biological Station (PBS) Molecular Genetics Laboratory (MGL).
+(ref:Table2Caption) Primers used in the development of a genetic test for determining Sablefish sex, developed by the Pacific Biological Station (PBS) Molecular Genetics Laboratory (MGL).
 \ \
 \ \
 ```{r table2,  results="asis",echo=FALSE, warning=FALSE, message=FALSE}
@@ -69,7 +69,7 @@
 ```
 \clearpage
 
-(ref:Table3Caption) Summary of sablefish biological data collected during the 2016 experimental study. Tally of fork lengths (L~FL~), round weights (RW), upper jaw lengths (L~UJ~),  eye diameters (L~ED~), interorbital distances (L~ID~), snout lengths (L~SL~), post orbital to preoperculum distances (L~PP~), post orbital head lengths (L~PO~), females (F), males (M), sagittal otoliths and operculum clips (DNA) listed by survey.
+(ref:Table3Caption) Summary of Sablefish biological data collected during the 2016 experimental study. Tally of fork lengths (L~FL~), round weights (RW), upper jaw lengths (L~UJ~),  eye diameters (L~ED~), interorbital distances (L~ID~), snout lengths (L~SL~), post orbital to preoperculum distances (L~PP~), post orbital head lengths (L~PO~), females (F), males (M), sagittal otoliths and operculum clips (DNA) listed by survey.
 \ \
 \ \
 
@@ -130,7 +130,7 @@
 \ \
 \ \
 \ \
-(ref:Table4Caption) Statistics associated with simple linear regressions using measurements (mm) of cranial lengths: upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum length (L~PP~) and post orbital head length (L~PO~) as predictors of the fork length (L~FL~) of 438 sablefish collected from research surveys in 2016.  All models were significant at P <0.001. 
+(ref:Table4Caption) Statistics associated with simple linear regressions using measurements (mm) of cranial lengths: upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum length (L~PP~) and post orbital head length (L~PO~) as predictors of the fork length (L~FL~) of 438 Sablefish collected from research surveys in 2016.  All models were significant at P <0.001. 
 \ \
 \ \
 
@@ -239,7 +239,7 @@ eick.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="EICKELBERG",])
 ``` 
 
 \ \
-(ref:Table6Caption) Summary of sablefish biological data collected from the 2017 pilot study to Cobb (n=`r cobb.count`) and Eickelberg (n=`r eick.count`) seamounts, measured by three expert technicians using a standardized protocol for the 2017 pilot study.  Index of Average Error (IAE) % values are reported for each of the cranial lengths.
+(ref:Table6Caption) Summary of Sablefish biological data collected from the 2017 pilot study to Cobb (n=`r cobb.count`) and Eickelberg (n=`r eick.count`) seamounts, measured by three expert technicians using a standardized protocol for the 2017 pilot study.  Index of Average Error (IAE) % values are reported for each of the cranial lengths.
 \ \
 
 ```{r table6, echo=FALSE}

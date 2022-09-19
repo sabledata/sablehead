@@ -4,9 +4,9 @@
 
 ### Data Collection
 
-Sablefish were randomly selected for sampling during the 2016 biennial DFO Groundfish Synoptic Bottom Trawl surveys using a length stratified sampling protocol. A total of 212 fish were sampled on the West Coast Vancouver Island survey [@Williams2018] and 219 fish on the West Coast Haida Gwaii survey [@Nottingham2018] (Figure \@ref(fig:figure1)). In addition, seven small sablefish were collected during the 2016 salmon survey (put reference here when obtain).  
+Sablefish were randomly selected for sampling during the 2016 biennial DFO Groundfish Synoptic Bottom Trawl surveys using a length stratified sampling protocol. A total of 212 fish were sampled on the West Coast Vancouver Island survey [@Williams2018] and 219 fish on the West Coast Haida Gwaii survey [@Nottingham2018] (Figure \@ref(fig:figure1)). In addition, seven small Sablefish were collected during the 2016 salmon survey (put reference here when obtain).  
 
-For each sampled fish, fork length, round weight, sex, and maturity were recorded at sea. The heads were removed, labelled with an unique ID and frozen.  On shore, six different cranial dimensions were considered, including upper jaw (L~UJ~), eye diameter (L~ED~), interorbital distance  (L~ID~), snout length (L~SL~), post orbital to preoperculum distance (L~PP~) and post orbital head length (L~PO~) (Table \@ref(tab:table1), Appendix \@ref(app:first-appendix)). All measurements were taken using Mitutoyo Absolute® 500-762-20 coolant proof digimatic calipers.  The post orbital head length (L~PO~) measurement was abandoned after testing 130 sablefish due to low sample quality and technical issues. 
+For each sampled fish, fork length, round weight, sex, and maturity were recorded at sea. The heads were removed, labelled with an unique ID and frozen.  On shore, six different cranial dimensions were considered, including upper jaw (L~UJ~), eye diameter (L~ED~), interorbital distance  (L~ID~), snout length (L~SL~), post orbital to preoperculum distance (L~PP~) and post orbital head length (L~PO~) (Table \@ref(tab:table1), Appendix \@ref(app:first-appendix)). All measurements were taken using Mitutoyo Absolute® 500-762-20 coolant proof digimatic calipers.  The post orbital head length (L~PO~) measurement was abandoned after testing 130 Sablefish due to low sample quality and technical issues. 
 
 At the time of sampling, each cranial dimension was evaluated by three experienced samplers on a five point rating scale in terms of two distinct metrics: 1. ease of use and 2. repeatability. The ease of use metric focused on three key attributes of the measurement: learn-ability (task understanding), efficiency (task-completion time) and degree of difficulty (task performance ease).  The repeatability metric focused on ranking each measurement under repeated caliper placement, taking into consideration that a proper understanding of how to place caliper jaws on soft or hard (bone) tissues may affect the final measurement. 
 
@@ -24,7 +24,7 @@ In the Molecular Genetics Laboratory (MGL), gender test methods were successfull
 
 ### Data Collection
 
-In 2017, a pilot study was conducted with the commercial sector returning sablefish samples.  A total of 360 heads were collected from J-cut sablefish on a limited-entry fishery trip to the Cobb and Eickelberg seamounts (Figure \@ref(fig:figure1)).  Each operculum was marked by commercial fishers with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix)).  
+In 2017, a pilot study was conducted with the commercial sector returning Sablefish samples.  A total of 360 heads were collected from J-cut Sablefish on a limited-entry fishery trip to the Cobb and Eickelberg seamounts (Figure \@ref(fig:figure1)).  Each operculum was marked by commercial fishers with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix)).  
 
 Scientific sampling occurred on shore, with the first 99 heads of the pilot study measured by three experienced technicians for L~ID~, L~SL~, L~UJ~ and L~PP~ to determine the most repeatable measurement.  The cranial dimensions of L~ED~ and L~PO~ were eliminated after the results from the 2016 experimental study.
 
@@ -34,6 +34,6 @@ The precision of cranial measurements among readers was quantified using and Ind
 $$
 IAE=\frac{1}{N}\sum_{j = 1}^{N}\left[\frac{1}{R}\sum_{i = 1}^{R}\frac{|X_{ij} - X_j|}{X_j}\right]
 $$
-where N is the number of sablefish measured for each cranial measurement, R is the number of times each cranial measurement was taken by a technician, $X_{ij}$ is the average cranial length for the jth sablefish, and $X_{ij}$ is the ith cranial measurement of the jth sablefish.
+where N is the number of Sablefish measured for each cranial measurement, R is the number of times each cranial measurement was taken by a technician, $X_{ij}$ is the average cranial length for the jth Sablefish, and $X_{ij}$ is the ith cranial measurement of the jth Sablefish.
 
 Fin clips (95 of 99) were forwarded to the molecular genetics lab for an audit of fisher sex determination. 
