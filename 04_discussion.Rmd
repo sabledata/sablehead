@@ -113,6 +113,6 @@ We recommend that a review of the head-only sample program be undertaken in 2024
 
 # Acknowledgments
 
-We thank Schon Acheson and Kristina Castle for lending their skilled technical expertise for this report and the Molecular Genetics Laboratory (Mike Wetklo and Gordon Skocic) at PBS for assistance in development of the Sablefish gender tests. A special thanks to the crew of the Pacific Viking for participating in the pilot project and the Wild Canadian Sablefish Association for their continued to support of science work with the Science Rewards Program.
+We thank Schon Acheson and Kristina Castle for lending their skilled technical expertise for this report and Mike Wetklo and Gordon Skocic of the Molecular Genetics Laboratory at PBS in development of the Sablefish DNA gender tests. A special thanks to the crew of the Pacific Viking for participating in the pilot project and the Wild Canadian Sablefish Association for their continued to support of science work with the Science Rewards Program.
 
 \clearpage
