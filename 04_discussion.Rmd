@@ -2,7 +2,7 @@
 
 ## Identification of Preferred Head Cranial Dimension
 
-Interorbital distance (L~ID~) is recommended as the most suitable cranial measurement for predicting Sablefish fork length in support of a head-only sampling program.  All cranial dimensions collected in the research investigation were found to be good predictors of Sablefish fork length (L~FL~) with resulting R^2^ values for male and female Sablefish >0.88.  However, L~ID~ was the only method to be ranked as 5 out of 5 for both ease of use and repeatability criteria. In addition, feedback from technicians participating in both the experimental and fishery pilot studies identified L~ID~ as the preferred method because it could be performed quickly, accurately, and repeatedly. Technicians reported that measurement errors were more probable when the calipers were placed on soft tissues. Other errors were a result of the manner in which the Sablefish were handled before measurement, ie. the operculum was cut off.  The high ease of use and repeatability scores for the L~ID~ method was largely due to it being based on bone measurements rather than soft tissue.    
+Interorbital distance (L~ID~) is recommended as the most suitable cranial measurement for predicting Sablefish fork length in support of a head-only sampling program.  All cranial dimensions collected in the research investigation were found to be good predictors of Sablefish fork length (L~FL~) with resulting R^2^ values for male and female Sablefish >0.88.  However, L~ID~ was the only method to be ranked as 5 out of 5 for both ease of use and repeatability criteria. In addition, feedback from technicians participating in both the experimental and fishery pilot studies identified L~ID~ as the preferred method because it could be performed quickly, accurately, and repeatedly. Technicians reported that measurement errors were more probable when the calipers were placed on soft tissues. Other errors were a result of the manner in which the Sablefish were handled before measurement, ie. the operculum was cut off.  The high ease of use and repeatability scores for the L~ID~ method was largely due to calipers placed on bone rather than soft tissue.    
 
 
 ## Implementation of Head-Only Catch Sampling in 2018
@@ -113,6 +113,6 @@ We recommend that a review of the head-only sample program be undertaken in 2024
 
 # Acknowledgments
 
-We thank Schon Acheson and Kristina Castle for lending their skilled technical expertise for this report and Mike Wetklo and Gordon Skocic of the Molecular Genetics Laboratory at PBS in development of the Sablefish DNA gender tests. A special thanks to the crew of the Pacific Viking for participating in the pilot project and the Wild Canadian Sablefish Association for their continued to support of scientific work with the Science Rewards Program.
+We thank Schon Acheson and Kristina Castle for lending their skilled technical expertise for this report and Mike Wetklo and Gordon Skocic of the Molecular Genetics Laboratory at PBS for development of the Sablefish DNA gender tests. A special thanks to the crew of the Pacific Viking for participating in the pilot project and the Wild Canadian Sablefish Association for their continued to support of scientific work via the Science Rewards Program.
 
 \clearpage
