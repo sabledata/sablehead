@@ -18,7 +18,7 @@ Using the lm() function in R [@R], fork lengths (L~FL~) were estimated by a simp
 
 ### Gender Test Development
 
-In the Molecular Genetics Laboratory (MGL), gender test methods were successfully developed.   DNA multiplex polymerase chain reactions (PCRs) were performed using fluorescently labelled forward primers.	X-insert and Y-insert specific primers developed by @Rondeau2013 were used, but the X-insert forward and Y-nested reverse were redesigned to produce slightly smaller PCR products (Table \@ref(tab:table2)).   Sex specific alleles were size fractionated in an ABI 3730 capillary DNA analyzer and were scored with ABI GeneMapper using an internal lane sizing standard. 
+In the Molecular Genetics Laboratory (MGL), gender test methods were successfully developed. X-insert and Y-insert specific primers developed by @Rondeau2013 were used in a modified format (J. Taylor, personal communication, August 4, 2022) to produce polymerase chain reaction (PCR) amplified products 155 and 170bp in size, respectively. These fluorescently labelled sex specific alleles were then size fractionated with the ABI 3730xl DNA Analyzer and scored using GeneMapper Software v5.0 (Applied Biosystems, Carlsbad, CA) and an internal lane sizing standard.
 
 ## Fishery Pilot Study 2017
 
