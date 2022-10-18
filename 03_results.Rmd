@@ -239,8 +239,8 @@ calipers malfunctioned with lengths >15 cm.
 
 ### Genetic sex-determination
 
-Genomic DNA (130 of 137 fin clips) were successfully PCR amplified by the MGL to determine sex. The accuracy of sex detection for the experimental study by the science technicians was 92% (119/130). 
+Genomic DNA (129 of 137 fin clips) were successfully PCR amplified by the MGL to determine sex. The accuracy of sex detection for the experimental study by the science technicians was 88.4% (114/129). 
 
 ##  Fishery Pilot Study 2017
 
-The 360 heads received from the commercial vessel were in good condition and operculum cuts worked well to indicate sex. The first 99 heads (`r count99[1]` from Cobb Seamount, `r count99[2]` from Eikelberg seamount) were measured once by three expert science technicians for each cranial dimension of L~UJ~, L~ID~, L~SL~ and L~PP~ (Table \@ref(tab:table5)).  The cranial measurements that produced the lowest mean error were upper jaw (L~UJ~) and interorbial distance (L~ID~) with IAE values of `r IAE.UJ` % and `r IAE.ID` %, respectively (Table \@ref(tab:table5)). The accuracy of the commercial fisher sex detection from the DNA gender analysis was xx% (x/95).
+The 360 heads received from the commercial vessel were in good condition and operculum cuts worked well to indicate sex. The first 99 heads (`r count99[1]` from Cobb Seamount, `r count99[2]` from Eikelberg seamount) were measured once by three expert science technicians for each cranial dimension of L~UJ~, L~ID~, L~SL~ and L~PP~ (Table \@ref(tab:table5)).  The cranial measurements that produced the lowest mean error were upper jaw (L~UJ~) and interorbial distance (L~ID~) with IAE values of `r IAE.UJ` % and `r IAE.ID` %, respectively (Table \@ref(tab:table5)). Genomic DNA (80 of 90 fin clips) were successfully PCR amplified resulting in an accuracy of 83.8% (67/80) for commercial fisher sex detection.
