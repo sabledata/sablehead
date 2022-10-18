@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.4)  18 OCT 2022 11:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.4)  18 OCT 2022 12:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1505,13 +1505,13 @@ Package rerunfilecheck Info: File `techreport.out' has not changed.
 Here is how much of TeX's memory you used:
  23716 strings out of 477031
  430020 string characters out of 5826551
- 824071 words of memory out of 5000000
+ 824065 words of memory out of 5000000
  44121 multiletter control sequences out of 15000+600000
  540029 words of font info for 204 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 87i,17n,91p,1348b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,17n,91p,1342b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on techreport.pdf (25 pages, 4197666 bytes).
+Output written on techreport.pdf (25 pages, 4197655 bytes).
 PDF statistics:
  459 PDF objects out of 1000 (max. 8388607)
  385 compressed objects within 4 object streams
