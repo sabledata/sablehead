@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.4)  22 NOV 2022 13:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.10.4)  22 NOV 2022 13:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1003,243 +1003,218 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.181 \clearpage
+l.183 \clearpage
                  [1
 
 ]
-Underfull \hbox (badness 1210) in paragraph at lines 208--209
-\T1/phv/m/n/10.95 (+20) In the Molec-u-lar Ge-net-ics Lab-o-ra-tory (MGL), gen-der test meth-ods were suc-cess-fully 
- []
-
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.209 
+l.211 
        [2
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.236 
+l.238 
        [3]
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.252 
+l.254 
        [4]
 pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.272 
+l.274 
        [5]
 pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.278 \clearpage
+l.280 \clearpage
                  [6]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 290.
+(Font)              <10> on input line 292.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 290.
+(Font)              <7> on input line 292.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 290.
+(Font)              <5> on input line 292.
 
-Overfull \hbox (4.41722pt too wide) in paragraph at lines 290--307
+Overfull \hbox (4.41722pt too wide) in paragraph at lines 292--309
 [][]  
  []
 
 
-Overfull \hbox (4.29697pt too wide) in paragraph at lines 318--329
+Overfull \hbox (4.29697pt too wide) in paragraph at lines 320--331
 [][]  
  []
 
 [7
 
 ]
-Overfull \hbox (0.57417pt too wide) in paragraph at lines 344--344
+Overfull \hbox (0.57417pt too wide) in paragraph at lines 346--346
 \T1/phv/b/n/10 (-20) Mea-sure-ment|  
  []
 
 
-Overfull \hbox (6.7683pt too wide) in paragraph at lines 344--344
+Overfull \hbox (6.7683pt too wide) in paragraph at lines 346--346
  []|\T1/phv/b/n/10 (-20) Slope| 
  []
 
 
-Overfull \hbox (2.28633pt too wide) in paragraph at lines 344--344
+Overfull \hbox (2.28633pt too wide) in paragraph at lines 346--346
  []|\T1/phv/b/n/10 (-20) Mean| 
  []
 
 
-Overfull \hbox (2.28633pt too wide) in paragraph at lines 344--344
+Overfull \hbox (2.28633pt too wide) in paragraph at lines 346--346
  []|\T1/phv/b/n/10 (-20) Mean| 
  []
 
 
-Overfull \hbox (4.60237pt too wide) in paragraph at lines 346--346
+Overfull \hbox (4.60237pt too wide) in paragraph at lines 348--348
  []|\T1/phv/m/n/10 (-20) 0.945| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 346--346
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 348--348
  []|\T1/phv/m/n/10 (-20) 0.972| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 346--346
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 348--348
  []|\T1/phv/m/n/10 (-20) 16.93| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 346--346
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 348--348
  []|\T1/phv/m/n/10 (-20) 586.7| 
  []
 
 
-Overfull \hbox (7.20566pt too wide) in paragraph at lines 346--347
+Overfull \hbox (7.20566pt too wide) in paragraph at lines 348--349
 []|\T1/phv/m/n/10 (-20) 129.71|  
- []
-
-
-Overfull \hbox (4.60237pt too wide) in paragraph at lines 347--347
- []|\T1/phv/m/n/10 (-20) 0.949| 
- []
-
-
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 347--347
- []|\T1/phv/m/n/10 (-20) 0.974| 
- []
-
-
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 347--347
- []|\T1/phv/m/n/10 (-20) 13.16| 
- []
-
-
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 347--347
- []|\T1/phv/m/n/10 (-20) 560.3| 
- []
-
-
-Overfull \hbox (7.20566pt too wide) in paragraph at lines 347--348
-[]|\T1/phv/m/n/10 (-20) 109.45|  
  []
 
 
 Overfull \hbox (4.60237pt too wide) in paragraph at lines 349--349
- []|\T1/phv/m/n/10 (-20) 0.914| 
+ []|\T1/phv/m/n/10 (-20) 0.949| 
  []
 
 
 Overfull \hbox (1.75693pt too wide) in paragraph at lines 349--349
- []|\T1/phv/m/n/10 (-20) 0.956| 
+ []|\T1/phv/m/n/10 (-20) 0.974| 
  []
 
 
 Overfull \hbox (1.75693pt too wide) in paragraph at lines 349--349
- []|\T1/phv/m/n/10 (-20) 586.7| 
+ []|\T1/phv/m/n/10 (-20) 13.16| 
+ []
+
+
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 349--349
+ []|\T1/phv/m/n/10 (-20) 560.3| 
  []
 
 
 Overfull \hbox (7.20566pt too wide) in paragraph at lines 349--350
-[]|\T1/phv/m/n/10 (-20) 129.41|  
- []
-
-
-Overfull \hbox (4.60237pt too wide) in paragraph at lines 350--350
- []|\T1/phv/m/n/10 (-20) 0.877| 
- []
-
-
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 350--350
- []|\T1/phv/m/n/10 (-20) 0.936| 
- []
-
-
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 350--350
- []|\T1/phv/m/n/10 (-20) 560.3| 
- []
-
-
-Overfull \hbox (7.20566pt too wide) in paragraph at lines 350--351
 []|\T1/phv/m/n/10 (-20) 109.45|  
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 352--352
- []|\T1/phv/m/n/10 (-20) 11.27| 
+Overfull \hbox (4.60237pt too wide) in paragraph at lines 351--351
+ []|\T1/phv/m/n/10 (-20) 0.914| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 352--352
- []|\T1/phv/m/n/10 (-20) 586.9| 
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 351--351
+ []|\T1/phv/m/n/10 (-20) 0.956| 
  []
 
 
-Overfull \hbox (7.20566pt too wide) in paragraph at lines 352--353
-[]|\T1/phv/m/n/10 (-20) 129.68|  
- []
-
-
-Overfull \hbox (4.60237pt too wide) in paragraph at lines 353--353
- []|\T1/phv/m/n/10 (-20) 0.916| 
- []
-
-
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 353--353
- []|\T1/phv/m/n/10 (-20) 0.957| 
- []
-
-
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 353--353
- []|\T1/phv/m/n/10 (-20) 560.3| 
- []
-
-
-Overfull \hbox (7.20566pt too wide) in paragraph at lines 353--354
-[]|\T1/phv/m/n/10 (-20) 109.45|  
- []
-
-
-Overfull \hbox (4.60237pt too wide) in paragraph at lines 355--355
- []|\T1/phv/m/n/10 (-20) 0.966| 
- []
-
-
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 355--355
- []|\T1/phv/m/n/10 (-20) 0.983| 
- []
-
-
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 355--355
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 351--351
  []|\T1/phv/m/n/10 (-20) 586.7| 
  []
 
 
-Overfull \hbox (7.20566pt too wide) in paragraph at lines 355--356
-[]|\T1/phv/m/n/10 (-20) 129.71|  
+Overfull \hbox (7.20566pt too wide) in paragraph at lines 351--352
+[]|\T1/phv/m/n/10 (-20) 129.41|  
  []
 
 
-Overfull \hbox (4.60237pt too wide) in paragraph at lines 356--356
- []|\T1/phv/m/n/10 (-20) 0.945| 
+Overfull \hbox (4.60237pt too wide) in paragraph at lines 352--352
+ []|\T1/phv/m/n/10 (-20) 0.877| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 356--356
- []|\T1/phv/m/n/10 (-20) 0.972| 
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 352--352
+ []|\T1/phv/m/n/10 (-20) 0.936| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 356--356
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 352--352
  []|\T1/phv/m/n/10 (-20) 560.3| 
  []
 
 
-Overfull \hbox (7.20566pt too wide) in paragraph at lines 356--357
+Overfull \hbox (7.20566pt too wide) in paragraph at lines 352--353
 []|\T1/phv/m/n/10 (-20) 109.45|  
+ []
+
+
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 354--354
+ []|\T1/phv/m/n/10 (-20) 11.27| 
+ []
+
+
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 354--354
+ []|\T1/phv/m/n/10 (-20) 586.9| 
+ []
+
+
+Overfull \hbox (7.20566pt too wide) in paragraph at lines 354--355
+[]|\T1/phv/m/n/10 (-20) 129.68|  
+ []
+
+
+Overfull \hbox (4.60237pt too wide) in paragraph at lines 355--355
+ []|\T1/phv/m/n/10 (-20) 0.916| 
+ []
+
+
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 355--355
+ []|\T1/phv/m/n/10 (-20) 0.957| 
+ []
+
+
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 355--355
+ []|\T1/phv/m/n/10 (-20) 560.3| 
+ []
+
+
+Overfull \hbox (7.20566pt too wide) in paragraph at lines 355--356
+[]|\T1/phv/m/n/10 (-20) 109.45|  
+ []
+
+
+Overfull \hbox (4.60237pt too wide) in paragraph at lines 357--357
+ []|\T1/phv/m/n/10 (-20) 0.966| 
+ []
+
+
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 357--357
+ []|\T1/phv/m/n/10 (-20) 0.983| 
+ []
+
+
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 357--357
+ []|\T1/phv/m/n/10 (-20) 586.7| 
+ []
+
+
+Overfull \hbox (7.20566pt too wide) in paragraph at lines 357--358
+[]|\T1/phv/m/n/10 (-20) 129.71|  
  []
 
 
@@ -1253,92 +1228,112 @@ Overfull \hbox (1.75693pt too wide) in paragraph at lines 358--358
  []
 
 
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 358--358
+ []|\T1/phv/m/n/10 (-20) 560.3| 
+ []
+
+
 Overfull \hbox (7.20566pt too wide) in paragraph at lines 358--359
+[]|\T1/phv/m/n/10 (-20) 109.45|  
+ []
+
+
+Overfull \hbox (4.60237pt too wide) in paragraph at lines 360--360
+ []|\T1/phv/m/n/10 (-20) 0.945| 
+ []
+
+
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 360--360
+ []|\T1/phv/m/n/10 (-20) 0.972| 
+ []
+
+
+Overfull \hbox (7.20566pt too wide) in paragraph at lines 360--361
 []|\T1/phv/m/n/10 (-20) 127.89|  
  []
 
 
-Overfull \hbox (4.60237pt too wide) in paragraph at lines 359--359
+Overfull \hbox (4.60237pt too wide) in paragraph at lines 361--361
  []|\T1/phv/m/n/10 (-20) 0.921| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 359--359
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 361--361
  []|\T1/phv/m/n/10 (-20) 559.9| 
  []
 
 
-Overfull \hbox (7.20566pt too wide) in paragraph at lines 359--360
+Overfull \hbox (7.20566pt too wide) in paragraph at lines 361--362
 []|\T1/phv/m/n/10 (-20) 109.84|  
  []
 
 
-Overfull \hbox (4.60237pt too wide) in paragraph at lines 361--361
+Overfull \hbox (4.60237pt too wide) in paragraph at lines 363--363
  []|\T1/phv/m/n/10 (-20) 0.923| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 361--361
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 363--363
  []|\T1/phv/m/n/10 (-20) 0.961| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 361--361
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 363--363
  []|\T1/phv/m/n/10 (-20) 22.51| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 361--361
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 363--363
  []|\T1/phv/m/n/10 (-20) 574.9| 
  []
 
 
-Overfull \hbox (7.20566pt too wide) in paragraph at lines 361--362
+Overfull \hbox (7.20566pt too wide) in paragraph at lines 363--364
 []|\T1/phv/m/n/10 (-20) 154.35|  
  []
 
 
-Overfull \hbox (4.60237pt too wide) in paragraph at lines 362--362
+Overfull \hbox (4.60237pt too wide) in paragraph at lines 364--364
  []|\T1/phv/m/n/10 (-20) 0.904| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 362--362
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 364--364
  []|\T1/phv/m/n/10 (-20) 0.951| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 362--362
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 364--364
  []|\T1/phv/m/n/10 (-20) 12.81| 
  []
 
 
-Overfull \hbox (1.75693pt too wide) in paragraph at lines 362--362
+Overfull \hbox (1.75693pt too wide) in paragraph at lines 364--364
  []|\T1/phv/m/n/10 (-20) 555.6| 
  []
 
 
-Overfull \hbox (7.20566pt too wide) in paragraph at lines 362--363
+Overfull \hbox (7.20566pt too wide) in paragraph at lines 364--365
 []|\T1/phv/m/n/10 (-20) 104.97|  
  []
 
 
-Overfull \hbox (10.26341pt too wide) in paragraph at lines 375--375
+Overfull \hbox (10.26341pt too wide) in paragraph at lines 377--377
  \T1/phv/b/n/10 (-20) Di-men-sion| 
  []
 
 
-Overfull \hbox (3.81288pt too wide) in paragraph at lines 375--375
+Overfull \hbox (3.81288pt too wide) in paragraph at lines 377--377
  []|\T1/phv/b/n/10 (-20) Repeatable| 
  []
 
 
-Overfull \hbox (9.41705pt too wide) in paragraph at lines 375--375
+Overfull \hbox (9.41705pt too wide) in paragraph at lines 377--377
  \T1/phv/b/n/10 (-20) lim-i-ta-tion| 
  []
 
 
-Overfull \hbox (1.72751pt too wide) in paragraph at lines 401--401
+Overfull \hbox (1.72751pt too wide) in paragraph at lines 403--403
 \T1/phv/b/n/10 (-20) Di-men-sion|  
  []
 
@@ -1346,71 +1341,71 @@ Overfull \hbox (1.72751pt too wide) in paragraph at lines 401--401
 <figures/Figure1.png, id=334, 770.88pt x 867.24pt>
 File: figures/Figure1.png Graphic file (type png)
 <use figures/Figure1.png>
-Package pdftex.def Info: figures/Figure1.png  used on input line 418.
+Package pdftex.def Info: figures/Figure1.png  used on input line 420.
 (pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 File: figures/Figure1.png Graphic file (type png)
 <use figures/Figure1.png>
-Package pdftex.def Info: figures/Figure1.png  used on input line 418.
+Package pdftex.def Info: figures/Figure1.png  used on input line 420.
 (pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 File: figures/Figure1.png Graphic file (type png)
 <use figures/Figure1.png>
-Package pdftex.def Info: figures/Figure1.png  used on input line 418.
+Package pdftex.def Info: figures/Figure1.png  used on input line 420.
 (pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 File: figures/Figure1.png Graphic file (type png)
 <use figures/Figure1.png>
-Package pdftex.def Info: figures/Figure1.png  used on input line 418.
+Package pdftex.def Info: figures/Figure1.png  used on input line 420.
 (pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 <figures/Figure2.png, id=336, 332.442pt x 390.258pt>
 File: figures/Figure2.png Graphic file (type png)
 <use figures/Figure2.png>
-Package pdftex.def Info: figures/Figure2.png  used on input line 427.
+Package pdftex.def Info: figures/Figure2.png  used on input line 429.
 (pdftex.def)             Requested size: 471.76422pt x 553.81293pt.
 File: figures/Figure2.png Graphic file (type png)
 <use figures/Figure2.png>
-Package pdftex.def Info: figures/Figure2.png  used on input line 427.
+Package pdftex.def Info: figures/Figure2.png  used on input line 429.
 (pdftex.def)             Requested size: 471.76422pt x 553.81293pt.
 File: figures/Figure2.png Graphic file (type png)
 <use figures/Figure2.png>
-Package pdftex.def Info: figures/Figure2.png  used on input line 427.
+Package pdftex.def Info: figures/Figure2.png  used on input line 429.
 (pdftex.def)             Requested size: 471.76422pt x 553.81293pt.
 File: figures/Figure2.png Graphic file (type png)
 <use figures/Figure2.png>
-Package pdftex.def Info: figures/Figure2.png  used on input line 427.
+Package pdftex.def Info: figures/Figure2.png  used on input line 429.
 (pdftex.def)             Requested size: 471.76422pt x 553.81293pt.
 
-Overfull \hbox (2.0092pt too wide) in paragraph at lines 427--428
+Overfull \hbox (2.0092pt too wide) in paragraph at lines 429--430
 []| [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
+Underfull \hbox (badness 10000) in paragraph at lines 429--430
  
  []
 
 <figures/Figure3.png, id=338, 332.442pt x 390.258pt>
 File: figures/Figure3.png Graphic file (type png)
 <use figures/Figure3.png>
-Package pdftex.def Info: figures/Figure3.png  used on input line 434.
+Package pdftex.def Info: figures/Figure3.png  used on input line 436.
 (pdftex.def)             Requested size: 471.76422pt x 553.81293pt.
 File: figures/Figure3.png Graphic file (type png)
 <use figures/Figure3.png>
-Package pdftex.def Info: figures/Figure3.png  used on input line 434.
+Package pdftex.def Info: figures/Figure3.png  used on input line 436.
 (pdftex.def)             Requested size: 471.76422pt x 553.81293pt.
 File: figures/Figure3.png Graphic file (type png)
 <use figures/Figure3.png>
-Package pdftex.def Info: figures/Figure3.png  used on input line 434.
+Package pdftex.def Info: figures/Figure3.png  used on input line 436.
 (pdftex.def)             Requested size: 471.76422pt x 553.81293pt.
 File: figures/Figure3.png Graphic file (type png)
 <use figures/Figure3.png>
-Package pdftex.def Info: figures/Figure3.png  used on input line 434.
+Package pdftex.def Info: figures/Figure3.png  used on input line 436.
 (pdftex.def)             Requested size: 471.76422pt x 553.81293pt.
 
-Overfull \hbox (2.0092pt too wide) in paragraph at lines 434--435
+Overfull \hbox (2.0092pt too wide) in paragraph at lines 436--437
 []| [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--435
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
  
  []
 
@@ -1420,19 +1415,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 434--435
 <figures/AppendixA.png, id=355, 770.88pt x 867.24pt>
 File: figures/AppendixA.png Graphic file (type png)
 <use figures/AppendixA.png>
-Package pdftex.def Info: figures/AppendixA.png  used on input line 451.
+Package pdftex.def Info: figures/AppendixA.png  used on input line 453.
 (pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 File: figures/AppendixA.png Graphic file (type png)
 <use figures/AppendixA.png>
-Package pdftex.def Info: figures/AppendixA.png  used on input line 451.
+Package pdftex.def Info: figures/AppendixA.png  used on input line 453.
 (pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 File: figures/AppendixA.png Graphic file (type png)
 <use figures/AppendixA.png>
-Package pdftex.def Info: figures/AppendixA.png  used on input line 451.
+Package pdftex.def Info: figures/AppendixA.png  used on input line 453.
 (pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 File: figures/AppendixA.png Graphic file (type png)
 <use figures/AppendixA.png>
-Package pdftex.def Info: figures/AppendixA.png  used on input line 451.
+Package pdftex.def Info: figures/AppendixA.png  used on input line 453.
 (pdftex.def)             Requested size: 433.62pt x 487.8213pt.
 [13
 
@@ -1441,19 +1436,19 @@ Package pdftex.def Info: figures/AppendixA.png  used on input line 451.
 <figures/AppendixB.png, id=361, 480.29437pt x 599.99156pt>
 File: figures/AppendixB.png Graphic file (type png)
 <use figures/AppendixB.png>
-Package pdftex.def Info: figures/AppendixB.png  used on input line 459.
+Package pdftex.def Info: figures/AppendixB.png  used on input line 461.
 (pdftex.def)             Requested size: 433.62pt x 541.69028pt.
 File: figures/AppendixB.png Graphic file (type png)
 <use figures/AppendixB.png>
-Package pdftex.def Info: figures/AppendixB.png  used on input line 459.
+Package pdftex.def Info: figures/AppendixB.png  used on input line 461.
 (pdftex.def)             Requested size: 433.62pt x 541.69028pt.
 File: figures/AppendixB.png Graphic file (type png)
 <use figures/AppendixB.png>
-Package pdftex.def Info: figures/AppendixB.png  used on input line 459.
+Package pdftex.def Info: figures/AppendixB.png  used on input line 461.
 (pdftex.def)             Requested size: 433.62pt x 541.69028pt.
 File: figures/AppendixB.png Graphic file (type png)
 <use figures/AppendixB.png>
-Package pdftex.def Info: figures/AppendixB.png  used on input line 459.
+Package pdftex.def Info: figures/AppendixB.png  used on input line 461.
 (pdftex.def)             Requested size: 433.62pt x 541.69028pt.
 [14
 
@@ -1461,37 +1456,37 @@ Package pdftex.def Info: figures/AppendixB.png  used on input line 459.
 <figures/AppendixC.png, id=369, 449.42906pt x 586.44093pt>
 File: figures/AppendixC.png Graphic file (type png)
 <use figures/AppendixC.png>
-Package pdftex.def Info: figures/AppendixC.png  used on input line 465.
+Package pdftex.def Info: figures/AppendixC.png  used on input line 467.
 (pdftex.def)             Requested size: 433.62pt x 565.8314pt.
 File: figures/AppendixC.png Graphic file (type png)
 <use figures/AppendixC.png>
-Package pdftex.def Info: figures/AppendixC.png  used on input line 465.
+Package pdftex.def Info: figures/AppendixC.png  used on input line 467.
 (pdftex.def)             Requested size: 433.62pt x 565.8314pt.
 File: figures/AppendixC.png Graphic file (type png)
 <use figures/AppendixC.png>
-Package pdftex.def Info: figures/AppendixC.png  used on input line 465.
+Package pdftex.def Info: figures/AppendixC.png  used on input line 467.
 (pdftex.def)             Requested size: 433.62pt x 565.8314pt.
 File: figures/AppendixC.png Graphic file (type png)
 <use figures/AppendixC.png>
-Package pdftex.def Info: figures/AppendixC.png  used on input line 465.
+Package pdftex.def Info: figures/AppendixC.png  used on input line 467.
 (pdftex.def)             Requested size: 433.62pt x 565.8314pt.
 [15 <./figures/AppendixC.png>]
 <figures/AppendixD.png, id=376, 501.37312pt x 654.94687pt>
 File: figures/AppendixD.png Graphic file (type png)
 <use figures/AppendixD.png>
-Package pdftex.def Info: figures/AppendixD.png  used on input line 471.
+Package pdftex.def Info: figures/AppendixD.png  used on input line 473.
 (pdftex.def)             Requested size: 433.62pt x 566.4713pt.
 File: figures/AppendixD.png Graphic file (type png)
 <use figures/AppendixD.png>
-Package pdftex.def Info: figures/AppendixD.png  used on input line 471.
+Package pdftex.def Info: figures/AppendixD.png  used on input line 473.
 (pdftex.def)             Requested size: 433.62pt x 566.4713pt.
 File: figures/AppendixD.png Graphic file (type png)
 <use figures/AppendixD.png>
-Package pdftex.def Info: figures/AppendixD.png  used on input line 471.
+Package pdftex.def Info: figures/AppendixD.png  used on input line 473.
 (pdftex.def)             Requested size: 433.62pt x 566.4713pt.
 File: figures/AppendixD.png Graphic file (type png)
 <use figures/AppendixD.png>
-Package pdftex.def Info: figures/AppendixD.png  used on input line 471.
+Package pdftex.def Info: figures/AppendixD.png  used on input line 473.
 (pdftex.def)             Requested size: 433.62pt x 566.4713pt.
 [16 <./figures/AppendixD.png>] 
 AED: lastpage setting LastPage
@@ -1503,15 +1498,15 @@ Package rerunfilecheck Info: File `techreport.out' has not changed.
 (rerunfilecheck)             Checksum: 5C6182EC424EF2689B0FCCC8735AB2E2;4725.
  ) 
 Here is how much of TeX's memory you used:
- 23716 strings out of 477031
- 430020 string characters out of 5826551
+ 23711 strings out of 477031
+ 429976 string characters out of 5826551
  823065 words of memory out of 5000000
  44121 multiletter control sequences out of 15000+600000
- 540029 words of font info for 204 fonts, out of 8000000 for 9000
+ 539779 words of font info for 201 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  87i,17n,91p,1342b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb><c:/Users/lackol/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on techreport.pdf (25 pages, 4197733 bytes).
+Output written on techreport.pdf (25 pages, 4198447 bytes).
 PDF statistics:
  459 PDF objects out of 1000 (max. 8388607)
  385 compressed objects within 4 object streams
