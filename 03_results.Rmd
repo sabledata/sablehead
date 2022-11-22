@@ -228,7 +228,7 @@
 
 ##  Experimental Study 2016
   
-A total of 438 specimens comprising `r count.males` males and `r count.females` females were evaluated for this study from three different surveys (Table \@ref(tab:table2)).  The post orbital head length (L~PO~) measurement had a lower number of measurements compared to other methods because it was abandoned after testing 130 Sablefish due to technical issues.  The smallest fork length of the collected specimens was `r fish.min` mm, the largest was `r fish.max` mm, and the average was `r round(fish.avg,1)` mm. 
+A total of 438 specimens comprising `r count.males` males and `r count.females` females were evaluated for this study from three different surveys (Table \@ref(tab:table2)).  The post orbital head length (L~PO~) measurement had a lower number of measurements compared to other methods because it was abandoned after measuring 130 Sablefish due to technical issues.  The smallest fork length of the collected specimens was `r fish.min` mm, the largest was `r fish.max` mm, and the average was `r round(fish.avg,1)` mm.  This range of sizes are broadly representative of those found in the fishery and survey.
 
 Table \@ref(tab:table3) lists the statistics of the cranial dimensions (L~UJ~, L~ED~, L~ID~, L~SL~, L~PP~, L~PO~) as predictors of the response variable fork length (L~FL~).  All cranial dimensions were highly correlated with fork length with high R-squared values and significant p-values (Figure \@ref(fig:figure2) and Figure \@ref(fig:figure3)).  
 
