@@ -225,8 +225,8 @@ eick.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="EICKELBERG",])
 
 ```{r table5, echo=FALSE}
 
-
-   samples.data <- read.csv(paste(path,'export.samples.csv',sep=''),header=T)  # read from csv created in the index.rmd
+   # FOS trip id 338773 Pacific Viking
+   samples.data <- read.csv(paste(path,'export.samples.csv',sep=''),header=T) # read csv created in index.rmd
    IAE.value        <- c(IAE.UJ,IAE.ID,IAE.SL,IAE.PP)
    
 #  separate out by sampler

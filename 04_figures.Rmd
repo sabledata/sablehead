@@ -348,6 +348,69 @@
      
 ```
 
+```{r figure4, fig.cap='(ref:figure4)', results='asis', width=4.0, height=3.5, fig.align='left'}
 
+#(ref:figure4) Box plot of fork length measurements conducted by science technicians for all specimens and only legal #size specimens (>55cm) where gender assignments were in concordance or not (1 or 0) with DNA test results.
+
+
+     png("C:/github/sablehead/figures/Figure4.png", units="px", width=2300, height=2700, res=500) # write png to file
+
+     # using 2022 results via MGL
+      DNA.data22 <- paste("SELECT 2022 as yr,dbo.Head_DNA_Report.DNA_VIAL_BARCODE, ",
+                      "dbo.Head_DNA_Report.SPECIMEN_SEX_DESC, ",
+                      "dbo.Head_DNA_Report.Y_X_proportion_based_genetic_sex_ID_2022,  ",
+                      "dbo.Head_DNA_Report.Y_X_proportion_based_concordance_fisher_and_genetic_sex_ID_2022, ",
+                      "dbo.Head_Measurements_Report.Fork_Length, ",
+                      "CASE WHEN Fork_Length >= 550 THEN 'Legal' ELSE 'Sublegal' END AS Size, 'All specimens' as grp ",
+                      "FROM  dbo.Head_DNA_Report INNER JOIN  ",
+                      "dbo.Head_Measurements_Report ON dbo.Head_DNA_Report.SPECIMEN_ID =  ",
+                      "dbo.Head_Measurements_Report.SPECIMEN_ID  ",
+                      "WHERE  (dbo.Head_DNA_Report.Y_X_proportion_based_concordance_fisher_and_genetic_sex_ID_2022  ",
+                      "IN('0','1')) ORDER BY dbo.Head_DNA_Report.DNA_VIAL_BARCODE", sep="")
+     #DNA.2022  <- GetSQLData(DNA.data22,"Sablefish") 
+     #write.table(DNA.2022, file = paste(path,"figure4.csv",sep=''),
+     #          row.names=FALSE,na="",col.names=TRUE, sep=',')
+     DNA.2022  <- read.csv(paste(path,'figure4.csv', sep=''), header=T)
+     names(DNA.2022) <- c("DNAYear","vial","sampler_sex","DNA_sex",
+                          "concordance","forkLength", "size", "grp")
+     alln1 <- sum(DNA.2022$concordance)
+     alln0 <- length(DNA.2022$vial) - sum(DNA.2022$concordance)  
+     
+     DNA.legal        <- DNA.2022[DNA.2022$size=="Legal",]  # only pull out the legal samples
+     DNA.legal$grp    <- 'Legal size specimens'
+     names(DNA.legal) <- c("DNAYear","vial","sampler_sex","DNA_sex",
+                           "concordance","forkLength", "size", "grp")
+     Sampler.Legal.percent <- (sum(DNA.legal$concordance)/length(DNA.legal$vial)) * 100
+     n1 <- sum(DNA.legal$concordance)
+     n0 <- length(DNA.legal$vial) - sum(DNA.legal$concordance)
+     
+     DNA.compare <- rbind(DNA.2022,DNA.legal)  # bind all with just legal size
+
+     library(reshape2)
+     DNA.melt  <- melt(DNA.compare[,c(-1,-2,-3,-4, -7)], id.vars=c("grp",  "forkLength"))
+     names(DNA.melt) <- c("Group","forkLength","variable","concordance")
+     #tail(DNA.melt)
+ 
+     p <-   ggplot(DNA.melt, aes(as.factor(concordance), forkLength)) +
+            geom_boxplot(aes(fill = Group)) + scale_fill_brewer() +
+            xlab("DNA concordance") + ylab("fork length (mm)") 
+     
+     p +    theme(panel.border = element_rect(color = "black",
+                                    fill = NA,
+                                    size = 0.25)) +
+            theme(panel.background = element_rect(fill = "white",
+                                     size = 0.75, linetype = "solid")) +
+            theme(legend.position = c(0.27, 0.85))+
+            geom_text(aes(x = as.factor(0), y = 100, label = paste('n=',alln0,
+                                                                   '     n=', n0, sep=""))) +
+            geom_text(aes(x = as.factor(1), y = 100, label = paste('n=',alln1,
+                                                                   '     n=', n1, sep="")))
+    
+
+     #while (!is.null(dev.list()))  dev.off()
+     #img <-   paste('C:/github/sablehead/figures/figure4.png',sep="")   # -- retrieve png 
+     #          knitr::include_graphics(img)
+
+```
 
 \clearpage

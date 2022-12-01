@@ -24,7 +24,7 @@ In the MGL, gender test methods were successfully developed. X-insert and Y-inse
 
 ### Data Collection
 
-In 2017, a pilot study was conducted with the commercial fishery returning Sablefish samples.  A total of 360 heads were collected from J-cut Sablefish on a limited-entry fishery trip to the Cobb and Eickelberg seamounts (Figure \@ref(fig:figure1)).  Each operculum was marked by commercial fishers with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix)).  
+In 2017, a pilot study was conducted with the commercial fishery returning Sablefish samples.  A total of 360 heads were collected from J-cut Sablefish on a limited-entry fishery trip to the Cobb and Eickelberg Seamounts (Figure \@ref(fig:figure1)).  Each operculum was marked by commercial fishers with either one knife cut (male) or two knife cuts (female) (Appendix \@ref(app:second-appendix)).  
 
 Scientific sampling occurred on shore, with the first 99 heads of the pilot study measured by three experienced technicians for L~ID~, L~SL~, L~UJ~ and L~PP~ to determine the most repeatable measurement.  The cranial dimensions of L~ED~ and L~PO~ were eliminated after the results from the 2016 experimental study.
 

@@ -26,7 +26,7 @@ output:
    french: false
 type:
   techreport
-# ------------Abstract word count 199 out of 200 limit
+# ------------Abstract word count 193 out of 200 limit
 # End of options to set
 knit: bookdown::render_book
 site: bookdown::bookdown_site
@@ -241,7 +241,7 @@ library(rgdal)
 ``` {r GlobalDataTable}
     # head measurements from research study 2016
     details <-    paste("select * from Head_Measurements_Report", sep="")
-    # hd     <-    GetSQLData(details,"Sablefish")      # head details from SQL Server
+    # hd    <-    GetSQLData(details,"Sablefish")      # head details from SQL Server
 
     # write.table(hd , file = paste(path,"head_measurements.csv",sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",")
     hd      <-    read.csv(paste(path,"head_measurements.csv",sep=''), header = T)  # master data

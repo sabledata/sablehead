@@ -15,6 +15,7 @@ Routine biological sampling procedures were modified so that commercial fishers 
 
 We recommend that a review of the head-only sample program be undertaken in 2024-2025 to better examine how sampling rates, length composition, and spatial distribution have changed compared to the previous sampling program. By this time, the sampling program will have been in place for at least 6 years. At least 6 years is recommended to allow for a couple years of adjustment to the new protocols, as well as to allow for some lags in at-shore sampling of heads due to the COVID-19 pandemic.
 
+There were some differences between fish sex as assigned by field technicians and as assigned by the genetic tests. Further research is recommended to resolve this discrepancy, which could be revisited as part of the recommended review in 2023-2024. For the genetic testing, this could involve additional optimization to improve the accuracy of the test. For field sampling, this could include cross-comparison work between samplers/recorders to ensure sex assignments are consistent among samplers. 
 
 ```{r figureComposition,  results='asis',  out.width = "410px", out.height = "400px",fig.align='left'}
 
