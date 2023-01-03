@@ -217,7 +217,7 @@
 \newcommand\Main{
   %% To number the main document sections, tables, etc.
   %%  as 1.1, 1.2, etc.
-  \renewcommand{\thesection}{\arabic{section}.}
+  \renewcommand{\thesection}{\arabic{section}}
   \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
   \renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
   \renewcommand{\thetable}{\arabic{table}}
@@ -245,6 +245,10 @@
   %% Section headings now use \appsection command
   \renewcommand{\section}{\appsection}
 }
+
+% Keeping periods after section numbers but not when referencing sections
+% https://tex.stackexchange.com/questions/399025/keeping-periods-after-section-numbers-but-not-when-referencing-sections
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname.\quad}
 
 %% Changes the name of the bibliography.
 \renewcommand{\bibname}{Sources of information}
@@ -312,15 +316,15 @@
 
 \AddEverypageHook{\ifdim\textwidth=\textheight
   \fancyhf{}\fancyfoot{}
-   \begin{textblock*}{11pt}(0.68in,1in+\shorttitlelandWidth+\remainderlandWidth)
+   \begin{textblock*}{11pt}(0.575in,1in+\shorttitlelandWidth+\remainderlandWidth)
 {\rotatebox{90}{\selectfont\fontsize{11}{13.2}\textbf{\rdRegion{}}}}\end{textblock*}
-\begin{textblock}{0.05}(0.08,0.0909)
+\begin{textblock}{0.05}(0.0518,0.0909)
 {\rotatebox{90}{\selectfont\fontsize{11}{13.2}\textbf{Science Response: \rdTitleShort{}}}}\end{textblock}
-\begin{textblock}{0.05}(0.925,0.5)
+\begin{textblock}{0.05}(0.89,0.5)
 {\rotatebox{90}{\sffamily\selectfont\small\thepage}}\end{textblock}
- \begin{textblock}{1}(0.1,0.0909)
+  \begin{textblock}{0.05}(0.062,0.0909)
 {\rotatebox{90}{\rule{9in}{0.25pt}}}\end{textblock}
-  \begin{textblock}{1}(0.9,0.0909)
+  \begin{textblock}{0.05}(0.875,0.0909)
   {\rotatebox{90}{\rule{9in}{0.25pt}}}\end{textblock}
 \fi}
 
@@ -559,7 +563,7 @@
   % Headers and footers for the first page
   \thispagestyle{firstPage}
   % Make the title -- needs a big space to print below the header
-  \vspace*{2.20cm}
+  \vspace*{1.20cm}
   \begin{center}
   \hypertarget{PageOne}{}
   \Large{\textbf{\MakeTextUppercase{\rdTitle{}}}}

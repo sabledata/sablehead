@@ -235,9 +235,9 @@
 \newcommand\Main{
   %% To number the main document sections, tables, etc.
   %%  as 1.1, 1.2, etc.
-  \renewcommand{\thesection}{\arabic{section}.}
-  \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}.}
-  \renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.}
+  \renewcommand{\thesection}{\arabic{section}}
+  \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+  \renewcommand{\thesubsubsection}{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
   \renewcommand{\thetable}{\arabic{table}}
   \renewcommand{\thefigure}{\arabic{figure}}
   \renewcommand{\theequation}{\arabic{equation}}
@@ -263,6 +263,10 @@
   %% Section headings now use \appsection command
   \renewcommand{\section}{\appsection}
 }
+
+% Keeping periods after section numbers but not when referencing sections
+% https://tex.stackexchange.com/questions/399025/keeping-periods-after-section-numbers-but-not-when-referencing-sections
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname.\quad}
 
 % Make the references section an actual section instead of a chapter and number it
 \renewcommand{\bibsection}{\section{\refname}}
@@ -333,11 +337,11 @@
 %% Creates a header and footer on the long page sides on landscape pages
 \AddEverypageHook{\ifdim\textwidth=\textheight
   \fancyhf{}\fancyfoot{}
- \begin{textblock}{0.05}(0.925,0.5)
+ \begin{textblock}{0.05}(0.9,0.5)
  {\rotatebox{90}{\sffamily\selectfont\small\thepage}}\end{textblock}
-  \begin{textblock}{1}(0.1,0.0909)
+  \begin{textblock}{0.05}(0.062,0.0909){\rotatebox{90}{\rule{9in}{0.25pt}}}
   \end{textblock}
-  \begin{textblock}{1}(0.9,0.0909)
+  \begin{textblock}{0.05}(0.875,0.0909){\rotatebox{90}{\rule{9in}{0.25pt}}}
   \end{textblock}
 \fi}
 
@@ -650,7 +654,7 @@ Ottawa ON K1A 0E6\\
 \includegraphics[scale=0.96]{\locRepo/images/recycle.png}
 
 \vspace{-1mm}
-\textcopyright\ Sa Majesté la Reine du chef du Canada, \rdYear{}\\
+\textcopyright\ Sa Majesté le Roi du chef du Canada, \rdYear{}\\
 ISSN 2292-4272\\
 ISBN~\rdISBN{} \hspace{5mm} N$^{\circ}$ cat.~\rdCatNo
 \end{center}

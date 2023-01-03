@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {2.1}Experimental Study 2016}{2}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Data Collection}{2}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}Data Analysis}{2}{subsubsection.2.1.2}%
-\contentsline {subsubsection}{\numberline {2.1.3}Gender Test Development}{2}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.3}Gender Test Development}{3}{subsubsection.2.1.3}%
 \contentsline {subsection}{\numberline {2.2}Fishery Pilot Study 2017}{3}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Data Collection}{3}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Data Analysis}{3}{subsubsection.2.2.2}%
@@ -19,8 +19,8 @@
 \contentsline {subsection}{\numberline {4.2}Implementation of Head-Only Catch Sampling in 2018}{5}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Future Monitoring and Research Requirements}{6}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Acknowledgments}{6}{section.5}%
-\contentsline {section}{\numberline {6}Tables}{7}{section.6}%
-\contentsline {section}{\numberline {7}Figures}{10}{section.7}%
+\contentsline {section}{\numberline {6}Figures}{7}{section.6}%
+\contentsline {section}{\numberline {7}Tables}{10}{section.7}%
 \contentsline {section}{APPENDICES}{13}{section*.12}%
 \contentsline {section}{\numberline {A}IMAGES OF THE SIX CRANIAL DIMENSION MEASUREMENTS.}{13}{appendix.1.A}%
 \contentsline {section}{\numberline {B}SEX DETERMINATION BY OPERCULUM MARKING}{14}{appendix.1.B}%

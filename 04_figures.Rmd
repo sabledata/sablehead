@@ -15,7 +15,8 @@
     #pointdata    <-  read.csv(paste(path,'figure1.csv',sep=''),header=T)  # read from csv
     
     #K.Holt: changed point data to use here function when reading
-    pointdata    <-read.csv(here("standalone", "figure1.csv"))
+    #pointdata    <-read.csv(here("standalone", "figure1.csv"))
+    pointdata    <-  read.csv(paste(path,'figure1.csv',sep=''),header=T)  # read from csv
     
     lon          <-   data.frame(pointdata$SLAT)
     lat          <-   data.frame(pointdata$SLON)
@@ -43,9 +44,10 @@
                                   aes(x = long, y = lat, group = group), 
                                       fill="gray40",  
                                       size = .2) +
-                     geom_polygon(data = seam_can, aes(x = long, y =  lat, group = group), color = "lightgray", alpha = 0, linetype = 1)  +
-                     geom_point(data =   points_df,   aes(pointdata.SLON, pointdata.SLAT,  
-                                                          fill=factor(pointdata.TRIP_ID),  size=0.7) , 
+                     geom_polygon(data = seam_can, aes(x = long, y =  lat, group = group), 
+                                  color = "lightgray", alpha = 0, linetype = 1)  +
+                     geom_point(data =   points_df, aes(pointdata.SLON, pointdata.SLAT,  
+                                                    fill=factor(pointdata.TRIP_ID),  size=0.7) , 
                                                           colour="lightgray", shape=21, size=5) + 
                      geom_text(aes(x =  -130.000, y = 46.7093, label = "Cobb"),
                                     alpha = 1,
@@ -83,7 +85,8 @@
                      width  = unit(5.95,"cm"),
                      text_cex = 1.0)   +
                      coord_sf(crs = 4326)  +
-                     scale_fill_discrete(name = "Research Trip", labels = c("WCVI", "WCHG","Seamount Pilot"))
+                     scale_fill_discrete(name = "Research Trip", 
+                                         labels = c("WCVI", "WCHG","Seamount Pilot"))
 
     while (!is.null(dev.list()))  dev.off()
     img <-   paste('C:/github/sablehead/figures/Figure1.png',sep="")   # -- retrieve png 
@@ -97,7 +100,8 @@
      
      cranial.f                     <-  hdUj[hdUj$SPECIMEN_SEX_DESC=="FEMALE",]  # Upper jaw  length data
      cranial.f$n                   <-  length(cranial.f$HeadBarcode)                   # number of specimens 
-     cranial.fit.outliers.f        <-  lm(Fork_Length ~ Upper_jaw_length, data=cranial.f)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliers.f        <-  lm(Fork_Length ~ Upper_jaw_length, data=cranial.f)  # linear regression model         
+     #plot(hd.fit.outliers, which = 1, pch=21) 
      cranial.fit.outliersummary.f  <-  summary(cranial.fit.outliers.f)                 # summary
 
      cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
@@ -105,7 +109,8 @@
 
      cranial.m                     <-  hdUj[hdUj$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
      cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
-     cranial.fit.outliers.m        <-  lm(Fork_Length ~ Upper_jaw_length, data=cranial.m)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliers.m        <-  lm(Fork_Length ~ Upper_jaw_length, data=cranial.m)  # linear regression model 
+     #plot(hd.fit.outliers, which = 1, pch=21) 
      cranial.fit.outliersummary.m  <-  summary(cranial.fit.outliers.m)                 # summary
 
      cranial.m$predicted           <-  predict(cranial.fit.outliers.m)   # save the predicted values
@@ -116,7 +121,8 @@
 
      cranial.f                     <-  hdEd[hdEd$SPECIMEN_SEX_DESC=="FEMALE",]  # Eye Diameter length data
      cranial.f$n                   <-  length(cranial.f$HeadBarcode)                   # number of specimens 
-     cranial.fit.outliers.f        <-  lm(Fork_Length ~ Eye_Diameter, data=cranial.f)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliers.f        <-  lm(Fork_Length ~ Eye_Diameter, data=cranial.f)  # linear regression model 
+     #plot(hd.fit.outliers, which = 1, pch=21) 
      cranial.fit.outliersummary.f  <-  summary(cranial.fit.outliers.f)                 # summary
 
      cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
@@ -124,7 +130,8 @@
 
      cranial.m                     <-  hdEd[hdEd$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
      cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
-     cranial.fit.outliers.m        <-  lm(Fork_Length ~ Eye_Diameter, data=cranial.m)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliers.m        <-  lm(Fork_Length ~ Eye_Diameter, data=cranial.m)  # linear regression model 
+     #plot(hd.fit.outliers, which = 1, pch=21) 
      cranial.fit.outliersummary.m  <-  summary(cranial.fit.outliers.m)                 # summary
 
      cranial.m$predicted           <-  predict(cranial.fit.outliers.m)   # save the predicted values
@@ -135,7 +142,8 @@
 
      cranial.f                     <-  hdId[hdId$SPECIMEN_SEX_DESC=="FEMALE",]  # InterOrbital distance data
      cranial.f$n                   <-  length(cranial.f$HeadBarcode)                   # number of specimens 
-     cranial.fit.outliers.f        <-  lm(Fork_Length ~ InterOrbital_Distance, data=cranial.f)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliers.f        <-  lm(Fork_Length ~ InterOrbital_Distance, data=cranial.f)  # linear regression model 
+     #plot(hd.fit.outliers, which = 1, pch=21) 
      cranial.fit.outliersummary.f  <-  summary(cranial.fit.outliers.f)                 # summary
 
      cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
@@ -143,7 +151,8 @@
 
      cranial.m                     <-  hdId[hdId$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
      cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
-     cranial.fit.outliers.m        <-  lm(Fork_Length ~ InterOrbital_Distance, data=cranial.m)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliers.m        <-  lm(Fork_Length ~ InterOrbital_Distance, data=cranial.m)  # linear regression model 
+     #plot(hd.fit.outliers, which = 1, pch=21) 
      cranial.fit.outliersummary.m  <-  summary(cranial.fit.outliers.m)                 # summary
 
      cranial.m$predicted           <-  predict(cranial.fit.outliers.m)   # save the predicted values
@@ -154,7 +163,8 @@
 
      cranial.f                     <-  hdSl[hdSl$SPECIMEN_SEX_DESC=="FEMALE",]         # Snout length data
      cranial.f$n                   <-  length(cranial.f$HeadBarcode)                   # number of specimens 
-     cranial.fit.outliers.f        <-  lm(Fork_Length ~ Snout_length, data=cranial.f)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliers.f        <-  lm(Fork_Length ~ Snout_length, data=cranial.f)  # linear regression model 
+     #plot(hd.fit.outliers, which = 1, pch=21) 
      cranial.fit.outliersummary.f  <-  summary(cranial.fit.outliers.f)                 # summary
 
      cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
@@ -162,7 +172,8 @@
 
      cranial.m                     <-  hdSl[hdSl$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
      cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
-     cranial.fit.outliers.m        <-  lm(Fork_Length ~ Snout_length, data=cranial.m)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
+     cranial.fit.outliers.m        <-  lm(Fork_Length ~ Snout_length, data=cranial.m)  # linear regression model 
+     #plot(hd.fit.outliers, which = 1, pch=21) 
      cranial.fit.outliersummary.m  <-  summary(cranial.fit.outliers.m)                 # summary
 
      cranial.m$predicted           <-  predict(cranial.fit.outliers.m)   # save the predicted values
@@ -215,7 +226,8 @@
 
 ```{r figure2, fig.cap='(ref:figure2)', results='asis', out.width = "470px", fig.align='left'}
    
-     png("C:/github/sablehead/figures/Figure2.png", units="px", width=2300, height=2700, res=500) # write png to file
+     png("C:/github/sablehead/figures/Figure2.png", units="px", 
+         width=2300, height=2700, res=500) # write png to file
 
      library(viridis)
      

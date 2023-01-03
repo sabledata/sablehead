@@ -1,8 +1,7 @@
 # Tables
 
-(ref:Table1Caption) List of head dimensions for upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum distance (L~PP~) and post orbital head length (L~PO~) measurement descriptions and specification of caliper jaw placement.  Many follow the morphological measurements described in [@Shaw1997].  The matching images are found in Appendix A.
-\ \
-\ \ 
+(ref:Table1Caption) List of head dimensions for upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum distance (L~PP~) and post orbital head length (L~PO~) measurement descriptions and specification of caliper jaw placement.  Many dimensions follow the morphological measurements described in [@Shaw1997].  The matching images for each dimension are found in Appendix A.
+
 
 ```{r table1, echo=FALSE}
      options(knitr.kable.NA = '')
@@ -47,12 +46,11 @@
                        row_spec(4,  hline_after = T) %>%  
                        row_spec(5,  hline_after = T) 
 ```
-\ \
-\ \
+\clearpage
 
-(ref:Table2Caption) Summary of Sablefish biological data collected during the 2016 experimental study. Tally of fork lengths (L~FL~), round weights (RW), upper jaw lengths (L~UJ~),  eye diameters (L~ED~), interorbital distances (L~ID~), snout lengths (L~SL~), post orbital to preoperculum distances (L~PP~), post orbital head lengths (L~PO~), females (F), males (M), sagittal otoliths and operculum clips (DNA) listed by survey.
-\ \
-\ \
+
+(ref:Table2Caption) Summary of Sablefish biological data collected during the 2016 experimental study by survey source. Tally of fork lengths (L~FL~), round weights (RW), upper jaw lengths (L~UJ~),  eye diameters (L~ED~), interorbital distances (L~ID~), snout lengths (L~SL~), post orbital to preoperculum distances (L~PP~), post orbital head lengths (L~PO~), females (F), males (M), sagittal otoliths and operculum clips (DNA) listed by survey.
+
 
 ```{r table2, results="asis",echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -78,7 +76,8 @@
                     "  group by CASE WHEN TRIP_ID = 0 THEN 'Salmon' WHEN trip_id = 80378  ",
                     "  THEN '2016 WCHG' ELSE '2016 WCVI ' END", sep="")
    # samplecnt <-    GetSQLData(sample,"Sablefish")  # -- counts of biological samples
-   # write.table(samplecnt , file = paste(path,"Table2.csv", sep=''), row.names=FALSE, na="", col.names=TRUE, sep=",")
+   # write.table(samplecnt , file = paste(path,"Table2.csv", sep=''), 
+   # row.names=FALSE, na="", col.names=TRUE, sep=",")
    samplecnt <- read.csv(paste(path,'Table2.csv',sep=''),header=T)  # read from csv
    
    last.line  <-   c('Total', sum(samplecnt$FL), sum(samplecnt$RW),
@@ -108,12 +107,12 @@
                      row_spec(3, hline_after = T)
    
 ```
-\ \
-\ \
-\ \
-(ref:Table3Caption) Statistics associated with simple linear regressions using measurements (mm) of cranial lengths: upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum length (L~PP~) and post orbital head length (L~PO~) as predictors of the fork length (L~FL~) of 438 Sablefish collected from research surveys in 2016.  All models were significant at P <0.001. 
-\ \
-\ \
+\
+
+(ref:Table3Caption) Statistics associated with simple linear regressions using measurements (mm) of cranial lengths as predictors of the fork length (LFL) for 438 Sablefish collected from research surveys in 2016. Cranial lengths included: upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum length (L~PP~) and post orbital head length (L~PO~).  All models were significant at P <0.001. 
+
+a predictors of the fork length  (L~FL~) for 438 Sablefish collected from research surveys in 2016. Cranial lengths included: 
+
 
 ```{r table3, echo=FALSE}
 
@@ -219,9 +218,8 @@ eick.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="EICKELBERG",])
 
 ``` 
 
-\ \
 (ref:Table5Caption) Summary of Sablefish biological data collected from the 2017 pilot study to Cobb (n=`r cobb.count`) and Eickelberg (n=`r eick.count`) seamounts, measured by three expert technicians using a standardized protocol for the 2017 pilot study.  Index of Average Error (IAE) % values are reported for each of the cranial lengths.
-\ \
+
 
 ```{r table5, echo=FALSE}
 
