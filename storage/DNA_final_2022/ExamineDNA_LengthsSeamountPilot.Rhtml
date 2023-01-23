@@ -1,0 +1,74 @@
+<html>
+
+<head>
+<title>Title</title>
+</head>
+
+<body>
+
+<p>DNA 2022</p>
+
+<!--begin.rcode
+
+  path       <- 'C:/github/sablehead/storage/DNA_final_2022/'
+  options(scipen = 999)                         # not displayed in scientific notation
+  
+  GetSQLData <- function(strSQL,strDbName) {    # connect to SQL Server
+     library(RODBC)
+        cnn  <- odbcDriverConnect(paste("Driver={SQL Server};Server=DFBCV9TWVASP001;", 
+                                       "Database=",strDbName,";Trusted_Connection=Yes",sep=""))
+        dat  <- sqlQuery(cnn, strSQL)
+                odbcClose(cnn)
+                return(dat) 
+  }
+  
+  
+  DNA.fisher22 <- paste("select DNA_VIAL_BARCODE, Sex_as_determined_by_fisher_M_F, ",
+                      "Genetic_sex_ID, Concordance_fisher_and_genetic_sex_ID, ",
+                      "(InterOrbital_DistanceA + InterOrbital_DistanceB + ",
+                      "InterOrbital_DistanceC) / 3 AS AverageID ",
+                      "from  dbo.Head_DNA_Seamount_Pilot_Results", sep="")
+  DNA.fisher.2022  <- GetSQLData(DNA.fisher22,"Sablefish") 
+  write.table(DNA.fisher.2022, file = paste(path,"DNAfisher2022.csv",sep=''),
+             row.names=FALSE,na="",col.names=TRUE, sep=',')
+  DNA.fisher.2022  <- read.csv(paste(path,'DNAfisher2022.csv', sep=''), header=T)
+  
+  names(DNA.fisher.2022) <- c("DNAvial","fisher_sex","DNALab_sex","concordance","averageInterODistance")   
+  DNA.fisher.2022  <-  DNA.fisher.2022[DNA.fisher.2022$DNALab_sex != 'Unknown',]
+  tail(DNA.fisher.2022)
+
+end.rcode-->
+
+<p>Box plot:</p>
+
+<!--begin.rcode fig.width=7, fig.height=6
+library(ggplot2)
+library(dplyr)
+
+# Basic box plot
+
+# summary statistics 2 ways to find mean...
+# 1. 
+DNA.melt.agg <- aggregate(averageInterODistance ~ concordance , data=DNA.fisher.2022, mean)
+names(DNA.melt.agg) <- c("concordance", "AverageID")
+#2.
+summary_df <- DNA.fisher.2022 %>% group_by(concordance) %>% summarize(m=mean(averageInterODistance))
+summary_n  <- DNA.fisher.2022 %>% group_by(concordance) %>% summarize(n=length(averageInterODistance))
+summary_nMF <- DNA.fisher.2022 %>% group_by(concordance,fisher_sex) %>% summarize(n=length(averageInterODistance))
+
+p <- ggplot(DNA.fisher.2022, aes(as.factor(concordance), averageInterODistance)) +
+            geom_boxplot() + theme_classic() + 
+            stat_summary(fun.y="mean",color="purple") 
+
+p <- p + geom_text(data=summary_df,
+    aes(y=m-0.6, label=round(m,1)),
+    color='purple', position=position_dodge(0.2)   )
+
+p
+
+print(summary_nMF)
+  
+end.rcode-->
+
+</body>
+</html>

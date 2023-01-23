@@ -1,0 +1,92 @@
+<html>
+
+<head>
+<title>Title</title>
+</head>
+
+<body>
+
+<p>DNA 2022</p>
+
+<!--begin.rcode
+
+  if(!(require(RODBC))) install.packages("RODBC")       
+    library(RODBC)
+
+  path       <- 'C:/github/sablehead/storage/DNA_final_2022/'
+  options(scipen = 999)                         # not displayed in scientific notation
+  
+  GetSQLData <- function(strSQL,strDbName) {    # connect to SQL Server
+        cnn  <- odbcDriverConnect(paste("Driver={SQL Server};Server=DFBCV9TWVASP001;", 
+                                       "Database=",strDbName,";Trusted_Connection=Yes",sep=""))
+        dat  <- sqlQuery(cnn, strSQL)
+                odbcClose(cnn)
+                return(dat) 
+  }
+  
+  
+  DNA.data22 <- paste("SELECT 2022 as yr,dbo.Head_DNA_Report.DNA_VIAL_BARCODE, dbo.Head_DNA_Report.SPECIMEN_SEX_DESC, ",
+                    "dbo.Head_DNA_Report.Y_X_proportion_based_genetic_sex_ID_2022,  ",
+                    "dbo.Head_DNA_Report.Y_X_proportion_based_concordance_fisher_and_genetic_sex_ID_2022, ",
+                    "dbo.Head_Measurements_Report.Fork_Length ",
+                    "FROM  dbo.Head_DNA_Report INNER JOIN  ",
+                    "dbo.Head_Measurements_Report ON dbo.Head_DNA_Report.SPECIMEN_ID =  ",
+                    "dbo.Head_Measurements_Report.SPECIMEN_ID  ",
+                    "WHERE  (dbo.Head_DNA_Report.Y_X_proportion_based_concordance_fisher_and_genetic_sex_ID_2022  ",
+                    "IN (N'0', N'1')) ORDER BY dbo.Head_DNA_Report.DNA_VIAL_BARCODE", sep="")
+  #DNA.2022  <- GetSQLData(DNA.data22,"Sablefish") 
+  #write.table(DNA.2022, file = paste(path,"DNA2022.csv",sep=''),
+  #           row.names=FALSE,na="",col.names=TRUE, sep=',')
+  DNA.2022  <- read.csv(paste(path,'DNA2022.csv', sep=''), header=T)
+  names(DNA.2022) <- c("DNAYear","vial","sampler_sex","DNA_sex","concordance","forkLength")    
+  #tail(DNA.2022)
+  
+  
+  DNA.data18 <- paste("SELECT 2018 as yr, dbo.Head_DNA_Report.DNA_VIAL_BARCODE, ",
+                      "dbo.Head_DNA_Report.SPECIMEN_SEX_DESC,  ",
+                      "dbo.Head_DNA_Report.Genetic_Sex_New_DFO_X_Insert_and_2_second_injection_2018, ",
+                      "dbo.Head_DNA_Report.Concordance_confirmed_and_genetic_sex_ID_2018, ",
+                      "dbo.Head_Measurements_Report.Fork_Length ",
+                      "FROM  dbo.Head_DNA_Report INNER JOIN ",
+                      "dbo.Head_Measurements_Report ON dbo.Head_DNA_Report.SPECIMEN_ID = ",
+                      "dbo.Head_Measurements_Report.SPECIMEN_ID ",
+                      "WHERE (dbo.Head_DNA_Report.Concordance_confirmed_and_genetic_sex_ID_2018 ",
+                      "IN (N'0', N'1')) ORDER BY dbo.Head_DNA_Report.DNA_VIAL_BARCODE", sep="")
+  #DNA.2018  <- GetSQLData(DNA.data18,"Sablefish") 
+  #write.table(DNA.2018, file = paste(path,"DNA2018.csv",sep=''),
+  #            row.names=FALSE,na="",col.names=TRUE, sep=',')
+  DNA.2018  <- read.csv(paste(path,'DNA2018.csv', sep=''), header=T)
+  names(DNA.2018) <- c("DNAYear","vial","sampler_sex","DNA_sex","concordance","forkLength")     
+  #tail(DNA.2018)
+  
+  DNA.201822 <- rbind(DNA.2018,DNA.2022)
+  
+  library(reshape2)
+  DNA.melt  <- melt(DNA.201822[,c(-2,-3,-4)], id.vars=c("DNAYear",  "forkLength"))
+  #head(DNA.melt)
+  names(DNA.melt) <- c("DNAYear","forkLength","variable","concordance")
+  tail(DNA.melt)
+
+end.rcode-->
+
+<p>Box plot:</p>
+
+<!--begin.rcode fig.width=7, fig.height=6
+library(ggplot2)
+
+# Basic box plot
+
+p <- ggplot(DNA.melt, aes(as.factor(concordance), forkLength)) +
+            geom_boxplot(aes(fill = factor(DNAYear))) + scale_fill_brewer()
+p 
+
+# summary statistics 
+DNA.melt.agg <- aggregate(forkLength ~ concordance + DNAYear, data=DNA.melt, mean)
+names(DNA.melt.agg) <- c("concordance", "DNA_Year", "AverageForkLength")
+print(DNA.melt.agg)
+
+
+end.rcode-->
+
+</body>
+</html>
