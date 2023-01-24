@@ -30,10 +30,26 @@ Scientific sampling occurred on shore, with the first 99 heads of the pilot stud
 
 ### Data Analysis
 
+<!--
+Removed by K.Holt on Jan 24 and replaced with the below paragraph
+
 The precision of cranial measurements among readers was quantified using an Index of Average Error (IAE) [@Beamish1981]. @Beamish1981 used IAE as a metric for comparing the precision of age determinations among different readers; however, given that three highly trained technicians were used to conduct the same measurements, we do not look at differences in IAE among technicians. Instead, we compare IAE among the four cranial dimensions considered to identify which one provided the most consistent measurement among readers. In our case, IAE was defined as:
 $$
 IAE=\frac{1}{N}\sum_{j = 1}^{N}\left[\frac{1}{R}\sum_{i = 1}^{R}\frac{|X_{ij} - X_j|}{X_j}\right]
 $$
 where N is the number of Sablefish measured for each cranial measurement, R is the number of times each cranial measurement was taken by a technician, $X_{ij}$ is the average cranial length for the jth Sablefish, and $X_{ij}$ is the ith cranial measurement of the jth Sablefish.
+
+-->
+
+
+The precision of cranial measurements among readers was quantified using an Index of Average Error (IAE) [@Beamish1981]. @Beamish1981 proposed IAE as a metric that could be used to compare the precision of a repetitive series of age determinations by a single reader (i.e., within-reader precision), or to compare among different readers for a given species or method (among-reader precision). We use it to compare the precision among technicians for each of the four cranial dimensions considered (L~UJ~, L~ID~, L~SL~ and L~PP~).
+
+For each cranial dimension, IAE was calculated as:
+$$
+IAE=\frac{1}{N}\sum_{j = 1}^{N}\left[\frac{1}{R}\sum_{i = 1}^{R}\frac{|X_{ij} - X_j|}{X_j}\right]
+$$
+where $N$ is the number of fish heads measured ($N$ = 99 fish), $R$ is the number of technicians taking measurements ($R$ = 3 technicians), $X_{ij}$ is the cranial length taken by technician *i* of fish *j*, and $X_{j}$ is the average cranial length for the $j^{th}$ fish over all technicians. Using this equation, the average error for measuring the $j^{th}$ fish is represented as a fraction of the average fish length.  
+
+An IEA value was calculated for each of the four cranial dimensions considered so that options could be ranked according to precision. Dimensions with lower IEAs values were judged to be more precise (i.e., provided the most consistent measurement among technicians). 
 
 Fin clips (95 of 99) were forwarded to the molecular genetics lab for an audit of fisher sex determination. 

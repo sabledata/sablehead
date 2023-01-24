@@ -13,7 +13,7 @@
 \contentsline {section}{\numberline {3}Results}{4}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Experimental Study 2016}{4}{subsection.3.1}%
 \contentsline {subsubsection}{\numberline {3.1.1}Genetic sex-determination}{4}{subsubsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.2}Fishery Pilot Study 2017}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Fishery Pilot Study 2017}{5}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Discussion}{5}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Identification of Preferred Head Cranial Dimension}{5}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Implementation of Head-Only Catch Sampling in 2018}{5}{subsection.4.2}%
