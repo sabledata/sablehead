@@ -60,7 +60,7 @@ summary_nMF <- DNA.fisher.2022 %>% group_by(concordance,fisher_sex) %>% summariz
 
 p <- ggplot(DNA.fisher.2022, aes(as.factor(concordance), averageInterODistance)) +
             geom_boxplot() + theme_classic() + 
-            stat_summary(fun.y="mean",color="purple") 
+            stat_summary(fun="mean",color="purple") 
 
 p <- p + geom_text(data=summary_df,
     aes(y=m-0.6, label=round(m,1)),
@@ -83,7 +83,7 @@ max(DNA.fisher.2022$averageInterODistance)
   geom_dotplot(aes(fill = fisher_sex), binaxis='y', stackdir='center',
                position = position_jitter(0.02), binwidth = 0.6, 
                stackratio=0.9, dotsize=0.4) +
-  stat_summary(fun.y=mean, geom="point", shape=18, size=2, color="red", fill="red") +
+  stat_summary(fun=mean, geom="point", shape=18, size=2, color="red", fill="red") +
   scale_fill_manual(values = c("#00AFBB", "#E7B800")) + theme_bw()
   
 end.rcode-->
