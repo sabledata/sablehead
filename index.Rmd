@@ -270,7 +270,7 @@ library(rgdal)
 ```
 
 ``` {r GlobalDataTable}
-    # head measurements from research study 2016
+    # head measurements from research study 2016 from trawl surveys and one salmon survey
     details <-    paste("select * from Head_Measurements_Report", sep="")
     # hd    <-    GetSQLData(details,"Sablefish")      # head details from SQL Server
 
@@ -304,7 +304,7 @@ library(rgdal)
                     Fork_Length,Whole_Round_Weight, HeadBarcode, Post_orbital_Head_length)   
     hdPo  <- hdPo%>% mutate(measure = 'PO')   # Post orbital Head length data
     
-    # head measurements from pilot study, trip to seamount
+    # head measurements from pilot study, trip to seamount, contains Sampler A, B, C
     head99    <-  read.csv(paste(path,"head_measurements_Seamount_Pilot.csv",sep=""), header = T)
     head99$id <-  as.numeric(str_sub(head99$DNA.VIAL.BARCODE, 10, 12)) - 200   # add id column
     count99   <-  table(head99['White.bag.label'])  # count of how many came from Cobb and Eickelberg ERROR!
@@ -396,7 +396,6 @@ library(rgdal)
     
     # y = Fork_Length, response variable
     options("scipen"=100, "digits"=3)
-    
 
 
 ```

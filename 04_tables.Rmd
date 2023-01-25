@@ -122,12 +122,13 @@ a predictors of the fork length  (L~FL~) for 438 Sablefish collected from resear
                               paste("L", "\\textsubscript{SL}", sep=''), paste("L", "\\textsubscript{SL}", sep=''),
                               paste("L", "\\textsubscript{PP}", sep=''), paste("L", "\\textsubscript{PP}", sep=''),
                               paste("L", "\\textsubscript{PO}", sep=''), paste("L", "\\textsubscript{PO}", sep=''))
-     head.stats$name  <- NULL
+     head.stats$name    <- NULL
      head.stats$measurement <- NULL
      head.stats  <- head.stats[,c(11,1,2,3,4,5,6,7,8,9,10)]
      head.stats$symbol <- cleanf(head.stats$symbol)  # remove duplicate names
 
-     kableExtra::kable(head.stats, col.names = c("Cranial Measurement","Sex","N","Slope","SE","R\\textsuperscript{2}","r","Mean","SD","Mean","SD"),
+     kableExtra::kable(head.stats, col.names = c("Cranial Measurement","Sex","N",
+                                                 "Slope","SE","R\\textsuperscript{2}","r","Mean","SD","Mean","SD"),
                       booktabs = TRUE, 
                       linesep = "", row.names=FALSE, escape = F, # need escape to show superscript
                       align = c("l","l","c","c","c","c","c","c","c","c"),
@@ -224,8 +225,8 @@ eick.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="EICKELBERG",])
 ```{r table5, echo=FALSE}
 
    # FOS trip id 338773 Pacific Viking
-   samples.data <- read.csv(paste(path,'export.samples.csv',sep=''),header=T) # read csv created in index.rmd
-   IAE.value        <- c(IAE.UJ,IAE.ID,IAE.SL,IAE.PP)
+   samples.data <- read.csv(paste(path,'export.samples.csv',sep=''),header=T) # Read csv created in index.rmd
+   IAE.value        <- c(IAE.UJ,IAE.ID,IAE.SL,IAE.PP)  # IAE calculated in GlobalDataTable in the Index.rmd
    
 #  separate out by sampler
 
@@ -233,7 +234,7 @@ eick.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="EICKELBERG",])
                                 c( paste("L", "\\textsubscript{UJ}", sep=''),paste("L", "\\textsubscript{ID}", sep=''),
                                    paste("L", "\\textsubscript{SL}", sep=''),paste("L", "\\textsubscript{PP}", sep='')) ,                          
             samplerA = c( paste(min(sample99cnt$Upper.jaw.lengthA)," - ", max(sample99cnt$Upper.jaw.lengthA), sep=''),  
-                          paste(min(sample99cnt$InterOrbital.DistanceA)," - ", max(sample99cnt$InterOrbital.DistanceA), sep=''),                                                       
+                          paste(min(sample99cnt$InterOrbital.DistanceA)," - ", max(sample99cnt$InterOrbital.DistanceA), sep=''),                                                      
                           paste(min(sample99cnt$Snout.lengthA)," - ", max(sample99cnt$Snout.lengthA), sep=''),
                           paste(min(sample99cnt$Post.orbital.to.PreoperculumA)," - ", 
                                 max(sample99cnt$Post.orbital.to.PreoperculumA), sep='')) ,

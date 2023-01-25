@@ -10,6 +10,9 @@
 
 <!--begin.rcode
 
+  library(ggplot2)
+  library(dplyr)
+
   path       <- 'C:/github/sablehead/storage/DNA_final_2022/'
   options(scipen = 999)                         # not displayed in scientific notation
   
@@ -28,9 +31,9 @@
                       "(InterOrbital_DistanceA + InterOrbital_DistanceB + ",
                       "InterOrbital_DistanceC) / 3 AS AverageID ",
                       "from  dbo.Head_DNA_Seamount_Pilot_Results", sep="")
-  DNA.fisher.2022  <- GetSQLData(DNA.fisher22,"Sablefish") 
-  write.table(DNA.fisher.2022, file = paste(path,"DNAfisher2022.csv",sep=''),
-             row.names=FALSE,na="",col.names=TRUE, sep=',')
+  #DNA.fisher.2022  <- GetSQLData(DNA.fisher22,"Sablefish") 
+  #write.table(DNA.fisher.2022, file = paste(path,"DNAfisher2022.csv",sep=''),
+  #           row.names=FALSE,na="",col.names=TRUE, sep=',')
   DNA.fisher.2022  <- read.csv(paste(path,'DNAfisher2022.csv', sep=''), header=T)
   
   names(DNA.fisher.2022) <- c("DNAvial","fisher_sex","DNALab_sex","concordance","averageInterODistance")   
@@ -42,8 +45,7 @@ end.rcode-->
 <p>Box plot:</p>
 
 <!--begin.rcode fig.width=7, fig.height=6
-library(ggplot2)
-library(dplyr)
+
 
 # Basic box plot
 
@@ -67,6 +69,22 @@ p <- p + geom_text(data=summary_df,
 p
 
 print(summary_nMF)
+  
+end.rcode-->
+
+<!--begin.rcode fig.width=7, fig.height=6
+
+min(DNA.fisher.2022$averageInterODistance)
+max(DNA.fisher.2022$averageInterODistance)
+
+  
+  e <- ggplot(DNA.fisher.2022, aes(x = concordance, y = averageInterODistance))
+  e + geom_boxplot(width = 0.5) +
+  geom_dotplot(aes(fill = fisher_sex), binaxis='y', stackdir='center',
+               position = position_jitter(0.02), binwidth = 0.6, 
+               stackratio=0.9, dotsize=0.4) +
+  stat_summary(fun.y=mean, geom="point", shape=18, size=2, color="red", fill="red") +
+  scale_fill_manual(values = c("#00AFBB", "#E7B800")) + theme_bw()
   
 end.rcode-->
 
