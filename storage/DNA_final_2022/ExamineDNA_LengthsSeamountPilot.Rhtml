@@ -12,6 +12,7 @@
 
   library(ggplot2)
   library(dplyr)
+  library(kableExtra)
 
   path       <- 'C:/github/sablehead/storage/DNA_final_2022/'
   options(scipen = 999)                         # not displayed in scientific notation
@@ -38,7 +39,7 @@
   
   names(DNA.fisher.2022) <- c("DNAvial","fisher_sex","DNALab_sex","concordance","averageInterODistance")   
   DNA.fisher.2022  <-  DNA.fisher.2022[DNA.fisher.2022$DNALab_sex != 'Unknown',]
-  tail(DNA.fisher.2022)
+  #tail(DNA.fisher.2022)
 
 end.rcode-->
 
@@ -77,14 +78,91 @@ end.rcode-->
 min(DNA.fisher.2022$averageInterODistance)
 max(DNA.fisher.2022$averageInterODistance)
 
-  
-  e <- ggplot(DNA.fisher.2022, aes(x = concordance, y = averageInterODistance))
-  e + geom_boxplot(width = 0.5) +
-  geom_dotplot(aes(fill = fisher_sex), binaxis='y', stackdir='center',
-               position = position_jitter(0.02), binwidth = 0.6, 
-               stackratio=0.9, dotsize=0.4) +
-  stat_summary(fun=mean, geom="point", shape=18, size=2, color="red", fill="red") +
-  scale_fill_manual(values = c("#00AFBB", "#E7B800")) + theme_bw()
+  DNA.fisher.table <- DNA.fisher.2022 %>%
+       mutate(Len.Group = case_when(averageInterODistance >= 35 & averageInterODistance < 37 ~"35-36",
+       averageInterODistance >= 37 & averageInterODistance < 39~ "37-38",
+       averageInterODistance >= 39 & averageInterODistance < 41~ "39-40",       
+       averageInterODistance >= 41 & averageInterODistance < 43~ "41-42",
+       averageInterODistance >= 43 & averageInterODistance < 45~ "43-44",       
+       averageInterODistance >= 45 & averageInterODistance < 47~ "45-46",
+       averageInterODistance >= 47 & averageInterODistance < 49~ "47-48",
+       averageInterODistance >= 49 & averageInterODistance < 51~ "49-50",
+       averageInterODistance >= 51 & averageInterODistance < 53~ "51-52", 
+       averageInterODistance >= 53 & averageInterODistance < 55~ "53-54",
+       averageInterODistance >= 55 & averageInterODistance < 57~ "55-56",
+       averageInterODistance >= 57 & averageInterODistance < 59~ "57-58", 
+       averageInterODistance >= 59 & averageInterODistance < 61~ "59-60",        
+       averageInterODistance >= 61 & averageInterODistance < 63~ "61-62"))
+
+   agg.dna <- DNA.fisher.table %>% group_by(concordance, Len.Group) %>% 
+               summarise( cnt = length(averageInterODistance))
+   
+   agg.dna$top <- "NA"
+   a<-agg.dna[agg.dna$concordance==0,]
+   b<-agg.dna[agg.dna$concordance==1,]
+   
+   a$top[c(which.max(a$cnt))]  <-  "X" 
+   b$top[c(which.max(b$cnt))]  <-  "X" 
+   names(a) <- c("concordance","x","y","top")
+   names(b) <- c("concordance","x","y","top")
+   
+
+   
+   library(ggplot2)
+   library(dplyr)
+   path            <-  "c:/github/sablehead/storage/DNA_final_2022/"
+   for (i in 1: length(a$x)) {# create sparkline graphs
+        h<- a$x[i]
+        p<-ggplot(a, aes(x=x, y=y)) +
+         geom_segment( aes(x=x, xend=x, y=0, yend=y)) +
+         geom_point( size=5, color=ifelse(a$x %in% c(h,a$x[i]), "red", "yellow" ), 
+                     fill=alpha("orange", 0.3), 
+                     alpha=0.7, shape=21, stroke=2) + theme_bw()
+        #p
+        
+         #ggsave(p, filename = paste0(path,"xfig", i ,".png"), 
+        #          width = 7, height = 1.9)  # mini graphs
+        
+   }
+   
+    for (i in 1: length(b$x)) {# create sparkline graphs
+        h<- b$x[i]
+        p<-ggplot(b, aes(x=x, y=y)) +
+         geom_segment( aes(x=x, xend=x, y=0, yend=y)) +
+         geom_point( size=5, color=ifelse(b$x %in% c(h,b$x[i]), "red", "blue" ), 
+                     fill=alpha("light blue", 0.3), 
+                     alpha=0.7, shape=21, stroke=2) + theme_bw()
+        #p
+        
+         #ggsave(p, filename = paste0(path,"x2fig", i ,".png"), 
+         #           width = 7, height = 1.9)  # mini graphs
+        
+        }
+   
+    a  <- a %>%
+          mutate(Sparkline = 
+                paste0("\\raisebox{.12\\height} {\\includegraphics[width=2cm]{",path,"xfig",i,".png}}"  ) ) 
+    
+    b  <- b%>%
+          mutate(Sparkline = 
+                paste0("\\raisebox{.12\\height} {\\includegraphics[width=2cm]{",path,"x2fig",i,".png}}"    ) ) 
+    
+    a1 <-  a[, c(2, 1, 3, 5)]
+    b1 <-  b[, c(2, 1, 3, 5)] 
+    agg.new <- rbind(a1,b1)
+    names(agg.new) <-  c("Head Length group", "Concordane", "Count", "Graph")
+    
+    kableExtra::kable(agg.new,
+                     booktabs = TRUE,     
+                     escape = F,        # lets the image show up 
+                     linesep   = "",
+                     align=rep('r', 18),
+                     row.names = FALSE,   # in order to get rid of matrix counter
+                     format = "html") 
+      
+   
+
+ 
   
 end.rcode-->
 

@@ -2,7 +2,7 @@
 title: |
   "Development of methods in support of a head-only sampling program for Sablefish (*Anoplopoma fimbria*) in British Columbia"
 french_title: Titre ici (*Nom latin de l'espèce*)
-year: 2022
+year: 2023
 report_number: nnn
 author: |
   First. M. Last^1^ and
@@ -120,10 +120,10 @@ library(tibble)
 library(rosettafish)
 library(csasdown)
 
-yr              <-  2021
-path            <-  "c:/github/sablehead/standalone/"
-graph_directory <-  "c:/github/sablehead/figures/"
-
+yr              <-  2023
+path            <-  "C:/github/sablehead/standalone/"
+graph_directory <-  "C:/github/sablehead/figures/"
+ 
 library(RODBC)
 library(knitr)
 library(magick)
@@ -147,7 +147,7 @@ library(gridExtra)
 library(stringr)
 library(ggpubr)
 library(here)
-library(ggfortify)
+library(ggfortify)  # for maturity plots
 library(rgdal)
 
 #  ----   G L O B A L --- F U N C T I O N S ---------------------------------
@@ -274,10 +274,10 @@ library(rgdal)
     details <-    paste("select * from Head_Measurements_Report", sep="")
     # hd    <-    GetSQLData(details,"Sablefish")      # head details from SQL Server
 
-    # write.table(hd , file = paste(path,"head_measurements.csv",sep=''),
+    # write.table(hd , file = paste(path,"index_head_measurements.csv",sep=''),
     # row.names=FALSE, na="",col.names=TRUE,  sep=",")
 
-    hd      <-    read.csv(paste(path,"head_measurements.csv",sep=''), header = T)  # master data
+    hd      <-    read.csv(paste(path,"index_head_measurements.csv",sep=''), header = T)  # master data
     
     # separate out the 2016 research data for scatterplots
     hdUj  <- select(filter(hd, Upper_jaw_length > 0), SPECIMEN_ID,SPECIMEN_SEX_DESC,
@@ -305,9 +305,9 @@ library(rgdal)
     hdPo  <- hdPo%>% mutate(measure = 'PO')   # Post orbital Head length data
     
     # head measurements from pilot study, trip to seamount, contains Sampler A, B, C
-    head99    <-  read.csv(paste(path,"head_measurements_Seamount_Pilot.csv",sep=""), header = T)
-    head99$id <-  as.numeric(str_sub(head99$DNA.VIAL.BARCODE, 10, 12)) - 200   # add id column
-    count99   <-  table(head99['White.bag.label'])  # count of how many came from Cobb and Eickelberg ERROR!
+    head99    <-  read.csv(paste(path,"index_head_measurements_Seamount_Pilot.csv",sep=""), header = T)
+    head99$id <-  as.numeric(str_sub(head99$DNA.VIAL.BARCODE, 10, 12)) - 200   # add id column 1 to 99
+    count99   <-  table(head99['White.bag.label'])  # count of how many came from Cobb and Eickelberg 
 
     library(dplyr)
     library(matrixStats)
@@ -316,7 +316,8 @@ library(rgdal)
     mhd.ID  <- c('InterOrbital.DistanceA','InterOrbital.DistanceB','InterOrbital.DistanceC')
     mhd.SL  <- c('Snout.lengthA','Snout.lengthB','Snout.lengthC')  
     mhd.UJ  <- c('Upper.jaw.lengthA','Upper.jaw.lengthB','Upper.jaw.lengthC')  
-    mhd.PP  <- c('Post.orbital.to.PreoperculumA','Post.orbital.to.PreoperculumB','Post.orbital.to.PreoperculumC')     
+    mhd.PP  <- c('Post.orbital.to.PreoperculumA','Post.orbital.to.PreoperculumB',
+                 'Post.orbital.to.PreoperculumC')     
 
     # mean and sdev added
     head99.data <- head99 %>% 
@@ -343,7 +344,8 @@ library(rgdal)
     names(samples)  <-  c("type","obs","id","SMean","Sstdev","A","B","C")
     #print(tail(samples,44))
 
-    write.table(samples, file = paste(path,"export.samples.csv", sep=''), row.names=FALSE, na="", col.names=TRUE, sep=",")
+    write.table(samples, file = paste(path,"index_export_Seamount_Pilot.csv", sep=''), 
+                row.names=FALSE, na="", col.names=TRUE, sep=",")
     
     # now add columns for IAE:  Index of Average Error
     head99.dat  <- head99.dat %>%   #IAE = 1/N Σ (1/RΣ (|Xij - Xj|/ Xj))
@@ -392,7 +394,6 @@ library(rgdal)
                  r2 =  format(summary(modelobject)$r.squared,  digits = 3)
                  return(r2)
     }
-    
     
     # y = Fork_Length, response variable
     options("scipen"=100, "digits"=3)

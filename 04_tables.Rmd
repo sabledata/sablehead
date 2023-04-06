@@ -48,7 +48,6 @@
 ```
 \clearpage
 
-
 (ref:Table2Caption) Summary of Sablefish biological data collected during the 2016 experimental study by survey source. Tally of fork lengths (L~FL~), round weights (RW), upper jaw lengths (L~UJ~),  eye diameters (L~ED~), interorbital distances (L~ID~), snout lengths (L~SL~), post orbital to preoperculum distances (L~PP~), post orbital head lengths (L~PO~), females (F), males (M), sagittal otoliths and operculum clips (DNA) listed by survey.
 
 
@@ -107,11 +106,8 @@
                      row_spec(3, hline_after = T)
    
 ```
-\
 
 (ref:Table3Caption) Statistics associated with simple linear regressions using measurements (mm) of cranial lengths as predictors of the fork length (LFL) for 438 Sablefish collected from research surveys in 2016. Cranial lengths included: upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum length (L~PP~) and post orbital head length (L~PO~).  All models were significant at P <0.001. 
-
-a predictors of the fork length  (L~FL~) for 438 Sablefish collected from research surveys in 2016. Cranial lengths included: 
 
 
 ```{r table3, echo=FALSE}
@@ -212,7 +208,7 @@ a predictors of the fork length  (L~FL~) for 438 Sablefish collected from resear
 
 ```{r table5words, echo=FALSE}
 
-sample99cnt <- read.csv(paste(path,'head_measurements_Seamount_Pilot.csv',sep=''),header=T)  # read from csv
+sample99cnt <- read.csv(paste(path,'index_head_measurements_Seamount_Pilot.csv',sep=''),header=T)  # read from csv
 
 cobb.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="COBB",])
 eick.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="EICKELBERG",])
@@ -225,36 +221,43 @@ eick.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="EICKELBERG",])
 ```{r table5, echo=FALSE}
 
    # FOS trip id 338773 Pacific Viking
-   samples.data <- read.csv(paste(path,'export.samples.csv',sep=''),header=T) # Read csv created in index.rmd
+   samples.data <- read.csv(paste(path,'index_export_Seamount_Pilot.csv',sep=''),header=T) # Read csv created in index.rmd
    IAE.value        <- c(IAE.UJ,IAE.ID,IAE.SL,IAE.PP)  # IAE calculated in GlobalDataTable in the Index.rmd
    
 #  separate out by sampler
 
    pilot.table <- as.data.frame(cbind(meas.name = 
-                                c( paste("L", "\\textsubscript{UJ}", sep=''),paste("L", "\\textsubscript{ID}", sep=''),
-                                   paste("L", "\\textsubscript{SL}", sep=''),paste("L", "\\textsubscript{PP}", sep='')) ,                          
-            samplerA = c( paste(min(sample99cnt$Upper.jaw.lengthA)," - ", max(sample99cnt$Upper.jaw.lengthA), sep=''),  
-                          paste(min(sample99cnt$InterOrbital.DistanceA)," - ", max(sample99cnt$InterOrbital.DistanceA), sep=''),                                                      
-                          paste(min(sample99cnt$Snout.lengthA)," - ", max(sample99cnt$Snout.lengthA), sep=''),
-                          paste(min(sample99cnt$Post.orbital.to.PreoperculumA)," - ", 
-                                max(sample99cnt$Post.orbital.to.PreoperculumA), sep='')) ,
-            samplerB = c( paste(min(sample99cnt$Upper.jaw.lengthB)," - ", max(sample99cnt$Upper.jaw.lengthB), sep=''),
+                  c( paste("L", "\\textsubscript{UJ}", sep=''),paste("L", "\\textsubscript{ID}", sep='') ,
+                     paste("L", "\\textsubscript{SL}", sep=''),paste("L", "\\textsubscript{PP}", sep='')) ,                     
+            samplerA = c( paste(min(sample99cnt$Upper.jaw.lengthA)," - ",  
+                                max(sample99cnt$Upper.jaw.lengthA), sep=''),                                                                                                    paste(min(sample99cnt$InterOrbital.DistanceA)," - ", 
+                                      max(sample99cnt$InterOrbital.DistanceA), sep=''),                                                      
+                                paste(min(sample99cnt$Snout.lengthA)," - ", 
+                                      max(sample99cnt$Snout.lengthA), sep=''),
+                                paste(min(sample99cnt$Post.orbital.to.PreoperculumA)," - ", 
+                                      max(sample99cnt$Post.orbital.to.PreoperculumA), sep='')) ,
+            samplerB = c( paste(min(sample99cnt$Upper.jaw.lengthB)," - ", 
+                                max(sample99cnt$Upper.jaw.lengthB), sep=''),
                                 paste(min(sample99cnt$InterOrbital.DistanceB)," - ", 
                                       max(sample99cnt$InterOrbital.DistanceB), sep=''),
-                                paste(min(sample99cnt$Snout.lengthB)," - ", max(sample99cnt$Snout.lengthB), sep=''),
+                                paste(min(sample99cnt$Snout.lengthB)," - ", 
+                                      max(sample99cnt$Snout.lengthB), sep=''),
                                 paste(min(sample99cnt$Post.orbital.to.PreoperculumB)," - ", 
                                       max(sample99cnt$Post.orbital.to.PreoperculumB), sep='')) ,
-            samplerC = c( paste(min(sample99cnt$Upper.jaw.lengthC)," - ", max(sample99cnt$Upper.jaw.lengthC), sep=''),
+            samplerC = c( paste(min(sample99cnt$Upper.jaw.lengthC)," - ", 
+                                max(sample99cnt$Upper.jaw.lengthC), sep=''),
                                 paste(min(sample99cnt$InterOrbital.DistanceC)," - ", 
                                       max(sample99cnt$InterOrbital.DistanceC), sep=''),
-                                paste(min(sample99cnt$Snout.lengthC)," - ", max(sample99cnt$Snout.lengthC), sep=''),
+                                paste(min(sample99cnt$Snout.lengthC)," - ", 
+                                      max(sample99cnt$Snout.lengthC), sep=''),
                                 paste(min(sample99cnt$Post.orbital.to.PreoperculumC)," - ",
                                       max(sample99cnt$Post.orbital.to.PreoperculumC), sep='')) ,
             IAE.value <- c(IAE.UJ,IAE.ID,IAE.SL,IAE.PP)
                                    ))
 
    kableExtra::kable(pilot.table, 
-                     booktabs = TRUE, col.names = c("Head Dimension", "Min - Max (mm)", "Min - Max (mm)","Min - Max (mm)", "IAE"), 
+                     booktabs = TRUE, col.names = c("Head Dimension", "Min - Max (mm)", 
+                                                    "Min - Max (mm)","Min - Max (mm)", "IAE"), 
                      linesep = "",
                      escape = F, 
                      align = c("l","c","c","c","l"),
@@ -272,5 +275,5 @@ eick.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="EICKELBERG",])
 
 
 ```
-\clearpage
 
+ 

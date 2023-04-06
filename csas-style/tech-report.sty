@@ -11,7 +11,7 @@
 \RequirePackage{booktabs}  % Nicer table formatting
 \RequirePackage{textcomp}  % Prevents two warnings in gensymb
 \RequirePackage{gensymb}  % Symbols for math and text
-\RequirePackage[running]{lineno}  % Number lines (editing)
+% \RequirePackage[running]{lineno}  % Number lines (editing)
 \RequirePackage{longtable}  % Long tables (multi-page)
 \RequirePackage{amsmath}  % Math facilities
 \RequirePackage{microtype}  % Better type handling
@@ -81,21 +81,17 @@
 %% Creates a header and footer on the long page sides on landscape pages
 \AddEverypageHook{\ifdim\textwidth=\textheight
   \fancyhf{}\fancyfoot{}
-\begin{textblock}{0.05}(0.925,0.5)
-{\rotatebox{90}{\sffamily\selectfont\small\thepage}}\end{textblock}
- \begin{textblock}{1}(0.1,0.0909)
-{\rotatebox{90}{\rule{9in}{0.25pt}}}\end{textblock}
-  \begin{textblock}{1}(0.9,0.0909)
-  {\rotatebox{90}{\rule{9in}{0.25pt}}}\end{textblock}
+\begin{textblock}{0.05}(0.9,0.5)
+{\rotatebox{90}{\sffamily\selectfont\normalsize\thepage}}\end{textblock}
 \fi}
 
 %% For landscape pages in CSAS documents
 \usepackage{pdflscape} % rotates landscape pages
 \usepackage[absolute]{textpos}
 \setlength{\TPHorizModule}
-  {-1in}
+  {8.5in}
 \setlength{\TPVertModule}
-  {-1in}
+  {11in}
 %% ------------------------------------------------------------------------------
 
 % Hyper links
@@ -122,24 +118,24 @@
 \renewcommand{\floatpagefraction}{0.85}  % Require fuller float pages
 \renewcommand{\dblfloatpagefraction}{0.7}  % Require fuller float pages
 
-% Line numbers (e.g., for drafts) don't like equations: this is a fix
-\newcommand*\patchAmsMathEnvironmentForLineno[1]{%
-  \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
-  \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
-  \renewenvironment{#1}%
-     {\linenomath\csname old#1\endcsname}%
-     {\csname oldend#1\endcsname\endlinenomath}}%
-\newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
-  \patchAmsMathEnvironmentForLineno{#1}%
-  \patchAmsMathEnvironmentForLineno{#1*}}%
-\AtBeginDocument{%
-\patchBothAmsMathEnvironmentsForLineno{equation}%
-\patchBothAmsMathEnvironmentsForLineno{align}%
-\patchBothAmsMathEnvironmentsForLineno{flalign}%
-\patchBothAmsMathEnvironmentsForLineno{alignat}%
-\patchBothAmsMathEnvironmentsForLineno{gather}%
-\patchBothAmsMathEnvironmentsForLineno{multline}%
-}
+% % Line numbers (e.g., for drafts) don't like equations: this is a fix
+% \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
+%   \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+%   \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+%   \renewenvironment{#1}%
+%      {\linenomath\csname old#1\endcsname}%
+%      {\csname oldend#1\endcsname\endlinenomath}}%
+% \newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
+%   \patchAmsMathEnvironmentForLineno{#1}%
+%   \patchAmsMathEnvironmentForLineno{#1*}}%
+% \AtBeginDocument{%
+% \patchBothAmsMathEnvironmentsForLineno{equation}%
+% \patchBothAmsMathEnvironmentsForLineno{align}%
+% \patchBothAmsMathEnvironmentsForLineno{flalign}%
+% \patchBothAmsMathEnvironmentsForLineno{alignat}%
+% \patchBothAmsMathEnvironmentsForLineno{gather}%
+% \patchBothAmsMathEnvironmentsForLineno{multline}%
+% }
 
 % Section formatting (in titles only, not x-refs or toc)
 %\makeatletter
@@ -432,5 +428,3 @@ Correct citation for this publication:
   \fi
  }%
  {}
-\linenumbers
-\modulolinenumbers[1]

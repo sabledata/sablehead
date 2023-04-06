@@ -93,6 +93,7 @@
             knitr::include_graphics(img)
  
 ```
+
 ```{r figure_data_fit_regression_male_female}
   
   #  fit the regression lines and get the prediction results separately for male, female and head measurements
@@ -107,7 +108,7 @@
      cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
      cranial.f$residuals           <-  residuals(cranial.fit.outliers.f) # save the residual values
 
-     cranial.m                     <-  hdUj[hdUj$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
+     cranial.m                     <-  hdUj[hdUj$SPECIMEN_SEX_DESC=="MALE",]  # data
      cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
      cranial.fit.outliers.m        <-  lm(Fork_Length ~ Upper_jaw_length, data=cranial.m)  # linear regression model 
      #plot(hd.fit.outliers, which = 1, pch=21) 
@@ -128,7 +129,7 @@
      cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
      cranial.f$residuals           <-  residuals(cranial.fit.outliers.f) # save the residual values
 
-     cranial.m                     <-  hdEd[hdEd$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
+     cranial.m                     <-  hdEd[hdEd$SPECIMEN_SEX_DESC=="MALE",]  
      cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
      cranial.fit.outliers.m        <-  lm(Fork_Length ~ Eye_Diameter, data=cranial.m)  # linear regression model 
      #plot(hd.fit.outliers, which = 1, pch=21) 
@@ -149,7 +150,7 @@
      cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
      cranial.f$residuals           <-  residuals(cranial.fit.outliers.f) # save the residual values
 
-     cranial.m                     <-  hdId[hdId$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
+     cranial.m                     <-  hdId[hdId$SPECIMEN_SEX_DESC=="MALE",]  
      cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
      cranial.fit.outliers.m        <-  lm(Fork_Length ~ InterOrbital_Distance, data=cranial.m)  # linear regression model 
      #plot(hd.fit.outliers, which = 1, pch=21) 
@@ -170,7 +171,7 @@
      cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
      cranial.f$residuals           <-  residuals(cranial.fit.outliers.f) # save the residual values
 
-     cranial.m                     <-  hdSl[hdSl$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
+     cranial.m                     <-  hdSl[hdSl$SPECIMEN_SEX_DESC=="MALE",]  
      cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
      cranial.fit.outliers.m        <-  lm(Fork_Length ~ Snout_length, data=cranial.m)  # linear regression model 
      #plot(hd.fit.outliers, which = 1, pch=21) 
@@ -209,7 +210,7 @@
      cranial.f$predicted           <-  predict(cranial.fit.outliers.f)   # save the predicted values
      cranial.f$residuals           <-  residuals(cranial.fit.outliers.f) # save the residual values
 
-     cranial.m                     <-  hdPo[hdPo$SPECIMEN_SEX_DESC=="MALE",]  # snout length data
+     cranial.m                     <-  hdPo[hdPo$SPECIMEN_SEX_DESC=="MALE",]  
      cranial.m$n                   <-  length(cranial.m$HeadBarcode)                   # number of specimens 
      cranial.fit.outliers.m        <-  lm(Fork_Length ~ Post_orbital_Head_length, data=cranial.m)  # linear regression model #plot(hd.fit.outliers, which = 1, pch=21) 
      cranial.fit.outliersummary.m  <-  summary(cranial.fit.outliers.m)         # summary
@@ -292,6 +293,7 @@
               knitr::include_graphics(img)
      
 ```
+
 (ref:figure3) Relationship between cranial lengths (SL, PP, PO) vs fork length in millimeters.    Predicted points represented by black circles, measured values colored by residual scale.
 
 ```{r figure3, fig.cap='(ref:figure3)', results='asis',  out.width = "470px", fig.align='left'}
@@ -359,70 +361,230 @@
               knitr::include_graphics(img)
      
 ```
+(ref:figure4) Concordance between the science technician sex determinations and the genetics lab results for the 129 successful Sablefish DNA samples.  Bubble size indicates number of specimens and fork length measurements (mm).  Bubbles outlined in red denote lowest concordance.
 
-```{r figure4, fig.cap='(ref:figure4)', results='asis', width=4.0, height=3.5, fig.align='left'}
+```{r figure4, fig.cap='(ref:figure4)', results='asis',  out.width = "500px", fig.align='left'}
 
-#(ref:figure4) Box plot of fork length measurements conducted by science technicians for all specimens and only legal #size specimens (>55cm) where gender assignments were in concordance or not (1 or 0) with DNA test results.
+  png("C:/github/sablehead/figures/Figure4.png", units="px", 
+       width=1900, height=900, res=500) # write png to file
 
+    # sex-DNA from research study 2016
+    #sex.DNA  <-    paste("select * from Head_DNA_Report_vw", sep="")
+    #science.sex.DNA <-    GetSQLData(sex.DNA,"Sablefish")      # head details from SQL Server
 
-     png("C:/github/sablehead/figures/Figure4.png", units="px", width=2300, height=2700, res=500) # write png to file
+    #write.table(science.sex.DNA , file = paste(path,"Figure4_science_sex_DNA2022.csv",sep=''),
+    #row.names=FALSE, na="",col.names=TRUE,  sep=",")
 
-     # using 2022 results via MGL
-      DNA.data22 <- paste("SELECT 2022 as yr,dbo.Head_DNA_Report.DNA_VIAL_BARCODE, ",
-                      "dbo.Head_DNA_Report.SPECIMEN_SEX_DESC, ",
-                      "dbo.Head_DNA_Report.Y_X_proportion_based_genetic_sex_ID_2022,  ",
-                      "dbo.Head_DNA_Report.Y_X_proportion_based_concordance_fisher_and_genetic_sex_ID_2022, ",
-                      "dbo.Head_Measurements_Report.Fork_Length, ",
-                      "CASE WHEN Fork_Length >= 550 THEN 'Legal' ELSE 'Sublegal' END AS Size, 'All specimens' as grp ",
-                      "FROM  dbo.Head_DNA_Report INNER JOIN  ",
-                      "dbo.Head_Measurements_Report ON dbo.Head_DNA_Report.SPECIMEN_ID =  ",
-                      "dbo.Head_Measurements_Report.SPECIMEN_ID  ",
-                      "WHERE  (dbo.Head_DNA_Report.Y_X_proportion_based_concordance_fisher_and_genetic_sex_ID_2022  ",
-                      "IN('0','1')) ORDER BY dbo.Head_DNA_Report.DNA_VIAL_BARCODE", sep="")
-     #DNA.2022  <- GetSQLData(DNA.data22,"Sablefish") 
-     #write.table(DNA.2022, file = paste(path,"figure4.csv",sep=''),
-     #          row.names=FALSE,na="",col.names=TRUE, sep=',')
-     DNA.2022  <- read.csv(paste(path,'figure4.csv', sep=''), header=T)
-     names(DNA.2022) <- c("DNAYear","vial","sampler_sex","DNA_sex",
-                          "concordance","forkLength", "size", "grp")
-     alln1 <- sum(DNA.2022$concordance)
-     alln0 <- length(DNA.2022$vial) - sum(DNA.2022$concordance)  
+    library(pander)
+
+    DNA.science.2022  <- read.csv(paste(path,'Figure4_science_sex_DNA2022.csv', sep=''), header=T)
+    DNA.science.2022$Fork_Length <- as.numeric(DNA.science.2022$Fork_Length)
+
+    DNA.science.table <- DNA.science.2022 %>%
+       mutate(x = case_when(
+       Fork_Length > 300.0 & Fork_Length <= 325.0~ "300-325",
+       Fork_Length > 325.0 & Fork_Length <= 350.0~ "325-350",
+       Fork_Length > 350.0 & Fork_Length <= 375.0~ "350-375",
+       Fork_Length > 375.0 & Fork_Length <= 400.0~ "375-400",
+       Fork_Length > 400.0 & Fork_Length <= 425.0~ "400-425",
+       Fork_Length > 425.0 & Fork_Length <= 450.0~ "425-450",
+       Fork_Length > 450.0 & Fork_Length <= 475.0~ "450-475",       
+       Fork_Length > 475.0 & Fork_Length <= 500.0~ "475-500",
+       Fork_Length > 500.0 & Fork_Length <= 525.0~ "500-525",       
+       Fork_Length > 525.0 & Fork_Length <= 550.0~ "525-550",
+       Fork_Length > 550.0 & Fork_Length <= 575.0~ "550-575", 
+       Fork_Length > 575.0 & Fork_Length <= 600.0~ "575-600", 
+       Fork_Length > 600.0 & Fork_Length <= 625.0~ "600-625",
+       Fork_Length > 625.0 & Fork_Length <= 650.0~ "625-650",
+       Fork_Length > 650.0 & Fork_Length <= 675.0~ "650-675",       
+       Fork_Length > 675.0 & Fork_Length <= 700.0~ "675-700",
+       Fork_Length > 700.0 & Fork_Length <= 725.0~ "700-725",
+       Fork_Length > 725.0 & Fork_Length <= 750.0~ "725-750",       
+       Fork_Length > 750.0 & Fork_Length <= 775.0~ "750-775", 
+       Fork_Length > 775.0 & Fork_Length <= 800.0~ "775-800",
+       Fork_Length > 800.0 & Fork_Length <= 825.0~ "800-825",
+       Fork_Length > 825.0 & Fork_Length <= 850.0~ "825-850",       
+       Fork_Length > 850.0 & Fork_Length <= 875.0~ "850-875",       
+       Fork_Length > 875.0 & Fork_Length <= 900.0~ "875-900", 
+       Fork_Length > 900.0 & Fork_Length <= 925.0~ "900-925",               
+       Fork_Length > 925.0 & Fork_Length <= 950.0~ "925-950",               
+       Fork_Length > 950.0 & Fork_Length <= 975.0~ "950-975",               
+       Fork_Length > 975.0 & Fork_Length <= 1000.0~"975-1000"))
+
+       agg.dna.scien <-  aggregate(DNA.science.table$DNAvial, by=list(DNA.science.table$x,
+                                                           DNA.science.table$concordance), FUN=length)
+       names(agg.dna.scien)  <- c("x","concordance","y")
+       
+       #no.concord.scien <-  agg.dna.scien[agg.dna.scien$concordance == 0,]
+       #write.table(no.concord.scien, file = paste(path,'Figure4_no_concord_scien.csv',sep=''),
+       #            row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+       no.concord.scien.file  <-  read.csv(paste(path,'Figure4_no_concord_scien.csv',sep=''),header=T)
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("300-325", 0, 0))
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("325-350", 0, 0))       
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("400-425", 0, 0))
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("475-500", 0, 0))
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("525-550", 0, 0))
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("575-600", 0, 0))
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("675-700", 0, 0))  
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("700-725", 0, 0))
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("725-750", 0, 0))
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("750-775", 0, 0))
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("775-800", 0, 0))
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("800-825", 0, 0))       
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("825-850", 0, 0))       
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("850-875", 0, 0))
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("875-900", 0, 0))       
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("900-925", 0, 0))       
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("925-950", 0, 0))
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("950-975", 0, 0))       
+       no.concord.scien.file  <-  rbind(no.concord.scien.file, c("975-1000", 0, 0))
+       
+       new.no.concord.scien.file  <-  no.concord.scien.file[order(no.concord.scien.file$x),]
+      
+       #concord.scien <- as.data.frame(agg.dna.scien[agg.dna.scien$concordance == 1,])
+       #write.table(concord.scien, file = paste(path,'Figure4_concord_scien.csv',sep=''), 
+       #            row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+       concord.scien.file  <-  read.csv(paste(path,'Figure4_concord_scien.csv',sep=''),header=T)
+       
+       df_merge.scien  <-  full_join(concord.scien.file, new.no.concord.scien.file, by = "x")
+       df_merge.scien[is.na(df_merge.scien)] <- 0
+       df_merge.scien$count  <-  as.numeric(df_merge.scien$y.x) + as.numeric(df_merge.scien$y.y)
+       df_merge.scien$percent <- round(as.numeric(df_merge.scien$y.x)/df_merge.scien$count * 100.0,1)
+       df_merge.scien2  <-  df_merge.scien[order(df_merge.scien$x),]
+      
+       
+      #  Created a table for viewing the data 
+      library(data.table)   # for transpose function
+      new_merge.scien <- df_merge.scien2[c(1,3,5,7)]
+      ball.stick.scien<- transpose(new_merge.scien)
      
-     DNA.legal        <- DNA.2022[DNA.2022$size=="Legal",]  # only pull out the legal samples
-     DNA.legal$grp    <- 'Legal size specimens'
-     names(DNA.legal) <- c("DNAYear","vial","sampler_sex","DNA_sex",
-                           "concordance","forkLength", "size", "grp")
-     Sampler.Legal.percent <- (sum(DNA.legal$concordance)/length(DNA.legal$vial)) * 100
-     n1 <- sum(DNA.legal$concordance)
-     n0 <- length(DNA.legal$vial) - sum(DNA.legal$concordance)
-     
-     DNA.compare <- rbind(DNA.2022,DNA.legal)  # bind all with just legal size
-
-     library(reshape2)
-     DNA.melt  <- melt(DNA.compare[,c(-1,-2,-3,-4, -7)], id.vars=c("grp",  "forkLength"))
-     names(DNA.melt) <- c("Group","forkLength","variable","concordance")
-     #tail(DNA.melt)
+      names(ball.stick.scien) <- c("300- 325", "325- 350", "350-375" , "375- 400", "400- 425",
+                                   "425- 450", "450- 475", "475- 500", "500- 525",
+                                   "525- 550", "550- 575", "575- 600", "600- 625",
+                                   "625- 650", "650- 675", "675- 700", "700- 725", 
+                                   "725- 750", "750- 775", "775- 800", "800- 825",
+                                   "825- 850", "850- 875", "875- 900", "900- 925",
+                                   "925- 950", "950- 975", "975-1000")
+      new.ball.stick.scien <- as.data.frame(ball.stick.scien)
+      new.ball.stick.scien <- new.ball.stick.scien[-1, ]
+      new.ball.stick.scien$mm <-  c("# Concordant","# Non Concordant","%")
+      new.ball.stick.scien <- new.ball.stick.scien[c(29,1:28)] 
+      
  
-     p <-   ggplot(DNA.melt, aes(as.factor(concordance), forkLength)) +
-            geom_boxplot(aes(fill = Group)) + scale_fill_brewer() +
-            xlab("DNA concordance") + ylab("fork length (mm)") 
+      p<-ggplot(df_merge.scien2, aes(x=x, y=percent, size = count)) +  #balls
+         geom_segment( aes(x=x, xend=x, y=0, yend=percent),size = 0.2) +  #sticks
+         geom_point(# put red line around the 60 %
+                    color= ifelse(df_merge.scien2$percent %in% c(0,60), "red", "#5ab4ac" ), 
+                    fill = alpha("#5ab4ac", 0.3), 
+                    alpha= 0.7, shape=21, stroke=0.5) + 
+         scale_size(range = c(.1, 4), name="Count") +
+         ylim(0,110) + theme_bw() 
+        
+      p +  theme(text = element_text(size = 6)) +
+           theme(axis.text.x = element_text(angle = 90)) + 
+           ylab("%") + 
+           xlab("Fork Length (mm)") +
+           theme(panel.background = element_rect(fill = "white", colour = "white",
+                   size = 0.35, linetype = "solid"),  # control the panel grey lines
+                   panel.grid.major = element_line(size = 0.125, linetype = 'solid',
+                   colour = "white"), 
+                   panel.grid.minor = element_line(size = 0.125, linetype = 'solid',
+                   colour = "white"))
+      
+      while (!is.null(dev.list()))  dev.off()
+      img <-   paste('C:/github/sablehead/figures/figure4.png',sep="")   # -- retrieve png 
+               knitr::include_graphics(img)
+ 
+  
+``` 
+
+(ref:figure5) Concordance between the fishery pilot sex determinations and the genetics lab results for the 80 successful Sablefish DNA samples.  Bubble size indicates number of specimens and interorbial distance measurements (mm) presented as average of three measurements. Bubble outlined in red denote lowest concordance.
+
+```{r figure5, fig.cap='(ref:figure5)', results='asis',  out.width = "500px", fig.align='left'}
+
+  png("C:/github/sablehead/figures/Figure5.png", units="px", 
+       width=1700, height=700, res=500) # write png to file
+
+  DNA.fisher.2022  <- read.csv(paste(path,'Figure5_DNAfisher2022.csv', sep=''), header=T)
+  names(DNA.fisher.2022) <- c("DNAvial","fisher_sex","DNALab_sex","concordance","averageInterODistance")   
+  DNA.fisher.2022  <-  DNA.fisher.2022[DNA.fisher.2022$DNALab_sex != 'Unknown',]
+
+  DNA.fisher.table <- DNA.fisher.2022 %>%
+       mutate(x = case_when(
+       averageInterODistance >= 35 & averageInterODistance < 37~ "35-36", 
+       averageInterODistance >= 37 & averageInterODistance < 39~ "37-38",
+       averageInterODistance >= 39 & averageInterODistance < 41~ "39-40",       
+       averageInterODistance >= 41 & averageInterODistance < 43~ "41-42",
+       averageInterODistance >= 43 & averageInterODistance < 45~ "43-44",       
+       averageInterODistance >= 45 & averageInterODistance < 47~ "45-46",
+       averageInterODistance >= 47 & averageInterODistance < 49~ "47-48",
+       averageInterODistance >= 49 & averageInterODistance < 51~ "49-50",
+       averageInterODistance >= 51 & averageInterODistance < 53~ "51-52", 
+       averageInterODistance >= 53 & averageInterODistance < 55~ "53-54",
+       averageInterODistance >= 55 & averageInterODistance < 57~ "55-56",
+       averageInterODistance >= 57 & averageInterODistance < 59~ "57-58", 
+       averageInterODistance >= 59 & averageInterODistance < 61~ "59-60",        
+       averageInterODistance >= 61 & averageInterODistance < 63~ "61-62"))
+  
+       agg.dna <-  aggregate(DNA.fisher.table$DNAvial, by=list(DNA.fisher.table$x,
+                                                           DNA.fisher.table$concordance), FUN=length)
+       names(agg.dna)  <- c("x","concordance","y")
+       
+      #no.concord<-  agg.dna[agg.dna$concordance == 0,]
+      #write.table(no.concord, file = paste(path,'Figure5_no.concord.csv',sep=''),
+       #row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+      no.concord.file  <-  read.csv(paste(path,'Figure5_no.concord.csv',sep=''),header=T)
+      
+      #concord<-as.data.frame(agg.dna[agg.dna$concordance == 1,])
+      #write.table(concord, file = paste(path,'Figure5_concord.csv',sep=''),
+      #row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+      concord.file  <-  read.csv(paste(path,'Figure5_concord.csv',sep=''),header=T)
+      concord.file  <-  rbind(concord.file, c("35-36", 0, 0))
+      #concord.file
+
+      df_merge  <-  full_join(concord.file,no.concord.file, by = "x")
+      df_merge[is.na(df_merge)] <- 0
+      df_merge$count  <-  as.numeric(df_merge$y.x) + as.numeric(df_merge$y.y)
+      df_merge$percent <- round(as.numeric(df_merge$y.x)/df_merge$count * 100,1)
+      
+      p<-ggplot(df_merge, aes(x=x, y=percent, size=count)) +
+         geom_segment( aes(x=x, xend=x, y=0, yend=percent),size = 0.2) +
+         geom_point(color=ifelse(df_merge$percent %in% c(70.6), 
+                                                  "red", "light blue" ), 
+                    fill=alpha("light blue", 0.3), 
+                    alpha=0.7, shape=21, stroke=0.5) +
+                    guides(color = guide_legend(override.aes = list(size = 3),
+                                                title= "Count")  ) +
+        scale_size(range = c(.1, 4), name = "Count") +
+        ylim(0,110) + theme_bw() 
+      
+        p +  theme(text = element_text(size = 6)) +
+             #geom_hline(yintercept=0)  +
+             theme(axis.text.x = element_text(angle = 90)) + ylab("%") + 
+             xlab("Interorbital Length (mm)")  +
+             theme(panel.background = element_rect(fill = "white",
+                         colour = "white",
+                         size = 0.35, linetype = "solid"),  # control the grey lines
+                         panel.grid.major = element_line(size = 0.125, linetype = 'solid',
+                         colour = "white"), 
+                         panel.grid.minor = element_line(size = 0.125, linetype = 'solid',
+                         colour = "white"))
+      
+      library(data.table)   # for transpose function
+      new_merge <- df_merge[c(1,3,5,7)]
+      ball.stick<- transpose(new_merge)
      
-     p +    theme(panel.border = element_rect(color = "black",
-                                    fill = NA,
-                                    size = 0.25)) +
-            theme(panel.background = element_rect(fill = "white",
-                                     size = 0.75, linetype = "solid")) +
-            theme(legend.position = c(0.27, 0.85))+
-            geom_text(aes(x = as.factor(0), y = 100, label = paste('n=',alln0,
-                                                                   '     n=', n0, sep=""))) +
-            geom_text(aes(x = as.factor(1), y = 100, label = paste('n=',alln1,
-                                                                   '     n=', n1, sep="")))
-    
+      names(ball.stick) <- c("37- 38", "39- 40", "41- 42", "43- 44", 
+                             "45- 46", "47- 48", "49- 50", "51- 52", 
+                             "53- 54", "55- 56", "57- 58", "59- 60", "61- 62")
+      new.ball.stick <- as.data.frame(ball.stick)
+      new.ball.stick <- new.ball.stick[-1, ]
+      new.ball.stick$mm <-  c("# Concordant","# Non Concordant","%")
+      new.ball.stick <- new.ball.stick[c(14,1:13)] 
 
-     #while (!is.null(dev.list()))  dev.off()
-     #img <-   paste('C:/github/sablehead/figures/figure4.png',sep="")   # -- retrieve png 
-     #          knitr::include_graphics(img)
-
-```
-
+     while (!is.null(dev.list()))  dev.off()
+     img <-   paste('C:/github/sablehead/figures/figure5.png',sep="")   # -- retrieve png 
+              knitr::include_graphics(img)
+```             
+              
 \clearpage

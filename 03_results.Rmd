@@ -2,7 +2,7 @@
 
 ```{r fishData}
 
-    fish         <-   read.csv(paste(path,"head_measurements.csv",sep=""), header = T)  # master data
+    fish         <-   read.csv(paste(path,"index_head_measurements.csv",sep=""), header = T)  # master data
     males        <-   fish[which(fish$SPECIMEN_SEX_DESC=='MALE'),]
     count.males  <-   length(males$SPECIMEN_ID)
     females      <-   fish[which(fish$SPECIMEN_SEX_DESC=='FEMALE'),]
@@ -15,7 +15,8 @@
 
 ```{r head.stats}
 
-    hd                     <-  hdUj[hdUj$SPECIMEN_SEX_DESC=='FEMALE',]        # UPPER JAW: female table of sample size, mean and sd for variables
+    hd                     <-  hdUj[hdUj$SPECIMEN_SEX_DESC=='FEMALE',]  # UPPER JAW: female table of sample size, 
+                                                                        # mean and sd for variables
     sex                    <-  'female'
     fl.nme                 <-  "Fork length"
     n                      <-  length(hd$SPECIMEN_ID)                   
@@ -24,8 +25,9 @@
     std                    <-  round(sd(hd$Upper_jaw_length),2)
     stdfl                  <-  round(sd(hd$Fork_Length),2)
     slope                  <-  round(lmslp(lm(Fork_Length ~ Upper_jaw_length, data=hd)),1)
-    se                     <-  round(coef(summary(lm(Fork_Length ~ Upper_jaw_length, data=hd)))[,"Std. Error"][2],2)  # se should be one more decimal place than for what 
-    r2                     <-  format(summary(lm(Fork_Length ~ Upper_jaw_length, data=hd))$r.squared,  digits = 3)    # they are computed for
+    se                     <-  round(coef(summary(lm(Fork_Length ~ Upper_jaw_length, data=hd)))[,"Std. Error"][2],2)  
+                           # se should be one more decimal place than for what they are computed for
+    r2                     <-  format(summary(lm(Fork_Length ~ Upper_jaw_length, data=hd))$r.squared,  digits = 3)    
     r                      <-  format(cor(hd$Upper_jaw_length,hd$Fork_Length),  digits = 3) 
     measurement            <-  "UJ"
     name                   <-  "upper jaw length"

@@ -42,8 +42,8 @@ Another recommendation would be to collect and repeat direct measurements of rou
                        " AND (SPECIMEN_AGE IS NULL) " , sep='')  
 
     #specimens     <- GetSQLData(samples ,"Sablefish")
-    #write.table( specimens, file = paste(path,"CommSpecimensCY.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
-    specimens     <-  read.csv(paste(path,"CommSpecimensCY.csv", sep=''), header=T) # read from csv
+    #write.table( specimens, file = paste(path,"discussion_CommSpecimensCY.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+    specimens     <-  read.csv(paste(path,"discussion_CommSpecimensCY.csv", sep=''), header=T) # read from csv
     # print(head(specimens))
     specimens  <- specimens %>%  mutate(GR = ifelse(fishing_year %in% c('FY 2016/2017','FY 2017/2018'), 1, 2))
     
@@ -66,8 +66,8 @@ Another recommendation would be to collect and repeat direct measurements of rou
                              " WHERE  (Fork_Length > 0) AND ([trip year] > 2015)" , sep='')  
 
     #gear.specimens     <- GetSQLData(gear.samples ,"Sablefish")
-    #write.table( gear.specimens, file = paste(path,"GearCommSpecimensCY.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
-    gear.specimens     <-  read.csv(paste(path,"GearCommSpecimensCY.csv", sep=''), header=T) # read from csv
+    #write.table( gear.specimens, file = paste(path,"discussion_GearCommSpecimensCY.csv",sep=''),row.names=FALSE, na="",col.names=TRUE, sep=",")
+    gear.specimens     <-  read.csv(paste(path,"discussion_GearCommSpecimensCY.csv", sep=''), header=T) # read from csv
     #print(head(gear.specimens))
     
      # sex in(1,2) only  for calendar years, 2020 only has 6 so left out  

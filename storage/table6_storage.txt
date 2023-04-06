@@ -1,40 +1,114 @@
-upper.jaw.slope    <-  lmslp(lm(Fork_Length ~ Upper_jaw_length, data=hdUj))
-  upper.jaw.SE       <-  coef(summary(lm(Fork_Length ~ Upper_jaw_length, data=hdUj)))[,"Std. Error"][2]
+(ref:Table6Caption) Concordance between fisher determined sex and DNA results by averaged interorbital head distance (mm).
 
-  slope.head              <- data.frame(measurement="head",slope=2.5, SE=6.6)
-  slope.head$measurement  <-  as.character(slope.head$measurement)
-  names(slope.head)       <-  c("Head dimension", "slope", "SE")
+```{r table6, echo=FALSE}
+  DNA.fisher.2022  <- read.csv(paste(path,'DNAfisher2022.csv', sep=''), header=T)
+  names(DNA.fisher.2022) <- c("DNAvial","fisher_sex","DNALab_sex","concordance","averageInterODistance")   
+  DNA.fisher.2022  <-  DNA.fisher.2022[DNA.fisher.2022$DNALab_sex != 'Unknown',]
+
+  DNA.fisher.table <- DNA.fisher.2022 %>%
+       mutate(x = case_when(averageInterODistance >= 35 & 
+                              averageInterODistance < 37 ~"35-36",
+       averageInterODistance >= 37 & averageInterODistance < 39~ "37-38",
+       averageInterODistance >= 39 & averageInterODistance < 41~ "39-40",       
+       averageInterODistance >= 41 & averageInterODistance < 43~ "41-42",
+       averageInterODistance >= 43 & averageInterODistance < 45~ "43-44",       
+       averageInterODistance >= 45 & averageInterODistance < 47~ "45-46",
+       averageInterODistance >= 47 & averageInterODistance < 49~ "47-48",
+       averageInterODistance >= 49 & averageInterODistance < 51~ "49-50",
+       averageInterODistance >= 51 & averageInterODistance < 53~ "51-52", 
+       averageInterODistance >= 53 & averageInterODistance < 55~ "53-54",
+       averageInterODistance >= 55 & averageInterODistance < 57~ "55-56",
+       averageInterODistance >= 57 & averageInterODistance < 59~ "57-58", 
+       averageInterODistance >= 59 & averageInterODistance < 61~ "59-60",        
+       averageInterODistance >= 61 & averageInterODistance < 63~ "61-62"))
+
+   agg.dna <-  aggregate(DNA.fisher.table$DNAvial, by=list(DNA.fisher.table$x,
+                                                           DNA.fisher.table$concordance), FUN=length)
+   names(agg.dna)  <- c("x","concordance","y")
+
+  #no.concord<-  agg.dna[agg.dna$concordance == 0,]
+  #write.table(no.concord, file = paste(path,'no.concord.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+  no.concord.file  <-  read.csv(paste(path,'no.concord.csv',sep=''),header=T)
+  #concord<-as.data.frame(agg.dna[agg.dna$concordance == 1,])
+  #write.table(concord, file = paste(path,'concord.csv',sep=''),row.names=FALSE, na="",col.names=TRUE,  sep=",") 
+  concord.file  <-  read.csv(paste(path,'concord.csv',sep=''),header=T) 
   
-  slope.head[1,] <- c("Upper jaw length", upper.jaw.slope, round(upper.jaw.SE,3))
+    for (i in 1:length(no.concord.file$x)) {# create sparkline graphs
+        h<- no.concord.file$x[i]
+        p<-ggplot(no.concord.file, aes(x=x, y=y)) +
+         geom_segment( aes(x=x, xend=x, y=0, yend=y)) +
+         geom_point(size= 5, color=ifelse(no.concord.file$x %in% c(h,no.concord.file$x[i]), 
+                                          "red", "dark green" ), 
+                     fill=alpha("green", 0.3), 
+                     alpha=0.7, shape=21, stroke=2) + ylim(0,6) + theme_bw()
+        p1<-p + theme(axis.title =   element_blank(), 
+                      panel.grid.major = element_blank(),
+                      panel.grid.minor = element_blank())
+        
+         #ggsave(p1, filename = paste0(graph_directory,"xfig", h ,".png"), 
+         #       width = 5, height = 1.2)  # mini graphs
+        }
+   
+    for (j in 1: length(concord.file$x)) {# create sparkline graphs
+        h<- concord.file$x[j]
+        p<-ggplot(concord.file, aes(x=x, y=y)) +
+         geom_segment( aes(x=x, xend=x, y=0, yend=y)) +
+         geom_point( size= 5, color=ifelse(concord.file$x %in% c(h,concord.file$x[j]), 
+                                          "red", "blue" ), 
+                     fill=alpha("light blue", 0.3), 
+                     alpha=0.7, shape=21, stroke=2) + ylim(0,17) + theme_bw()
+        
+        p1<-p + theme(axis.title =   element_blank(), 
+                      panel.grid.major = element_blank(),
+                      panel.grid.minor = element_blank())
+        
+        #ggsave(p1, filename = paste0(graph_directory,"x2fig", h ,".png"), 
+        #          width = 5, height = 1.2)  # mini graphs
+        }
+     
+   
+    no.concord.file  <- no.concord.file %>%
+        mutate(Sparkline = paste0("\\raisebox{-.16\\height} {\\includegraphics[width=2.8cm]{",
+                                  graph_directory,"xfig",no.concord.file$x,".png}}"  ) ) 
+    
+    concord.file  <- concord.file %>%
+         mutate(Sparkline = 
+               paste0("\\raisebox{-.16\\height} {\\includegraphics[width=2.8cm]{",
+                      graph_directory,"x2fig",concord.file$x,".png}}"    ) ) 
+    
 
-  eye.diameter.slope <-  lmslp(lm(Fork_Length ~ Eye_Diameter, data=hdEd))
-  eye.diameter.SE    <-  coef(summary(lm(Fork_Length ~ Eye_Diameter, data=hdEd)))[, "Std. Error"][2]
+    agg.new <- rbind(no.concord.file,concord.file)
+    agg.new <- agg.new[,c(4,2,1,3),]
+    
+    names(agg.new) <-  c("","Concordance", "Head Length", "Count")
+    agg.new$Concordance <- cleanf(agg.new$Concordance)
+    agg.new[1,1] <- ''  
+    agg.new[2,1] <- '' 
+    agg.new[3,1] <- ''
+    agg.new[5,1] <- ''
+    agg.new[6,1] <- ''   
+    agg.new[7,1] <- ''  
+    agg.new[8,1] <- ''  
 
-  slope.head[2,] <- c("Eye diameter", eye.diameter.slope, round(eye.diameter.SE,3))
-
-  interorbital.slope <-  lmslp(lm(Fork_Length ~ InterOrbital_Distance, data=hdId))
-  interorbital.SE    <-  coef(summary(lm(Fork_Length ~ InterOrbital_Distance, data=hdId)))[, "Std. Error"][2]
-
-  slope.head[3,] <- c("InterOrbital distance", interorbital.slope, round(interorbital.SE,3))
-
-  snoutlength.slope <-  lmslp(lm(Fork_Length ~ Snout_length, data=hdSl))
-  snoutlength.SE    <-  coef(summary(lm(Fork_Length ~ Snout_length, data=hdSl)))[, "Std. Error"][2]
-
-  slope.head[4,]    <-  c("Snout length", snoutlength.slope, round(snoutlength.SE,3))
-
-  postorb.Preoper.slope <-  lmslp(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop))
-  postorb.Preoper.SE    <-  coef(summary(lm(Fork_Length ~ Postorbital_Preoperculum, data=hdPop)))[, "Std. Error"][2]
-
-  slope.head[5,] <- c("Post orbital to preoperculum length", postorb.Preoper.slope, round(postorb.Preoper.SE,3))
-
-  post.orbital.slope    <-  lmslp(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo))
-  post.orbital.SE       <-  coef(summary(lm(Fork_Length ~ Post_orbital_Head_length, data=hdPo)))[, "Std. Error"][2]
-
-  slope.head[6,]     <- c("Post orbital head length", post.orbital.slope, round(post.orbital.SE,3))
-  
-  kableExtra::kable( slope.head,
-                     booktabs = TRUE,linesep = "",
-                     format = "latex",  caption = "(ref:Table6Caption)") %>%
-                     row_spec(0, bold="true") %>%
-  kableExtra::kable_styling(font_size = 10, position = "left")
-  
+    agg.new[10,1] <- ''
+    agg.new[11,1] <- ''
+    agg.new[12,1] <- ''
+    agg.new[13,1] <- ''
+    agg.new[14,1] <- ''
+    agg.new[15,1] <- ''
+    agg.new[16,1] <- ''
+    agg.new[17,1] <- ''
+    agg.new[18,1] <- ''
+    
+    kableExtra::kable(agg.new, booktabs = TRUE, 
+                      linesep = "",
+                      align = c("l","l","l","l"),
+                      escape = F, 
+                      format = "latex",  caption = "(ref:Table6Caption)") %>%
+      
+    kableExtra::kable_styling(font_size = 9, position = "left", full_width = FALSE, latex_options = "hold_position") %>%
+                row_spec(0,    bold = T) %>%
+                row_spec(4,    bold = T)%>%
+                row_spec(9,    bold = T)%>%
+                row_spec(6,    hline_after = T)
+```
