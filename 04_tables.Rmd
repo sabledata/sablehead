@@ -107,8 +107,8 @@
    
 ```
 
-(ref:Table3Caption) Statistics associated with simple linear regressions using measurements (mm) of cranial lengths as predictors of the fork length (LFL) for 438 Sablefish collected from research surveys in 2016. Cranial lengths included: upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum length (L~PP~) and post orbital head length (L~PO~).  All models were significant at P <0.001. 
-
+<!-- KH: Edits made to the below table caption. Lisa, please confirm that you are ok with this text -->
+(ref:Table3Caption) Model statistics are shown for comparisons of each of the six cranial measurements versus fork length using 438 Sablefish collected from research surveys in 2016. Statistics shown include sample size, Pearson's correlation co-efficients (r), and linear regression statistics for cranial measurements as predictors of fork length, including slope, R-squared values, mean predictor variable, and mean response variable. All measurements are in millimeters. Cranial measurements include: upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum length (L~PP~) and post orbital head length (L~PO~).  All linear regression models were significant at P <0.001.  
 
 ```{r table3, echo=FALSE}
 

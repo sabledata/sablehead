@@ -14,7 +14,10 @@ Once head measurements were completed, sagittal otoliths were collected for futu
 
 ### Data Analysis
 
-Using the lm() function in R [@R], fork lengths (L~FL~) were estimated by a simple linear regression model, using the six cranial measurements as predictor variables to see how well each could predict fork length.  Model fit was evaluated in terms of statistical significance (p-value less than 0.05) and coefficients of determination (R^2^).
+<!--Using the lm() function in R [@R], fork lengths (L~FL~) were estimated by a simple linear regression model, using the six cranial measurements as predictor variables to see how well each could predict fork length.  Model fit was evaluated in terms of statistical significance (p-value less than 0.05) and coefficients of determination (R^2^).-->
+
+<!--KH: I have suggested replacing the above paragraph with the following to be really, really explicit about what we are testing with the linear regressions-->
+Fork lengths (L~FL~) were modelled as a function of each of the six cranial measurements using simple linear regressions implemented using the lm() function in R [@R] (i.e., one linear regression for each measurement type). Model fits were evaluated in terms of statistical significance and coefficients of determination (R^2^).  A significant p-value from a linear regression model (p-value less than 0.05) was taken to indicate that the cranial measurement being tested was a good predictor of fork length.
 
 ### Gender Test Development
 
