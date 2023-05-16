@@ -361,7 +361,7 @@
               knitr::include_graphics(img)
      
 ```
-(ref:figure4) Concordance between the science technician sex determinations and the genetics lab results for the 129 successful Sablefish DNA samples.  Bubble size indicates number of specimens and fork length measurements (mm).  Bubbles outlined in red denote lowest concordance.
+(ref:figure4) Concordance between the science technician sex determinations and the genetics lab results for the 129 successful Sablefish DNA samples.  Bubble size indicates number of specimens and fork length measurements (mm).  Bubbles outlined in red denotes fork length ranges with the lowest concordance.
 
 ```{r figure4, fig.cap='(ref:figure4)', results='asis',  out.width = "500px", fig.align='left'}
 
@@ -498,7 +498,7 @@
   
 ``` 
 
-(ref:figure5) Concordance between the fishery pilot sex determinations and the genetics lab results for the 80 successful Sablefish DNA samples.  Bubble size indicates number of specimens and interorbial distance measurements (mm) presented as average of three measurements. Bubble outlined in red denote lowest concordance.
+(ref:figure5) Concordance between the fishery pilot sex determinations and the genetics lab results for the 80 successful Sablefish DNA samples.  Bubble size indicates number of specimens and interorbial distance measurements (mm) presented as average of three measurements. Bubble outlined in red denotes the average interorbital distance range with the lowest concordance above 0.
 
 ```{r figure5, fig.cap='(ref:figure5)', results='asis',  out.width = "500px", fig.align='left'}
 

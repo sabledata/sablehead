@@ -119,6 +119,6 @@ Another recommendation would be to collect and repeat direct measurements of rou
 
 # Acknowledgments
 
-We thank Schon Acheson and Kristina Castle for lending their skilled technical expertise for this report and Mike Wetklo and Gordon Skocic of the Molecular Genetics Laboratory at PBS for development of the Sablefish DNA gender tests. A special thanks to the crew of the F/V Pacific Viking for participating in the pilot project and the Canadian Sablefish Association for their continued support of scientific work via the Science Rewards Program.
+We thank Schon Acheson and Kristina Castle for lending their skilled technical expertise for this report and Mike Wetklo and Gordon Skocic of the Molecular Genetics Laboratory at PBS for development of the Sablefish DNA gender tests. We are grateful for the review of this document provided by x and x.  A special thanks to the crew of the F/V Pacific Viking for participating in the pilot project and the Canadian Sablefish Association for their continued support of scientific work via the Science Rewards Program.
 
 \clearpage
