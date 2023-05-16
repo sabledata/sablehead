@@ -498,7 +498,7 @@
   
 ``` 
 
-(ref:figure5) Concordance between the fishery pilot sex determinations and the genetics lab results for the 80 successful Sablefish DNA samples.  Bubble size indicates number of specimens and interorbial distance measurements (mm) presented as average of three measurements. Bubble outlined in red denotes the average interorbital distance range with the lowest concordance above 0.
+(ref:figure5) Concordance between the fishery pilot sex determinations and the genetics lab results for the 80 successful Sablefish DNA samples.  Bubble size indicates number of specimens and interorbial distance measurements (mm) presented as average of three measurements. Bubble outlined in red denotes the average interorbital distance range with the lowest concordance > 1%.
 
 ```{r figure5, fig.cap='(ref:figure5)', results='asis',  out.width = "500px", fig.align='left'}
 

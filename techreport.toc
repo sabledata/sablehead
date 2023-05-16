@@ -21,7 +21,7 @@
 \contentsline {section}{\numberline {5}Acknowledgments}{6}{section.5}%
 \contentsline {section}{\numberline {6}Figures}{7}{section.6}%
 \contentsline {section}{\numberline {7}Tables}{11}{section.7}%
-\contentsline {section}{APPENDICES}{12}{section*.14}%
+\contentsline {section}{APPENDICES}{14}{section*.14}%
 \contentsline {section}{\numberline {A}IMAGES OF THE SIX CRANIAL DIMENSION MEASUREMENTS.}{14}{appendix.1.A}%
 \contentsline {section}{\numberline {B}SEX DETERMINATION BY OPERCULUM MARKING}{15}{appendix.1.B}%
 \contentsline {section}{\numberline {C}SABLEFISH BIOSAMPLE COLLECTION PROGRAM NOTICE}{16}{appendix.1.C}%

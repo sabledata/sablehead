@@ -275,5 +275,6 @@ eick.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="EICKELBERG",])
 
 
 ```
+\clearpage
 
  
