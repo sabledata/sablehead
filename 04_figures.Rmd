@@ -223,7 +223,7 @@
 
    
 ```
-(ref:figure2) Relationship between cranial lengths (UJ, ED, ID) vs fork length in millimeters.  Predicted points represented by black circles, measured values colored by residual scale.
+(ref:figure2) Relationship between cranial lengths (UJ-upper jaw, ED-eye diameter, ID-interorbital distance) vs fork length in millimeters.  Predicted points represented by black circles, measured values colored by residual scale.
 
 ```{r figure2, fig.cap='(ref:figure2)', results='asis', out.width = "470px", fig.align='left'}
    
@@ -294,7 +294,7 @@
      
 ```
 
-(ref:figure3) Relationship between cranial lengths (SL, PP, PO) vs fork length in millimeters.    Predicted points represented by black circles, measured values colored by residual scale.
+(ref:figure3) Relationship between cranial lengths (SL-snout length, PP-post orbital to preoperculum, PO-post orbital) vs fork length in millimeters.    Predicted points represented by black circles, measured values colored by residual scale.
 
 ```{r figure3, fig.cap='(ref:figure3)', results='asis',  out.width = "470px", fig.align='left'}
    
@@ -361,7 +361,7 @@
               knitr::include_graphics(img)
      
 ```
-(ref:figure4) Concordance between the science technician sex determinations and the genetics lab results for the 129 successful Sablefish DNA samples.  Bubble size indicates number of specimens and fork length measurements (mm).  Bubbles outlined in red denotes fork length ranges with the lowest concordance.
+(ref:figure4) Concordance between the science technician sex determinations and the genetics lab results for the 129 successful Sablefish DNA samples.  Bubble size indicates the number of specimens and fork length measurements are in mm.  Bubbles outlined in red denotes fork length ranges with the lowest concordance.
 
 ```{r figure4, fig.cap='(ref:figure4)', results='asis',  out.width = "500px", fig.align='left'}
 
@@ -498,7 +498,7 @@
   
 ``` 
 
-(ref:figure5) Concordance between the fishery pilot sex determinations and the genetics lab results for the 80 successful Sablefish DNA samples.  Bubble size indicates number of specimens and interorbial distance measurements (mm) presented as average of three measurements. Bubble outlined in red denotes the average interorbital distance range with the lowest concordance > 1%.
+(ref:figure5) Concordance between the fishery pilot sex determinations and the genetics lab results for the 80 successful Sablefish DNA samples.  Bubble size indicates number of specimens.  Interorbial distance measurements (mm) are presented as average of three measurements. Bubbles outlined in red denotes the average interorbital distance range with the lowest concordance > 1%.
 
 ```{r figure5, fig.cap='(ref:figure5)', results='asis',  out.width = "500px", fig.align='left'}
 
