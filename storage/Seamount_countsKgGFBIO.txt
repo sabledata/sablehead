@@ -1,0 +1,24 @@
+SELECT        TOP (100) PERCENT year, LOCALITY_NAME, SPECIES_COMMON_NAME, SPECIES_SCIENCE_NAME, SPECIES_CATEGORY_DESC, SPECIES_GROUPING, SUM(FinalKG) AS KG, SUM(FinalCNT) AS CNT
+FROM            (SELECT        year, LOCALITY_NAME, TRIP_ID, FISHING_EVENT_ID, FE_MAJOR_LEVEL_ID, SPECIES_COMMON_NAME, SPECIES_SCIENCE_NAME, KG, CNT, SPECIES_CATEGORY_DESC, SPECIES_GROUPING, 
+                                                    CASE WHEN KG > 0 AND CNT >= 0 THEN KG ELSE 0 END AS FinalKG, CASE WHEN KG = 0 AND CNT > 0 THEN CNT ELSE 0 END AS FinalCNT
+                          FROM            (SELECT        TOP (100) PERCENT YEAR(GFBioSQL.dbo.TRIP.TRIP_START_DATE) AS year, GFBioSQL.dbo.C_Locality.LOCALITY_NAME, GFBioSQL.dbo.FISHING_EVENT.TRIP_ID, 
+                                                                              GFBioSQL.dbo.FISHING_EVENT.FISHING_EVENT_ID, GFBioSQL.dbo.FISHING_EVENT.FE_MAJOR_LEVEL_ID, CAST(GFBioSQL.dbo.SPECIES.SPECIES_CODE AS VARCHAR(4)) AS species_cde, 
+                                                                              GFBioSQL.dbo.SPECIES.SPECIES_COMMON_NAME, GFBioSQL.dbo.SPECIES.SPECIES_SCIENCE_NAME, CAST(ISNULL(GFBioSQL.dbo.CATCH.CATCH_WEIGHT, 0) AS float) AS KG, 
+                                                                              ISNULL(GFBioSQL.dbo.CATCH.CATCH_COUNT, 0) AS CNT, GFBioSQL.dbo.C_Species_Category.SPECIES_CATEGORY_DESC, GFBioSQL.dbo.SPECIES.SPECIES_GROUPING
+                                                    FROM            GFBioSQL.dbo.TRIP INNER JOIN
+                                                                              GFBioSQL.dbo.FISHING_EVENT INNER JOIN
+                                                                              GFBioSQL.dbo.C_Locality ON GFBioSQL.dbo.FISHING_EVENT.MAJOR_STAT_AREA_CODE = GFBioSQL.dbo.C_Locality.MAJOR_STAT_AREA_CODE AND 
+                                                                              GFBioSQL.dbo.FISHING_EVENT.MINOR_STAT_AREA_CODE = GFBioSQL.dbo.C_Locality.MINOR_STAT_AREA_CODE AND 
+                                                                              GFBioSQL.dbo.FISHING_EVENT.LOCALITY_CODE = GFBioSQL.dbo.C_Locality.LOCALITY_CODE ON GFBioSQL.dbo.TRIP.TRIP_ID = GFBioSQL.dbo.FISHING_EVENT.TRIP_ID LEFT OUTER JOIN
+                                                                              GFBioSQL.dbo.FISHING_EVENT_CATCH ON GFBioSQL.dbo.FISHING_EVENT.FISHING_EVENT_ID = GFBioSQL.dbo.FISHING_EVENT_CATCH.FISHING_EVENT_ID LEFT OUTER JOIN
+                                                                              GFBioSQL.dbo.C_Species_Category RIGHT OUTER JOIN
+                                                                              GFBioSQL.dbo.CATCH ON GFBioSQL.dbo.C_Species_Category.SPECIES_CATEGORY_CODE = GFBioSQL.dbo.CATCH.SPECIES_CATEGORY_CODE ON 
+                                                                              GFBioSQL.dbo.FISHING_EVENT_CATCH.CATCH_ID = GFBioSQL.dbo.CATCH.CATCH_ID LEFT OUTER JOIN
+                                                                              GFBioSQL.dbo.SPECIES ON GFBioSQL.dbo.CATCH.SPECIES_CODE = GFBioSQL.dbo.SPECIES.SPECIES_CODE
+                                                    WHERE        (GFBioSQL.dbo.C_Locality.LOCALITY_NAME LIKE '%SEAMOUNT%') AND (GFBioSQL.dbo.SPECIES.SPECIES_GROUPING = 'Invertebrate') AND 
+                                                                              (GFBioSQL.dbo.SPECIES.SPECIES_COMMON_NAME LIKE '%sponges%') OR
+                                                                              (GFBioSQL.dbo.C_Locality.LOCALITY_NAME LIKE '%SEAMOUNT%') AND (GFBioSQL.dbo.SPECIES.SPECIES_GROUPING = 'Invertebrate') AND 
+                                                                              (GFBioSQL.dbo.SPECIES.SPECIES_COMMON_NAME LIKE '%coral%')
+                                                    ORDER BY year) AS DetermineSeamCNTKG) AS InvertesGrouped
+GROUP BY year, LOCALITY_NAME, SPECIES_COMMON_NAME, SPECIES_SCIENCE_NAME, SPECIES_CATEGORY_DESC, SPECIES_GROUPING
+ORDER BY year, LOCALITY_NAME

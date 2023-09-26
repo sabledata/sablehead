@@ -1,0 +1,30 @@
+
+concord.file  <-  read.csv(paste(path,'concord.csv',sep=''),header=T)
+concord.file  <-  rbind(concord.file, c("35-36", 0, 0))
+concord.file
+
+df_merge  <-  full_join(concord.file,no.concord.file, by = "x")
+df_merge[is.na(df_merge)] <- 0
+df_merge$sum  <-  as.numeric(df_merge$y.x) + as.numeric(df_merge$y.y)
+df_merge$percent <- as.numeric(df_merge$y.x)/df_merge$sum * 100
+
+df_merge
+
+    for (i in 1:length(df_merge$x)) {# create sparkline graphs
+        h<- df_merge$x[i]
+        p<-ggplot(df_merge, aes(x=x, y=percent)) +
+         geom_segment( aes(x=x, xend=x, y=0, yend=percent)) +
+         geom_point(size= df_merge$sum/4, color=ifelse(df_merge$x %in% c(h,df_merge$x[i]), 
+                                          "red", "dark green" ), 
+                     fill=alpha("green", 0.3), 
+                     alpha=0.7, shape=21, stroke=1) + ylim(0,110) + theme_bw() 
+        p1<-p + theme(axis.title =   element_blank(), 
+                      panel.grid.major = element_blank(),
+                      panel.grid.minor = element_blank()) +
+            geom_hline(yintercept=0)  +
+            theme(axis.text.x = element_text(angle = 90)) + xlab("%")
+        
+         ggsave(p1, filename = paste0(graph_directory,"nextfig", h ,".png"), 
+                width = 5, height = 1.2)  # mini graphs
+        }
+
