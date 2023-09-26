@@ -36,7 +36,7 @@ author_footnote: "Email: Lacko.Lisa@dfo-mpo.gc.ca | telephone: (778) 268-3236"
 abstract: |
     Routine biological sampling of whole round Sablefish from commercial fishing operations in British Columbia began the early 1990’s.  Historically, round specimens were obtained through a voluntary commercial fishery catch sampling and tag recovery programs.   We investigate the potential for obtaining sex and length information using heads, rather than the entire fish to promote participation in the sampling programs. In 2016, 438 Sablefish (240-1080 mm) were sampled at sea and six different fish head measurements were collected. Genetic samples (137) were obtained to develop methods of DNA-based sex identification. Regression analysis results reveal that all six cranial dimensions can be used to accurately predict length. However, interorbital distance was not only a good predictor of length, but samplers ranked it the most efficient to measure and easily repeatable. A pilot study occurred in 2017 with 360 head-only samples collected and sexed by a commercial vessel, followed by scientific sampling on shore. Genomic DNA were successfully processed for 80 of 99 samples. Fisher sex determination was accurate 84% of the time. Given the results, the 2018 commercial sampling collection program was modified so that returns of whole round Sablefish were replaced by head-only samples with knife cuts on the operculum to indicate sex.
 french_abstract: |
-  Voici le résumé. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  L’échantillonnage biologique périodique de morues charbonnières entières provenant des activités de pêche commerciale en Colombie-Britannique a commencé au début des années 1990. Historiquement, des spécimens entiers ont été recueillis dans le cadre de programmes volontaires d’échantillonnage des prises commerciales et de récupération d’étiquettes. Nous étudions la possibilité d’obtenir de l’information sur le sexe et la longueur en utilisant les têtes seulement plutôt que les poissons entiers afin de favoriser la participation aux programmes d’échantillonnage. En 2016, 438 morues charbonnières (de 240 à 1 080 mm) ont été échantillonnées en mer et six différentes mesures de la tête des poissons ont été recueillies. Des échantillons génétiques (137) ont été obtenus afin de mettre au point des méthodes de sexage fondées sur l’ADN. Les résultats de l’analyse de régression révèlent que les six mesures de la dimension du crâne peuvent toutes permettre de prédire la longueur avec précision. Cependant, la distance interorbitale s’est non seulement révélée un bon prédicteur de la longueur, mais les échantillonneurs ont aussi déterminé qu’il s’agissait de la mesure la plus efficace et la plus facilement répétable. Une étude pilote a été menée en 2017, au cours de laquelle 360 échantillons de tête seulement ont été obtenus et sexés en mer à bord d’un bateau de pêche commercial, puis échantillonnés à terre par une équipe scientifique. L’ADN génomique de 80 échantillons sur 99 a été traité avec succès. La détermination du sexe par les pêcheurs était exacte 84 % du temps. Compte tenu de ces résultats, le programme d’échantillonnage des prises commerciales de 2018 a été modifié de sorte que les échantillons retournés ne sont plus des morues charbonnières entières, mais seulement des têtes avec une entaille au couteau sur l’opercule indiquant le sexe.
 output:
  csasdown::techreport_pdf:
    french: false
@@ -45,7 +45,7 @@ output:
    # will remain between compilations. If true, your changes will be lost when you compile
    copy_sty: true
    # line_nums is a toggle to show line numbers on the left side of the page. 
-   line_nums: true
+   line_nums: false
    # line_nums_mod represents showing every Nth line if line_nums is true
    line_nums_mod: 1
    # lot_lof is a toggle to show/not show the lists of tables and figures at the
@@ -124,7 +124,7 @@ library(dplyr) # transform and summarize tabular data
 library(ggplot2)
 library(readr)
 library(tibble)
-library(rosettafish)
+#library(rosettafish)
 library(csasdown)
 
 yr              <-  2023

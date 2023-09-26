@@ -10,7 +10,7 @@ For each sampled fish, fork length, round weight, sex, and maturity were recorde
 
 At the time of sampling, each cranial dimension was evaluated by three experienced samplers on a five point rating scale in terms of two distinct metrics: 1. ease of use (1-5, with 1 as least easy and 5 as easiest) and 2. repeatability  (1-5, with 1 as least repeatable and 5 as most repeatable). The ease of use metric focused on three key attributes of the measurement: learn-ability (task understanding), efficiency (task-completion time) and degree of difficulty (task performance ease).  The repeatability metric focused on ranking each measurement under repeated caliper placement, taking into consideration that a proper understanding of how to place caliper jaws on soft or hard (bone) tissues may affect the final measurement. 
 
-Once head measurements were completed, sagittal otoliths were collected for future ageing from all fish. Operculum clips (DNA) were also collected from the first 137 fish measured and forwarded to the Molecular Genetics Laboratory (MGL) at the Pacific Biological Station, Nanaimo BC for analysis and gender test development.
+Once head measurements were completed, sagittal otoliths were collected from all fish for future aging. Additionally, operculum clips containing DNA were collected from the first 137 fish that were measured. These clips were then forwarded to the Molecular Genetics Laboratory (MGL) at the Pacific Biological Station in Nanaimo, BC, for analysis and the development of gender tests.
 
 ### Data Analysis
 
@@ -49,10 +49,9 @@ The precision of cranial measurements among readers was quantified using an Inde
 
 For each cranial dimension, IAE was calculated as:
 $$
-IAE=\frac{1}{N}\sum_{j = 1}^{N}\left[\frac{1}{R}\sum_{i = 1}^{R}\frac{|X_{ij} - X_j|}{X_j}\right]
+IAE=\frac{1}{N}\sum_{j = 1}^{N}\left[\frac{1}{R}\sum_{i = 1}^{R}\frac{|X_{ij} - \overline{X}_j|}{\overline{X}_j}\right]
 $$
 where $N$ is the number of fish heads measured ($N$ = 99 fish), $R$ is the number of technicians taking measurements ($R$ = 3 technicians), $X_{ij}$ is the cranial length taken by technician *i* of fish *j*, and $X_{j}$ is the average cranial length for the $j^{th}$ fish over all technicians. Using this equation, the average error for measuring the $j^{th}$ fish is represented as a fraction of the average fish length.  
 
-An IEA value was calculated for each of the four cranial dimensions considered so that options could be ranked according to precision. Dimensions with lower IEAs values were judged to be more precise (i.e., provided the most consistent measurement among technicians). 
-
-Fin clips (95 of 99) were forwarded to the molecular genetics lab for an audit of fisher sex determination. 
+An IEA value was calculated for each of the four cranial dimensions under consideration, allowing for the ranking of options based on precision. Dimensions with lower IEA values were deemed more precise, indicating greater consistency in measurements among technicians. 
+Out of the 99 fin clips, 95 were sent to the molecular genetics lab for an audit of fisher sex determination.
