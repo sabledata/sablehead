@@ -391,8 +391,8 @@ library(rgdal)
     }
 
     lmslp <- function (modelobject) {                    #  slope (m) value function
-             if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
                  slp <- signif(modelobject$coef[[2]], 5)
+             if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
                  return(slp)
     }
     

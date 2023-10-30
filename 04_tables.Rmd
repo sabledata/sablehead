@@ -95,6 +95,7 @@
                                    "L\\textsubscript{PP}", "L\\textsubscript{PO}", 
                                    "F", "M", "Otoliths", "DNA", "Total"),
                      format = "latex", 
+                     align = c("l","r","r","r","r","r","r","r","r","r","r","r","r","r"),
                      linesep = "",
                      row.names=FALSE,
                      escape = F, # allows textsuperscript latex
@@ -122,12 +123,22 @@
      head.stats$measurement <- NULL
      head.stats  <- head.stats[,c(11,1,2,3,4,5,6,7,8,9,10)]
      head.stats$symbol <- cleanf(head.stats$symbol)  # remove duplicate names
+     head.stats$mnfl<- gsub("583","583.0", head.stats$mnfl)   # force .0 in numeric column
+     head.stats$se  <- gsub("0.5", "0.50", head.stats$se)
+     head.stats$se  <- gsub("0.501", "0.51", head.stats$se)
+     head.stats$r2  <- gsub("0.96","0.960", head.stats$r2)
+     head.stats$r2  <- gsub("0.9606","0.966", head.stats$r2)
+     head.stats$r   <- gsub("0.98", "0.980", head.stats$r)
+     head.stats$r   <- gsub("0.9803", "0.983", head.stats$r)
+     head.stats$r   <- gsub("0.96", "0.960", head.stats$r)
+     head.stats$r   <- gsub("0.9601", "0.961", head.stats$r)
+     head.stats$std   <- gsub("11.7", "11.70", head.stats$std)
 
      kableExtra::kable(head.stats, col.names = c("Cranial Measurement","Sex","N",
                                                  "Slope","SE","R\\textsuperscript{2}","r","Mean","SD","Mean","SD"),
                       booktabs = TRUE, 
                       linesep = "", row.names=FALSE, escape = F, # need escape to show superscript
-                      align = c("l","l","c","c","c","c","c","c","c","c"),
+                      align = c("l","l","r","r","r","r","r","r","r","r"),
                       format = "latex",  caption = "(ref:Table3Caption)") %>%
 
      add_header_above(c(" "=7, "Predictor"= 2, "Response L$_{FL}$" = 2), bold=T, escape = F) %>% 
@@ -254,13 +265,14 @@ eick.count  <- nrow(sample99cnt[sample99cnt$White.bag.label=="EICKELBERG",])
                                       max(sample99cnt$Post.orbital.to.PreoperculumC), sep='')) ,
             IAE.value <- c(IAE.UJ,IAE.ID,IAE.SL,IAE.PP)
                                    ))
-
+   pilot.table[1,5] <- '1.0'
+   
    kableExtra::kable(pilot.table, 
                      booktabs = TRUE, col.names = c("Head Dimension", "Min - Max (mm)", 
                                                     "Min - Max (mm)","Min - Max (mm)", "IAE"), 
                      linesep = "",
                      escape = F, 
-                     align = c("l","c","c","c","l"),
+                     align = c("l","r","r","r","r"),
                      format = "latex",  caption = "(ref:Table5Caption)") %>%
      
     add_header_above(c(" "= 1, "Sampler A" = 1, "Sampler B" = 1, "Sampler C" = 1,  " " = 1 ), bold = T) %>% 
