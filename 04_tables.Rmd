@@ -158,7 +158,7 @@
                       column_spec(11, width = "0.8cm")
     
 ```
-(ref:Table4Caption) Ease of use and repeatable five point ranking scale recorded by experienced samplers for each cranial measurement for the 2016 experimental study, where 5 = Great; 4 = Good; 3 = Moderate; 2 = Questionable; 1 = Poor. 
+(ref:Table4Caption) Ease of use and repeatable five point ranking scale recorded by experienced samplers for each cranial measurement for the 2016 experimental study, where 5 = Great; 4 = Good; 3 = Moderate; 2 = Questionable; 1 = Poor. Cranial measurements include: upper jaw length (L~UJ~), eye diameter (L~ED~), interorbital distance (L~ID~), snout length (L~SL~), post orbital to preoperculum length (L~PP~) and post orbital head length (L~PO~).
 
 ```{r table4, echo=FALSE}
 
